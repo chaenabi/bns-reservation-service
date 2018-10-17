@@ -35,9 +35,9 @@
 			name="onlydev" value="개발자전용: 무시하고 다음 페이지로 이동"
 			onClick="location.href='./menu.jsp';">
 		
-		<div class="btn">
+		<br>
 		<button id="myBtn" onclick="myFunction()">Pause</button>
-		</div>
+		
 	</div>
 
 
@@ -45,7 +45,8 @@
 		
 		var video = document.getElementById("myVideo");
 		var btn = document.getElementById("myBtn");
-	
+		btn.innerHTML = "Play";
+		
 		function myFunction() {
 			if (video.paused) {
 				video.play();
