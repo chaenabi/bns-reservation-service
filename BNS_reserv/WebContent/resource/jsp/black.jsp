@@ -7,7 +7,8 @@
 
 Sorry! We do not service in this page right now.
 
-검은 마천루. 
+black skyscraper.
+
 
 </body>
 </html>
