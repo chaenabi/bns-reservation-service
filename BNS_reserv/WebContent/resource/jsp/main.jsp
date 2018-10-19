@@ -12,41 +12,56 @@
 <script src="${pageContext.request.contextPath}/resource/js/jquery.js"></script>
 <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 <script src="${pageContext.request.contextPath}/resource/js/kakao.js"></script>
+
+
+
 </head>
 
 <body>
 
-	<video autoplay loop id="myVideo">
-		<source src="${pageContext.request.contextPath}/resource/assets/video/vi2.mp4" type="video/mp4">
+	<video autoplay loop id="intro_video">
+		<source
+			src="${pageContext.request.contextPath}/resource/assets/video/vi2.mp4"
+			type="video/mp4">
 	</video>
 
 
-
-	<div class="content">
+	<div class="container">
 		<h1>Blade and Soul</h1>
 		<p>Welcome to BNS BUS reservation guide</p>
-		<br> <img
-			src="//mud-kage.kakao.com/14/dn/btqbjxsO6vP/KPiGpdnsubSq3a0PHEGUK1/o.jpg"
-			width="300" id="upup" /> <a id="kakao-login-btn"> </a> <a
-			href="http://developers.kakao.com/logout"> </a>
-		<div id="kakao-logged-group"></div>
-		<div id="kakao-profile"></div>
+		<br>
+		
+		<div class="kakao">
+		<a id="kakao-login-btn"></a>  <a
+			href="http://developers.kakao.com/logout"></a> 
+		<script>
+			Kakao.init('70009e108e4f5d8b1b0fa8759b63dc8f');
+			Kakao.Auth.createLoginButton({
+				container : '#kakao-login-btn',
+				success : function(authObj) {
+					alert("로그인 성공!");
+				},
+				fail : function(err) {
+					alert("로그인 실패!");
+				}
+			});
+		</script>
+	
+		
+	</div> <br>
 		<br> <input type="button" class="btn btn-danger" id="onlydev"
 			name="onlydev" value="개발자전용: 무시하고 다음 페이지로 이동"
-			onClick="location.href='./menu.jsp';">
-		
-		<br>
-		<button id="myBtn" onclick="myFunction()">Pause</button>
-		
+			onClick="location.href='./menu.jsp';"> <br> <br>
+		<button id="Btn_video" onclick="myFunction()">Pause</button>
+
 	</div>
 
 
 	<script>
-		
-		var video = document.getElementById("myVideo");
-		var btn = document.getElementById("myBtn");
+		var video = document.getElementById("intro_video");
+		var btn = document.getElementById("Btn_video");
 		btn.innerHTML = "Play";
-		
+
 		function myFunction() {
 			if (video.paused) {
 				video.play();
@@ -58,5 +73,8 @@
 		}
 	</script>
 
+
 </body>
+
+
 </html>
