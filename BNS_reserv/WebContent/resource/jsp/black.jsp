@@ -29,23 +29,30 @@
 		<h1>Blade and Soul</h1>
 		<p>Welcome to BNS BUS reservation guide</p>
 		<br>
-		<button id="showLeft" style="color: red">Show/Hide Left Slide Menu</button>
+		<div id="left_index" style="display: none;">
+		<button id="showLeft">Show/Hide Left Slide Menu</button>
+		</div>
 	</div>
 
 
 
 	<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left"
 		id="cbp-spmenu-s1">
-		<h3>Menu</h3>
-		<a href="#">Celery seakale</a> <a href="#">Dulse daikon</a> <a
-			href="#">Zucchini garlic</a> <a href="#">Catsear azuki bean</a> <a
-			href="#">Dandelion bunya</a> <a href="#">Rutabaga</a>
+		<!-- <h3>Server</h3> -->
+		<a>경국지색</a>
+		<a>절세미인</a>
+		<a>명불허전</a>
+		<a>일확천금</a>
+		<a>신검합일</a>
+		<a>이심전심</a>
+		<a>금강불괴</a>
+		<a>화룡점정</a>
 	</nav>
 
 
 	<script src="${pageContext.request.contextPath}/resource/js/classie.js"></script>
 	<script src="${pageContext.request.contextPath}/resource/js/black.js"></script>
-
+	
 
 </body>
 </html>

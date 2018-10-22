@@ -1,17 +1,17 @@
 /* General styles for all menus */
 .cbp-spmenu {
-	background: #47a3da;
-	position: fixed;
+	background: rgba(0, 0, 0, 0.2);
+	position: absolute;
 }
 
-.cbp-spmenu h3 {
+/* .cbp-spmenu h3 {
 	color: #afdefa;
-	font-size: 1.9em;
+	font-size: 1.1em;
 	padding: 20px;
 	margin: 0;
 	font-weight: 300;
 	background: #0d77b6;
-}
+} */
 
 .cbp-spmenu a {
 	display: block;
@@ -21,25 +21,27 @@
 }
 
 .cbp-spmenu a:hover {
-	background: #258ecd;
+	background: rgba(0, 0, 0, 0.3);
+	color: #fff;
+	text-decoration:none;
 }
 
 .cbp-spmenu a:active {
-	background: #afdefa;
-	color: #47a3da;
+	background: rgba(0, 0, 0, 0.3);
+	color: rgba(0, 0, 0, 0.2);
 }
 
 /* Orientation-dependent styles for the content of the menu */
 
 .cbp-spmenu-vertical {
-	width: 240px;
+	width: 90px;
 	height: 100%;
 	top: 0;
 	z-index: 1000;
 }
 
 .cbp-spmenu-vertical a {
-	border-bottom: 1px solid #258ecd;
+	
 	padding: 1em;
 }
 
@@ -120,9 +122,9 @@
 
 .cbp-spmenu,
 .cbp-spmenu-push {
-	-webkit-transition: all 0.3s ease;
-	-moz-transition: all 0.3s ease;
-	transition: all 0.3s ease;
+	-webkit-transition: all 0.6s ease;
+	-moz-transition: all 0.6s ease;
+	transition: all 0.6s ease;
 }
 
 /* Example media queries */

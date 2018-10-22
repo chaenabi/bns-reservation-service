@@ -1,5 +1,10 @@
 var menuLeft = document.getElementById('cbp-spmenu-s1'), showLeft = document
 		.getElementById("showLeft");
+
+window.onload = function() {
+	showLeft.onclick();
+}
+
 showLeft.onclick = function() {
 	classie.toggle(this, 'active');
 	classie.toggle(menuLeft, 'cbp-spmenu-open');
@@ -10,3 +15,5 @@ function disableOther(button) {
 		classie.toggle(showLeft, 'disabled');
 	}
 }
+
+
