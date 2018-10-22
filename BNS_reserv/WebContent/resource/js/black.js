@@ -1,13 +1,12 @@
-var LeftIndex = document.getElementsByClassName("LeftIndex");
-		var startTime = new Date().getTime();
-		var makeItBigger = function() {
-			var currTime = new Date().getTime();
-			var newWidth = (((currTime - startTime) / 1000) * 40);
-			LeftIndex.style.width = newWidth + "px";
-
-			if (newWidth < 100) {
-				window.requestAnimationFrame(makeItBigger);
-			}
-
-		};
-		
+var menuLeft = document.getElementById('cbp-spmenu-s1'), showLeft = document
+		.getElementById("showLeft");
+showLeft.onclick = function() {
+	classie.toggle(this, 'active');
+	classie.toggle(menuLeft, 'cbp-spmenu-open');
+	disableOther('showLeft');
+};
+function disableOther(button) {
+	if (button !== 'showLeft') {
+		classie.toggle(showLeft, 'disabled');
+	}
+}
