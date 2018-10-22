@@ -9,7 +9,8 @@
 	href="${pageContext.request.contextPath}/resource/css/black.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/resource/css/bootstrap.min.css" />
-<script src="${pageContext.request.contextPath}/resource/js/jquery.js"></script>
+<script src="${pageContext.request.contextPath}/resource/js/jquery/jquery.js"></script>
+<script src="${pageContext.request.contextPath}/resource/js/black.js"></script>
 
 </head>
 <body>
@@ -23,33 +24,22 @@
 		<h1>Blade and Soul</h1>
 		<p>Welcome to BNS BUS reservation guide</p>
 		<br>
+
+	</div>
+
+	<div class="LeftIndex" id="leftIndex">
 		
-			
+			<div class="LeftIndex" id="leftlist_1st"></div>
+			<br> <br>
+			<div class="LeftIndex" id="leftlist_2nd"></div>
+
+		
 	</div>
 
-<div style="position: relative" class="left_index" id="left_index">
-			
-		<script>
-			var left_index = document.getElementById("left_index");
-			
-			left_index.style.width = "0px";
-			left_index.style.height = "900px";
-			left_index.style.background = "rgba(0, 0, 0, 0.5)";
-			var startTime = new Date().getTime();
-			var makeItBigger = function() {
-				var currTime = new Date().getTime();
-				var newWidth = (((currTime - startTime) / 1000) * 40);
-				left_index.style.width = newWidth + "px";
 
-				if (newWidth < 100) {
-					window.requestAnimationFrame(makeItBigger);
-				}
 
-			};
-			makeItBigger();
-			
-		</script>
-	</div>
+	
+	
 
 
 </body>

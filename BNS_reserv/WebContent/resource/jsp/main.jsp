@@ -9,7 +9,7 @@
 	href="${pageContext.request.contextPath}/resource/css/main.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/resource/css/bootstrap.min.css" />
-<script src="${pageContext.request.contextPath}/resource/js/jquery.js"></script>
+<script src="${pageContext.request.contextPath}/resource/js/jquery/jquery.js"></script>
 <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 <script src="${pageContext.request.contextPath}/resource/js/kakao.js"></script>
 

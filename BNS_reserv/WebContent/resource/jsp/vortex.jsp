@@ -10,7 +10,7 @@
 
 
 <!-- jQuery Core -->
-<script src="${pageContext.request.contextPath}/resource/bootstrap/js/jquery-3.3.0.min.js"></script>
+<script src="${pageContext.request.contextPath}/resource/bootstrap/js/jquery/jquery-3.3.0.min.js"></script>
 
 <!-- font icons -->
 
