@@ -19,9 +19,9 @@
 
 <body>
 
-	<video autoplay loop id="intro_video">
+	<video autoplay loop id="intro_video" muted>
 		<source
-			src="${pageContext.request.contextPath}/resource/assets/video/vi2.mp4"
+			src="${pageContext.request.contextPath}/resource/assets/video/vi2.mp4" 
 			type="video/mp4">
 	</video>
 
@@ -52,26 +52,12 @@
 		<br> <input type="button" class="btn btn-danger" id="onlydev"
 			name="onlydev" value="개발자전용: 무시하고 다음 페이지로 이동"
 			onClick="location.href='./menu.jsp';"> <br> <br>
-		<button id="Btn_video" onclick="myFunction()">Pause</button>
-
+		
+	
 	</div>
 
 
-	<script>
-		var video = document.getElementById("intro_video");
-		var btn = document.getElementById("Btn_video");
-		btn.innerHTML = "Play";
-
-		function myFunction() {
-			if (video.paused) {
-				video.play();
-				btn.innerHTML = "Pause";
-			} else {
-				video.pause();
-				btn.innerHTML = "Play";
-			}
-		}
-	</script>
+	
 
 
 </body>

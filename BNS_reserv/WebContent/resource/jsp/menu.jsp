@@ -14,7 +14,7 @@
 </head>
 <body>
 	
-	<video autoplay loop id="background_video">
+	<video autoplay loop id="background_video" muted>
 		<source
 			src="${pageContext.request.contextPath}/resource/assets/video/vi3.mp4"
 			type="video/mp4">
