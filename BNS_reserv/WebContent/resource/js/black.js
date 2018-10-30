@@ -1,4 +1,4 @@
-var menuLeft = document.getElementById('cbp-spmenu-s1'), showLeft = document
+var menuLeft = document.getElementById('sidenav'), showLeft = document
 		.getElementById("showLeft");
 
 window.onload = function() {
