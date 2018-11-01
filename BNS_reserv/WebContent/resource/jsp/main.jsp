@@ -64,15 +64,7 @@
 						alert("로그인 실패!");
 					}
 				});
-				
-				function createKakaotalkLogout(){
-					$("#kakao-login-btn").remove();
-					var logoutBtn = $("<a/>",{"class":"kakao-logout-btn","text":"로그아웃"});
-					logoutBtn.click(function(){
-						Kakao.Auth.logout();
-						
-					
-					});
+			
 				}
 				
 				
