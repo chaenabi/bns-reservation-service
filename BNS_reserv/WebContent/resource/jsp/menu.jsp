@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
- <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>   
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,11 +9,12 @@
 	href="${pageContext.request.contextPath}/resource/css/menu.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/resource/css/bootstrap.min.css" />
-<script src="${pageContext.request.contextPath}/resource/js/jquery/jquery.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resource/js/jquery/jquery.js"></script>
 <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
 <body>
-	
+
 	<video autoplay loop id="background_video" muted>
 		<source
 			src="${pageContext.request.contextPath}/resource/assets/video/vi3.mp4"
@@ -22,25 +23,19 @@
 	<div class="container">
 		<h1>Blade and Soul</h1>
 		<p>Welcome to BNS BUS reservation guide</p>
-		<br>
-		
-		<br> <input type="button" id="goblack"
-			name="goblack" value="검은 마천루"
-			onClick="location.href='./black.jsp';"> 
-		
-		<input type="button" id="goblack"
-			name="goblack" value="소용돌이 사원"
-			onClick="location.href='./vortex.jsp';">
-			
-		<input type="button" id="goblack"
-			name="goblack" value="태천왕릉"
-			onClick="location.href='./twilight.jsp';"> 			
-	
-			<!-- 카카오톡 로그아웃 버튼 만들어 줄것 -->
-		<a class="kakao-logout-btn" >로그아웃</a>
-			
-				<!--  또는-->
-				<script>
+		<br> <br> <input type="button" id="goblack" name="goblack"
+			value="검은 마천루" onClick="location.href='./black.jsp';"> <input
+			type="button" id="goblack" name="goblack" value="소용돌이 사원"
+			onClick="location.href='./vortex.jsp';"> <input type="button"
+			id="goblack" name="goblack" value="태천왕릉"
+			onClick="location.href='./twilight.jsp';">
+
+		<!-- 카카오톡 로그아웃 버튼 만들어 줄것 -->
+		<img
+			src="${pageContext.request.contextPath}/resource/assets/image/Klogout.png"
+			class="kakao-logout-btn" />
+		<!--  또는-->
+		<script>
 				function createKakaotalkLogout(){
 					var logoutBtn = $("<a/>",{"class":"kakao-logout-btn","text":"로그아웃"});
 					logoutBtn.click(function(){
@@ -48,13 +43,14 @@
 						
 					
 					});
+				}
 					</script>
-		
-	
+
+
 	</div>
-	
-		
-		<!--보안상의 이유로 더이상 지원되지 않음.
+
+
+	<!--보안상의 이유로 더이상 지원되지 않음.
 				따라서 main.jsp에서 작성한 oath는 json 형태로 반환되므로 이 것을 파싱하여 사용할것.
 		<script>
 			$(document).ready(function(){
@@ -110,6 +106,6 @@
 
 
 
- 	
+
 </body>
 </html>
