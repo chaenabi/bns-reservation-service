@@ -21,32 +21,36 @@
 			type="video/mp4">
 	</video>
 	<div class="container">
-		<h1>Blade and Soul</h1>
-		<p>Welcome to BNS BUS reservation guide</p>
-		<br> <br> <input type="button" id="goblack" name="goblack"
-			value="검은 마천루" onClick="location.href='./black.jsp';"> <input
-			type="button" id="goblack" name="goblack" value="소용돌이 사원"
-			onClick="location.href='./vortex.jsp';"> <input type="button"
-			id="goblack" name="goblack" value="태천왕릉"
-			onClick="location.href='./twilight.jsp';">
-
+		<div class="content">
+			<h1>Blade and Soul</h1>
+			<p>Welcome to BNS BUS reservation guide</p>
+			<br> <br> <input type="button" id="goblack" value="검은 마천루"
+				onClick="location.href='./black.jsp';"> <input type="button"
+				id="govortex" value="소용돌이 사원"
+				onClick="location.href='./vortex.jsp';"> <input
+				type="button" id="gotwilight" value="태천왕릉"
+				onClick="location.href='./twilight.jsp';">
+		</div>
 		<!-- 카카오톡 로그아웃 버튼 만들어 줄것 -->
-		<img
-			src="${pageContext.request.contextPath}/resource/assets/image/Klogout.png"
-			class="kakao-logout-btn" />
+
 		<!--  또는-->
 		<script>
-				function createKakaotalkLogout(){
-					var logoutBtn = $("<a/>",{"class":"kakao-logout-btn","text":"로그아웃"});
-					logoutBtn.click(function(){
-						Kakao.Auth.logout();
-						
-					
-					});
-				}
-					</script>
+			function createKakaotalkLogout() {
+				var logoutBtn = $("<a/>", {
+					"class" : "kakao-logout-btn",
+					"text" : "로그아웃"
+				});
+				logoutBtn.click(function() {
+					Kakao.Auth.logout();
 
+				});
+			}
+		</script>
 
+		<img
+			src="${pageContext.request.contextPath}/resource/assets/image/Klogout.png"
+			class="kakao-logout-btn" style="width: 100px; height: 100px" />
+			<a type="submit" href="#"></a>
 	</div>
 
 
