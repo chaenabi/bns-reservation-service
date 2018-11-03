@@ -4,273 +4,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resource/css/black.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resource/css/bootstrap.min.css" />
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script
-	src="${pageContext.request.contextPath}/resource/js/jquery/jquery.js"></script>
-<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-<style>
-
-/* 서버 목록 div 제어문 */
-.sidenav {
-	height: 100%;
-	width: 105px;
-	position: fixed;
-	z-index: 0;
-	top: 0;
-	left: 0;
-	background-color: rgba(0, 0, 0, 0.5);
-	overflow: hidden;
-	transition: 0.5s;
-	padding-top: 10px;
-}
-/* 서버 목록 ul 제어문  */
-.sidenav .sidemenu {
-	margin: 0px;
-	padding: 0px;
-}
-/* 서버목록 기본세팅(div가 보이지 않음)  */
-.sidenav .inner {
-	display: none;
-}
-
-/* 서버 목록 li 제어문  */
-.sidenav .d1 {
-	padding: 8px;
-	text-decoration: none;
-	font-size: 20px;
-	color: white;
-	display: block;
-	transition: 0.3s;
-}
-
-/* 두번째 목록의 시작  */
-/* 서버 목록에 마우스 오버시 생성되는 첫번째 div 제어문  */
-.sidenav .d1:hover .inner, .sidenav .d1:active .inner {
-	background: rgba(0, 0, 0, 0.7);
-	display: inline-block;
-	height: 100%;
-	width: 180px;
-	position: fixed;
-	z-index: 0;
-	top: 0;
-	left: 110px;
-	overflow: hidden;
-	transition: 0.5s;
-	color: white;
-	padding-left: 10px;
-	padding-top: 10px;
-}
-
-.sidenav .d1:hover {
-	background: rgba(0, 0, 0, 0.7);
-	color: #1EA4FF;
-}
-
-.sidenav .d1:active {
-	background: rgba(0, 0, 0, 0.7);
-	olor: #1EA4FF;
-}
-
-/*  두번째 목록의 div 추가세팅 */
-.sidenav .inner .core {
-	margin: 0px;
-	padding: 0px;
-	display: block;
-	padding-top: 14px;
-}
-
-strong {
-	color: red;
-}
-
-/* 두번째 목록 ul 위치, 스타일 제어  */
-.sidenav .inner .list, .sidenav .inner .list {
-	padding-left: 0px;
-	padding-top: 20px;
-	text-decoration: none;
-	list-style: none;
-	color: white;
-	transition: 0.3s;
-	overflow: hidden;
-}
-
-/* 두번째 목록 li 위치, 스타일 제어 */
-.core li a {
-	padding: 8px;
-	text-decoration: none;
-	font-size: 20px;
-	color: white;
-	display: block;
-	transition: 0.3s;
-}
-
-/* 두번째 목록 li의 a에 마우스오버시 작동  */
-.core li a:hover {
-	color: #1EA4FF;
-}
-
-.sidenav>.teamlists>.teamlist {
-	padding-left: 0px;
-	padding-top: 5px;
-	text-decoration: none;
-	list-style: none;
-	color: white;
-	transition: 0.3s;
-	overflow: hidden;
-}
-
-.sidenav>.teamlists>.teamlist a {
-	padding: 8px;
-	text-decoration: none;
-	font-size: 20px;
-	color: white;
-	display: block;
-	transition: 0.3s;
-}
-
-.sidenav>.teamlists>.teamlist a:hover {
-	color: #1EA4FF;
-}
-
-/* 세번째 목록 기본세팅 (div 보이지 않음) */
-.sidenav .teamlists {
-	display: inline-block;
-	/* 호버시 작동해야할 스타일이지만 임시로 기본 세팅해놓았음 */
-	background: rgba(0, 0, 0, 0.7);
-	height: 100%;
-	width: 150px;
-	position: fixed;
-	z-index: 0;
-	top: 0;
-	left: 290px;
-	overflow: hidden;
-	transition: 0.5s;
-	color: white;
-	padding-left: 10px;
-	padding-top: 10px;
-}
-/* 세번째 하는중 */
-/* .core li a:hover .teamlist {
-	background: rgba(0, 0, 0, 0.7);
-	display: block;
-	height: 100%;
-	width: 150px;
-	position: fixed;
-	z-index: 0;
-	top: 0;
-	left: 290px;
-	overflow: hidden;
-	transition: 0.5s;
-	color: white;
-	padding-left: 10px;
-	padding-top: 10px;
-}
- */
-/* 주문양식 기본셋팅(div가 보이지 않음)  */
-.order {
-	display: inline-block;
-}
-
-/*  판매(주문) 목록의 div 추가세팅 하는중*/
-.order .menu {
-	margin: 0px;
-	padding: 0px;
-	display: block;
-	padding-top: 14px;
-	/* 호버시 작동해야할 스타일이지만 임시로 기본 세팅해놓았음 */
-	height: 100%;
-	width: 750px;
-	position: fixed;
-	z-index: 0;
-	top: 0;
-	left: 440px;
-	background-color: rgba(0, 0, 0, 1.0);
-	overflow: hidden;
-	transition: 0.5s;
-	padding-top: 10px;
-}
-/* 주문양식 제어문 하는중 */
-/* .core li a:hover .order,  .core li a:active .order {
-	display: block;
-	height: 100%;
-	width: 500px;
-	position: fixed;
-	z-index: 0;
-	top: 0;
-	left: 440px;
-	background-color: rgba(0, 0, 0, 1.0);
-	overflow: hidden;
-	transition: 0.5s;
-	padding-top: 10px;
-} */
-.order .menu .menupan p {
-	text-align: left;
-	font-size: 20px;
-	letter-spacing: 3px;
-	color: #fff;
-}
-
-.teamname {
-	display: inline-block;
-	text-align: left;
-}
-
-.teamname a {
-	margin-left: 10px;
-	margin-top: 10px;
-	text-decoration: none;
-	font-size: 25px;
-}
-
-.teamleader {
-	display: inline-block;
-	text-align: right;
-}
-
-.teamleader a {
-	font-size: 2.2rem;
-	text-decoration: none;
-	margin-right: 20px;
-}
-
-.menupan in_menu {
-
-}
-
-.menupan .items {
-	display: block;
-	width: auto;
-}
-
-.item {
-	display: inline-block;
-	width: 150px;
-	height: 50px;
-	text-align: center;
-}
-
-.item a {
-	font-size: 1.8rem;
-	color: #fff;
-	font-weight: 200;
-	text-decoration: none;
-}
-
-.item>.item_c {
-	width: 50px;
-	height: 25px;
-	display: inline-block;
-}
-</style>
+<link rel="import"
+	href="${pageContext.request.contextPath}/resource/jsp/common/header.jsp">
 </head>
-
-
 <body>
 	<!--  마천루 비디오 제어 -->
 	<video autoplay loop id="background_video" muted>
@@ -510,8 +246,8 @@ strong {
 								</div>
 							</div>
 							<div class="item">
-							<div class="itemname">
-								<a>천독귀걸이(화염)</a>
+								<div class="itemname">
+									<a>천독귀걸이(화염)</a>
 								</div>
 								<div class="item_c">
 									<input type="checkbox" value="천독귀걸이(화염)" />
@@ -527,8 +263,8 @@ strong {
 							</div>
 
 							<div class="item">
-							<div class="itemname">
-								<a> 천독반지(암흑) </a>
+								<div class="itemname">
+									<a> 천독반지(암흑) </a>
 								</div>
 								<div class="item_c">
 									<input type="checkbox" value="천독반지(암흑)" />
@@ -542,24 +278,24 @@ strong {
 						<div class="media-body media-middle">
 							<div class="items">
 								<div class="item">
-								<div class="itemname">
-									<a>천독귀걸이(번개)</a>
+									<div class="itemname">
+										<a>천독귀걸이(번개)</a>
 									</div>
 									<div class="item_c">
 										<input type="checkbox" value="천독귀걸이(번개)" />
 									</div>
 								</div>
 								<div class="item">
-								<div class="itemname">
-									<a>천독귀걸이(화염)</a>
+									<div class="itemname">
+										<a>천독귀걸이(화염)</a>
 									</div>
 									<div class="item_c">
 										<input type="checkbox" value="천독귀걸이(화염)" />
 									</div>
 								</div>
 								<div class="item">
-								<div class="itemname">
-									<a> 천독반지(바람) </a>
+									<div class="itemname">
+										<a> 천독반지(바람) </a>
 									</div>
 									<div class="item_c">
 										<input type="checkbox" value="천독반지(바람)" />
@@ -567,8 +303,8 @@ strong {
 								</div>
 
 								<div class="item">
-								<div class="itemname">
-									<a> 천독반지(암흑) </a>
+									<div class="itemname">
+										<a> 천독반지(암흑) </a>
 									</div>
 									<div class="item_c">
 										<input type="checkbox" value="천독반지(암흑)" />
@@ -586,24 +322,24 @@ strong {
 						<div class="media-body media-middle">
 							<div class="items">
 								<div class="item">
-								<div class="itemname">
-									<a>천독귀걸이(번개)</a>
+									<div class="itemname">
+										<a>천독귀걸이(번개)</a>
 									</div>
 									<div class="item_c">
 										<input type="checkbox" value="천독귀걸이(번개)" />
 									</div>
 								</div>
 								<div class="item">
-								<div class="itemname">
-									<a>천독귀걸이(화염)</a>
+									<div class="itemname">
+										<a>천독귀걸이(화염)</a>
 									</div>
 									<div class="item_c">
 										<input type="checkbox" value="천독귀걸이(화염)" />
 									</div>
 								</div>
 								<div class="item">
-								<div class="itemname">
-									<a> 천독반지(바람) </a>
+									<div class="itemname">
+										<a> 천독반지(바람) </a>
 									</div>
 									<div class="item_c">
 										<input type="checkbox" value="천독반지(바람)" />
@@ -611,8 +347,8 @@ strong {
 								</div>
 
 								<div class="item">
-								<div class="itemname">
-									<a> 천독반지(암흑) </a>
+									<div class="itemname">
+										<a> 천독반지(암흑) </a>
 									</div>
 									<div class="item_c">
 										<input type="checkbox" value="천독반지(암흑)" />
@@ -631,24 +367,24 @@ strong {
 						<div class="media-body media-middle">
 							<div class="items">
 								<div class="item">
-								<div class="itemname">
-									<a>천독귀걸이(번개)</a>
+									<div class="itemname">
+										<a>천독귀걸이(번개)</a>
 									</div>
 									<div class="item_c">
 										<input type="checkbox" value="천독귀걸이(번개)" />
 									</div>
 								</div>
 								<div class="item">
-								<div class="itemname">
-									<a>천독귀걸이(화염)</a>
+									<div class="itemname">
+										<a>천독귀걸이(화염)</a>
 									</div>
 									<div class="item_c">
 										<input type="checkbox" value="천독귀걸이(화염)" />
 									</div>
 								</div>
 								<div class="item">
-								<div class="itemname">
-									<a> 천독반지(바람) </a>
+									<div class="itemname">
+										<a> 천독반지(바람) </a>
 									</div>
 									<div class="item_c">
 										<input type="checkbox" value="천독반지(바람)" />
@@ -656,8 +392,8 @@ strong {
 								</div>
 
 								<div class="item">
-								<div class="itemname">
-									<a> 천독반지(암흑) </a>
+									<div class="itemname">
+										<a> 천독반지(암흑) </a>
 									</div>
 									<div class="item_c">
 										<input type="checkbox" value="천독반지(암흑)" />
@@ -692,43 +428,6 @@ strong {
 
 	</form>
 
-
-
-
-
-
-
-
-
 </body>
-
-<script>
-	/* 사이드바 열림 애니메이션 (클릭이벤트) */
-	var nav = document.getElementById('nav');
-	window.onload = function() {
-		nav.onclick();
-
-	}
-	function openNav() {
-		document.getElementById("sidenav").style.width = "110px";
-	}
-	/* end of 사이드바 열림 애니메이션 (클릭이벤트)  */
-
-	/*  */
-	/* $(".core").children("li").onmouseover = function(){
-		if($(".sidenav").children(".teamlist").css("display") == "none") {
-		$(".sidenav").children(".teamlist").show();	
-		$(".sidenav").children(".teamlist").css("height","100%");	
-		$(".sidenav").children(".teamlist").css("width","500px");	
-		$(".teamlist").css("position","fixed");	
-		$(".teamlist").css("z-index","0");	
-		$(".teamlist").css("top","0");	
-		$(".teamlist").css("left","440px");	
-		$(".teamlist").css("background-color","rgba(0,0,0,0.5)");	
-		$(".teamlist").css("overflow","hidden");	
-		$(".teamlist").css("transition","0.5s");	
-		$(".teamlist").css("padding-top","10px");	
-		}
-	} */
-</script>
+<script src="${pageContext.request.contextPath}/resource/js/black.js"></script>
 </html>

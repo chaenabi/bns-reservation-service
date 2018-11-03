@@ -1,19 +1,11 @@
-var menuLeft = document.getElementById('sidenav'), showLeft = document
-		.getElementById("showLeft");
-
+/* 사이드바 열림 애니메이션 (클릭이벤트) */
+var nav = document.getElementById('nav');
 window.onload = function() {
-	showLeft.onclick();
-}
+	nav.onclick();
 
-showLeft.onclick = function() {
-	classie.toggle(this, 'active');
-	classie.toggle(menuLeft, 'cbp-spmenu-open');
-	disableOther('showLeft');
-};
-function disableOther(button) {
-	if (button !== 'showLeft') {
-		classie.toggle(showLeft, 'disabled');
-	}
+}
+function openNav() {
+	document.getElementById("sidenav").style.width = "110px";
 }
 
 
