@@ -224,25 +224,39 @@
 
 				<section class="menupan">
 
-
-					<div class="teamname">
-						<a class="text-left text-primary">경국지색 : 개세천루</a>
+				<div class="team_info">
+					<div class="team_sn">
+						<a class="text-right text-default" style="text-decoration: none !important;"> 경국지색 : </a>
+						<a class="team_name">룩덕호</a>
 					</div>
-					<div class="teamleader">
-						<a class="text-right text-default">팀장명 : 개세</a>
+					<div class="team_tn">
+						<a class="text-right text-default" style="text-decoration: none !important;"> 팀장명 : </a>
+						<a class="team_name">기공사초보</a>
 					</div>
-					<h2 class="text-center text-success">판매 목록</h2>
+				</div>
+					<h2 class="text-center text-success" style="margin: 0;">판매 목록</h2>
 					<hr>
 					<h3 class="text-center text-danger" style="font-weight: bold">1네임드
 						: 천독룡</h3>
-					<div class="in_menu" style="display: inline-block">
+					<div class="in_menu">
 						<div class="items">
 							<div class="item">
 								<div class="itemname">
 									<a>천독귀걸이(번개)</a>
 								</div>
 								<div class="item_c">
+									<a> 어트 : </a>
+									<a> 200,000금 </a>
+									<span>
 									<input type="checkbox" value="천독귀걸이(번개)" />
+									</span>
+								</div>
+								<div class=item_c>
+								<a> 노어트 : </a>
+								<a> 300,000금 </a>
+									<span>
+									<input type="checkbox" value="천독귀걸이(번개)" />
+									</span>
 								</div>
 							</div>
 							<div class="item">
@@ -250,15 +264,37 @@
 									<a>천독귀걸이(화염)</a>
 								</div>
 								<div class="item_c">
+									<a> 어트 : </a>
+									<a> 200,000금 </a>
+									<span>
 									<input type="checkbox" value="천독귀걸이(화염)" />
+									</span>
+								</div>
+								<div class="item_c">
+									<a> 노어트 : </a>
+									<a> 300,000금 </a>
+									<span>
+									<input type="checkbox" value="천독귀걸이(화염)" />
+									</span>
 								</div>
 							</div>
 							<div class="item">
 								<div class="itemname">
-									<a> 천 </a>
+									<a> 천독반지(바람)</a>
 								</div>
 								<div class="item_c">
+									<a> 어트 : </a>
+									<a> 200,000금 </a>
+									<span>
 									<input type="checkbox" value="천독반지(바람)" />
+									</span>
+								</div>
+								<div class="item_c">
+									<a> 노어트 : </a>
+									<a> 300,000금 </a>
+									<span>
+									<input type="checkbox" value="천독반지(바람)" />
+									</span>
 								</div>
 							</div>
 
@@ -267,147 +303,284 @@
 									<a> 천독반지(암흑) </a>
 								</div>
 								<div class="item_c">
+									<a> 어트 : </a>
+									<a> 200,000금 </a>
+									<span>
 									<input type="checkbox" value="천독반지(암흑)" />
+									</span>
+								</div>
+								<div class="item_c">
+									<a> 노어트 : </a>
+									<a> 300,000금 </a>
+									<span>
+									<input type="checkbox" value="천독반지(암흑)" />
+									</span>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="media wow fadeIn">
+					
 						<h3 class="text-center text-danger" style="font-weight: bold">2네임드
 							: 사안장군</h3>
-						<div class="media-body media-middle">
-							<div class="items">
-								<div class="item">
-									<div class="itemname">
-										<a>천독귀걸이(번개)</a>
-									</div>
-									<div class="item_c">
-										<input type="checkbox" value="천독귀걸이(번개)" />
-									</div>
+						<div class="in_menu">
+						<div class="items">
+							<div class="item">
+								<div class="itemname">
+									<a>천독귀걸이(번개)</a>
 								</div>
-								<div class="item">
-									<div class="itemname">
-										<a>천독귀걸이(화염)</a>
-									</div>
-									<div class="item_c">
-										<input type="checkbox" value="천독귀걸이(화염)" />
-									</div>
+								<div class="item_c">
+									<a> 어트 : </a>
+									<a> 200,000금 </a>
+									<span>
+									<input type="checkbox" value="천독귀걸이(번개)" />
+									</span>
 								</div>
-								<div class="item">
-									<div class="itemname">
-										<a> 천독반지(바람) </a>
-									</div>
-									<div class="item_c">
-										<input type="checkbox" value="천독반지(바람)" />
-									</div>
+								<div class=item_c>
+								<a> 노어트 : </a>
+								<a> 300,000금 </a>
+									<span>
+									<input type="checkbox" value="천독귀걸이(번개)" />
+									</span>
 								</div>
+							</div>
+							<div class="item">
+								<div class="itemname">
+									<a>천독귀걸이(화염)</a>
+								</div>
+								<div class="item_c">
+									<a> 어트 : </a>
+									<a> 200,000금 </a>
+									<span>
+									<input type="checkbox" value="천독귀걸이(화염)" />
+									</span>
+								</div>
+								<div class="item_c">
+									<a> 노어트 : </a>
+									<a> 300,000금 </a>
+									<span>
+									<input type="checkbox" value="천독귀걸이(화염)" />
+									</span>
+								</div>
+							</div>
+							<div class="item">
+								<div class="itemname">
+									<a> 천독반지(바람)</a>
+								</div>
+								<div class="item_c">
+									<a> 어트 : </a>
+									<a> 200,000금 </a>
+									<span>
+									<input type="checkbox" value="천독반지(바람)" />
+									</span>
+								</div>
+								<div class="item_c">
+									<a> 노어트 : </a>
+									<a> 300,000금 </a>
+									<span>
+									<input type="checkbox" value="천독반지(바람)" />
+									</span>
+								</div>
+							</div>
 
-								<div class="item">
-									<div class="itemname">
-										<a> 천독반지(암흑) </a>
-									</div>
-									<div class="item_c">
-										<input type="checkbox" value="천독반지(암흑)" />
-									</div>
+							<div class="item">
+								<div class="itemname">
+									<a> 천독반지(암흑) </a>
+								</div>
+								<div class="item_c">
+									<a> 어트 : </a>
+									<a> 200,000금 </a>
+									<span>
+									<input type="checkbox" value="천독반지(암흑)" />
+									</span>
+								</div>
+								<div class="item_c">
+									<a> 노어트 : </a>
+									<a> 300,000금 </a>
+									<span>
+									<input type="checkbox" value="천독반지(암흑)" />
+									</span>
 								</div>
 							</div>
 						</div>
-
 					</div>
 
 
-					<div class="media wow fadeInRight">
+			
 						<h3 class="text-center text-danger" style="font-weight: bold">3네임드
 							: 모순장군</h3>
-						<div class="media-body media-middle">
-							<div class="items">
-								<div class="item">
-									<div class="itemname">
-										<a>천독귀걸이(번개)</a>
-									</div>
-									<div class="item_c">
-										<input type="checkbox" value="천독귀걸이(번개)" />
-									</div>
+						<div class="in_menu">
+						<div class="items">
+							<div class="item">
+								<div class="itemname">
+									<a>천독귀걸이(번개)</a>
 								</div>
-								<div class="item">
-									<div class="itemname">
-										<a>천독귀걸이(화염)</a>
-									</div>
-									<div class="item_c">
-										<input type="checkbox" value="천독귀걸이(화염)" />
-									</div>
+								<div class="item_c">
+									<a> 어트 : </a>
+									<a> 200,000금 </a>
+									<span>
+									<input type="checkbox" value="천독귀걸이(번개)" />
+									</span>
 								</div>
-								<div class="item">
-									<div class="itemname">
-										<a> 천독반지(바람) </a>
-									</div>
-									<div class="item_c">
-										<input type="checkbox" value="천독반지(바람)" />
-									</div>
+								<div class=item_c>
+								<a> 노어트 : </a>
+								<a> 300,000금 </a>
+									<span>
+									<input type="checkbox" value="천독귀걸이(번개)" />
+									</span>
 								</div>
+							</div>
+							<div class="item">
+								<div class="itemname">
+									<a>천독귀걸이(화염)</a>
+								</div>
+								<div class="item_c">
+									<a> 어트 : </a>
+									<a> 200,000금 </a>
+									<span>
+									<input type="checkbox" value="천독귀걸이(화염)" />
+									</span>
+								</div>
+								<div class="item_c">
+									<a> 노어트 : </a>
+									<a> 300,000금 </a>
+									<span>
+									<input type="checkbox" value="천독귀걸이(화염)" />
+									</span>
+								</div>
+							</div>
+							<div class="item">
+								<div class="itemname">
+									<a> 천독반지(바람)</a>
+								</div>
+								<div class="item_c">
+									<a> 어트 : </a>
+									<a> 200,000금 </a>
+									
+									<span>
+									<input type="checkbox" value="천독반지(바람)" />
+									</span>
+								</div>
+								<div class="item_c">
+									<a> 노어트 : </a>
+									<a> 300,000금 </a>
+									<span>
+									<input type="checkbox" value="천독반지(바람)" />
+									</span>
+								</div>
+							</div>
 
-								<div class="item">
-									<div class="itemname">
-										<a> 천독반지(암흑) </a>
-									</div>
-									<div class="item_c">
-										<input type="checkbox" value="천독반지(암흑)" />
-									</div>
+							<div class="item">
+								<div class="itemname">
+									<a> 천독반지(암흑) </a>
+								</div>
+								<div class="item_c">
+									<a> 어트 : </a>
+									<a> 200,000금 </a>
+									<span>
+									<input type="checkbox" value="천독반지(암흑)" />
+									</span>
+								</div>
+								<div class="item_c">
+									<a> 노어트 : </a>
+									<a> 300,000금 </a>
+									<span>
+									<input type="checkbox" value="천독반지(암흑)" />
+									</span>
 								</div>
 							</div>
 						</div>
-
-
 					</div>
 
-					<div class="media wow fadeIn">
+					
 						<h3 class="text-center text-danger" style="font-weight: bold">4네임드
 							: 촉마왕</h3>
 
-						<div class="media-body media-middle">
-							<div class="items">
-								<div class="item">
-									<div class="itemname">
-										<a>천독귀걸이(번개)</a>
-									</div>
-									<div class="item_c">
-										<input type="checkbox" value="천독귀걸이(번개)" />
-									</div>
+						<div class="in_menu">
+						<div class="items">
+							<div class="item">
+								<div class="itemname">
+									<a>천독귀걸이(번개)</a>
 								</div>
-								<div class="item">
-									<div class="itemname">
-										<a>천독귀걸이(화염)</a>
-									</div>
-									<div class="item_c">
-										<input type="checkbox" value="천독귀걸이(화염)" />
-									</div>
+								<div class="item_c">
+									<a> 어트 : </a>
+									<a> 200,000금 </a>
+									<span>
+									<input type="checkbox" value="천독귀걸이(번개)" />
+									</span>
 								</div>
-								<div class="item">
-									<div class="itemname">
-										<a> 천독반지(바람) </a>
-									</div>
-									<div class="item_c">
-										<input type="checkbox" value="천독반지(바람)" />
-									</div>
+								<div class=item_c>
+								<a> 노어트 : </a>
+								<a> 300,000금 </a>
+								<span>
+									<input type="checkbox" value="천독귀걸이(번개)" />
+									</span>
 								</div>
+							</div>
+							<div class="item">
+								<div class="itemname">
+									<a>천독귀걸이(화염)</a>
+								</div>
+								<div class="item_c">
+									<a> 어트 : </a>
+									<a> 200,000금 </a>
+									<span>
+									<input type="checkbox" value="천독귀걸이(화염)" />
+									</span>
+								</div>
+								<div class="item_c">
+									<a> 노어트 : </a>
+									<a> 300,000금 </a>
+									<span>
+									<input type="checkbox" value="천독귀걸이(화염)" />
+									</span>
+								</div>
+							</div>
+							<div class="item">
+								<div class="itemname">
+									<a> 천독반지(바람)</a>
+								</div>
+								<div class="item_c">
+									<a> 어트 : </a>
+									<a> 200,000금 </a>
+									<span>
+									<input type="checkbox" value="천독반지(바람)" />
+									</span>
+								</div>
+								<div class="item_c">
+									<a> 노어트 : </a>
+									<a> 300,000금 </a>
+									<span>
+									<input type="checkbox" value="천독반지(바람)" />
+									</span>
+								</div>
+							</div>
 
-								<div class="item">
-									<div class="itemname">
-										<a> 천독반지(암흑) </a>
-									</div>
-									<div class="item_c">
-										<input type="checkbox" value="천독반지(암흑)" />
-									</div>
+							<div class="item">
+								<div class="itemname">
+									<a> 천독반지(암흑) </a>
+								</div>
+								<div class="item_c">
+									<a> 어트 : </a>
+									<a> 200,000금 </a>
+									<span>
+									<input type="checkbox" value="천독반지(암흑)" />
+									</span>
+								</div>
+								<div class="item_c">
+									<a> 노어트 : </a>
+									<a> 300,000금 </a>
+									<span>
+									<input type="checkbox" value="천독반지(암흑)" />
+									</span>
 								</div>
 							</div>
 						</div>
-
 					</div>
 
 					<div class="call-to-action text-center">
-						<h2 class="text-center text-primary">소용돌이 사원 버스</h2>
-
-						<a class="btn center btn-default"> 예약하기</a>
+						<h2 class="text-center text-primary" style="margin: 40px; margin-bottom:0;">검은 마천루 버스</h2>
+						<br>
+						<a class="btn center btn-default" type="submit">예약하기</a>
 					</div>
 					<hr>
 					<div class="row">

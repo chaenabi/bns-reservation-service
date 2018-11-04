@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
@@ -9,21 +9,21 @@ body {
 #background_video {
 	position: fixed;
 	right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
 }
 
 .container {
 	position: fixed;
-    background: rgba(0, 0, 0, 0.3);
-    color: #f1f1f1;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    text-align:center;
- }
+	background: rgba(0, 0, 0, 0.3);
+	color: #f1f1f1;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	text-align: center;
+}
 
 .container h1 {
 	text-align: center;
@@ -41,16 +41,83 @@ body {
 	color: #fff;
 }
 
-#goblack, #govortex, #gotwilight {
-	    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+#goblack, #govortex, #gotwilight, #gored {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+.history_reserv {
+	width: auto;
+	margin: 0; 
+	background : #fff ;
+	visibility: hidden;
+	border-radius: 30px;
+	display: none;
+}
+
+
+.history_reserv hr {
+	margin-top : 10px;
+	margin-bottom : 10px;
+}
+
+.history_summary {
+	display: inline-block;
+	
+}
+
+.history_summary {
+	margin-top: 20px;
+}
+
+.history_frame p {
+	color: black;
+}
+
+.history_sum {
+	width: auto;
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.history_sum {
+	text-align: left;
+}
+
+.history_items {
+	display:inline-block;
+}
+
+.summary_items {
+	width: auto;
+	display: inline-block;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+
+
+.ordered_history_item {
+	display: inline-block;	
+}
+.history_item, .item_price {
+	width: 200px;
+	display: inline-block;
+	
+}
+
+.history_item p {
+	text-align : right;
 }
 
