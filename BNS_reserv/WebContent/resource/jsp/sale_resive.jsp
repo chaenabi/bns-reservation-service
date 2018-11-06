@@ -26,7 +26,7 @@
 
 			<div class="mainform">
 
-				<h2>등록</h2>
+				<h2>수정</h2>
 				<hr>
 				<br>
 				<div class="team_register">
@@ -241,7 +241,8 @@
 					</div>
 					<br>
 					<br>
-					<br> <input type="submit" value="팀등록하기">
+					<br> <input type="submit" value="수정완료"> &emsp;
+					<input type="submit" value="팀삭제">
 				</div>
 
 			</div>
