@@ -63,6 +63,8 @@ body {
 	background : #fff ;
 	border-radius: 30px;
 	display: none;
+	/* 마우스 클릭시 열람가능  */
+	
 	float: right;
 	top: -125px;
 }
@@ -96,12 +98,7 @@ body {
 	display: inline-block;
 	margin-left: 10px;
 	margin-right: 10px;
-	
 }
-
-/* .history_sum:nth-child(0) {
-	text-align: left;
-} */
 
 .history_items {
 	display:inline-block;
@@ -133,3 +130,18 @@ body {
 	padding-left: 40px;
 }
 
+.team_summary {
+	background-color: #fff;
+	margin: 0;
+	border-radius: 10px;
+	width: 50vh;
+	display: none;
+	
+	
+	/* 마우스 클릭시 열람해야함 display: flex;
+	justify-content: space-between; */
+}
+
+.team_summary p {
+	color: #000;
+}

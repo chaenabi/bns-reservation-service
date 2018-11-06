@@ -33,7 +33,7 @@
 					<a>팀명</a> : <input type="text" value="" placeholder="6글자이내">
 					<input type="button" id="multi_ck" value="중복체크"> &nbsp; <a>진행날짜
 						: </a> <input type="text" value="" placeholder="timeplickr 적용예정">
-						
+							출발시각 : <input type="text" value="" placeholder="출발시각">
 						</div>
 						
 					<div class="team_raid"> 레이드종류 : 검은 마천루 <label class="radio"> <input
@@ -50,7 +50,7 @@
 				</div>
 				<hr>
 
-				<h3>판매할 아이템</h3>
+				<h3 style="margin:10px;">판매할 아이템</h3>
 				<hr>
 				<div class="sales">
 					<a class="named"> 천독룡 </a> <br>

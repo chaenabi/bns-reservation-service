@@ -31,17 +31,17 @@
 	<div class="container">
 		<div class="content">
 			<div class="aside">
-				<input type="button" class="btn btn-info" id="register"
-					style="font-weight: bold;" value="판매등록" onclick=""> &emsp; <input
-					type="button" class="btn btn-default" id="history"
+				<input type="button" class="btn btn-danger" id="register"
+					style="font-weight: bold;" value="판매등록" onclick="location.href='./sale_register.jsp';"> &emsp;
+				<input type="button" class="btn btn-default" id="history"
 					style="font-weight: bold;" value="주문내역" onclick="btn_history();">
 				&emsp; <img
 					src="${pageContext.request.contextPath}/resource/assets/image/Klogout.png"
 					class="kakao-logout-btn" style="width: 100px; height: 100px" /> <a
 					type="submit" href="#"></a>
 			</div>
-				
-				
+
+
 
 
 			<h1>Blade and Soul</h1>
@@ -52,104 +52,116 @@
 				type="button" id="gotwilight" value="태천왕릉"
 				onClick="alert('준비중입니다.')"> <input type="button" id="gored"
 				value="적몽의비원" onClick="alert('준비중입니다.')">
-				
+
 		</div>
-			<!-- 내역에 대한 프레임  -->
-				<div class="history_reserv">
-					<div class="history_frame">
-						<div class="history_summary">
+		<!-- 내역에 대한 프레임  -->
+		<div class="history_reserv">
+			<div class="history_frame">
+				<div class="history_summary">
 
-							<div class="history_sum">
-								<p>날짜</p>
-								<p>2018. 03. 29</p>
-							</div>
-							<div class="history_sum">
-								<p>시각</p>
-								<p>오후 10시</p>
-							</div>
-							<div class="history_sum">
-								<p>팀명</p>
-								<p>룩덕호룩덕호</p>
-							</div>
-							<div class="history_sum">
-								<p>팀장명</p>
-								<p>기공사초보</p>
-							</div>
-							<hr>
+					<div class="history_sum">
+						<p>날짜</p>
+						<p>2018. 03. 29</p>
+					</div>
+					<div class="history_sum">
+						<p>시각</p>
+						<p>오후 10시</p>
+					</div>
+					<div class="history_sum">
+						<p>팀명</p>
+						<p>룩덕호룩덕호</p>
+					</div>
+					<div class="history_sum">
+						<p>팀장명</p>
+						<p>기공사초보</p>
+					</div>
+					<hr>
+				</div>
+				<br>
+				<div class="history_items">
+					<div class="summary_items">
+						<p>주문아이템</p>
+					</div>
+
+					<div class="summary_items">
+						<p>금액</p>
+					</div>
+
+					<hr>
+
+					<br>
+					<div class="ordered_history_item">
+
+						<div class="history_item">
+							<p>화염귀걸이</p>
 						</div>
-						<br>
-						<div class="history_items">
-							<div class="summary_items">
-								<p>주문아이템</p>
-							</div>
+						<div class="item_price">
+							<p>3000금</p>
+						</div>
 
-							<div class="summary_items">
-								<p>금액</p>
-							</div>
+					</div>
+					<br>
+					<div class="ordered_history_item">
+						<div class="history_item">
+							<p>냉기귀걸이</p>
+						</div>
+						<div class="item_price">
+							<p>2000금</p>
+						</div>
+					</div>
+					<br>
 
-							<hr>
+					<div class="ordered_history_item">
+						<div class="history_item">
+							<p>초마령의 심장</p>
+						</div>
+						<div class="item_price">
+							<p>5000금</p>
+						</div>
+					</div>
+					<br>
+					<div class="ordered_history_item">
+						<div class="history_item">
+							<p>대지목걸이</p>
+						</div>
+						<div class="item_price">
+							<p>3000금</p>
+						</div>
+					</div>
 
-							<br>
-							<div class="ordered_history_item">
+					<br>
 
-								<div class="history_item">
-									<p>화염귀걸이</p>
-								</div>
-								<div class="item_price">
-									<p>3000금</p>
-								</div>
+					<div class="ordered_history_item">
+						<hr>
+						<div class="history_item">
 
-							</div>
-							<br>
-							<div class="ordered_history_item">
-								<div class="history_item">
-									<p>냉기귀걸이</p>
-								</div>
-								<div class="item_price">
-									<p>2000금</p>
-								</div>
-							</div>
-							<br>
-
-							<div class="ordered_history_item">
-								<div class="history_item">
-									<p>초마령의 심장</p>
-								</div>
-								<div class="item_price">
-									<p>5000금</p>
-								</div>
-							</div>
-							<br>
-							<div class="ordered_history_item">
-								<div class="history_item">
-									<p>대지목걸이</p>
-								</div>
-								<div class="item_price">
-									<p>3000금</p>
-								</div>
-							</div>
-
-							<br>
-
-							<div class="ordered_history_item">
-								<hr>
-								<div class="history_item">
-
-									<p>합계 :</p>
-								</div>
-								<div class="item_price">
-									<p>13000금</p>
-								</div>
-							</div>
+							<p>합계 :</p>
+						</div>
+						<div class="item_price">
+							<p>13000금</p>
 						</div>
 					</div>
 				</div>
-		<span class="team_resigter" style="background: #fff;float:right; width: 300px; color: black; display:inline-block; display:none;">
-				<span style="margin: auto; width: 100%;">
-				<input type="text" placeholder="팀명은 최대 6글자까지 가능" value="">
-				<input type="button" value="팀등록하기!">
-				</span>
-		</span>
+			</div>
+		</div>
+
+		<div class="team_summary">
+
+			<div class="s_team_name">
+				<p>팀장명</p>
+				<p>기공사초보</p>
+
+			</div>
+			<div class="s_team_date">
+				<p>날짜</p>
+				<p>2018. 03. 29</p>
+
+			</div>
+			<div class="s_team_time">
+				<p>출발시각</p>
+				<p>오후 10시</p>
+			</div>
+		</div>
 
 	</div>
 
