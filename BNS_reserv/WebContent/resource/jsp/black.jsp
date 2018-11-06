@@ -7,6 +7,7 @@
 <link rel="import"
 	href="${pageContext.request.contextPath}/resource/jsp/common/header.jsp">
 </head>
+
 <body>
 	<!--  마천루 비디오 제어 -->
 	<video autoplay loop id="background_video" muted>
@@ -243,78 +244,111 @@
 							<div class="item">
 								<div class="itemname">
 									<a>천독귀걸이(번개)</a>
+									<hr style="margin: 5px 0 8px 0;">
 								</div>
-								<div class="item_c">
+								<div class="item_c" >
 									<a> 어트 : </a>
-									<a> 200,000금 </a>
+									<a> 200,000금 </a>					
 									<span>
-									<input type="checkbox" value="천독귀걸이(번개)" />
+									<label class="checkbox">
+										  <input type="checkbox" value="천독귀걸이(번개)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
 									</span>
+									<!-- radio 쓰는법.
+									 <label class="radio">
+									  <input type="radio" name="group-radio">
+									  <i class="icon-radio"></i>
+									</label> -->
 								</div>
 								<div class=item_c>
 								<a> 노어트 : </a>
 								<a> 300,000금 </a>
 									<span>
-									<input type="checkbox" value="천독귀걸이(번개)" />
+									<label class="checkbox">
+										  <input type="checkbox" value="천독귀걸이(번개)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
 									</span>
 								</div>
 							</div>
 							<div class="item">
 								<div class="itemname">
 									<a>천독귀걸이(화염)</a>
+									<hr style="margin: 5px 0 8px 0;">
 								</div>
 								<div class="item_c">
 									<a> 어트 : </a>
 									<a> 200,000금 </a>
 									<span>
-									<input type="checkbox" value="천독귀걸이(화염)" />
+									<label class="checkbox">
+										  <input type="checkbox" value="천독귀걸이(화염)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
 									</span>
 								</div>
 								<div class="item_c">
 									<a> 노어트 : </a>
 									<a> 300,000금 </a>
 									<span>
-									<input type="checkbox" value="천독귀걸이(화염)" />
-									</span>
+									<label class="checkbox">
+										  <input type="checkbox" value="천독귀걸이(화염)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
+										</span>
 								</div>
 							</div>
 							<div class="item">
 								<div class="itemname">
 									<a> 천독반지(바람)</a>
+									<hr style="margin: 5px 0 8px 0;">
 								</div>
 								<div class="item_c">
 									<a> 어트 : </a>
 									<a> 200,000금 </a>
 									<span>
-									<input type="checkbox" value="천독반지(바람)" />
-									</span>
+									<label class="checkbox">
+										  <input type="checkbox" value="천독반지(바람)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
+										</span>
 								</div>
 								<div class="item_c">
 									<a> 노어트 : </a>
 									<a> 300,000금 </a>
 									<span>
-									<input type="checkbox" value="천독반지(바람)" />
-									</span>
+									<label class="checkbox">
+										  <input type="checkbox" value="천독반지(바람)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
+										</span>
 								</div>
 							</div>
 
 							<div class="item">
 								<div class="itemname">
 									<a> 천독반지(암흑) </a>
+									<hr style="margin: 5px 0 8px 0;">
 								</div>
 								<div class="item_c">
 									<a> 어트 : </a>
 									<a> 200,000금 </a>
 									<span>
-									<input type="checkbox" value="천독반지(암흑)" />
-									</span>
+									<label class="checkbox">
+										  <input type="checkbox" value="천독반지(암흑)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
+										</span>
 								</div>
 								<div class="item_c">
 									<a> 노어트 : </a>
 									<a> 300,000금 </a>
 									<span>
-									<input type="checkbox" value="천독반지(암흑)" />
-									</span>
+									<label class="checkbox">
+										  <input type="checkbox" value="천독반지(암흑)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
+										</span>
 								</div>
 							</div>
 						</div>
@@ -328,18 +362,29 @@
 								<div class="itemname">
 									<a>천독귀걸이(번개)</a>
 								</div>
-								<div class="item_c">
+								<div class="item_c" >
 									<a> 어트 : </a>
-									<a> 200,000금 </a>
+									<a> 200,000금 </a>					
 									<span>
-									<input type="checkbox" value="천독귀걸이(번개)" />
+									<label class="checkbox">
+										  <input type="checkbox" value="천독귀걸이(번개)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
 									</span>
+									<!-- radio 쓰는법.
+									 <label class="radio">
+									  <input type="radio" name="group-radio">
+									  <i class="icon-radio"></i>
+									</label> -->
 								</div>
 								<div class=item_c>
 								<a> 노어트 : </a>
 								<a> 300,000금 </a>
 									<span>
-									<input type="checkbox" value="천독귀걸이(번개)" />
+									<label class="checkbox">
+										  <input type="checkbox" value="천독귀걸이(번개)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
 									</span>
 								</div>
 							</div>
@@ -351,15 +396,21 @@
 									<a> 어트 : </a>
 									<a> 200,000금 </a>
 									<span>
-									<input type="checkbox" value="천독귀걸이(화염)" />
+									<label class="checkbox">
+										  <input type="checkbox" value="천독귀걸이(화염)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
 									</span>
 								</div>
 								<div class="item_c">
 									<a> 노어트 : </a>
 									<a> 300,000금 </a>
 									<span>
-									<input type="checkbox" value="천독귀걸이(화염)" />
-									</span>
+									<label class="checkbox">
+										  <input type="checkbox" value="천독귀걸이(화염)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
+										</span>
 								</div>
 							</div>
 							<div class="item">
@@ -370,15 +421,21 @@
 									<a> 어트 : </a>
 									<a> 200,000금 </a>
 									<span>
-									<input type="checkbox" value="천독반지(바람)" />
-									</span>
+									<label class="checkbox">
+										  <input type="checkbox" value="천독반지(바람)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
+										</span>
 								</div>
 								<div class="item_c">
 									<a> 노어트 : </a>
 									<a> 300,000금 </a>
 									<span>
-									<input type="checkbox" value="천독반지(바람)" />
-									</span>
+									<label class="checkbox">
+										  <input type="checkbox" value="천독반지(바람)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
+										</span>
 								</div>
 							</div>
 
@@ -390,15 +447,21 @@
 									<a> 어트 : </a>
 									<a> 200,000금 </a>
 									<span>
-									<input type="checkbox" value="천독반지(암흑)" />
-									</span>
+									<label class="checkbox">
+										  <input type="checkbox" value="천독반지(암흑)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
+										</span>
 								</div>
 								<div class="item_c">
 									<a> 노어트 : </a>
 									<a> 300,000금 </a>
 									<span>
-									<input type="checkbox" value="천독반지(암흑)" />
-									</span>
+									<label class="checkbox">
+										  <input type="checkbox" value="천독반지(암흑)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
+										</span>
 								</div>
 							</div>
 						</div>
@@ -409,23 +472,34 @@
 						<h3 class="text-center text-danger" style="font-weight: bold">3네임드
 							: 모순장군</h3>
 						<div class="in_menu">
-						<div class="items">
+												<div class="items">
 							<div class="item">
 								<div class="itemname">
 									<a>천독귀걸이(번개)</a>
 								</div>
-								<div class="item_c">
+								<div class="item_c" >
 									<a> 어트 : </a>
-									<a> 200,000금 </a>
+									<a> 200,000금 </a>					
 									<span>
-									<input type="checkbox" value="천독귀걸이(번개)" />
+									<label class="checkbox">
+										  <input type="checkbox" value="천독귀걸이(번개)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
 									</span>
+									<!-- radio 쓰는법.
+									 <label class="radio">
+									  <input type="radio" name="group-radio">
+									  <i class="icon-radio"></i>
+									</label> -->
 								</div>
 								<div class=item_c>
 								<a> 노어트 : </a>
 								<a> 300,000금 </a>
 									<span>
-									<input type="checkbox" value="천독귀걸이(번개)" />
+									<label class="checkbox">
+										  <input type="checkbox" value="천독귀걸이(번개)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
 									</span>
 								</div>
 							</div>
@@ -437,15 +511,21 @@
 									<a> 어트 : </a>
 									<a> 200,000금 </a>
 									<span>
-									<input type="checkbox" value="천독귀걸이(화염)" />
+									<label class="checkbox">
+										  <input type="checkbox" value="천독귀걸이(화염)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
 									</span>
 								</div>
 								<div class="item_c">
 									<a> 노어트 : </a>
 									<a> 300,000금 </a>
 									<span>
-									<input type="checkbox" value="천독귀걸이(화염)" />
-									</span>
+									<label class="checkbox">
+										  <input type="checkbox" value="천독귀걸이(화염)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
+										</span>
 								</div>
 							</div>
 							<div class="item">
@@ -455,17 +535,22 @@
 								<div class="item_c">
 									<a> 어트 : </a>
 									<a> 200,000금 </a>
-									
 									<span>
-									<input type="checkbox" value="천독반지(바람)" />
-									</span>
+									<label class="checkbox">
+										  <input type="checkbox" value="천독반지(바람)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
+										</span>
 								</div>
 								<div class="item_c">
 									<a> 노어트 : </a>
 									<a> 300,000금 </a>
 									<span>
-									<input type="checkbox" value="천독반지(바람)" />
-									</span>
+									<label class="checkbox">
+										  <input type="checkbox" value="천독반지(바람)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
+										</span>
 								</div>
 							</div>
 
@@ -477,15 +562,21 @@
 									<a> 어트 : </a>
 									<a> 200,000금 </a>
 									<span>
-									<input type="checkbox" value="천독반지(암흑)" />
-									</span>
+									<label class="checkbox">
+										  <input type="checkbox" value="천독반지(암흑)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
+										</span>
 								</div>
 								<div class="item_c">
 									<a> 노어트 : </a>
 									<a> 300,000금 </a>
 									<span>
-									<input type="checkbox" value="천독반지(암흑)" />
-									</span>
+									<label class="checkbox">
+										  <input type="checkbox" value="천독반지(암흑)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
+										</span>
 								</div>
 							</div>
 						</div>
@@ -501,18 +592,29 @@
 								<div class="itemname">
 									<a>천독귀걸이(번개)</a>
 								</div>
-								<div class="item_c">
+								<div class="item_c" >
 									<a> 어트 : </a>
-									<a> 200,000금 </a>
+									<a> 200,000금 </a>					
 									<span>
-									<input type="checkbox" value="천독귀걸이(번개)" />
+									<label class="checkbox">
+										  <input type="checkbox" value="천독귀걸이(번개)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
 									</span>
+									<!-- radio 쓰는법.
+									 <label class="radio">
+									  <input type="radio" name="group-radio">
+									  <i class="icon-radio"></i>
+									</label> -->
 								</div>
 								<div class=item_c>
 								<a> 노어트 : </a>
 								<a> 300,000금 </a>
-								<span>
-									<input type="checkbox" value="천독귀걸이(번개)" />
+									<span>
+									<label class="checkbox">
+										  <input type="checkbox" value="천독귀걸이(번개)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
 									</span>
 								</div>
 							</div>
@@ -524,15 +626,21 @@
 									<a> 어트 : </a>
 									<a> 200,000금 </a>
 									<span>
-									<input type="checkbox" value="천독귀걸이(화염)" />
+									<label class="checkbox">
+										  <input type="checkbox" value="천독귀걸이(화염)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
 									</span>
 								</div>
 								<div class="item_c">
 									<a> 노어트 : </a>
 									<a> 300,000금 </a>
 									<span>
-									<input type="checkbox" value="천독귀걸이(화염)" />
-									</span>
+									<label class="checkbox">
+										  <input type="checkbox" value="천독귀걸이(화염)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
+										</span>
 								</div>
 							</div>
 							<div class="item">
@@ -543,15 +651,21 @@
 									<a> 어트 : </a>
 									<a> 200,000금 </a>
 									<span>
-									<input type="checkbox" value="천독반지(바람)" />
-									</span>
+									<label class="checkbox">
+										  <input type="checkbox" value="천독반지(바람)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
+										</span>
 								</div>
 								<div class="item_c">
 									<a> 노어트 : </a>
 									<a> 300,000금 </a>
 									<span>
-									<input type="checkbox" value="천독반지(바람)" />
-									</span>
+									<label class="checkbox">
+										  <input type="checkbox" value="천독반지(바람)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
+										</span>
 								</div>
 							</div>
 
@@ -563,15 +677,21 @@
 									<a> 어트 : </a>
 									<a> 200,000금 </a>
 									<span>
-									<input type="checkbox" value="천독반지(암흑)" />
-									</span>
+									<label class="checkbox">
+										  <input type="checkbox" value="천독반지(암흑)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
+										</span>
 								</div>
 								<div class="item_c">
 									<a> 노어트 : </a>
 									<a> 300,000금 </a>
 									<span>
-									<input type="checkbox" value="천독반지(암흑)" />
-									</span>
+									<label class="checkbox">
+										  <input type="checkbox" value="천독반지(암흑)">									
+										  <i class="icon-checkbox"></i>										
+										</label>
+										</span>
 								</div>
 							</div>
 						</div>

@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/resource/css/menu.css">
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resource/css/bootstrap.min.css" />
+	href="${pageContext.request.contextPath}/resource/css/bootstrap/bootstrap.min.css" />
 <script
 	src="${pageContext.request.contextPath}/resource/js/jquery/jquery.js"></script>
 <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
@@ -30,125 +30,136 @@
 	</video>
 	<div class="container">
 		<div class="content">
-			<div style="float: right;">
-			
+			<div class="aside">
 			<input type="button" class="btn btn-danger" id="register"
-					style="font-weight: bold;" value="등록" onclick=""> &emsp;
-				<input type="button" class="btn btn-default" id="history"
-					style="font-weight: bold;" value="주문내역" onclick="btn_history();"> &emsp;
-					<img
-			src="${pageContext.request.contextPath}/resource/assets/image/Klogout.png"
-			class="kakao-logout-btn" style="width: 100px; height: 100px" /> <a
-			type="submit" href="#"></a>
-			<!-- 내역에 대한 프레임  -->
-		<div class="history_reserv" >
-			<div class="history_frame">
-				<div class="history_summary">
-
-					<div class="history_sum">
-						<p>날짜</p>
-						<p>2018. 03. 29</p>
-					</div>
-					<div class="history_sum">
-						<p>시각</p>
-						<p>오후 10시</p>
-					</div>
-					<div class="history_sum">
-						<p>팀명</p>
-						<p>룩덕호룩덕호</p>
-					</div>
-					<div class="history_sum">
-						<p>팀장명</p>
-						<p>기공사초보</p>
-					</div>
-					<hr>
-				</div>
-				<br>
-				<div class="history_items">
-					<div class="summary_items">
-						<p>주문아이템</p>
-					</div>
-
-					<div class="summary_items">
-						<p>금액</p>
-					</div>
-
-					<hr>
-				</div>
-				<br>
-				<div class="ordered_history_item">
-					
-					<div class="history_item">
-						<p>화염귀걸이</p>
-					</div>
-					<div class="item_price">
-						<p>3000금</p>
-					</div>
-					
-				</div>
-				<br>
-				<div class="ordered_history_item">
-					<div class="history_item">
-						<p>냉기귀걸이</p>
-					</div>
-					<div class="item_price">
-						<p>2000금</p>
-					</div>
-				</div>
-				<br>
-				
-				<div class="ordered_history_item">
-					<div class="history_item">
-						<p>초마령의 심장</p>
-					</div>
-					<div class="item_price">
-						<p>5000금</p>
-					</div>
-				</div>
-				<br>
-				<div class="ordered_history_item">
-					<div class="history_item">
-						<p>대지목걸이</p>
-					</div>
-					<div class="item_price">
-						<p>3000금</p>
-					</div>
-				</div>
-				<br>
-				
-				<div class="ordered_history_item">
-				<hr>
-					<div class="history_item">
-						<p>합계 :</p>
-					</div>
-					<div class="item_price">
-						<p>13000금</p>
-					</div>
-				</div>
-
+					style="font-weight: bold;" value="팀등록" onclick=""> &emsp;
+				<input type="button" class="btn btn-info" id="register"
+					style="font-weight: bold;" value="판매등록" onclick=""> &emsp; <input
+					type="button" class="btn btn-default" id="history"
+					style="font-weight: bold;" value="주문내역" onclick="btn_history();">
+				&emsp; <img
+					src="${pageContext.request.contextPath}/resource/assets/image/Klogout.png"
+					class="kakao-logout-btn" style="width: 100px; height: 100px" /> <a
+					type="submit" href="#"></a>
 			</div>
-		</div>
+				
+				
 
-	
-			</div>
+
 			<h1>Blade and Soul</h1>
 			<p>Welcome to BNS BUS reservation guide</p>
 			<br> <br> <input type="button" id="goblack" value="검은 마천루"
 				onClick="location.href='./black.jsp';"> <input type="button"
-				id="govortex" value="소용돌이 사원"
-				onClick="alert('준비중입니다.')"> <input
+				id="govortex" value="소용돌이 사원" onClick="alert('준비중입니다.')"> <input
 				type="button" id="gotwilight" value="태천왕릉"
-				onClick="alert('준비중입니다.')">
-				<input
-				type="button" id="gored" value="적몽의비원"
-				onClick="alert('준비중입니다.')">
+				onClick="alert('준비중입니다.')"> <input type="button" id="gored"
+				value="적몽의비원" onClick="alert('준비중입니다.')">
+				
 		</div>
-		
-		</div>
-		<!-- 카카오톡 로그아웃 버튼 만들어 줄것 -->
+			<!-- 내역에 대한 프레임  -->
+				<div class="history_reserv">
+					<div class="history_frame">
+						<div class="history_summary">
 
-		<!--  또는-->
-		<!-- <script>
+							<div class="history_sum">
+								<p>날짜</p>
+								<p>2018. 03. 29</p>
+							</div>
+							<div class="history_sum">
+								<p>시각</p>
+								<p>오후 10시</p>
+							</div>
+							<div class="history_sum">
+								<p>팀명</p>
+								<p>룩덕호룩덕호</p>
+							</div>
+							<div class="history_sum">
+								<p>팀장명</p>
+								<p>기공사초보</p>
+							</div>
+							<hr>
+						</div>
+						<br>
+						<div class="history_items">
+							<div class="summary_items">
+								<p>주문아이템</p>
+							</div>
+
+							<div class="summary_items">
+								<p>금액</p>
+							</div>
+
+							<hr>
+
+							<br>
+							<div class="ordered_history_item">
+
+								<div class="history_item">
+									<p>화염귀걸이</p>
+								</div>
+								<div class="item_price">
+									<p>3000금</p>
+								</div>
+
+							</div>
+							<br>
+							<div class="ordered_history_item">
+								<div class="history_item">
+									<p>냉기귀걸이</p>
+								</div>
+								<div class="item_price">
+									<p>2000금</p>
+								</div>
+							</div>
+							<br>
+
+							<div class="ordered_history_item">
+								<div class="history_item">
+									<p>초마령의 심장</p>
+								</div>
+								<div class="item_price">
+									<p>5000금</p>
+								</div>
+							</div>
+							<br>
+							<div class="ordered_history_item">
+								<div class="history_item">
+									<p>대지목걸이</p>
+								</div>
+								<div class="item_price">
+									<p>3000금</p>
+								</div>
+							</div>
+
+							<br>
+
+							<div class="ordered_history_item">
+								<hr>
+								<div class="history_item">
+
+									<p>합계 :</p>
+								</div>
+								<div class="item_price">
+									<p>13000금</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		<span class="team_resigter" style="background: #fff;float:right; width: 300px; color: black; display:inline-block; display:none;">
+				<span style="margin: auto; width: 100%;">
+				<input type="text" placeholder="팀명은 최대 6글자까지 가능" value="">
+				<input type="button" value="팀등록하기!">
+				</span>
+		</span>
+
+	</div>
+
+
+	<!-- 카카오톡 로그아웃 버튼 만들어 줄것 -->
+
+	<!--  또는-->
+	<!-- <script>
 			function createKakaotalkLogout() {
 				var logoutBtn = $("<a/>", {
 					"class" : "kakao-logout-btn",
@@ -160,8 +171,8 @@
 				});
 			}
 		</script> -->
-		
-		
+
+
 	<!--보안상의 이유로 더이상 지원되지 않음.
 				따라서 main.jsp에서 작성한 oath는 json 형태로 반환되므로 이 것을 파싱하여 사용할것.
 		<script>

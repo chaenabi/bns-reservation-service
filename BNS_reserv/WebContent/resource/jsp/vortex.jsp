@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8">
 <title>vortex</title>
-<link rel="stylesheet" href="./css/bootstrap.min.css" />
+<link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css" />
 <link rel="stylesheet" href="./css/ionicons.min.css" />
 
 
