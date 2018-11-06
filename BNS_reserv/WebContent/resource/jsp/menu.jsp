@@ -31,8 +31,6 @@
 	<div class="container">
 		<div class="content">
 			<div class="aside">
-			<input type="button" class="btn btn-danger" id="register"
-					style="font-weight: bold;" value="팀등록" onclick=""> &emsp;
 				<input type="button" class="btn btn-info" id="register"
 					style="font-weight: bold;" value="판매등록" onclick=""> &emsp; <input
 					type="button" class="btn btn-default" id="history"
