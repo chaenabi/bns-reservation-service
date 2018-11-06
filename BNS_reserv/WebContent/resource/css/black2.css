@@ -63,7 +63,8 @@
 .sidenav .inner .core {
 	margin: 0px;
 	padding: 0px;
-	display: block;
+	display: none;
+	/* 마우스 호버시 작동해야함 display: block; */
 	padding-top: 14px;
 }
 
@@ -122,7 +123,8 @@ strong {
 
 /* 세번째 목록 기본세팅 (div 보이지 않음) */
 .sidenav .teamlists {
-	display: inline-block;
+	display: none;
+	/* 마우스 호버시 작동해야함 display: inline-block; */
 	/* 호버시 작동해야할 스타일이지만 임시로 기본 세팅해놓았음 */
 	background: rgba(0, 0, 0, 0.7);
 	height: 100%;
@@ -163,7 +165,8 @@ strong {
 .order .menu {
 	margin: 0px;
 	padding: 0px;
-	display: block;
+	display: none;
+	/* 마우스 호버시 작동해야함 display: block; */
 	padding-top: 14px;
 	/* 호버시 작동해야할 스타일이지만 임시로 기본 세팅해놓았음 */
 	height: 100%;
