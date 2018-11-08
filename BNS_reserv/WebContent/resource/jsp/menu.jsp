@@ -50,8 +50,8 @@
 				onClick="location.href='./black.jsp';"> <input type="button"
 				id="govortex" value="소용돌이 사원" onClick="alert('준비중입니다.')"> <input
 				type="button" id="gotwilight" value="태천왕릉"
-				onClick="alert('준비중입니다.')"> <input type="button" id="gored"
-				value="적몽의비원" onClick="alert('준비중입니다.')">
+				onClick="location.href='./twilight.jsp';"> <input type="button" id="gored"
+				value="적몽의 비원" onClick="location.href='./reddream.jsp';">
 
 		</div>
 		<!-- 내역에 대한 프레임  -->

@@ -1,8 +1,8 @@
 package servlet;
 
 public class MainActivity {
-
-//자스로 적용시켜주자.
+	
+	//Curl? Rest API?
 	public function kakao_login_action() {
 
         if (isset($_GET['code'])) {

@@ -2,7 +2,7 @@ package dao;
 
 public class Main {
 
-//자스로 적용시켜주자..	
+//Curl? Rest API?
 	
 // Register Action Process
    function _register_action($assign_data) {
