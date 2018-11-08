@@ -7,7 +7,7 @@ import java.io.OutputStreamWriter;
 import java.net.URL;
 import com.sun.net.ssl.HttpsURLConnection;
 
-public class main {
+public class Main {
 
 	public static void main(String[] args) {
 		final String AUTH_HOST = "https://kauth.kakao.com";
