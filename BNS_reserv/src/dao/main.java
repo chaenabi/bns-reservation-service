@@ -1,4 +1,4 @@
-package main;
+package dao;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,8 +14,8 @@ public class main {
 		final String tokenRequestUrl = AUTH_HOST + "/oauth/token";
 
 		String CLIENT_ID = "2f679389b3ec2465e93791f4e2b245ce"; // 해당 앱의 REST API KEY 정보. 
-		//String REDIRECT_URI = "http://localhost:8080/zero/oauth"; // 해당 앱의 설정된 uri. 개발자 웹사이트의 대쉬보드에서 확인 및 설정 가능
-		//String code = "****MkexueeLWd912Ou2CJ0KHUgYtpZIo9owIhAWEghUvfHHf-CUy2LF-g5BMsSN6FreBqwQQjMAAAFK10MI6A"; // 로그인
+		String REDIRECT_URI = "http://localhost:8080/zero/oauth"; // 해당 앱의 설정된 uri. 개발자 웹사이트의 대쉬보드에서 확인 및 설정 가능
+		String code = "****MkexueeLWd912Ou2CJ0KHUgYtpZIo9owIhAWEghUvfHHf-CUy2LF-g5BMsSN6FreBqwQQjMAAAFK10MI6A"; // 로그인
 																												// 과정중
 																												// 얻은
 																												// authorization

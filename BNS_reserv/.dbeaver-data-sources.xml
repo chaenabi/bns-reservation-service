@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-sources>
+	<data-source id="mariaDB-166f2c7205c-494d4845f7cab8d" provider="mysql" driver="mariaDB" name="MariaDB - bns_reserv" save-password="true" show-system-objects="true" show-util-objects="true" read-only="false">
+		<connection host="localhost" port="3306" server="" database="bns_reserv" url="jdbc:mysql://localhost:3306/bns_reserv" user="hr" password="GxZmwQ==" type="dev"/>
+	</data-source>
+	<filters/>
+</data-sources>
