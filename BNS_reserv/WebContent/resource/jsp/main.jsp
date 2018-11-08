@@ -31,7 +31,8 @@
 		<h1>Blade and Soul</h1>
 		<p>Welcome to BNS BUS reservation guide</p>
 		<br>
-
+	<form action="kakao-login" method="post">
+	
 		<div class="kakao">
 			<a id="kakao-login-btn"></a> <a
 				href="http://developers.kakao.com/logout"></a>
@@ -70,6 +71,7 @@
 				
 			</script>
 		</div>
+		</form>
 		<br> <br> <input type="button" class="btn btn-danger"
 			id="onlydev" name="onlydev" value="개발자전용: 무시하고 다음 페이지로 이동"
 			onClick="location.href='./menu.jsp';"> <br> <br>
