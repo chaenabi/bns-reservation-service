@@ -1,147 +1,64 @@
-/*package servlet;
+package servlet;
 
-public class MainActivity extends AppCompatActivity {
-private SessionCallback sessionCallback;
-*//**
- * 로그인 버튼을 클릭 했을시 access token을 요청하도록 설정한다.
- *
- * @param savedInstanceState 기존 session 정보가 저장된 객체
- *//*
-@Override
+public class MainActivity {
 
-protected void onCreate(Bundle savedInstanceState) {
+//자스로 적용시켜주자.
+	public function kakao_login_action() {
 
-    super.onCreate(savedInstanceState);
+        if (isset($_GET['code'])) {
 
-    setContentView(R.layout.activity_main);
+            require_once realpath(dirname(__FILE__).'/../libraries/SNS_OAuth/').'/kakao_oauth.php';
 
+            $url = "https://kauth.kakao.com/oauth/token";
+            
+            $param = "grant_type=authorization_code";
+            $param .= "&client_id=".$kakao_api;
+            $param .= "&redirect_url=".$kakao_redirect;
+            $param .= "&code=".$_GET['code'];
 
+            // Get Aeccess Token Value
+            
+            $auth_data = $this->common->restful_curl($url, $param, 'POST');
+            $auth_data = json_decode($auth_data);
 
-
-
-
-    try{
-
-        PackageInfo info = getPackageManager().getPackageInfo(this.getPackageName(), PackageManager.GET_SIGNATURES);
-
-        for(Signature signature : info.signatures){
-
-            MessageDigest messageDigest = MessageDigest.getInstance("SHA");
-
-            messageDigest.update(signature.toByteArray());;
-
-        }
-
-    } catch (Exception e){
-
-        Log.d("error", "PackageInfo error is " + e.toString());
-
-    }
+           
+            
+            if($auth_data->access_token) {
+               
+                $_SESSION['kakao_token'] = $auth_data->access_token;
+                
+                $url = "https://kapi.kakao.com/v1/user/me";
+                $param = "";
+                $header = array("Authorization: Bearer " .$auth_data->access_token);
 
 
+                // Get User Info
+                $user_data = $this->common->restful_curl($url, $param, 'POST', $header);
+                $user_data = json_decode($user_data);
 
-    sessionCallback = new SessionCallback();
+                $nickname=isset($user_data->name)?$user_data->name :"";
+                $thumbnail_image=isset($user_data->thumbnail_image)?$user_data->thumbnail_image:"";
+                
+                // Add Code :: Valid Member
+                $assign_data=array(
+                    'sns_id'=>$user_data->id,
+                    'sns_type'=>'kakao',
+                    'profile_img'=>$thumbnail_image,
+                    'email'=>$user_data->kaccount_email,
+                    'name'=>$user_data->name,
+                    'nickname'=>''   
+                );
+                
+                $this->_register_action($assign_data);
 
-    Session.getCurrentSession().addCallback(sessionCallback);
+            }else {
+                $this->script->alert("Kakao Token Access Fail.");
+                $this->script->locationhref('/index.php/auth');
+            }
 
-    Session.getCurrentSession().checkAndImplicitOpen();
-
-
-
-}
-
-
-@Override
-
-protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
-    if(Session.getCurrentSession().handleActivityResult(requestCode, resultCode, data)){
-
-        return ;
-
-    }
-
-    super.onActivityResult(requestCode, resultCode, data);
-
-}
-
-@Override
-protected void onDestroy() {
-    super.onDestroy();
-    Session.getCurrentSession().removeCallback(sessionCallback);
-}
-private class SessionCallback implements ISessionCallback {
-
-    @Override
-    public void onSessionOpened() {
-        redirectSignupActivity();
-    }
-
-    @Override
-    public void onSessionOpenFailed(KakaoException exception) {
-        if(exception != null) {
-            Logger.e(exception);
-        }
+        }else {
+            $this->script->alert("Invailed Access.");
+            $this->script->locationhref('/index.php/auth');
+        } 
     }
 }
-
-
-
-
-
-
-protected void redirectSignupActivity() {
-    final Intent intent = new Intent(this, SuccessActivity.class);
-    startActivity(intent);
-    finish();
-}
-
-
-private void requestMe() {
-    List<String> propertyKeys = new ArrayList<String>();
-    propertyKeys.add("kaccount_email");
-    propertyKeys.add("nickname");
-    propertyKeys.add("profile_image");
-    propertyKeys.add("thumbnail_image");
-
-    UserManagement.requestMe(new MeResponseCallback() {
-        @Override
-        public void onFailure(ErrorResult errorResult) {
-            String message = "failed to get user info. msg=" + errorResult;
-            Logger.d(message);
-
-            redirectMainActivity();
-        }
-
-        @Override
-        public void onSessionClosed(ErrorResult errorResult) {
-            redirectMainActivity();
-        }
-
-        @Override
-        public void onSuccess(UserProfile userProfile) {
-            Logger.d("UserProfile : " + userProfile);
-            redirectSuccessActivity();
-        }
-
-        @Override
-        public void onNotSignedUp() {
-            redirectMainActivity();
-        }
-    }, propertyKeys, false);
-}
-private void redirectSuccessActivity() {
-    startActivity(new Intent(MainActivity.this, SuccessActivity.class));
-    Toast.makeText(MainActivity.this, "로그인 되었습니다!", Toast.LENGTH_SHORT);
-}
-private  void redirectMainActivity() {
-
-}
-private void onClickLogout() {//로그아웃인데..왜
-    UserManagement.requestLogout(new LogoutResponseCallback() {
-        @Override
-        public void onCompleteLogout() {
-            startActivity(new Intent(MainActivity.this, MainActivity.class));
-        }
-    });
-}*/

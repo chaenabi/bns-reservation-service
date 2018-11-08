@@ -1,84 +1,72 @@
 package dao;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.net.URL;
-import com.sun.net.ssl.HttpsURLConnection;
-
 public class Main {
 
-	public static void main(String[] args) {
-		final String AUTH_HOST = "https://kauth.kakao.com";
-		final String tokenRequestUrl = AUTH_HOST + "/oauth/token";
+//자스로 적용시켜주자..	
+	
+// Register Action Process
+   function _register_action($assign_data) {
 
-		String CLIENT_ID = "2f679389b3ec2465e93791f4e2b245ce"; // 해당 앱의 REST API KEY 정보. 
-		String REDIRECT_URI = "http://localhost:8080/zero/oauth"; // 해당 앱의 설정된 uri. 개발자 웹사이트의 대쉬보드에서 확인 및 설정 가능
-		String code = "****MkexueeLWd912Ou2CJ0KHUgYtpZIo9owIhAWEghUvfHHf-CUy2LF-g5BMsSN6FreBqwQQjMAAAFK10MI6A"; // 로그인
-																												// 과정중
-																												// 얻은
-																												// authorization
-																												// code
-																												// 값
+         //sns 의경우 이메일이 없는 경우가 있으므로 없을 경우 sns_id 값으로 저장
+        $insertId=$assign_data['email']!=null ? $assign_data['email'] :$assign_data['sns_id'];
+        
+        //sns_id 로 기존에 등록된 유저 확인
+        $sql="select * from users where userid=?";
+        $query=$this->db->query($sql,  $insertId);
+        
+       
+        $message="";
+        //등록된 userid 를 확인 한다.
+        if($query->num_rows() > 0){
+            //테스트 메시지
+            $message="userid 가 존재";
+        }
+        else
+        {
+            //userid 값이 없으면 등록한다. 
+             // Member Register in Your Code.       
+             $data=array(
+                'userid' =>$insertId,
+                'sns_id'=>$assign_data['sns_id'],
+                'sns_type'=>$assign_data['sns_type'],
+                'register_auth_code'=>1,  //이메일 인증 코드 1로 
+                'profile_img'=>$assign_data['profile_img'],
+                'email'=>$assign_data['email'],
+                'nickname'=>$assign_data['nickname'],
+                'username'=>$assign_data['name'],
+                'register_ip'=>$_SERVER['REMOTE_ADDR']
+                );       
+            $this->db->insert('users', $data);
+              $message="등록했습니다.";
+                      
+        }
+        
+        //DB에서 정보를 다시 불러온다.
+        $sql="select * from users where userid=?";
+        $query=$this->db->query($sql,  $insertId);
+        $result=$query->row();
 
-		HttpsURLConnection conn = null;
-		OutputStreamWriter writer = null;
-		BufferedReader reader = null;
-		InputStreamReader isr = null;
-
-		try {
-			final String params = String.format("grant_type=authorization_code&client_id=%s&redirect_uri=%s&code=%s",
-					CLIENT_ID, REDIRECT_URI, code);
-
-			final URL url = new URL(tokenRequestUrl);
-
-			conn = (HttpsURLConnection) url.openConnection();
-			conn.setRequestMethod("POST");
-			conn.setDoOutput(true);
-
-			writer = new OutputStreamWriter(conn.getOutputStream());
-			writer.write(params);
-			writer.flush();
-
-			final int responseCode = conn.getResponseCode();
-			System.out.println("\nSending 'POST' request to URL : " + tokenRequestUrl);
-			System.out.println("Post parameters : " + params);
-			System.out.println("Response Code : " + responseCode);
-
-			isr = new InputStreamReader(conn.getInputStream());
-			reader = new BufferedReader(isr);
-			final StringBuffer buffer = new StringBuffer();
-			String line;
-			while ((line = reader.readLine()) != null) {
-				buffer.append(line);
-			}
-
-			System.out.println(buffer.toString());
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
-			// clear resources
-			if (writer != null) {
-				try {
-					writer.close();
-				} catch (Exception ignore) {
-				}
-			}
-			if (reader != null) {
-				try {
-					reader.close();
-				} catch (Exception ignore) {
-				}
-			}
-			if (isr != null) {
-				try {
-					isr.close();
-				} catch (Exception ignore) {
-				}
-			}
-
-		}
-	}
+         //세션 생성         
+        if($result) {             
+            //세션 생성         
+            $newdata =array(
+                'nickname' =>$result->nickname,
+                'email' =>$result->email,
+                'logged_in' =>TRUE,
+                'auth_code' =>$result->auth_code,
+                'icon'=>$result->icon,
+                'sns_type'=>$result->sns_type,
+                'userid' =>$result->userid
+            );
+            
+            $this->session->set_userdata($newdata);
+            
+            redirect('/');
+            exit;
+         }else{
+             
+             alert('로그인에 실패 하였습니다.', '/');
+             exit;
+         }                            
+    }
 }
