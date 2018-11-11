@@ -20,7 +20,7 @@ public class JDBC {
         try {
             Class.forName("org.mariadb.jdbc.Driver");
             
-            String url =  "jdbc:mariadb://localhost:3306/BNS_reserv";
+            String url =  "jdbc:mariadb://localhost:3306/bns_reserv";
             conn = DriverManager.getConnection(url, "hr", "hr");
             
         } catch(Exception e) {
