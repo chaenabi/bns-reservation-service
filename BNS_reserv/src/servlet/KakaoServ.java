@@ -18,7 +18,7 @@ import org.apache.commons.beanutils.BeanUtils;
 import dao.KakaoDAO;
 import vo.KakaoDTO;
 
-@WebServlet("/kakao")
+@WebServlet("/servlet/KakaoServ")
 public class KakaoServ extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -55,20 +55,23 @@ public class KakaoServ extends HttpServlet {
 
 			out.print("어떤 form의 action도 넘겨받지 못했습니다.");
 
+		} else if (action.equals("kakao-login")) {
+			// 로그인 시 개인정보 DB 등록 처리
+			kdao.insertID(kvo);
+			out.print("--------------------------------");
+			out.print("------- Login 정보 전달 성공 --------");
+			out.print("--------------------------------");
+			
+			// 목록으로 페이지 이동
+			request.getRequestDispatcher("/resource/jsp/menu.jsp").forward(request, response);
+
 		} else if (action.equals("list")) {
-			// 데이터 전체 조회
+			// 가입된 데이터 전체 조회
 			ArrayList<KakaoDTO> datas = kdao.getIdList();
 			request.setAttribute("datas", datas);
 
 			// 뷰 페이지로 포워드
-			// request.getRequestDispatcher("--갈곳잃은.jsp--").forward(request, response);
-
-		} else if (action.equals("kakao-login")) {
-			// 로그인 시 개인정보 DB 등록 처리
-			kdao.insertID(kvo);
-
-			// 목록으로 페이지 이동
-			request.getRequestDispatcher("menu.jsp").forward(request, response);
+			// request.getRequestDispatcher("--갈곳이 아직 없는.jsp--").forward(request, response);
 
 		} else {
 			out.print("잘못된 action입니다. 해당 jsp파일의 form action 값을 확인해주세요.");

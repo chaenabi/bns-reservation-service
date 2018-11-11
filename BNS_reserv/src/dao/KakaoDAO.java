@@ -47,6 +47,7 @@ public class KakaoDAO extends JDBC {
 			System.out.println("세션 접속 완료.");
 			String sql = "insert into users (id, email, nickname, access_token)"
 					+ "values (?, ?, ?, ?)"; //마리아db의 sql 문법에 맞는지 꼭 확인할것
+			System.out.println("ID정보를 Insert 합니다. : ");
 			System.out.println(kvo);
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, kvo.getId());
