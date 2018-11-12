@@ -18,7 +18,7 @@ public class JDBC {
        
  
         try {
-            Class.forName("org.mysql.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver"); 
             String url =  "jdbc:mysql://localhost:3306/bns_reserv";
             conn = DriverManager.getConnection(url, "hr", "hr");
             
