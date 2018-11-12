@@ -18,9 +18,8 @@ public class JDBC {
        
  
         try {
-            Class.forName("org.mariadb.jdbc.Driver");
-            
-            String url =  "jdbc:mariadb://localhost:3306/bns_reserv";
+            Class.forName("org.mysql.jdbc.Driver");
+            String url =  "jdbc:mysql://localhost:3306/bns_reserv";
             conn = DriverManager.getConnection(url, "hr", "hr");
             
         } catch(Exception e) {

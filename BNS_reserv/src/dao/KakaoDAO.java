@@ -15,7 +15,7 @@ public class KakaoDAO extends JDBC {
 		connect();
 		ArrayList<KakaoDTO> datas = new ArrayList<KakaoDTO>();
 		
-		String sql = "select * from users order by nickname"; //마리아db의 sql 문법에 맞는지 꼭 확인할것
+		String sql = "select * from users order by nickname";
 		try {
 			pstmt = conn.prepareStatement(sql);
 			ResultSet rs = pstmt.executeQuery();
@@ -46,7 +46,7 @@ public class KakaoDAO extends JDBC {
 			connect();
 			System.out.println("세션 접속 완료.");
 			String sql = "insert into users (id, email, nickname, access_token)"
-					+ "values (?, ?, ?, ?)"; //마리아db의 sql 문법에 맞는지 꼭 확인할것
+					+ "values (?, ?, ?, ?)"; 
 			System.out.println("ID정보를 Insert 합니다. : ");
 			System.out.println(kvo);
 			pstmt = conn.prepareStatement(sql);
