@@ -13,11 +13,6 @@
 	src="${pageContext.request.contextPath}/resource/js/jquery/jquery.js"></script>
 <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 
-<!-- <script>
-
-</script>	 -->
-
-
 </head>
 
 <body>
@@ -34,8 +29,7 @@
 		<p>Welcome to BNS BUS reservation guide</p>
 		<br>
 		<form action="${pageContext.request.contextPath}/servlet/KakaoServ"
-			method="post" id="kakao-login"
-			onsubmit="alert('폼 작동하는지 테스트. : 성공!');">
+			method="post" id="kakao-login">
 
 			<div class="kakao">
 				<input type="hidden" name="action" value="kakao-login" /> <a
@@ -44,7 +38,8 @@
 					id="id" name="id" value="0"> <input type="hidden"
 					id="email" name="email" value="0"> <input type="hidden"
 					id="nickname" name="nickname" value="0"> <input type="hidden"
-					id="access_token" name="access_token" value="0">
+					id="access_token" name="access_token" value="0"> <input type="hidden"
+					id="log_count" name="log_count" value="0">
 
 				<script>
 				Kakao.init("70009e108e4f5d8b1b0fa8759b63dc8f");
@@ -67,7 +62,7 @@
 								console.log("email: " + email);
 								console.log("nickname: " + nickname);
 								console.log("access_token: " + access_token);
-							
+								
 								$(function() {
 									
 									//로그인 정보들을 input 태그의 value 에 담는다.
@@ -105,7 +100,7 @@
 		</form>
 		<br> <br> <input type="button" class="btn btn-danger"
 			id="onlydev" name="onlydev" value="개발자전용: 무시하고 다음 페이지로 이동"
-			onClick="location.href='./menu.jsp';"> <br> <br>
+			onClick="location.href='${pageContext.request.contextPath}/resource/jsp/menu.jsp';"> <br> <br>
 
 
 	</div>

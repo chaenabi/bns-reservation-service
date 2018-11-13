@@ -58,12 +58,10 @@ public class KakaoServ extends HttpServlet {
 		} else if (action.equals("kakao-login")) {
 			// 로그인 시 개인정보 DB 등록 처리
 			kdao.insertID(kvo);
-			out.print("--------------------------------");
-			out.print("------- Login 정보 전달 성공 --------");
-			out.print("--------------------------------");
+
 			
 			// 목록으로 페이지 이동
-			request.getRequestDispatcher("/resource/jsp/menu.jsp").forward(request, response);
+			request.getRequestDispatcher("/resource/jsp/main.jsp").forward(request, response);
 
 		} else if (action.equals("list")) {
 			// 가입된 데이터 전체 조회

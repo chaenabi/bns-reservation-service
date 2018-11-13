@@ -38,7 +38,7 @@ public class KakaoDAO extends JDBC {
 		}
 		return datas;
 	}
-	
+	//INSERT INTO a_tbl VALUES(1, 'aaa', '222-2222') ON DUPLICATE KEY UPDATE phone = '222-2222';
 	
 	// 카카오톡 아이디 로그인 정보 DB 등록
 	public void insertID(KakaoDTO kvo) {
@@ -46,19 +46,25 @@ public class KakaoDAO extends JDBC {
 			connect();
 			System.out.println("세션 접속 완료.");
 			String sql = "insert into users (id, email, nickname, access_token)"
-					+ "values (?, ?, ?, ?)"; 
-			System.out.println("ID정보를 Insert 합니다. : ");
+					+ "values (?, ?, ?, ?)" 
+					+ "on duplicate key update email=values(email), nickname=values(nickname),"
+											  +"access_token=values(access_token)";
+					// OR
+					//"INSERT INTO users (id, email, nickname, access_token) VALUES (?, ?, ?, ?)"
+					//+ "ON DUPLICATE KEY UPDATE email=?, nickname=?, access_token=?";
+			System.out.println("ID정보를 DB에 적용합니다. : ");
 			System.out.println(kvo);
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, kvo.getId());
 			pstmt.setString(2, kvo.getEmail());
 			pstmt.setString(3, kvo.getNickname());
 			pstmt.setString(4, kvo.getAccess_token());
+			//pstmt.setInt(5, kvo.getLog_count());
 
 			int r = pstmt.executeUpdate();
 
 			System.out.println(r + " 건 등록 완료");
-
+			//}
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
