@@ -3,7 +3,6 @@ package dao;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
 
 import common.JDBC;
 import vo.KakaoDTO;
@@ -74,41 +73,6 @@ public class KakaoDAO extends JDBC {
 			System.out.println("세션 종료되었습니다.");
 		}
 
-	}
-	
-	
-	// 카카오 아이디, 닉네임, 이메일 조회용.
-	// (카카오톡 전체 조회와는 다른 용도로 사용하기 위해 만들어 두었으나.. 별차이가 없긴하다..)
-	public List<KakaoDTO> selectAll(String id) {
-		List<KakaoDTO> list = new ArrayList<>();
-		KakaoDTO kvo = new KakaoDTO();
-		try {
-			connect();
-			stmt = conn.createStatement();
-			String sql=null;
-			if(id.equals("all")) {
-				
-				sql ="select id, nickname, email from users";
-			
-			}
-			ResultSet rs = stmt.executeQuery(sql);
-			
-			if( rs.next() ) {
-				
-				kvo.setId(rs.getString("id"));
-				kvo.setNickname(rs.getString("nickname"));
-				kvo.setEmail(rs.getString("email"));
-
-				list.add(kvo);
-			}	
-		} catch (Exception e) {
-			e.printStackTrace();
-			
-		} finally {
-			disconnect();
-		} 
-		return list;
-	
 	}
 
 }

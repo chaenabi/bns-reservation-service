@@ -35,12 +35,12 @@
 		<div class="content">
 			<div class="aside">
 				<input type="button" class="btn btn-danger" id="register"
-					style="font-weight: bold;" value="판매등록" onclick="location.href='./sale_register.jsp';"> &emsp;
+					style="font-weight: bold;" value="판매등록" onclick="location.href='${pageContext.request.contextPath}/resource/jsp/sale_register.jsp';"> &emsp;
 				<input type="button" class="btn btn-default" id="history"
 					style="font-weight: bold;" value="주문내역" onclick="btn_history();">
-				&emsp; <img
+				&emsp; <a href="${pageContext.request.contextPath}/resource/jsp/kakao-logout.jsp"> <img
 					src="${pageContext.request.contextPath}/resource/assets/image/Klogout.png"
-					class="kakao-logout-btn" style="width: 100px; height: 100px" onclick="Logout(); return false;"/> 
+					class="kakao-logout-btn" style="width: 100px; height: 100px;" onclick="Logout(); return false;"/> </a>
 			</div>
 	
 			
@@ -48,9 +48,9 @@
 			<p>Welcome to BNS BUS reservation guide</p>
 			
 			
-			<p style="margin: 0; padding: 0; font-size:10px;">
+			<p style="margin: 0; padding: 0; font-size:20px; color:#58FA58">
 			
-				${kvo.getNickname}님 환영합니다.
+				<%= session.getAttribute("nickname") %> 님 환영합니다.
 			
 				</p>
 

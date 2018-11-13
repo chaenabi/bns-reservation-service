@@ -12,8 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-//import javax.servlet.ServletContext;
-//import javax.servlet.http.HttpSession;
+import javax.servlet.http.HttpSession;
 
 import org.apache.commons.beanutils.BeanUtils;
 
@@ -33,7 +32,7 @@ public class KakaoServ extends HttpServlet {
 
 		// 내장객체 application, session, out
 		//ServletContext application = this.getServletContext();
-		//HttpSession session = request.getSession();
+		HttpSession session = request.getSession();
 		PrintWriter out = response.getWriter();
 		// 파라미터 인코딩
 		request.setCharacterEncoding("utf-8");
@@ -60,19 +59,14 @@ public class KakaoServ extends HttpServlet {
 		} else if (action.equals("kakao-login")) {
 			// 로그인 시 개인정보 DB 등록 처리
 			kdao.insertID(kvo);
-
+			
+			//님 안녕하세요~ 를 위한 코드.
+			String nickname = request.getParameter("nickname");
+			session.setAttribute("nickname", nickname);
 			
 			// 목록으로 페이지 이동
 			request.getRequestDispatcher("/resource/jsp/menu.jsp").forward(request, response);
 
-		} else if(action.equals("selectAll")){
-			// 단순히 닉네임을 '님 환영합니다'에 노출시키기 위한 용도로만 쓰이고 있음.
-			// 닉네임만 가져오는 것이 아니라, 혹시 모를 email과 id (의 활용을 위해) 도 함께 조회함.
-			List<KakaoDTO> id = kdao.selectAll("id");
-			request.setAttribute("datas", id);
-	
-			request.getRequestDispatcher("/resource/jsp/menu.jsp").forward(request, response);
-		
 		} else if (action.equals("list")) {
 			// 가입된 데이터 전체 조회
 			ArrayList<KakaoDTO> datas = kdao.getIdList();
