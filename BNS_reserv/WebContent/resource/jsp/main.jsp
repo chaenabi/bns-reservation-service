@@ -32,9 +32,12 @@
 			method="post" id="kakao-login">
 
 			<div class="kakao">
-				<input type="hidden" name="action" value="kakao-login" /> <a
-					id="kakao-login-btn"></a> <a
-					href="http://developers.kakao.com/logout"></a> <input type="hidden"
+				<input type="hidden" name="action" value="kakao-login" /> 
+				<a id="kakao-login-btn"></a>
+
+				<a href="http://developers.kakao.com/logout"></a>
+				
+				<input type="hidden"
 					id="id" name="id" value="0"> <input type="hidden"
 					id="email" name="email" value="0"> <input type="hidden"
 					id="nickname" name="nickname" value="0"> <input type="hidden"
@@ -74,7 +77,12 @@
 									//서브밋 한다.
 									 var form = document.getElementById("kakao-login");  
 									  form.submit();
+									  
+									 
+
 								});
+								
+						
 								
 								//alert("res: "+ JSON.stringify(res)); 
 								//kakao.api.request 에서 불러온 결과값을 json형태로 출력
@@ -85,7 +93,10 @@
 							}
 								});
 							
-
+						//로그인 후 로그인버튼 처리
+						$('#kakao-login-btn').hide();
+			
+					
 					},
 
 					fail : function(error) {

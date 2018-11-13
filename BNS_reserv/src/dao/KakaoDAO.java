@@ -3,6 +3,7 @@ package dao;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 import common.JDBC;
 import vo.KakaoDTO;
@@ -10,7 +11,7 @@ import vo.KakaoDTO;
 
 public class KakaoDAO extends JDBC {
 	
-	// 카카오톡 아이디 전체 조회
+	// 카카오톡 정보 전체 조회
 	public ArrayList<KakaoDTO> getIdList() {
 		connect();
 		ArrayList<KakaoDTO> datas = new ArrayList<KakaoDTO>();
@@ -38,17 +39,18 @@ public class KakaoDAO extends JDBC {
 		}
 		return datas;
 	}
-	//INSERT INTO a_tbl VALUES(1, 'aaa', '222-2222') ON DUPLICATE KEY UPDATE phone = '222-2222';
+
 	
 	// 카카오톡 아이디 로그인 정보 DB 등록
 	public void insertID(KakaoDTO kvo) {
 		try {
 			connect();
 			System.out.println("세션 접속 완료.");
-			String sql = "insert into users (id, email, nickname, access_token)"
-					+ "values (?, ?, ?, ?)" 
-					+ "on duplicate key update email=values(email), nickname=values(nickname),"
-											  +"access_token=values(access_token)";
+			String sql = "INSERT INTO users (id, email, nickname, access_token)"
+					+ "VALUES (?, ?, ?, ?)" 
+					+ "ON DUPLICATE KEY UPDATE email=VALUES(email)" 
+																	  +", nickname=VALUES(nickname)"
+											                          +", access_token=VALUES(access_token)";
 					// OR
 					//"INSERT INTO users (id, email, nickname, access_token) VALUES (?, ?, ?, ?)"
 					//+ "ON DUPLICATE KEY UPDATE email=?, nickname=?, access_token=?";
@@ -75,4 +77,38 @@ public class KakaoDAO extends JDBC {
 	}
 	
 	
+	// 카카오 아이디, 닉네임, 이메일 조회용.
+	// (카카오톡 전체 조회와는 다른 용도로 사용하기 위해 만들어 두었으나.. 별차이가 없긴하다..)
+	public List<KakaoDTO> selectAll(String id) {
+		List<KakaoDTO> list = new ArrayList<>();
+		KakaoDTO kvo = new KakaoDTO();
+		try {
+			connect();
+			stmt = conn.createStatement();
+			String sql=null;
+			if(id.equals("all")) {
+				
+				sql ="select id, nickname, email from users";
+			
+			}
+			ResultSet rs = stmt.executeQuery(sql);
+			
+			if( rs.next() ) {
+				
+				kvo.setId(rs.getString("id"));
+				kvo.setNickname(rs.getString("nickname"));
+				kvo.setEmail(rs.getString("email"));
+
+				list.add(kvo);
+			}	
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+		} finally {
+			disconnect();
+		} 
+		return list;
+	
+	}
+
 }
