@@ -63,7 +63,8 @@
 			
 			<p style="margin: 0; padding: 0; font-size:20px; color:#58FA58">
 			
-				<%= session.getAttribute("nickname") %> 님 환영합니다.
+				
+			 <%= session.getAttribute("nickname") %> 님 환영합니다.
 			
 				</p>
 			

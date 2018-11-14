@@ -28,15 +28,16 @@
 
 				<h2>등록</h2>
 					<p style="margin: 0; padding: 0; font-size:20px; color:#58FA58">
-			
+		
+				<%=  session.getAttribute("id") %>
 				<%= session.getAttribute("nickname") %> 님 환영합니다.
 			
 				</p>
 				<hr>
 				<br>
 				<div class="team_register">
-					<input type="hidden" id="<%=session.getAttribute("id")%>"  name="<%=session.getAttribute("id") %>" 
-					value="<%= session.getAttribute("id") %>"/>
+					<input type="hidden" id="id"  name="id" 
+					value="<%=session.getAttribute("id")%>"/>
 					<a>팀명</a> : <input type="text" id="team_name" name="team_name" placeholder="6글자이내">
 					<input type="button" id="multi_ck" value="중복체크"> &nbsp; <a>진행날짜
 						: </a> <input type="text" id="go_date" name="go_date" placeholder="timeplickr 적용예정">

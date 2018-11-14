@@ -60,9 +60,14 @@ public class KakaoServ extends HttpServlet {
 			// 로그인 시 개인정보 DB 등록 처리
 			kdao.insertID(kvo);
 			
-			//님 안녕하세요~ 를 위한 코드.
+			//세션에서 아래의 정보를 사용하기 위하여 setAttribute 한다.
 			String nickname = request.getParameter("nickname");
+			String id = request.getParameter("id");
+			String email = request.getParameter("email");
+			
 			session.setAttribute("nickname", nickname);
+			session.setAttribute("id", id);
+			session.setAttribute("email", email);
 			
 			// 목록으로 페이지 이동
 

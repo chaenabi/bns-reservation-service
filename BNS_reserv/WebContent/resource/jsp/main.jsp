@@ -58,8 +58,8 @@
 								// json형태로 출력되는 로그인 정보들을 변수에 담는다.
 								var id =JSON.stringify(res.id);
 								var email = JSON.stringify(res.kaccount_email);
-								var nickname = JSON.stringify(res.properties['nickname']);
-																				 //res.properties.nickname으로도 접근 가능.
+								var nickname = JSON.stringify(res.properties.nickname);
+																				 //res.properties['nickname']으로도 접근 가능.
 								var access_token = JSON.stringify(authObj.access_token);
 								
 								$(function() {
