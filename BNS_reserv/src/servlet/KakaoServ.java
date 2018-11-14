@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
-import java.util.List;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -65,6 +65,7 @@ public class KakaoServ extends HttpServlet {
 			session.setAttribute("nickname", nickname);
 			
 			// 목록으로 페이지 이동
+
 			request.getRequestDispatcher("/resource/jsp/menu.jsp").forward(request, response);
 
 		} else if (action.equals("list")) {

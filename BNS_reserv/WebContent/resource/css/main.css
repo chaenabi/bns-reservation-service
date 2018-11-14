@@ -1,11 +1,10 @@
 * {
     box-sizing: border-box;
 }
-
-body {
-	font-family: Calibri, sans-serif;
+body > * {
+	all:unset;
+		
 }
-
 #intro_video {
 	position: fixed;
 	right: 0;
@@ -47,10 +46,21 @@ body {
 	
 }
 
-.container #onlydev {
-	display: inline-block;
+.container #login_other {
+	display: block;
 	margin: 0 auto;
-	font-size: 20px;
+	font-size: 16px;
+	padding: 12px 20px 12px 20px;
+	color: #fff;
+	background-color: #FE2E2E;
+	border-radius: 5px;
+	border: none;
+	font-family: Malgun Gothic;
+
+}
+
+.container #login_other:hover {
+		background-color: #DF0101;
 }
 
 #Btn_video {
@@ -63,7 +73,7 @@ body {
 	
 	display: block;
 	margin: 0 auto;
-	
+
 }
 
 #Btn_video:hover {
