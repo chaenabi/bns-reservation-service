@@ -9,7 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+
 
 import org.apache.commons.beanutils.BeanUtils;
 
@@ -30,7 +30,7 @@ public class TeamServ extends HttpServlet {
 
 				// 내장객체 application, session, out
 				//ServletContext application = this.getServletContext();
-				HttpSession session = request.getSession();
+				//HttpSession session = request.getSession();
 				PrintWriter out = response.getWriter();
 				// 파라미터 인코딩
 				request.setCharacterEncoding("utf-8");
@@ -56,12 +56,12 @@ public class TeamServ extends HttpServlet {
 
 				} else if (action.equals("team_reg")) {
 					// 팀 등록
-					String nickname = request.getParameter("nickname");
+					/*String nickname = request.getParameter("nickname");
 					String id = request.getParameter("id");
 					String email = request.getParameter("email");
 					session.setAttribute("nickname", nickname);
 					session.setAttribute("id", id);
-					session.setAttribute("email", email);
+					session.setAttribute("email", email);*/
 					tdao.addTeam(tvo);
 
 					// 목록으로 페이지 이동

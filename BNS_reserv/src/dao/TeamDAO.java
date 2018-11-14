@@ -14,7 +14,7 @@ public class TeamDAO extends JDBC{
 					+ "VALUES (?, ?, ?, ?, ?)";
 
 			System.out.println("ID정보를 DB에 적용합니다. : ");
-			System.out.println(tvo);
+
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, tvo.getId());
 			pstmt.setString(2, tvo.getTeam_name());
