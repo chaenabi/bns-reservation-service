@@ -20,7 +20,7 @@
 			src="${pageContext.request.contextPath}/resource/assets/video/vi3.mp4"
 			type="video/mp4">
 	</video>
-
+	<form action="${pageContext.request.contextPath}/servlet/TeamServ?action=team_reg" method="post">
 	<div class="container">
 		<div class="content">
 
@@ -35,20 +35,22 @@
 				<hr>
 				<br>
 				<div class="team_register">
-					<a>팀명</a> : <input type="text" value="" placeholder="6글자이내">
+					<input type="hidden" id="<%=session.getAttribute("id")%>"  name="<%=session.getAttribute("id") %>" 
+					value="<%= session.getAttribute("id") %>"/>
+					<a>팀명</a> : <input type="text" id="team_name" name="team_name" placeholder="6글자이내">
 					<input type="button" id="multi_ck" value="중복체크"> &nbsp; <a>진행날짜
-						: </a> <input type="text" value="" placeholder="timeplickr 적용예정">
-						출발시각 : <input type="text" value="" placeholder="출발시각">
+						: </a> <input type="text" id="go_date" name="go_date" placeholder="timeplickr 적용예정">
+						출발시각 : <input type="text" id="go_time" name="go_time" placeholder="출발시각">
 						</div>
 						
 					<div class="team_raid"> 레이드종류 : 검은 마천루 <label class="radio"> <input
-						type="radio" name="group-radio"> <i class="icon-radio"></i>
+						type="radio" name="raid_type" value="검은 마천루"> <i class="icon-radio"></i>
 					</label> 소용돌이 사원 <label class="radio"> <input type="radio"
-						name="group-radio"> <i class="icon-radio"></i>
+						name="raid_type" value="소용돌이 사원"> <i class="icon-radio"></i>
 					</label> 태천왕릉 <label class="radio"> <input type="radio"
-						name="group-radio"> <i class="icon-radio"></i>
+						name="raid_type" value="태천왕릉"> <i class="icon-radio"></i>
 					</label> 적몽의 비원 <label class="radio"> <input type="radio"
-						name="group-radio" disabled="disabled"> <i
+						name="raid_type" value="적몽의 비원" disabled="disabled"> <i
 						class="icon-radio"></i>
 					</label>
 
@@ -255,6 +257,6 @@
 		</div>
 
 	</div>
-
+</form>
 </body>
 </html>

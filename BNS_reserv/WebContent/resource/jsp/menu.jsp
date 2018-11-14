@@ -38,11 +38,24 @@
 					style="font-weight: bold;" value="판매등록" onclick="location.href='${pageContext.request.contextPath}/resource/jsp/sale_register.jsp';"> &emsp;
 				<input type="button" class="btn btn-default" id="history"
 					style="font-weight: bold;" value="주문내역" onclick="btn_history();">
-				&emsp; <a href="${pageContext.request.contextPath}/resource/jsp/kakao-logout.jsp"> <img
+				&emsp; <a href="${pageContext.request.contextPath}/resource/jsp/main.jsp" onclick="logoutFromKakao();"> <img
 					src="${pageContext.request.contextPath}/resource/assets/image/Klogout.png"
-					class="kakao-logout-btn" style="width: 100px; height: 100px;" onclick="Logout(); return false;"/> </a>
+					class="kakao-logout-btn" style="width: 100px; height: 100px;"/> </a>
 			</div>
-	
+			
+			
+			<script>			
+			
+				//카카오톡 로그아웃.
+				function logoutFromKakao(){
+				Kakao.init("70009e108e4f5d8b1b0fa8759b63dc8f");
+				Kakao.Auth.logout(function(){
+
+    			location.href='${pageContext.request.contextPath}/resource/jsp/menu.jsp';
+
+    		  });
+			};
+			</script>
 			
 			<h1>Blade and Soul</h1>
 			<p>Welcome to BNS BUS reservation guide</p>
@@ -53,7 +66,7 @@
 				<%= session.getAttribute("nickname") %> 님 환영합니다.
 			
 				</p>
-
+			
 			
 			
 			<br> <br> <input type="button" id="goblack" value="검은 마천루"
