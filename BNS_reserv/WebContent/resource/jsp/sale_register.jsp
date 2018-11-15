@@ -45,25 +45,36 @@
 						</div>
 						
 					<div class="team_raid"> 레이드종류 : 검은 마천루 <label class="radio"> <input
-						type="radio" name="raid_type" value="검은 마천루"> <i class="icon-radio"></i>
+						type="radio" name="raid_type" id="black" value="검은 마천루"  required> <i class="icon-radio"></i>
 					</label> 소용돌이 사원 <label class="radio"> <input type="radio"
-						name="raid_type" value="소용돌이 사원"> <i class="icon-radio"></i>
-					</label> 태천왕릉 <label class="radio"> <input type="radio"
-						name="raid_type" value="태천왕릉"> <i class="icon-radio"></i>
-					</label> 적몽의 비원 <label class="radio"> <input type="radio"
-						name="raid_type" value="적몽의 비원" disabled="disabled"> <i
+						name="raid_type" id="vortex"  value="소용돌이 사원"  required> <i class="icon-radio"></i>
+					</label> 태천왕릉 <label class="radio"  > <input type="radio"
+						name="raid_type"  id="twilight"  value="태천왕릉" required> <i class="icon-radio"></i>
+					</label> 적몽의 비원 <label class="radio" > <input type="radio"
+						name="raid_type"  id="reddream"  value="적몽의 비원" disabled="disabled"> <i
 						class="icon-radio"></i>
 					</label>
 
 				</div>
 				<hr>
-
+				
 				<h3 style="margin:10px;">판매할 아이템</h3>
 				<hr>
+				
+				
+				
 				<div class="sales">
-					<a class="named"> 천독룡 </a> <br>
-
-
+				
+				
+				
+					<a class="named"> 천독룡 </a>
+					<a class="named2"> 초열혹한검</a>
+					<a class="named3"> 결계천수 </a>	
+					<a class="named4"> ??? </a>		 <br>
+					
+					
+					
+					<!-- 검은마천루  -->
 					<div class="sale-item">
 						<div class="sale-item-name">
 							<a> 천독귀걸이(번개)</a>
@@ -71,7 +82,7 @@
 						<label class="checkbox">
 								<input type="checkbox" value="천독귀걸이(번개)"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" placeholder="금액">
+						</label> <input type="text" id="a" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item">
@@ -81,43 +92,86 @@
 						<label class="checkbox">
 								<input type="checkbox" value="천독귀걸이(화염)"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" placeholder="금액">
+						</label> <input type="text" id="b" class="writeprice" placeholder="금액">
 					</div>
 
-					<br>
-
-
-					<div class="sale-item">
+					<!-- 소용돌이 사원  -->
+					<div class="sale-item2">
 						<div class="sale-item-name">
-							<a> 천독반지(바람)</a>
+							<a> 천독귀걸이(번개)</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="천독반지(바람)"> <i
+								<input type="checkbox" value="천독귀걸이(번개)" > <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" placeholder="금액">
+						</label> <input type="text" id="c"  class="writeprice" placeholder="금액">
 					</div>
 
-					<div class="sale-item">
+					<div class="sale-item2">
 						<div class="sale-item-name">
-							<a> 천독반지(암흑)</a>
+							<a> 천독귀걸이(화염)</a>
 						</div>
-						 <label class="checkbox">
-								<input type="checkbox" value="천독반지(암흑)"> <i
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
 								class="icon-checkbox"></i>
-						</label>
-						 <input type="text" placeholder="금액">
+						</label> <input type="text" id="d"  class="writeprice" placeholder="금액">
 					</div>
-					<a class="named"> 사안장군 </a> <br>
-
-
-						<div class="sale-item">
+					
+					<!-- 태천왕릉  -->
+					<div class="sale-item3">
 						<div class="sale-item-name">
 							<a> 천독귀걸이(번개)</a>
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" value="천독귀걸이(번개)"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" placeholder="금액">
+						</label> <input type="text" id="e"  class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item3">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(화염)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text"  id="f" class="writeprice" placeholder="금액">
+					</div>
+					
+					<!-- 적몽의 비원  -->
+					<div class="sale-item4">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(번개)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text"  id="g" class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item4">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(화염)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="h"  class="writeprice" placeholder="금액">
+					</div>
+					
+					
+
+
+					<br>
+
+										<!-- 검은마천루  -->
+					<div class="sale-item">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(번개)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="i"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item">
@@ -127,44 +181,94 @@
 						<label class="checkbox">
 								<input type="checkbox" value="천독귀걸이(화염)"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" placeholder="금액">
+						</label> <input type="text" id="j" class="writeprice" placeholder="금액">
 					</div>
 
-					<br>
-
-
-					<div class="sale-item">
-						<div class="sale-item-name">
-							<a> 천독반지(바람)</a>
-						</div>
-						<label class="checkbox">
-								<input type="checkbox" value="천독반지(바람)"> <i
-								class="icon-checkbox"></i>
-						</label> <input type="text" placeholder="금액">
-					</div>
-
-					<div class="sale-item">
-						<div class="sale-item-name">
-							<a> 천독반지(암흑)</a>
-						</div>
-						 <label class="checkbox">
-								<input type="checkbox" value="천독반지(암흑)"> <i
-								class="icon-checkbox"></i>
-						</label>
-						 <input type="text" placeholder="금액">
-					</div>
-
-					<a class="named"> 모순장군 </a> <br>
-
-
-						<div class="sale-item">
+					<!-- 소용돌이 사원  -->
+					<div class="sale-item2">
 						<div class="sale-item-name">
 							<a> 천독귀걸이(번개)</a>
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" value="천독귀걸이(번개)"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" placeholder="금액">
+						</label> <input type="text"  id="k" class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item2">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(화염)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text"id="l"  class="writeprice" placeholder="금액">
+					</div>
+					
+					<!-- 태천왕릉  -->
+					<div class="sale-item3">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(번개)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text"  id="m" class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item3">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(화염)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="n"  class="writeprice" placeholder="금액">
+					</div>
+					
+					<!-- 적몽의 비원  -->
+					<div class="sale-item4">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(번개)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="o"  class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item4">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(화염)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="p" class="writeprice" placeholder="금액">
+					</div>	
+
+					
+					
+					<div class="info">
+							<a> 등록할 팀의 레이드 종류를 선택해주세요 !</a>
+						</div>
+					
+					<a class="named"> 천독룡 </a>
+					<a class="named2"> 초열혹한검</a>
+					<a class="named3"> 결계천수 </a>	
+					<a class="named4"> ??? </a>		 <br>
+					
+					
+					
+					<!-- 검은마천루  -->
+					<div class="sale-item">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(번개)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="q"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item">
@@ -174,36 +278,78 @@
 						<label class="checkbox">
 								<input type="checkbox" value="천독귀걸이(화염)"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" placeholder="금액">
+						</label> <input type="text" id="r" class="writeprice" placeholder="금액">
 					</div>
+
+					<!-- 소용돌이 사원  -->
+					<div class="sale-item2">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(번개)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="s" class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item2">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(화염)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="t" class="writeprice" placeholder="금액">
+					</div>
+					
+					<!-- 태천왕릉  -->
+					<div class="sale-item3">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(번개)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="u"  class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item3">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(화염)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text"id="v"  class="writeprice" placeholder="금액">
+					</div>
+					
+					<!-- 적몽의 비원  -->
+					<div class="sale-item4">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(번개)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="w" class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item4">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(화염)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="x"  class="writeprice" placeholder="금액">
+					</div>
+					
+					
+
 
 					<br>
 
-
-					<div class="sale-item">
-						<div class="sale-item-name">
-							<a> 천독반지(바람)</a>
-						</div>
-						<label class="checkbox">
-								<input type="checkbox" value="천독반지(바람)"> <i
-								class="icon-checkbox"></i>
-						</label> <input type="text" placeholder="금액">
-					</div>
-
-					<div class="sale-item">
-						<div class="sale-item-name">
-							<a> 천독반지(암흑)</a>
-						</div>
-						 <label class="checkbox">
-								<input type="checkbox" value="천독반지(암흑)"> <i
-								class="icon-checkbox"></i>
-						</label>
-						 <input type="text" placeholder="금액">
-					</div>
-
-					<a class="named"> 촉마왕 </a> <br>
-
-
+										<!-- 검은마천루  -->
 					<div class="sale-item">
 						<div class="sale-item-name">
 							<a> 천독귀걸이(번개)</a>
@@ -211,7 +357,7 @@
 						<label class="checkbox">
 								<input type="checkbox" value="천독귀걸이(번개)"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" placeholder="금액">
+						</label> <input type="text" id="y" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item">
@@ -221,35 +367,443 @@
 						<label class="checkbox">
 								<input type="checkbox" value="천독귀걸이(화염)"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" placeholder="금액">
+						</label> <input type="text" id="z" class="writeprice" placeholder="금액">
 					</div>
 
-					<br>
-
-
-					<div class="sale-item">
+					<!-- 소용돌이 사원  -->
+					<div class="sale-item2">
 						<div class="sale-item-name">
-							<a> 천독반지(바람)</a>
+							<a> 천독귀걸이(번개)</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="천독반지(바람)"> <i
+								<input type="checkbox" value="천독귀걸이(번개)"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" placeholder="금액">
+						</label> <input type="text" id="a0" class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item2">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(화염)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="b0" class="writeprice" placeholder="금액">
+					</div>
+					
+					<!-- 태천왕릉  -->
+					<div class="sale-item3">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(번개)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="c0" class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item3">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(화염)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="d0" class="writeprice" placeholder="금액">
+					</div>
+					
+					<!-- 적몽의 비원  -->
+					<div class="sale-item4">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(번개)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="e0"  class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item4">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(화염)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="f0" class="writeprice" placeholder="금액">
+					</div>	
+
+
+					<a class="named"> 천독룡 </a>
+					<a class="named2"> 초열혹한검</a>
+					<a class="named3"> 결계천수 </a>	
+					<a class="named4"> ??? </a>		 <br>
+					
+					
+					
+					<!-- 검은마천루  -->
+					<div class="sale-item">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(번개)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="g0" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item">
 						<div class="sale-item-name">
-							<a> 천독반지(암흑)</a>
+							<a> 천독귀걸이(화염)</a>
 						</div>
-						 <label class="checkbox">
-								<input type="checkbox" value="천독반지(암흑)"> <i
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
 								class="icon-checkbox"></i>
-						</label>
-						 <input type="text" placeholder="금액">
+						</label> <input type="text"  id="h0" class="writeprice" placeholder="금액">
 					</div>
+
+					<!-- 소용돌이 사원  -->
+					<div class="sale-item2">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(번개)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text"  id="i0" class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item2">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(화염)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="j0" class="writeprice" placeholder="금액">
+					</div>
+					
+					<!-- 태천왕릉  -->
+					<div class="sale-item3">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(번개)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="k0" class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item3">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(화염)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="l0"  class="writeprice" placeholder="금액">
+					</div>
+					
+					<!-- 적몽의 비원  -->
+					<div class="sale-item4">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(번개)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="m0" class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item4">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(화염)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text"  id="n0" class="writeprice" placeholder="금액">
+					</div>
+					
+					
+
+
+					<br>
+
+										<!-- 검은마천루  -->
+					<div class="sale-item">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(번개)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text"  id="o0" class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(화염)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="p0" class="writeprice" placeholder="금액">
+					</div>
+
+					<!-- 소용돌이 사원  -->
+					<div class="sale-item2">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(번개)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text"  id="q0" class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item2">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(화염)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="r0"  class="writeprice" placeholder="금액">
+					</div>
+					
+					<!-- 태천왕릉  -->
+					<div class="sale-item3">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(번개)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text"  id="s0" class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item3">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(화염)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="t0" class="writeprice" placeholder="금액">
+					</div>
+					
+					<!-- 적몽의 비원  -->
+					<div class="sale-item4">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(번개)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text"  id="u0" class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item4">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(화염)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text"  id="v0" class="writeprice" placeholder="금액">
+					</div>	
+
+	<a class="named"> 천독룡 </a>
+					<a class="named2"> 초열혹한검</a>
+					<a class="named3"> 결계천수 </a>	
+					<a class="named4"> 사화마녀 </a>		 <br>
+					
+					
+					
+					<!-- 검은마천루  -->
+					<div class="sale-item">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(번개)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text"  id="w0" class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(화염)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="x0" class="writeprice" placeholder="금액">
+					</div>
+
+					<!-- 소용돌이 사원  -->
+					<div class="sale-item2">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(번개)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="y0" class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item2">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(화염)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="z0"  class="writeprice" placeholder="금액">
+					</div>
+					
+					<!-- 태천왕릉  -->
+					<div class="sale-item3">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(번개)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="a1" class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item3">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(화염)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="b1" class="writeprice" placeholder="금액">
+					</div>
+					
+					<!-- 적몽의 비원  -->
+					<div class="sale-item4">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(번개)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="c1"  class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item4">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(화염)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="d1"  class="writeprice" placeholder="금액">
+					</div>
+					
+					
+
+
+					<br>
+
+										<!-- 검은마천루  -->
+					<div class="sale-item">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(번개)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text"  id="e1"  class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(화염)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="f1"  class="writeprice" placeholder="금액">
+					</div>
+
+					<!-- 소용돌이 사원  -->
+					<div class="sale-item2">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(번개)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text"  id="g1"  class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item2">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(화염)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="h1"  class="writeprice" placeholder="금액">
+					</div>
+					
+					<!-- 태천왕릉  -->
+					<div class="sale-item3">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(번개)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text"  id="i1"  class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item3">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(화염)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text"  id="j1"  class="writeprice" placeholder="금액">
+					</div>
+					
+					<!-- 적몽의 비원 4네임드 미구현인듯  -->
+			<!-- 		<div class="sale-item4">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(번개)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text"  class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item4">
+						<div class="sale-item-name">
+							<a> 천독귀걸이(화염)</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text"  class="writeprice" placeholder="금액">
+					</div>	 -->
+
+					
+						<div class="info2" style="display:none;">
+							<a> 등록할 팀의 레이드 종류를 선택해주세요 !</a>
+						</div>
+						
 					<br>
 					<br>
-					<br> <input type="submit" value="팀등록하기">
+					<br> 
+					
+					<input type="submit" value="팀등록하기">
 				</div>
 
 			</div>
@@ -259,5 +813,9 @@
 
 	</div>
 </form>
+
+
+<script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/sale_register.js"></script>
+
 </body>
 </html>

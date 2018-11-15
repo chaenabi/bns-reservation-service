@@ -65,14 +65,15 @@ body {
 	display: inline-block;
 }
 
-.named {
+.named, .named2, .named3, .named4{
 	font-size: 20px;
 	font-weight: bold;
+	display: none;
 }
 
-.sale-item {
+.sale-item, .sale-item2,.sale-item3,.sale-item4 {
 	width: 50%;
-	display: block;
+	display: none;
 	float: left;
 	margin-top: 2px;
 	margin-bottom: 5px;
@@ -116,6 +117,11 @@ color:#000;
 	height: 20px;
 	color: #fff;
 	font-size: 16px;
+}
+
+.writeprice {
+	
+	visibility: hidden;
 }
 
 .sales input[type="submit"] {
