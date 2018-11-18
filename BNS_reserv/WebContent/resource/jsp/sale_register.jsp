@@ -86,9 +86,9 @@
 							<a> 투쟁반지 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="bs_tujang_ring1"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="e"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs1"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item">
@@ -96,9 +96,9 @@
 							<a> 투쟁반지 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="bs_tujang_ring2"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="f" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="bs2" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item">
@@ -106,9 +106,9 @@
 							<a> 투지반지 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="bs_tuji_ring1"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="e"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs3"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item">
@@ -116,9 +116,9 @@
 							<a> 투지반지 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="bs_tuji_ring2"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="f" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="bs4" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item">
@@ -126,9 +126,9 @@
 							<a> 투혼반지 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="bs_tuhon_ring1"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="e"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs5"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item">
@@ -136,9 +136,9 @@
 							<a> 투혼반지 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="bs_tuhon_ring2"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="f" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="bs6" class="writeprice" placeholder="금액">
 					</div>
 					
 
@@ -148,9 +148,9 @@
 							<a> 투쟁 1계열 비공패</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="vt_gon_tujang" > <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="c"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt1"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item2">
@@ -158,9 +158,9 @@
 							<a> 투쟁 2계열 비공패</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="vt_sun_tujang"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="d"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt2"  class="writeprice" placeholder="금액">
 					</div>
 							
 					<div class="sale-item2">
@@ -168,9 +168,9 @@
 							<a> 투지 1계열 비공패</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="vt_gon_tuji"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="k" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="vt3" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item2">
@@ -178,9 +178,9 @@
 							<a> 투지 2계열 비공패</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="vt_sun_tuji"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="k" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="vt4" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item2">
@@ -188,9 +188,9 @@
 							<a> 투혼 1계열 비공패</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="vt_gon_tuhon"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="k" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="vt5" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item2">
@@ -198,9 +198,9 @@
 							<a> 투혼 2계열 비공패</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="vt_sun_tuhon"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="k" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="vt6" class="writeprice" placeholder="금액">
 					</div>
 					
 					<!-- 태천왕릉  -->
@@ -209,9 +209,9 @@
 							<a> 투쟁반지 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="tw_tujang_ring1"> <i
+								<input type="checkbox"value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="e"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw1"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item3">
@@ -219,9 +219,9 @@
 							<a> 투쟁반지 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="tw_tujang_ring2"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="f" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="tw2" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item3">
@@ -229,9 +229,9 @@
 							<a> 투지반지 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="tw_tuji_ring1"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="e"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw3"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item3">
@@ -239,9 +239,9 @@
 							<a> 투지반지 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="tw_tuji_ring2"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="f" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="tw4" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item3">
@@ -249,9 +249,9 @@
 							<a> 투혼반지 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="tw_tuhon_ring1"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="e"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw5"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item3">
@@ -259,9 +259,9 @@
 							<a> 투혼반지 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="tw_tuhon_ring2"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="f" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="tw6" class="writeprice" placeholder="금액">
 					</div>
 					
 					
@@ -271,7 +271,7 @@
 							<a> 천독귀걸이(번개)</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
 						</label> <input type="text"  id="g" class="writeprice" placeholder="금액">
 					</div>
@@ -281,23 +281,18 @@
 							<a> 천독귀걸이(화염)</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
 						</label> <input type="text" id="h"  class="writeprice" placeholder="금액">
 					</div>
 					
 					
-
-
-
-
-					<!-- 적몽의 비원  -->
 					<div class="sale-item4">
 						<div class="sale-item-name">
 							<a> 천독귀걸이(번개)</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
 						</label> <input type="text" id="o"  class="writeprice" placeholder="금액">
 					</div>
@@ -307,7 +302,7 @@
 							<a> 천독귀걸이(화염)</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
 						</label> <input type="text" id="p" class="writeprice" placeholder="금액">
 					</div>	
@@ -341,9 +336,9 @@
 							<a> 투쟁귀걸이 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="bs_tujang_earring1"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="u"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs7"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item">
@@ -351,9 +346,9 @@
 							<a> 투쟁귀걸이 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="bs_tujang_earring2"> <i
+								<input type="checkbox"value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"id="v"  class="writeprice" placeholder="금액">
+						</label> <input type="text"id="bs8"  class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item">
@@ -361,9 +356,9 @@
 							<a> 투지귀걸이 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="bs_tuji_earring1"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="u"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs9"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item">
@@ -371,9 +366,9 @@
 							<a> 투지귀걸이 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="bs_tuji_earring2"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"id="v"  class="writeprice" placeholder="금액">
+						</label> <input type="text"id="bs10"  class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item">
@@ -381,9 +376,9 @@
 							<a> 투혼귀걸이 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="bs_tuhon_earring1"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="u"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs11"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item">
@@ -391,9 +386,9 @@
 							<a> 투혼귀걸이 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="bs_tuhon_earring2"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"id="v"  class="writeprice" placeholder="금액">
+						</label> <input type="text"id="bs12"  class="writeprice" placeholder="금액">
 					</div>
 
 					<!-- 소용돌이 사원  -->
@@ -402,9 +397,9 @@
 							<a> 투쟁 1계열 악세</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="vt_tujang1"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="s" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt7" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item2">
@@ -412,9 +407,9 @@
 							<a> 투쟁 2계열 악세</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="vt_tujang2"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="t" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt8" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item2">
@@ -422,9 +417,9 @@
 							<a> 투지 1계열 악세</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="vt_tuji1"> <i
+								<input type="checkbox"value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="t" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt9" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item2">
@@ -432,9 +427,9 @@
 							<a> 투지 2계열 악세</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="vt_tuji2"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="t" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt10" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item2">
@@ -442,9 +437,9 @@
 							<a> 투혼 1계열 악세</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="vt_tuhon1"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="t" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt11" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item2">
@@ -452,9 +447,9 @@
 							<a> 투혼 2계열 악세</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="vt_tuhon2"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="t" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt12" class="writeprice" placeholder="금액">
 					</div>
 					
 			
@@ -465,9 +460,9 @@
 							<a> 투쟁귀걸이 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="tw_tujang_earring1"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="u"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw7"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item3">
@@ -475,9 +470,9 @@
 							<a> 투쟁귀걸이 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="tw_tujang_earring2"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"id="v"  class="writeprice" placeholder="금액">
+						</label> <input type="text"id="tw8"  class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item3">
@@ -485,9 +480,9 @@
 							<a> 투지귀걸이 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="tw_tuji_earring1"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="u"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw9"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item3">
@@ -495,9 +490,9 @@
 							<a> 투지귀걸이 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="tw_tuji_earring2"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"id="v"  class="writeprice" placeholder="금액">
+						</label> <input type="text"id="tw10"  class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item3">
@@ -505,9 +500,9 @@
 							<a> 투혼귀걸이 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="tw_tuhon_earring1"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="u"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw11"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item3">
@@ -515,9 +510,9 @@
 							<a> 투혼귀걸이 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="tw_tuhon_earring2"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"id="v"  class="writeprice" placeholder="금액">
+						</label> <input type="text"id="tw12"  class="writeprice" placeholder="금액">
 					</div>
 					
 					<!-- 적몽의 비원  -->
@@ -526,7 +521,7 @@
 							<a> 천독귀걸이(번개)</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
 						</label> <input type="text" id="w" class="writeprice" placeholder="금액">
 					</div>
@@ -536,24 +531,17 @@
 							<a> 천독귀걸이(화염)</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
 						</label> <input type="text" id="x"  class="writeprice" placeholder="금액">
 					</div>
 					
-					
-
-
-
-
-					
-					<!-- 적몽의 비원  -->
 					<div class="sale-item4">
 						<div class="sale-item-name">
 							<a> 천독귀걸이(번개)</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
 						</label> <input type="text" id="e0"  class="writeprice" placeholder="금액">
 					</div>
@@ -563,7 +551,7 @@
 							<a> 천독귀걸이(화염)</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
 						</label> <input type="text" id="f0" class="writeprice" placeholder="금액">
 					</div>	
@@ -588,9 +576,9 @@
 							<a> 투쟁반지 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="bs_tujang_ring3"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="e"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs13"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item">
@@ -598,9 +586,9 @@
 							<a> 투쟁반지 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="bs_tujang_ring4"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="f" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="bs14" class="writeprice" placeholder="금액">
 					</div>
 				
 					<div class="sale-item">
@@ -608,9 +596,9 @@
 							<a> 투지반지 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="bs_tuji_ring3"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="e"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs15"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item">
@@ -618,9 +606,9 @@
 							<a> 투지반지 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="bs_tuji_ring4"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="f" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="bs16" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item">
@@ -628,9 +616,9 @@
 							<a> 투혼반지 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="bs_tuhon_ring3"> <i
+								<input type="checkbox"value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="e"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs17"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item">
@@ -638,9 +626,9 @@
 							<a> 투혼반지 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="bs_tuhon_ring4"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="f" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="bs18" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item">
@@ -648,9 +636,9 @@
 							<a> 투쟁귀걸이 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="bs_tujang_earring3"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="u"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs19"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item">
@@ -658,9 +646,9 @@
 							<a> 투쟁귀걸이 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="bs_tujang_earring4"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"id="v"  class="writeprice" placeholder="금액">
+						</label> <input type="text"id="bs20"  class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item">
@@ -668,9 +656,9 @@
 							<a> 투지귀걸이 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="bs_tuji_earring3"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="u"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs21"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item">
@@ -678,9 +666,9 @@
 							<a> 투지귀걸이 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="bs_tuji_earring4"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"id="v"  class="writeprice" placeholder="금액">
+						</label> <input type="text"id="bs22"  class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item">
@@ -688,9 +676,9 @@
 							<a> 투혼귀걸이 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="bs_tuhon_earring3"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="u"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs23"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item">
@@ -698,20 +686,20 @@
 							<a> 투혼귀걸이 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="bs_tuhon_earring4"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"id="v"  class="writeprice" placeholder="금액">
+						</label> <input type="text"id="bs24"  class="writeprice" placeholder="금액">
 					</div>
 
 					<!-- 소용돌이 사원  -->
-									<div class="sale-item2">
+					<div class="sale-item2">
 						<div class="sale-item-name">
 							<a> 투쟁 1계열 악세</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="vt_tujang3"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="s" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt13" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item2">
@@ -719,9 +707,9 @@
 							<a> 투쟁 2계열 악세</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="vt_tujang4"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="t" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt14" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item2">
@@ -729,9 +717,9 @@
 							<a> 투지 1계열 악세</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="vt_tuji3"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="t" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt15" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item2">
@@ -739,9 +727,9 @@
 							<a> 투지 2계열 악세</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="vt_tuji4"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="t" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt16" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item2">
@@ -749,9 +737,9 @@
 							<a> 투혼 1계열 악세</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="vt_tuhon3"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="t" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt17" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item2">
@@ -759,19 +747,19 @@
 							<a> 투혼 2계열 악세</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="vt_tuhon4"> <i
+								<input type="checkbox"value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="t" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt18" class="writeprice" placeholder="금액">
 					</div>
-										<!-- 소용돌이 사원  -->
+
 					<div class="sale-item2">
 						<div class="sale-item-name">
 							<a> 투쟁 1계열 비공패</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="vt_gon_tujang2" > <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="c"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt19"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item2">
@@ -779,9 +767,9 @@
 							<a> 투쟁 2계열 비공패</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="vt_sun_tujang2"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="d"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt20"  class="writeprice" placeholder="금액">
 					</div>
 							
 					<div class="sale-item2">
@@ -789,9 +777,9 @@
 							<a> 투지 1계열 비공패</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="vt_gon_tuji2"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="k" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="vt21" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item2">
@@ -799,9 +787,9 @@
 							<a> 투지 2계열 비공패</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="vt_sun_tuji2"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="k" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="vt22" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item2">
@@ -809,9 +797,9 @@
 							<a> 투혼 1계열 비공패</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="vt_gon_tuhon2"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="k" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="vt23" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item2">
@@ -819,9 +807,9 @@
 							<a> 투혼 2계열 비공패</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="vt_sun_tuhon2"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="k" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="vt24" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item2" >
@@ -829,9 +817,9 @@
 							<a> 신공석</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="singongsuk"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="t" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt25" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item2" >
@@ -847,9 +835,9 @@
 							<a> 투쟁반지 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="tw_tujang_ring3"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="e"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw13"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item3">
@@ -857,9 +845,9 @@
 							<a> 투쟁반지 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="tw_tujang_ring4"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="f" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="tw14" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item3">
@@ -867,9 +855,9 @@
 							<a> 투지반지 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="tw_tuji_ring3"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="e"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw15"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item3">
@@ -877,9 +865,9 @@
 							<a> 투지반지 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="tw_tuji_ring4"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="f" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="tw16" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item3">
@@ -887,9 +875,9 @@
 							<a> 투혼반지 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="tw_tuhon_ring3"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="e"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw17"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item3">
@@ -897,9 +885,9 @@
 							<a> 투혼반지 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="tw_tuhon_ring4"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="f" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="tw18" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item3">
@@ -907,9 +895,9 @@
 							<a> 투쟁귀걸이 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="tw_tujang_earring3"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="u"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw19"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item3">
@@ -917,9 +905,9 @@
 							<a> 투쟁귀걸이 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="tw_tujang_earring4"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"id="v"  class="writeprice" placeholder="금액">
+						</label> <input type="text"id="tw20"  class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item3">
@@ -927,9 +915,9 @@
 							<a> 투지귀걸이 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="tw_tuji_earring3"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="u"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw21"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item3">
@@ -937,9 +925,9 @@
 							<a> 투지귀걸이 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="tw_tuji_earring4"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"id="v"  class="writeprice" placeholder="금액">
+						</label> <input type="text"id="tw22"  class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item3">
@@ -947,9 +935,9 @@
 							<a> 투혼귀걸이 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="tw_tuhon_earring3"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="u"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw23"  class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item3">
@@ -957,9 +945,9 @@
 							<a> 투혼귀걸이 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="tw_tuhon_earring4"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"id="v"  class="writeprice" placeholder="금액">
+						</label> <input type="text"id="tw24"  class="writeprice" placeholder="금액">
 					</div>
 					
 				
@@ -972,7 +960,7 @@
 							<a> 천독귀걸이(번개)</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
 						</label> <input type="text"  id="u0" class="writeprice" placeholder="금액">
 					</div>
@@ -982,7 +970,7 @@
 							<a> 천독귀걸이(화염)</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
 						</label> <input type="text"  id="v0" class="writeprice" placeholder="금액">
 							
@@ -1005,9 +993,9 @@
 							<a> 촉마왕의 흑린</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="hukrin"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="w0" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="bs_hukrin" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item">
@@ -1015,9 +1003,9 @@
 							<a> 촉마왕의 격골</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="gyukgol"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="x0" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs_gyukgol" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item">
@@ -1025,9 +1013,9 @@
 							<a> 촉마왕의 진기</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="ginki"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="x0" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs_ginki" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item">
@@ -1035,9 +1023,9 @@
 							<a> 촉마강</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="bs_gang"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="x0" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs_bsgang" class="writeprice" placeholder="금액">
 					</div>
 				
 					<!-- 소용돌이 사원  -->
@@ -1046,9 +1034,9 @@
 							<a> 흑풍마녀의 묵시</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="muksi"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="y0" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt_muksi" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item2">
@@ -1056,27 +1044,27 @@
 							<a> 흑풍마녀의 흑참</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="hukcham"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="z0"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt_hukcham"  class="writeprice" placeholder="금액">
 					</div>
 					<div class="sale-item2">
 						<div class="sale-item-name">
 							<a> 흑풍마녀의 암각</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="amgak"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="z0"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt_amgak"  class="writeprice" placeholder="금액">
 					</div>
 					<div class="sale-item2">
 						<div class="sale-item-name">
 							<a> 흑풍강</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="vt_gang"> <i
+								<input type="checkbox"  value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="z0"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt_vtgang"  class="writeprice" placeholder="금액">
 					</div>
 					
 					<!-- 태천왕릉  -->
@@ -1085,9 +1073,9 @@
 							<a> 태천명왕의 시익</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="siik"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="a1" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw_siik" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item3">
@@ -1095,9 +1083,9 @@
 							<a> 태천명왕의 늑골</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="nukgol"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="b1" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw_nukgol" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item3">
@@ -1105,9 +1093,9 @@
 							<a> 태천명왕의 광배</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="gwangbae"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="b1" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw_gwangbae" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item3">
@@ -1115,9 +1103,9 @@
 							<a> 태천강</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="tw_gang"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="b1" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw_twgang" class="writeprice" placeholder="금액">
 					</div>
 
 	
@@ -1128,7 +1116,7 @@
 							<a> 천독귀걸이(번개)</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="천독귀걸이(번개)"> <i
+								<input type="checkbox"value="0"> <i
 								class="icon-checkbox"></i>
 						</label> <input type="text"  class="writeprice" placeholder="금액">
 					</div>
@@ -1138,7 +1126,7 @@
 							<a> 천독귀걸이(화염)</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" value="천독귀걸이(화염)"> <i
+								<input type="checkbox" value="0"> <i
 								class="icon-checkbox"></i>
 						</label> <input type="text"  class="writeprice" placeholder="금액">
 					</div>	 -->

@@ -6,7 +6,7 @@ import vo.TeamDTO;
 public class TeamDAO extends JDBC{
 
 	
-	public void addTeam(TeamDTO tvo) {
+public void addTeam(TeamDTO tvo) {
 		try {
 			connect();
 			System.out.println("세션 접속 완료.");
