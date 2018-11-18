@@ -31,7 +31,7 @@ body {
 	display: block;
 	color: #000; position : absolute;
 	transform: translate(-50%, -50%); box-sizing : border-box;
-	padding: 70px 30px;
+	padding: 10px 30px;
 	box-sizing: border-box;
 	position: absolute;
 }
@@ -65,10 +65,16 @@ body {
 	display: inline-block;
 }
 
+.named_class {
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
 .named, .named2, .named3, .named4{
 	font-size: 20px;
 	font-weight: bold;
 	display: none;
+	color: #fff;
 }
 
 .sale-item, .sale-item2,.sale-item3,.sale-item4 {
@@ -79,17 +85,17 @@ body {
 	margin-bottom: 5px;
 }
 
+.sale-item-name a {
+	color: #ff0;
+	font-weight: normal;
+}
+
 .sale-item-name {
 	width: 180px;
 	margin: 0;
 	display: inline-block;
 }
 
-/* .sale-item-check {
-	width: 22px;
-	height: 22px;
-	vertical-align: bottom;
-} */
 
 #multi_ck {
 	border: none;

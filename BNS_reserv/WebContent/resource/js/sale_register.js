@@ -42,8 +42,8 @@ $('input[type="radio"]').click(function(){
 		  $(".sale-item4").hide('slow');
 		  $(".sale-item3").show('slow');
 	  }   
-	  /*else if($(this).attr("value")=="적몽의 비원"){
-	   * $('.info').hide('slow');
+	  else if($(this).attr("value")=="적몽의 비원"){
+	    $('.info').hide('slow');
 		  $('.info2').hide('slow');
 		  
 		   $(".named").hide('slow');   
@@ -55,7 +55,7 @@ $('input[type="radio"]').click(function(){
 		  $(".sale-item2").hide('slow');
 		  $(".sale-item3").hide('slow');
 		    $(".sale-item4").show('slow');
-	  }   */
+	  }   
 	  
 	  else {
 		  $('.info2').show('slow');

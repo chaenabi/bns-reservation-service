@@ -2,5 +2,5 @@
     pageEncoding="UTF-8"%>
 
 <!-- 메인페이지로 이동하라! -->    
-<%response.sendRedirect("./resource/jsp/main.jsp");%>
 
+ <%response.sendRedirect("./resource/jsp/main.jsp");%>
