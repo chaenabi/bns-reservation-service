@@ -89,6 +89,7 @@
 								<input type="checkbox" id="ck_bs1" value="0"> <i
 								class="icon-checkbox"></i>
 						</label> <input type="text" id="bs1"  class="writeprice" placeholder="금액">
+						
 					</div>
 
 					<div class="sale-item">
@@ -209,7 +210,7 @@
 							<a> 투쟁반지 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox"id="ck_tw2" value="0"> <i
+								<input type="checkbox"id="ck_tw1" value="0"> <i
 								class="icon-checkbox"></i>
 						</label> <input type="text" id="tw1"  class="writeprice" placeholder="금액">
 					</div>
@@ -1136,11 +1137,10 @@
 							<a> 등록할 팀의 레이드 종류를 선택해주세요 !</a>
 						</div>
 						
-					<br>
-					<br>
-					<br> 
-					
+				
+					<div style=" height: 40px; padding-top: 20px; display: inline-block;" >
 					<input type="submit" class="btn_submit" value="팀등록하기">
+					</div>
 				</div>
 
 			</div>

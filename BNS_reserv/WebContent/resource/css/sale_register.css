@@ -83,6 +83,7 @@ body {
 	float: left;
 	margin-top: 2px;
 	margin-bottom: 5px;
+	text-align: left;
 }
 
 .sale-item-name a {
@@ -127,7 +128,7 @@ color:#000;
 
 .writeprice {
 	
-	visibility: hidden;
+	display: none;
 }
 
 .sales input[type="submit"] {
