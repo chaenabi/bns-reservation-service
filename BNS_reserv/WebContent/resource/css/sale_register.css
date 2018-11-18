@@ -74,7 +74,7 @@ body {
 	font-size: 20px;
 	font-weight: bold;
 	display: none;
-	color: #fff;
+	color: #000;
 }
 
 .sale-item, .sale-item2,.sale-item3,.sale-item4 {
@@ -86,7 +86,7 @@ body {
 }
 
 .sale-item-name a {
-	color: #ff0;
+	color: #000;
 	font-weight: normal;
 }
 
@@ -139,6 +139,7 @@ color:#000;
 	font-size: 18px;
 	border-radius: 20px;
 	margin: 0 auto;
+	display: none;
 }
 
 .sales input[type="submit"]:hover {
