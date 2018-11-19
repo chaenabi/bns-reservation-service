@@ -18,6 +18,8 @@ $("#ck_bns_id").click(e=>{
 		        success: function(result){
 		        	
 		        	
+		        	console.log("bns_id 는: "+ bns_id + " 입니다.");
+		        	
         			/// 진짜 중복체크하는곳
         			   $.ajax({
         		            async: true,

@@ -44,11 +44,13 @@ public class KakaoDAO extends JDBC {
 		try {
 			connect();
 			pstmt = conn.prepareStatement(sql);
+			System.out.println("bns_id는 null입니까? " +bns_id);
 			pstmt.setString(1, bns_id);
 
 			rs = pstmt.executeQuery();
-
+			
 			if (rs.next()) {
+				
 				result = true;
 			} 
 		} catch (Exception e) {

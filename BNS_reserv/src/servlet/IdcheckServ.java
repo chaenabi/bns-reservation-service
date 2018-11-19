@@ -1,7 +1,6 @@
 package servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,10 +8,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 import org.json.simple.JSONObject;
 
 import dao.KakaoDAO;
 import vo.KakaoDTO;
+
 
 
 
@@ -23,22 +24,26 @@ public class IdcheckServ extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		response.setContentType("text/html; charset=UTF-8");
+		response.setContentType("application/json; charset=UTF-8");
 		request.setCharacterEncoding("utf-8");
 
 		// 내장객체 application, session, out
 		//ServletContext application = this.getServletContext();
 		//HttpSession session = request.getSession();
-		PrintWriter out = response.getWriter();
+		//PrintWriter out = response.getWriter();
 		// 파라미터 인코딩
 		request.setCharacterEncoding("utf-8");
-		
-		KakaoDTO kvo = new KakaoDTO();	
+		KakaoDTO kvo = new KakaoDTO();
 		KakaoDAO kdao = new KakaoDAO();
 		
-		kvo.setBns_id("bns_id");
 		
-		boolean duplicate = kdao.search_id("bns_id");
+	
+		String bns_id = request.getParameter("id");
+		System.out.println("bns_id 는 : " + bns_id);
+
+		kvo.setBns_id(bns_id);
+
+		boolean duplicate = kdao.search_id(bns_id);
 		System.out.println("DB에 아이디가 있습니까? : "+ duplicate);
 		
 		 if(duplicate == false){
@@ -50,7 +55,7 @@ public class IdcheckServ extends HttpServlet {
 	    		request.getRequestDispatcher("/resource/jsp/main.jsp").forward(request, response);
 		
 		
-		 } else if(duplicate == true) {
+		 } else {
 			 JSONObject obj = new JSONObject();
 	    		obj.put("result", "fail");
 	    		response.setContentType("application/json; charset=UTF-8");
