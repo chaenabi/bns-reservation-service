@@ -39,7 +39,7 @@ public class KakaoDAO extends JDBC {
 
 	// bns 아이디가 db에 등록되어 있는지 중복체크
 	public Boolean search_id(String bns_id) {
-
+		boolean result = false;
 		String sql = "select bns_id from users where bns_id = ?";
 		try {
 			connect();
@@ -49,15 +49,15 @@ public class KakaoDAO extends JDBC {
 			rs = pstmt.executeQuery();
 
 			if (rs.next()) {
-				return true;
-			}
+				result = true;
+			} 
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			// 연결해제
 			disconnect();
 		}
-		return false;
+		return result;
 
 	}
 	

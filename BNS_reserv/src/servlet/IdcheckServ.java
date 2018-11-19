@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.simple.JSONObject;
 
 import dao.KakaoDAO;
+import vo.KakaoDTO;
 
 
 
@@ -32,11 +33,13 @@ public class IdcheckServ extends HttpServlet {
 		// 파라미터 인코딩
 		request.setCharacterEncoding("utf-8");
 		
-		//KakaoDTO kvo = new KakaoDTO();	
+		KakaoDTO kvo = new KakaoDTO();	
 		KakaoDAO kdao = new KakaoDAO();
-
+		
+		kvo.setBns_id("bns_id");
+		
 		boolean duplicate = kdao.search_id("bns_id");
-
+		System.out.println("DB에 아이디가 있습니까? : "+ duplicate);
 		
 		 if(duplicate == false){
 
