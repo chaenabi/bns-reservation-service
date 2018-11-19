@@ -56,7 +56,7 @@ public class Keyboard extends HttpServlet {
 		buttons.add("반갑습니다.");
 		buttons.add("뭐하는 거에요?");
 		buttons.add("어떻게 하면 되나요?");
-		buttons.add("여기 다신 안와");
+		buttons.add("??????????");
 		buttons.add("뭐가 이래 친절하게 해줘요");
 		buttons.add("모르겠다.");
 		buttons.add("만든사람");

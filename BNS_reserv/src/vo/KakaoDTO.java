@@ -2,6 +2,7 @@ package vo;
 
 public class KakaoDTO {
 	private String id;
+	private String bns_id;
 	private String email;
 	private String nickname;
 	private String access_token;
@@ -12,6 +13,12 @@ public class KakaoDTO {
 	}
 	public void setId(String id) {
 		this.id = id;
+	}
+	public String getBns_id() {
+		return bns_id;
+	}
+	public void setBns_id(String bns_id) {
+		this.bns_id = bns_id;
 	}
 	public String getEmail() {
 		return email;
@@ -39,10 +46,11 @@ public class KakaoDTO {
 	}
 	@Override
 	public String toString() {
-		return "KakaoDTO [id=" + id + ", email=" + email + ", nickname=" + nickname + ", access_token=" + access_token
-				+ ", log_count=" + log_count + "]";
+		return "KakaoDTO [id=" + id + ", bns_id=" + bns_id + ", email=" + email + ", nickname=" + nickname
+				+ ", access_token=" + access_token + ", log_count=" + log_count + "]";
 	}
-
+	
+	
 	
 	
 }

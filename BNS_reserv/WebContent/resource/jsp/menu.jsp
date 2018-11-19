@@ -14,13 +14,44 @@
 <script
 	src="${pageContext.request.contextPath}/resource/js/jquery/jquery.js"></script>
 <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-<!-- 내역 클릭 이벤트 
+
 <script>
+	//내역 클릭 이벤트 
 	function btn_history() {
-		var history = document.getElementById(".history_reserv");
-		history.style.visibility = "visible";
+
+		request_history();
+
+		//var history = document.getElementById("history_reserv");
+		//history.show();
+
 	}
-</script> -->
+</script>
+
+<script>
+	$(document).ready(function() {
+		gethistory = {
+			"action" : "purchase_history",
+		
+			//"delete_in" : totalval[i]
+		
+		};
+
+		$.getJSON("./InterestController", gethistory, function(data) {
+		
+			
+			/* 	if (data.status == "스카웃요청" || data.status == "이적요청") {
+
+				status++;
+
+			} else {
+
+				status2++;
+
+			} */
+
+		});
+	});
+</script>
 
 </head>
 <body>
@@ -35,53 +66,56 @@
 		<div class="content">
 			<div class="aside">
 
-			
-				
-			 <%= session.getAttribute("nickname") %> 님 환영합니다.
-			
-				
-				<input type="button" class="btn btn-danger" id="register"
-					style="font-weight: bold;" value="판매등록" onclick="location.href='${pageContext.request.contextPath}/resource/jsp/sale_register.jsp';"> &emsp;
-				<input type="button" class="btn btn-default" id="history"
+
+
+				<%=session.getAttribute("nickname")%>
+				님 환영합니다. <input type="button" class="btn btn-danger" id="register"
+					style="font-weight: bold;" value="판매등록"
+					onclick="location.href='${pageContext.request.contextPath}/resource/jsp/sale_register.jsp';">
+				&emsp; <input type="button" class="btn btn-default" id="history"
 					style="font-weight: bold;" value="주문내역" onclick="btn_history();">
-				&emsp; <a href="${pageContext.request.contextPath}/resource/jsp/main.jsp" onclick="logoutFromKakao();"> <img
+				&emsp; <a
+					href="${pageContext.request.contextPath}/resource/jsp/main.jsp"
+					onclick="logoutFromKakao();"> <img
 					src="${pageContext.request.contextPath}/resource/assets/image/Klogout.png"
-					class="kakao-logout-btn" style="width: 100px; height: 100px;"/> </a>
+					class="kakao-logout-btn" style="width: 100px; height: 100px;" />
+				</a>
 			</div>
-			
-			
-			<script>			
-			
+
+
+			<script>
 				//카카오톡 로그아웃.
-				function logoutFromKakao(){
-				Kakao.init("70009e108e4f5d8b1b0fa8759b63dc8f");
-				Kakao.Auth.logout(function(){
+				function logoutFromKakao() {
+					Kakao.init("70009e108e4f5d8b1b0fa8759b63dc8f");
+					Kakao.Auth
+							.logout(function() {
 
-    			location.href='${pageContext.request.contextPath}/resource/jsp/menu.jsp';
+								location.href = '${pageContext.request.contextPath}/resource/jsp/menu.jsp';
 
-    		  });
-			};
+							});
+				};
 			</script>
-			
+
 			<h1>Blade and Soul</h1>
 			<p>Welcome to BNS BUS reservation guide</p>
-			
-			
-			
-			
-			
-			
+
+
+
+
+
+
 			<br> <br> <input type="button" id="goblack" value="검은 마천루"
-				onClick="location.href='${pageContext.request.contextPath}/resource/jsp/black.jsp';"> <input type="button"
-				id="govortex" value="소용돌이 사원" onClick="alert('준비중입니다.')"> <input
-				type="button" id="gotwilight" value="태천왕릉"
+				onClick="location.href='${pageContext.request.contextPath}/resource/jsp/black.jsp';">
+			<input type="button" id="govortex" value="소용돌이 사원"
+				onClick="alert('준비중입니다.')"> <input type="button"
+				id="gotwilight" value="태천왕릉"
 				onClick="location.href='${pageContext.request.contextPath}/resource/jsp/twilight.jsp';">
-				<input type="button" id="gored"
-				value="적몽의 비원" onClick="location.href='${pageContext.request.contextPath}/resource/jsp/reddream.jsp';">
+			<input type="button" id="gored" value="적몽의 비원"
+				onClick="location.href='${pageContext.request.contextPath}/resource/jsp/reddream.jsp';">
 
 		</div>
 		<!-- 내역에 대한 프레임  -->
-		<div class="history_reserv">
+		<div class="history_reserv" id="history_reserv">
 			<div class="history_frame">
 				<div class="history_summary">
 

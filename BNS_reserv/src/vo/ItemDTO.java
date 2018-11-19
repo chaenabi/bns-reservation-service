@@ -2,6 +2,9 @@ package vo;
 
 public class ItemDTO {
 
+	private String id;
+	private String bns_id;
+	
 	// 마천루
 	private String bs_tujang_ring1;
 	private String bs_tujang_ring2;
@@ -99,10 +102,24 @@ public class ItemDTO {
 	
 	
 	
+	//getter setter
 	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getBns_id() {
+		return bns_id;
+	}
+	public void setBns_id(String bns_id) {
+		this.bns_id = bns_id;
+	}
 	public String getBs_tujang_ring1() {
 		return bs_tujang_ring1;
 	}
+
 	public void setBs_tujang_ring1(String bs_tujang_ring1) {
 		this.bs_tujang_ring1 = bs_tujang_ring1;
 	}
@@ -612,41 +629,42 @@ public class ItemDTO {
 	}
 	@Override
 	public String toString() {
-		return "ItemDTO [bs_tujang_ring1=" + bs_tujang_ring1 + ", bs_tujang_ring2=" + bs_tujang_ring2
-				+ ", bs_tuji_ring1=" + bs_tuji_ring1 + ", bs_tuji_ring2=" + bs_tuji_ring2 + ", bs_tuhon_ring1="
-				+ bs_tuhon_ring1 + ", bs_tuhon_ring2=" + bs_tuhon_ring2 + ", bs_tujang_earring1=" + bs_tujang_earring1
-				+ ", bs_tujang_earring2=" + bs_tujang_earring2 + ", bs_tuji_earring1=" + bs_tuji_earring1
-				+ ", bs_tuji_earring2=" + bs_tuji_earring2 + ", bs_tuhon_earring1=" + bs_tuhon_earring1
-				+ ", bs_tuhon_earring2=" + bs_tuhon_earring2 + ", bs_tujang_ring3=" + bs_tujang_ring3
-				+ ", bs_tujang_ring4=" + bs_tujang_ring4 + ", bs_tuji_ring3=" + bs_tuji_ring3 + ", bs_tuji_ring4="
-				+ bs_tuji_ring4 + ", bs_tuhon_ring3=" + bs_tuhon_ring3 + ", bs_tuhon_ring4=" + bs_tuhon_ring4
-				+ ", bs_tujang_earring3=" + bs_tujang_earring3 + ", bs_tujang_earring4=" + bs_tujang_earring4
-				+ ", bs_tuji_earring3=" + bs_tuji_earring3 + ", bs_tuji_earring4=" + bs_tuji_earring4
-				+ ", bs_tuhon_earring3=" + bs_tuhon_earring3 + ", bs_tuhon_earring4=" + bs_tuhon_earring4 + ", hukrin="
-				+ hukrin + ", ginki=" + ginki + ", gyukgol=" + gyukgol + ", bs_gang=" + bs_gang + ", vt_gon_tujang="
-				+ vt_gon_tujang + ", vt_sun_tujang=" + vt_sun_tujang + ", vt_gon_tuji=" + vt_gon_tuji + ", vt_sun_tuji="
-				+ vt_sun_tuji + ", vt_gon_tuhon=" + vt_gon_tuhon + ", vt_sun_tuhon=" + vt_sun_tuhon + ", vt_tujang1="
-				+ vt_tujang1 + ", vt_tujang2=" + vt_tujang2 + ", vt_tuji1=" + vt_tuji1 + ", vt_tuji2=" + vt_tuji2
-				+ ", vt_tuhon1=" + vt_tuhon1 + ", vt_tuhon2=" + vt_tuhon2 + ", vt_gon_tujang2=" + vt_gon_tujang2
-				+ ", vt_sun_tujang2=" + vt_sun_tujang2 + ", vt_gon_tuji2=" + vt_gon_tuji2 + ", vt_sun_tuji2="
-				+ vt_sun_tuji2 + ", vt_gon_tuhon2=" + vt_gon_tuhon2 + ", vt_sun_tuhon2=" + vt_sun_tuhon2
-				+ ", vt_tujang3=" + vt_tujang3 + ", vt_tujang4=" + vt_tujang4 + ", vt_tuji3=" + vt_tuji3 + ", vt_tuji4="
-				+ vt_tuji4 + ", vt_tuhon3=" + vt_tuhon3 + ", vt_tuhon4=" + vt_tuhon4 + ", singongsuk=" + singongsuk
-				+ ", hukcham=" + hukcham + ", amgak=" + amgak + ", muksi=" + muksi + ", vt_gang=" + vt_gang
-				+ ", tw_tujang_ring1=" + tw_tujang_ring1 + ", tw_tujang_ring2=" + tw_tujang_ring2 + ", tw_tuji_ring1="
-				+ tw_tuji_ring1 + ", tw_tuji_ring2=" + tw_tuji_ring2 + ", tw_tuhon_ring1=" + tw_tuhon_ring1
-				+ ", tw_tuhon_ring2=" + tw_tuhon_ring2 + ", tw_tujang_earring1=" + tw_tujang_earring1
-				+ ", tw_tujang_earring2=" + tw_tujang_earring2 + ", tw_tuji_earring1=" + tw_tuji_earring1
-				+ ", tw_tuji_earring2=" + tw_tuji_earring2 + ", tw_tuhon_earring1=" + tw_tuhon_earring1
-				+ ", tw_tuhon_earring2=" + tw_tuhon_earring2 + ", tw_tujang_ring3=" + tw_tujang_ring3
-				+ ", tw_tujang_ring4=" + tw_tujang_ring4 + ", tw_tuji_ring3=" + tw_tuji_ring3 + ", tw_tuji_ring4="
-				+ tw_tuji_ring4 + ", tw_tuhon_ring3=" + tw_tuhon_ring3 + ", tw_tuhon_ring4=" + tw_tuhon_ring4
-				+ ", tw_tujang_earring3=" + tw_tujang_earring3 + ", tw_tujang_earring4=" + tw_tujang_earring4
-				+ ", tw_tuji_earring3=" + tw_tuji_earring3 + ", tw_tuji_earring4=" + tw_tuji_earring4
-				+ ", tw_tuhon_earring3=" + tw_tuhon_earring3 + ", tw_tuhon_earring4=" + tw_tuhon_earring4 + ", siik="
-				+ siik + ", gwangbae=" + gwangbae + ", nukgol=" + nukgol + ", tw_gang=" + tw_gang + "]";
+		return "ItemDTO [id=" + id + ", bns_id=" + bns_id + ", bs_tujang_ring1=" + bs_tujang_ring1
+				+ ", bs_tujang_ring2=" + bs_tujang_ring2 + ", bs_tuji_ring1=" + bs_tuji_ring1 + ", bs_tuji_ring2="
+				+ bs_tuji_ring2 + ", bs_tuhon_ring1=" + bs_tuhon_ring1 + ", bs_tuhon_ring2=" + bs_tuhon_ring2
+				+ ", bs_tujang_earring1=" + bs_tujang_earring1 + ", bs_tujang_earring2=" + bs_tujang_earring2
+				+ ", bs_tuji_earring1=" + bs_tuji_earring1 + ", bs_tuji_earring2=" + bs_tuji_earring2
+				+ ", bs_tuhon_earring1=" + bs_tuhon_earring1 + ", bs_tuhon_earring2=" + bs_tuhon_earring2
+				+ ", bs_tujang_ring3=" + bs_tujang_ring3 + ", bs_tujang_ring4=" + bs_tujang_ring4 + ", bs_tuji_ring3="
+				+ bs_tuji_ring3 + ", bs_tuji_ring4=" + bs_tuji_ring4 + ", bs_tuhon_ring3=" + bs_tuhon_ring3
+				+ ", bs_tuhon_ring4=" + bs_tuhon_ring4 + ", bs_tujang_earring3=" + bs_tujang_earring3
+				+ ", bs_tujang_earring4=" + bs_tujang_earring4 + ", bs_tuji_earring3=" + bs_tuji_earring3
+				+ ", bs_tuji_earring4=" + bs_tuji_earring4 + ", bs_tuhon_earring3=" + bs_tuhon_earring3
+				+ ", bs_tuhon_earring4=" + bs_tuhon_earring4 + ", hukrin=" + hukrin + ", ginki=" + ginki + ", gyukgol="
+				+ gyukgol + ", bs_gang=" + bs_gang + ", vt_gon_tujang=" + vt_gon_tujang + ", vt_sun_tujang="
+				+ vt_sun_tujang + ", vt_gon_tuji=" + vt_gon_tuji + ", vt_sun_tuji=" + vt_sun_tuji + ", vt_gon_tuhon="
+				+ vt_gon_tuhon + ", vt_sun_tuhon=" + vt_sun_tuhon + ", vt_tujang1=" + vt_tujang1 + ", vt_tujang2="
+				+ vt_tujang2 + ", vt_tuji1=" + vt_tuji1 + ", vt_tuji2=" + vt_tuji2 + ", vt_tuhon1=" + vt_tuhon1
+				+ ", vt_tuhon2=" + vt_tuhon2 + ", vt_gon_tujang2=" + vt_gon_tujang2 + ", vt_sun_tujang2="
+				+ vt_sun_tujang2 + ", vt_gon_tuji2=" + vt_gon_tuji2 + ", vt_sun_tuji2=" + vt_sun_tuji2
+				+ ", vt_gon_tuhon2=" + vt_gon_tuhon2 + ", vt_sun_tuhon2=" + vt_sun_tuhon2 + ", vt_tujang3=" + vt_tujang3
+				+ ", vt_tujang4=" + vt_tujang4 + ", vt_tuji3=" + vt_tuji3 + ", vt_tuji4=" + vt_tuji4 + ", vt_tuhon3="
+				+ vt_tuhon3 + ", vt_tuhon4=" + vt_tuhon4 + ", singongsuk=" + singongsuk + ", hukcham=" + hukcham
+				+ ", amgak=" + amgak + ", muksi=" + muksi + ", vt_gang=" + vt_gang + ", tw_tujang_ring1="
+				+ tw_tujang_ring1 + ", tw_tujang_ring2=" + tw_tujang_ring2 + ", tw_tuji_ring1=" + tw_tuji_ring1
+				+ ", tw_tuji_ring2=" + tw_tuji_ring2 + ", tw_tuhon_ring1=" + tw_tuhon_ring1 + ", tw_tuhon_ring2="
+				+ tw_tuhon_ring2 + ", tw_tujang_earring1=" + tw_tujang_earring1 + ", tw_tujang_earring2="
+				+ tw_tujang_earring2 + ", tw_tuji_earring1=" + tw_tuji_earring1 + ", tw_tuji_earring2="
+				+ tw_tuji_earring2 + ", tw_tuhon_earring1=" + tw_tuhon_earring1 + ", tw_tuhon_earring2="
+				+ tw_tuhon_earring2 + ", tw_tujang_ring3=" + tw_tujang_ring3 + ", tw_tujang_ring4=" + tw_tujang_ring4
+				+ ", tw_tuji_ring3=" + tw_tuji_ring3 + ", tw_tuji_ring4=" + tw_tuji_ring4 + ", tw_tuhon_ring3="
+				+ tw_tuhon_ring3 + ", tw_tuhon_ring4=" + tw_tuhon_ring4 + ", tw_tujang_earring3=" + tw_tujang_earring3
+				+ ", tw_tujang_earring4=" + tw_tujang_earring4 + ", tw_tuji_earring3=" + tw_tuji_earring3
+				+ ", tw_tuji_earring4=" + tw_tuji_earring4 + ", tw_tuhon_earring3=" + tw_tuhon_earring3
+				+ ", tw_tuhon_earring4=" + tw_tuhon_earring4 + ", siik=" + siik + ", gwangbae=" + gwangbae + ", nukgol="
+				+ nukgol + ", tw_gang=" + tw_gang + "]";
 	}
-
+	
 
 	
 	

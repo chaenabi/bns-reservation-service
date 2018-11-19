@@ -45,21 +45,23 @@ public class KakaoDAO extends JDBC {
 		try {
 			connect();
 			System.out.println("세션 접속 완료.");
-			String sql = "INSERT INTO users (id, email, nickname, access_token)"
-					+ "VALUES (?, ?, ?, ?)" 
-					+ "ON DUPLICATE KEY UPDATE email=VALUES(email)" 
+			String sql = "INSERT INTO users (id, bns_id, email, nickname, access_token)"
+					+ "VALUES (?, ?, ?, ?, ?)" 
+					+ "ON DUPLICATE KEY UPDATE bns_id=VALUES(bns_id)"
+																	  +", email=VALUES(email)" 
 																	  +", nickname=VALUES(nickname)"
 											                          +", access_token=VALUES(access_token)";
 					// OR
-					//"INSERT INTO users (id, email, nickname, access_token) VALUES (?, ?, ?, ?)"
-					//+ "ON DUPLICATE KEY UPDATE email=?, nickname=?, access_token=?";
+					//"INSERT INTO users (id, bns_id, email, nickname, access_token) VALUES (?, ?, ?, ?, ?)"
+					//+ "ON DUPLICATE KEY UPDATE bns_id=?, email=?, nickname=?, access_token=?";
 			System.out.println("ID정보를 DB에 적용합니다. : ");
 			System.out.println(kvo);
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, kvo.getId());
-			pstmt.setString(2, kvo.getEmail());
-			pstmt.setString(3, kvo.getNickname());
-			pstmt.setString(4, kvo.getAccess_token());
+			pstmt.setString(2, kvo.getBns_id());
+			pstmt.setString(3, kvo.getEmail());
+			pstmt.setString(4, kvo.getNickname());
+			pstmt.setString(5, kvo.getAccess_token());
 			//pstmt.setInt(5, kvo.getLog_count());
 
 			int r = pstmt.executeUpdate();

@@ -70,7 +70,7 @@ public class KakaoServ extends HttpServlet {
 			session.setAttribute("email", email);
 			
 			// 목록으로 페이지 이동
-
+			
 			request.getRequestDispatcher("/resource/jsp/menu.jsp").forward(request, response);
 
 		} else if (action.equals("list")) {

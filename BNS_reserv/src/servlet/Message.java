@@ -60,7 +60,7 @@ public class Message extends HttpServlet {
 		buttons.add("반갑습니다.");
 		buttons.add("뭐하는 거에요?");
 		buttons.add("어떻게 하면 되나요?");
-		buttons.add("여기 다신 안와");
+		buttons.add("??????????");
 		buttons.add("뭐가 이래??? 친절하게 해줘요");
 		buttons.add("모르겠다.");
 		buttons.add("만든사람");
@@ -95,8 +95,8 @@ public class Message extends HttpServlet {
 					cupon.put("url", "https://center-pf.kakao.com/_rtxktC/coupons/60949");
 					text_json.put("message_button", cupon);			
 					return_json.put("message", text_json);
-				} else if (msg.equals("여기 다신 안와")) {
-					text_json.put("text", "그래, 잘가 다시오지마");
+				} else if (msg.equals("??????????")) {
+					text_json.put("text", "thanks han jae young");
 					return_json.put("message", text_json);
 				} else if (msg.equals("뭐가 이래??? 친절하게 해줘요")) {
 					text_json.put("text", "싫어요, 그렇게 안할래요");

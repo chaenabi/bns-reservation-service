@@ -30,7 +30,9 @@
 		<br><br>
 		<form action="${pageContext.request.contextPath}/servlet/KakaoServ"
 			method="post" id="kakao-login">
-
+				<div class="bnsid" id="bnsid" style="padding-bottom: 20px; color:#000; display: none;">
+				<input type="text"  id="bns_id" name="bns_id" placeholder="블소 인게임 실제 아이디를 입력해주세요" >
+			</div>
 			<div class="kakao">
 				<input type="hidden" name="action" value="kakao-login" /> 
 				<a id="kakao-login-btn"></a>
@@ -70,9 +72,18 @@
 									$('#nickname').val(nickname);
 									$('#access_token').val(access_token);
 									
+									
+									$('#bnsid').show();
+									var bns_id = document.getElementById("bns_id");
+									var form = document.getElementById("kakao-login");  
+								
+									
 									//서브밋 한다.
-									 var form = document.getElementById("kakao-login");  
+									if ($('#bns_id').val() != null) {
 									  form.submit();
+									} else {
+										alert("블소 아이디를 입력해주세요 ! ");
+									}
 	
 								});
 	
@@ -94,6 +105,8 @@
 					}
 				});
 				
+				
+				//다른 계정으로 로그인하기 버튼
 				function loginForm() {
 				Kakao.Auth.loginForm({
 
@@ -119,6 +132,9 @@
 											
 											//서브밋 한다.
 											 var form = document.getElementById("kakao-login");  
+											
+											
+											
 											  form.submit();
 			
 										});

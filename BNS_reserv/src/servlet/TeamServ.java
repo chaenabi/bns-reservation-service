@@ -67,8 +67,11 @@ public class TeamServ extends HttpServlet {
 					// 목록으로 페이지 이동
 					request.getRequestDispatcher("/resource/jsp/menu.jsp").forward(request, response);
 
-				}
+				} else if(action.equals("purchase_history")) {
 				
+					
+					
+				}			
 				else if (action.equals("list")) {
 					// 팀 데이터 전체 조회
 					//ArrayList<TeamDTO> datas = tdao.getTeamList();
