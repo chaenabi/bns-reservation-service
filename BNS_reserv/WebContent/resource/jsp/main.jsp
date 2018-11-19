@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="EUC-KR"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
@@ -9,9 +9,11 @@
 	href="${pageContext.request.contextPath}/resource/css/main.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/resource/css/bootstrap/bootstrap.min.css" />
-<script
-	src="${pageContext.request.contextPath}/resource/js/jquery/jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
 <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+
 
 </head>
 
@@ -30,8 +32,27 @@
 		<br><br>
 		<form action="${pageContext.request.contextPath}/servlet/KakaoServ"
 			method="post" id="kakao-login">
-				<div class="bnsid" id="bnsid" style="padding-bottom: 20px; color:#000; display: none;">
-				<input type="text"  id="bns_id" name="bns_id" placeholder="ë¸”ì†Œ ì¸ê²Œì„ ì‹¤ì œ ì•„ì´ë””ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”" >
+				<div class="bnsid" id="bnsid">
+			
+				<div class="insert_bnsid">
+				<p class="p"> Blade & Soul ¿¡¼­ </p>
+				<p class="p"> ½ÇÁ¦·Î »ç¿ëÇÏ´Â ´Ğ³×ÀÓÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä.</p>
+				<p class="p"> ´Ğ³×ÀÓ ¼³Á¤Àº ÃÖÃÊ ÇÑ¹ø¸¸ ½ÇÇàµË´Ï´Ù. </p>
+				<p class="p">½ÅÁßÇÏ°Ô ÀÔ·ÂÇØÁÖ¼¼¿ä.</p>
+				<br>
+				<a style="color:#fff">ID)</a>&nbsp; 
+				<input type="text"  id="bns_id" name="bns_id" placeholder="¾ÆÀÌµğ ÀÔ·Â¶õ" />
+				<input type="button" id="ck_bns_id" value="Áßº¹Ã¼Å©"/><br><br>
+				
+				<div id="no_match_id" style="display: none;">
+				<input type="text" id="notfound_id" value="¾ÆÀÌµğ¸¦ Ã£À» ¼ö ¾ø½À´Ï´Ù. ´Ù½Ã È®ÀÎÇØÁÖ¼¼¿ä." readonly="readonly"/>
+				</div>
+				
+				
+				<br><br>
+				<input type="button" id="determine_bns_id" name="determine_bns_id" value="È®ÀÎ" />
+				 </div>
+				
 			</div>
 			<div class="kakao">
 				<input type="hidden" name="action" value="kakao-login" /> 
@@ -46,124 +67,16 @@
 					id="access_token" name="access_token" value="0"> <input type="hidden"
 					id="log_count" name="log_count" value="0">
 
-				<script>
-				Kakao.init("70009e108e4f5d8b1b0fa8759b63dc8f");
-				Kakao.Auth.createLoginButton({
-					container : '#kakao-login-btn',
-					
-					size: 'medium',
-					success : function(authObj) {
-						Kakao.API.request({
-							url : '/v1/user/me',
-							success : function(res) {
-								
-								// jsoní˜•íƒœë¡œ ì¶œë ¥ë˜ëŠ” ë¡œê·¸ì¸ ì •ë³´ë“¤ì„ ë³€ìˆ˜ì— ë‹´ëŠ”ë‹¤.
-								var id =JSON.stringify(res.id);
-								var email = JSON.stringify(res.kaccount_email);
-								var nickname = JSON.stringify(res.properties.nickname);
-																				 //res.properties['nickname']ìœ¼ë¡œë„ ì ‘ê·¼ ê°€ëŠ¥.
-								var access_token = JSON.stringify(authObj.access_token);
-								
-								$(function() {
-									
-									//ë¡œê·¸ì¸ ì •ë³´ë“¤ì„ input íƒœê·¸ì˜ value ì— ë‹´ëŠ”ë‹¤.
-									$('#id').val(id);
-									$('#email').val(email);
-									$('#nickname').val(nickname);
-									$('#access_token').val(access_token);
-									
-									
-									$('#bnsid').show();
-									var bns_id = document.getElementById("bns_id");
-									var form = document.getElementById("kakao-login");  
-								
-									
-									//ì„œë¸Œë°‹ í•œë‹¤.
-									if ($('#bns_id').val() != null) {
-									  form.submit();
-									} else {
-										alert("ë¸”ì†Œ ì•„ì´ë””ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš” ! ");
-									}
-	
-								});
-	
-								//alert("res: "+ JSON.stringify(res)); 
-								//kakao.api.request ì—ì„œ ë¶ˆëŸ¬ì˜¨ ê²°ê³¼ê°’ì„ jsoní˜•íƒœë¡œ ì¶œë ¥
-								//id, email, nicknameì€ resì•ˆì— ìˆìœ¼ë¯€ë¡œ, res.id ë“±ìœ¼ë¡œ í˜¸ì¶œê°€ëŠ¥.
-
-								//alert("authObj: "+ JSON.stringify(authObj));
-								//Kakao.Auth.createLoginButtonì—ì„œ ë¶ˆëŸ¬ì˜¨ ê²°ê³¼ê°’ì„ jsoní˜•íƒœë¡œ ì¶œë ¥
-							}
-								});
-							
-					
-					},
-
-					fail : function(error) {
-						alert(JSON.stringify(error));
-						alert("ë¡œê·¸ì¸ ì‹¤íŒ¨!");
-					}
-				});
-				
-				
-				//ë‹¤ë¥¸ ê³„ì •ìœ¼ë¡œ ë¡œê·¸ì¸í•˜ê¸° ë²„íŠ¼
-				function loginForm() {
-				Kakao.Auth.loginForm({
-
-					success : function(authObj) {
-						Kakao.API.request({
-							url : '/v1/user/me',
-							success : function(res) {
-								
-								// jsoní˜•íƒœë¡œ ì¶œë ¥ë˜ëŠ” ë¡œê·¸ì¸ ì •ë³´ë“¤ì„ ë³€ìˆ˜ì— ë‹´ëŠ”ë‹¤.
-								var id =JSON.stringify(res.id);
-								var email = JSON.stringify(res.kaccount_email);
-								var nickname = JSON.stringify(res.properties['nickname']);
-																				 //res.properties.nicknameìœ¼ë¡œë„ ì ‘ê·¼ ê°€ëŠ¥.
-								var access_token = JSON.stringify(authObj.access_token);
-								
-										$(function() {
-											
-											//ë¡œê·¸ì¸ ì •ë³´ë“¤ì„ input íƒœê·¸ì˜ value ì— ë‹´ëŠ”ë‹¤.
-											$('#id').val(id);
-											$('#email').val(email);
-											$('#nickname').val(nickname);
-											$('#access_token').val(access_token);
-											
-											//ì„œë¸Œë°‹ í•œë‹¤.
-											 var form = document.getElementById("kakao-login");  
-											
-											
-											
-											  form.submit();
-			
-										});
-			
-							}
-					});
-							
-					
-				},
-
-					fail : function(error) {
-						alert(JSON.stringify(error));
-						alert("ë¡œê·¸ì¸ ì‹¤íŒ¨!");
-					}
-				});
-				};
-				</script>
-
-
 			</div>
 		</form>
 		 <br> <br> <input type="button" class="login_other"
-			id="login_other" name="login_other" value="ë‹¤ë¥¸ ì¹´ì¹´ì˜¤í†¡ ê³„ì •ìœ¼ë¡œ ë¡œê·¸ì¸"
+			id="login_other" name="login_other" value="´Ù¸¥ Ä«Ä«¿ÀÅå °èÁ¤À¸·Î ·Î±×ÀÎ"
 			onClick="loginForm();"> <br> <br>
  	
 
 	</div>
-
+<script
+	src="${pageContext.request.contextPath}/resource/js/main.js"></script>
 </body>
-
-
+			
 </html>

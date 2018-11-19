@@ -1,28 +1,102 @@
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
-body > * {
-	all:unset;
-		
+
+body>* {
+	all: unset;
 }
+
 #intro_video {
 	position: fixed;
 	right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
 }
 
 .container {
 	position: fixed;
-    background: rgba(0, 0, 0, 0.2);
-    color: #f1f1f1;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    text-align:center;
- }
+	background: rgba(0, 0, 0, 0.2);
+	color: #f1f1f1;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	text-align: center;
+}
+
+.bnsid {
+	padding-bottom: 20px;
+	color: #000;
+	display: none;
+	background: rgba(0,0,0,0.9);
+	position: fixed;
+	min-width: 30%;
+	min-height: 40%;
+	text-align: center;
+	top: 30%;
+	margin: 0 auto 0 -15%;
+	border-radius: 15px;
+}
+
+.insert_bnsid {
+	padding-top: 5%;
+	text-align: center;
+} 
+
+#bns_id {
+	width: 150px;
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	height: 20px;
+	color: rgba(0,255,0,0.8);
+	font-size: 18px;
+	
+}
+
+#ck_bns_id {
+	width: 80px;
+	height: 30px;
+	background-color: red;
+	border-radius: 5px;
+	color: #fff;
+	border: none;
+	padding: 0;
+	margin-left: 10px;
+}
+
+#ck_bns_id:active, #ck_bns_id:hover {
+	background-color: #8A0808;
+}
+
+.insert_bnsid .p {
+	font-family: sans-serif;
+	font-size: 1.4em;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color: #BEF781;
+
+	
+}
+
+#notfound_id, #ckfound_id {
+	width: 300px;
+	border: none;
+    background: transparent;
+	color: #fff;
+	text-align: center;
+}
+
+#determine_bns_id {
+	width: 60px;
+	height: 30px;
+	background-color: #FF8000;
+	border-radius: 5px;
+	color: #fff;
+	border: none;
+	padding: 0;
+}
 
 .container h1 {
 	text-align: center;
@@ -41,9 +115,8 @@ body > * {
 }
 
 .container .kakao {
-	position : relative;
-	display: inline-block;
-	
+	position: static;
+	display: block;
 }
 
 .container #login_other {
@@ -56,28 +129,22 @@ body > * {
 	border-radius: 5px;
 	border: none;
 	font-family: Malgun Gothic;
-
 }
 
 .container #login_other:hover {
-		background-color: #DF0101;
+	background-color: #DF0101;
 }
 
 #Btn_video {
 	width: 100px;
 	font-size: 18px;
-	
 	border: none;
 	background-color: rgba(0, 0, 0, 0);
 	cursor: pointer;
-	
 	display: block;
 	margin: 0 auto;
-
 }
 
 #Btn_video:hover {
 	font-weight: bold;
 }
-
-

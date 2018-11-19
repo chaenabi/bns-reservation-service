@@ -86,7 +86,7 @@
 			<script>
 				//카카오톡 로그아웃.
 				function logoutFromKakao() {
-					Kakao.init("70009e108e4f5d8b1b0fa8759b63dc8f");
+					Kakao.init("031e33baa1e3d2a584c550bacf19c0a9");
 					Kakao.Auth
 							.logout(function() {
 
