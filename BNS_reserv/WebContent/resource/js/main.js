@@ -1,4 +1,3 @@
-
 $("#ck_bns_id").click(e=>{
 
 	var bns_id = $('#bns_id').val();
@@ -8,7 +7,6 @@ $("#ck_bns_id").click(e=>{
 		$('#no_match_id').show();
 	} else {
 	
-	var content = "";
 		$.ajax({
 				
 		        crossDomain:true,
@@ -20,7 +18,7 @@ $("#ck_bns_id").click(e=>{
 		        	
 		        	//console.log("json_bns_id is: "+ bns_id);
 		        	
-		        	/// id check
+		        	/// bns_id check
      			   $.ajax({
      		            async: true,
      		            type : 'get',
@@ -30,7 +28,7 @@ $("#ck_bns_id").click(e=>{
      		            contentType: "application/json; charset=UTF-8",
      		            success : function(result) {
      		         
-     		                    //아이디가 존재할 경우 초록색으로 , 존재하지 않을 경우 빨강으로 처리하는 디자인
+     		                    //아이디가 존재할 경우 초록색으로, 존재하지 않을 경우 빨강으로 처리하는 디자인
      		                	$('#notfound_id').val("사용할 수 있는 아이디입니다.");
      		                	$("#notfound_id").attr('style',  'color:green;font-weight:bold');
      		                
@@ -46,6 +44,7 @@ $("#ck_bns_id").click(e=>{
      		                
      		            },
      		           fail : function() {
+     		        	   console.log("fail 테스트");
      		            	$('#notfound_id').val("이미 존재하는 아이디입니다.");
  		                    //아이디가 존재할 경우 초록색으로 , 존재하지 않을 경우 빨강으로 처리하는 디자인
  		                    $("#notfound_id").attr('style',  'color:red;font-weight:bold');
@@ -63,8 +62,7 @@ $("#ck_bns_id").click(e=>{
 		        	
 		        	//실제 존재하는 아이디를 담는다.
 		        	$('#bns_id').val(bns_id);
-		        	
-		        	
+
 		        	
 		        	//확인버튼으로 submit.
 		        	$("#determine_bns_id").click(e=>{
