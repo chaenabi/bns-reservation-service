@@ -20,24 +20,22 @@ $("#ck_bns_id").click(e=>{
 		        	
 		        	//실제 존재하는 아이디를 담는다.
 		        	$('#bns_id').val(bns_id);
-		        	var data = {
-		        			bns_id : $('#bns_id').val()
-		        	}
 		        	
+		   
 		        	
 		        	/// bns_id check
      			   $.ajax({
      		            async: true,
      		            type : 'get',
-     		            data : data,
+     		            data :  jQuery("#kakao-login").serialize(),
      		            url : "/BNS_reserv/idcheckServ",
-     		            dataType : "json",
+     		           // dataType : 'json',
      		            contentType: "application/json; charset=UTF-8",
      		            timeout: 3000,
-     		            success : function(result) {
-     		            	JSON.stringify(result);
-     		            	console.log(result);
-     		            	if (result) {
+     		            success : function(data) {
+     		            	
+     		            	
+     		            	if (data.result) {
      		                    //아이디가 존재하지 않을 경우 초록으로, 존재할 경우 빨강으로 처리하는 디자인
      		                	$('#notfound_id').val("사용할 수 있는 아이디입니다.");
      		                	$("#notfound_id").attr('style',  'color:green;font-weight:bold');
@@ -49,7 +47,7 @@ $("#ck_bns_id").click(e=>{
      		        			$("#bns_id").attr('style',  'color:gray');
      		            	}
      		                
-     		            	if (result) {
+     		            	/*if (result) {
      		            	console.log("fail 테스트");
      		            	$('#notfound_id').val("이미 존재하는 아이디입니다.");
      		            	 //아이디가 존재하지 않을 경우 초록으로, 존재할 경우 빨강으로 처리하는 디자인
@@ -57,15 +55,17 @@ $("#ck_bns_id").click(e=>{
  		                   
  		                    $('#no_match_id').show();
  		                    $("#bns_id").focus();
-     		            	}    
+     		            	}    */
      		                
      		            },
 
-     		            error : function(error, request, status) {
-     		            	console.log("code: "+request.status+"\n"+"message(json 데이터는?): "+request.responseText+"\n"+"error: "+error);
-     		               
-
-     		            	출처: http://shonm.tistory.com/454 [정윤재의 정리노트]
+     		           error: function(xhr,textStatus,err) {
+     		              console.log("readyState: " + xhr.readyState);
+     		              console.log("responseText: "+ xhr.responseText);
+     		              console.log("status: " + xhr.status);
+     		              console.log("text status: " + textStatus);
+     		              console.log("error: " + err);
+     		          
      		            	$('#notfound_id').val("예상치 못한 문제가 발생했습니다.");
  		        			$('#no_match_id').show();
      		            }

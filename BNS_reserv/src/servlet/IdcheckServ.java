@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 import org.json.simple.JSONObject;
 
 import dao.KakaoDAO;
@@ -39,22 +38,20 @@ public class IdcheckServ extends HttpServlet {
 		
 	
 		String bns_id = request.getParameter("bns_id");
-		//System.out.println("bns_id is : " + bns_id);
+		System.out.println("bns_id is : " + bns_id);
 
 		kvo.setBns_id(bns_id);
 
 		boolean duplicate = kdao.search_id(bns_id);
 		System.out.println("is there id in DB? : "+ duplicate);
 		JSONObject obj = new JSONObject();
-		
+		response.setContentType("application/x-json; charset=UTF-8");
 		 if(duplicate == true){
 			 
-	    		obj.put("result", "fail");
-	    		
+	    		obj.put("result", "fail");    		
 	    		response.getWriter().print(obj);
 	    		System.out.println("fail:" + obj);
-	    		
-		
+	    			
 		 } else if(duplicate == false) {
 	
 	        	obj.put("result", "success");
@@ -62,7 +59,7 @@ public class IdcheckServ extends HttpServlet {
 	    		System.out.println("success: " + obj);
 		 
 		 }
-		 request.getRequestDispatcher("/resource/jsp/main.jsp").forward(request, response);
+ 		request.getRequestDispatcher("/resource/jsp/main.jsp").forward(request, response); 
 		 //response.getWriter().close();
 		 
 	}
