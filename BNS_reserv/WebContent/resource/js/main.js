@@ -16,13 +16,14 @@ $("#ck_bns_id").click(e=>{
 		        success: function(result){
 		        	
 		        	
-		        	console.log("json_bns_id is: "+ bns_id);
+		        	//console.log("json_bns_id is: "+ bns_id);
 		        	
 		        	//실제 존재하는 아이디를 담는다.
 		        	$('#bns_id').val(bns_id);
 		        	var data = {
 		        			bns_id : $('#bns_id').val()
 		        	}
+		        	
 		        	
 		        	/// bns_id check
      			   $.ajax({
@@ -32,10 +33,12 @@ $("#ck_bns_id").click(e=>{
      		            url : "/BNS_reserv/idcheckServ",
      		            dataType : "json",
      		            contentType: "application/json; charset=UTF-8",
+     		            timeout: 3000,
      		            success : function(result) {
-     		         
-     		            	if (success) {
-     		                    //아이디가 존재할 경우 초록색으로, 존재하지 않을 경우 빨강으로 처리하는 디자인
+     		            	JSON.stringify(result);
+     		            	console.log(result);
+     		            	if (result) {
+     		                    //아이디가 존재하지 않을 경우 초록으로, 존재할 경우 빨강으로 처리하는 디자인
      		                	$('#notfound_id').val("사용할 수 있는 아이디입니다.");
      		                	$("#notfound_id").attr('style',  'color:green;font-weight:bold');
      		                
@@ -46,10 +49,10 @@ $("#ck_bns_id").click(e=>{
      		        			$("#bns_id").attr('style',  'color:gray');
      		            	}
      		                
-     		            	if (fail) {
+     		            	if (result) {
      		            	console.log("fail 테스트");
      		            	$('#notfound_id').val("이미 존재하는 아이디입니다.");
- 		                    //아이디가 존재할 경우 초록색으로 , 존재하지 않을 경우 빨강으로 처리하는 디자인
+     		            	 //아이디가 존재하지 않을 경우 초록으로, 존재할 경우 빨강으로 처리하는 디자인
  		                    $("#notfound_id").attr('style',  'color:red;font-weight:bold');
  		                   
  		                    $('#no_match_id').show();

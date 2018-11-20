@@ -60,11 +60,10 @@ public class IdcheckServ extends HttpServlet {
 	        	obj.put("result", "success");
 	    		response.getWriter().print(obj);
 	    		System.out.println("success: " + obj);
-		
 		 
 		 }
 		 request.getRequestDispatcher("/resource/jsp/main.jsp").forward(request, response);
-
+		 //response.getWriter().close();
 		 
 	}
 
