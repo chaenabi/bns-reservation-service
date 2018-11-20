@@ -26,8 +26,9 @@ $("#ck_bns_id").click(e=>{
      		            url : "/BNS_reserv/idcheckServ",
      		            dataType : "text",
      		            contentType: "application/json; charset=UTF-8",
-     		            success : function(result) {
+     		            success : function(success, fail) {
      		         
+     		            	if (success) {
      		                    //아이디가 존재할 경우 초록색으로, 존재하지 않을 경우 빨강으로 처리하는 디자인
      		                	$('#notfound_id').val("사용할 수 있는 아이디입니다.");
      		                	$("#notfound_id").attr('style',  'color:green;font-weight:bold');
@@ -37,22 +38,20 @@ $("#ck_bns_id").click(e=>{
      		        			
      		        			$('#bns_id').attr("readonly", true);		
      		        			$("#bns_id").attr('style',  'color:gray');
-     		                    
-     		                    //아이디가 중복하지 않으면  idck = 1 
-     		                    idck = 1;
-     		                    
+     		            	}
      		                
-     		            },
-     		           fail : function() {
-     		        	   console.log("fail 테스트");
+     		            	if (fail) {
+     		            	console.log("fail 테스트");
      		            	$('#notfound_id').val("이미 존재하는 아이디입니다.");
  		                    //아이디가 존재할 경우 초록색으로 , 존재하지 않을 경우 빨강으로 처리하는 디자인
  		                    $("#notfound_id").attr('style',  'color:red;font-weight:bold');
  		                   
  		                    $('#no_match_id').show();
  		                    $("#bns_id").focus();
-     		            	
+     		            	}    
+     		                
      		            },
+
      		            error : function(error) {
      		                
      		            	$('#notfound_id').val("예상치 못한 문제가 발생했습니다.");

@@ -44,21 +44,24 @@ public class IdcheckServ extends HttpServlet {
 		kvo.setBns_id(bns_id);
 
 		boolean duplicate = kdao.search_id(bns_id);
-		//System.out.println("is there id in db? : "+ duplicate);
+		System.out.println("is there id in DB? : "+ duplicate);
 		
 		 if(duplicate == true){
 			 JSONObject obj = new JSONObject();
 	    		obj.put("result", "fail");
 	    		response.setContentType("application/json; charset=UTF-8");
 	    		response.getWriter().print(obj);
+	    		System.out.println("fail:" + obj);
 	    		request.getRequestDispatcher("/resource/jsp/main.jsp").forward(request, response);
 		
-		 } else {
+		 } else if(duplicate == false) {
 
 	    		JSONObject obj = new JSONObject();
+	    		
 	        	obj.put("result", "success");
 	    		response.setContentType("application/json; charset=UTF-8");
 	    		response.getWriter().print(obj);
+	    		System.out.println("success: " + obj);
 	    		request.getRequestDispatcher("/resource/jsp/main.jsp").forward(request, response);
 		
 		 
