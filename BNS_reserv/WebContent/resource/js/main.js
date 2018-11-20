@@ -1,4 +1,4 @@
-
+// 카카오 로그인시 bns_id 세팅하도록 
 $("#ck_bns_id").click(e=>{
 
 	var bns_id = $('#bns_id').val();
@@ -105,7 +105,7 @@ $("#ck_bns_id").click(e=>{
 
 
 
-//
+//카카오 로그인
 
 Kakao.init("031e33baa1e3d2a584c550bacf19c0a9");
 Kakao.Auth.createLoginButton({
