@@ -1,3 +1,4 @@
+
 $("#ck_bns_id").click(e=>{
 
 	var bns_id = $('#bns_id').val();
@@ -6,6 +7,7 @@ $("#ck_bns_id").click(e=>{
 		$('#notfound_id').val('아이디를 입력해주세요');
 		$('#no_match_id').show();
 	} else {
+
 	
 		$.ajax({
 				
@@ -21,21 +23,25 @@ $("#ck_bns_id").click(e=>{
 		        	//실제 존재하는 아이디를 담는다.
 		        	$('#bns_id').val(bns_id);
 		        	
-		   
+		        	var test = {
+		        			 bns_id : $('#bns_id').val()
+		        	}
 		        	
-		        	/// bns_id check
+		        	//id check
      			   $.ajax({
-     		            async: true,
+     		            async: false,
      		            type : 'get',
-     		            data :  jQuery("#kakao-login").serialize(),
+     		            data :  test,
      		            url : "/BNS_reserv/idcheckServ",
-     		           // dataType : 'json',
+     		            dataType : 'json',
      		            contentType: "application/json; charset=UTF-8",
      		            timeout: 3000,
      		            success : function(data) {
+     		            		
      		            	
+     		            	console.log("success 확인 로그");
+     		            		console.log(test);            		
      		            	
-     		            	if (data.result) {
      		                    //아이디가 존재하지 않을 경우 초록으로, 존재할 경우 빨강으로 처리하는 디자인
      		                	$('#notfound_id').val("사용할 수 있는 아이디입니다.");
      		                	$("#notfound_id").attr('style',  'color:green;font-weight:bold');
@@ -45,29 +51,17 @@ $("#ck_bns_id").click(e=>{
      		        			
      		        			$('#bns_id').attr("readonly", true);		
      		        			$("#bns_id").attr('style',  'color:gray');
-     		            	}
-     		                
-     		            	/*if (result) {
-     		            	console.log("fail 테스트");
-     		            	$('#notfound_id').val("이미 존재하는 아이디입니다.");
-     		            	 //아이디가 존재하지 않을 경우 초록으로, 존재할 경우 빨강으로 처리하는 디자인
- 		                    $("#notfound_id").attr('style',  'color:red;font-weight:bold');
- 		                   
- 		                    $('#no_match_id').show();
- 		                    $("#bns_id").focus();
-     		            	}    */
-     		                
+     
      		            },
-
-     		           error: function(xhr,textStatus,err) {
-     		              console.log("readyState: " + xhr.readyState);
-     		              console.log("responseText: "+ xhr.responseText);
-     		              console.log("status: " + xhr.status);
-     		              console.log("text status: " + textStatus);
-     		              console.log("error: " + err);
+     		           error: function() {
+     		             
      		          
-     		            	$('#notfound_id').val("예상치 못한 문제가 발생했습니다.");
- 		        			$('#no_match_id').show();
+     		        	  $('#notfound_id').val("이미 존재하는 아이디입니다.");
+  		            	 //아이디가 존재하지 않을 경우 초록으로, 존재할 경우 빨강으로 처리하는 디자인
+		                    $("#notfound_id").attr('style',  'color:red;font-weight:bold');
+		                   
+		                    $('#no_match_id').show();
+		                    $("#bns_id").focus();
      		            }
      		        });
 		        	
@@ -92,12 +86,7 @@ $("#ck_bns_id").click(e=>{
 		        	//var form = document.getElementById("kakao-login"); 
 		        	//form.submit(); 
 		        },
-		    	fail : function() {
-		    		
-		    	},
-		        
 		        error : function(error) {
-		    		
 
 		        	$('#no_match_id').show();
 		        }
@@ -109,9 +98,10 @@ $("#ck_bns_id").click(e=>{
 		});//ajax
 	    
 	
-	}//else 
+	} 
 
 });
+
 
 
 
