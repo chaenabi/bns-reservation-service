@@ -137,7 +137,7 @@ Kakao.Auth.createLoginButton({
 					var form = document.getElementById("kakao-login");  
 					
 					
-					// 서브밋 한다.
+					// DB에 아이디가 있으면 바로 서브밋, 없으면 bnsid div 를 띄우도록 설정한다.
 					if ($('#bns_id').val() != "") {
 					  form.submit();
 					} else {
