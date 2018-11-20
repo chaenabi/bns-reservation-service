@@ -51,7 +51,7 @@ public class IdcheckServ extends HttpServlet {
 		JSONObject obj = new JSONObject();
 		response.setContentType("application/json; charset=UTF-8");
 		 if(duplicate == true){
-			// out.print("fail");
+		 // 고의 error 발생
 	    			
 		 } else if(duplicate == false) {
 	
