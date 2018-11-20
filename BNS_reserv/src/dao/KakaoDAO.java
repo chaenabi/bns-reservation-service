@@ -44,7 +44,7 @@ public class KakaoDAO extends JDBC {
 		try {
 			connect();
 			pstmt = conn.prepareStatement(sql);
-			System.out.println("bns_id는 null입니까? " +bns_id);
+			//System.out.println("bns_id is null? " +bns_id);
 			pstmt.setString(1, bns_id);
 
 			rs = pstmt.executeQuery();

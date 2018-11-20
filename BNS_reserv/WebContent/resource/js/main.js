@@ -18,51 +18,53 @@ $("#ck_bns_id").click(e=>{
 		        success: function(result){
 		        	
 		        	
-		        	console.log("bns_id 는: "+ bns_id + " 입니다.");
+		        	//console.log("json_bns_id is: "+ bns_id);
 		        	
-        			/// 진짜 중복체크하는곳
-        			   $.ajax({
-        		            async: true,
-        		            type : 'POST',
-        		            data : bns_id,
-        		            url : "/BNS_reserv/idcheckServ",
-        		            dataType : "text",
-        		            contentType: "application/json; charset=UTF-8",
-        		            success : function(result) {
-        		         
-        		                    //아이디가 존재할 경우 초록색으로 , 존재하지 않을 경우 빨강으로 처리하는 디자인
-        		                	$('#notfound_id').val("사용할 수 있는 아이디입니다.");
-        		                	$("#notfound_id").attr('style',  'color:green;font-weight:bold');
-        		                
-        		                	
-        		                    $('#no_match_id').show();
-        		        			
-        		        			$('#bns_id').attr("readonly", true);		
-        		        			$("#bns_id").attr('style',  'color:gray');
-        		                    
-        		                    //아이디가 중복하지 않으면  idck = 1 
-        		                    idck = 1;
-        		                    
-        		                
-        		            },
-        		            fail : function() {
-        		            	$('#notfound_id').val("이미 존재하는 아이디입니다.");
-    		                    //아이디가 존재할 경우 초록색으로 , 존재하지 않을 경우 빨강으로 처리하는 디자인
-    		                    $("#notfound_id").attr('style',  'color:red;font-weight:bold');
-    		                   
-    		                    $('#no_match_id').show();
-    		                    $("#bns_id").focus();
-        		            	
-        		            },
-        		            error : function(error) {
-        		                
-        		            	$('#notfound_id').val("예상치 못한 문제가 발생했습니다.");
-    		        			$('#no_match_id').show();
-        		            }
-        		        });
+		        	/// id check
+     			   $.ajax({
+     		            async: true,
+     		            type : 'get',
+     		            data : $('#bns_id').val(bns_id),
+     		            url : "/BNS_reserv/idcheckServ",
+     		            dataType : "text",
+     		            contentType: "application/json; charset=UTF-8",
+     		            success : function(result) {
+     		         
+     		                    //아이디가 존재할 경우 초록색으로 , 존재하지 않을 경우 빨강으로 처리하는 디자인
+     		                	$('#notfound_id').val("사용할 수 있는 아이디입니다.");
+     		                	$("#notfound_id").attr('style',  'color:green;font-weight:bold');
+     		                
+     		                	
+     		                    $('#no_match_id').show();
+     		        			
+     		        			$('#bns_id').attr("readonly", true);		
+     		        			$("#bns_id").attr('style',  'color:gray');
+     		                    
+     		                    //아이디가 중복하지 않으면  idck = 1 
+     		                    idck = 1;
+     		                    
+     		                
+     		            },
+     		           fail : function() {
+     		            	$('#notfound_id').val("이미 존재하는 아이디입니다.");
+ 		                    //아이디가 존재할 경우 초록색으로 , 존재하지 않을 경우 빨강으로 처리하는 디자인
+ 		                    $("#notfound_id").attr('style',  'color:red;font-weight:bold');
+ 		                   
+ 		                    $('#no_match_id').show();
+ 		                    $("#bns_id").focus();
+     		            	
+     		            },
+     		            error : function(error) {
+     		                
+     		            	$('#notfound_id').val("예상치 못한 문제가 발생했습니다.");
+ 		        			$('#no_match_id').show();
+     		            }
+     		        });
 		        	
 		        	//실제 존재하는 아이디를 담는다.
 		        	$('#bns_id').val(bns_id);
+		        	
+		        	
 		        	
 		        	//확인버튼으로 submit.
 		        	$("#determine_bns_id").click(e=>{
@@ -82,7 +84,11 @@ $("#ck_bns_id").click(e=>{
 		        	//var form = document.getElementById("kakao-login"); 
 		        	//form.submit(); 
 		        },
-		    	error : function(error) {
+		    	fail : function() {
+		    		
+		    	},
+		        
+		        error : function(error) {
 		    		
 
 		        	$('#no_match_id').show();

@@ -38,30 +38,31 @@ public class IdcheckServ extends HttpServlet {
 		
 		
 	
-		String bns_id = request.getParameter("id");
-		System.out.println("bns_id 는 : " + bns_id);
+		String bns_id = request.getParameter("bns_id");
+		//System.out.println("bns_id is : " + bns_id);
 
 		kvo.setBns_id(bns_id);
 
 		boolean duplicate = kdao.search_id(bns_id);
-		System.out.println("DB에 아이디가 있습니까? : "+ duplicate);
+		//System.out.println("is there id in db? : "+ duplicate);
 		
-		 if(duplicate == false){
-
-	        	JSONObject obj = new JSONObject();
-	        	obj.put("result", "success");
-	    		response.setContentType("application/json; charset=UTF-8");
-	    		response.getWriter().print(obj);
-	    		request.getRequestDispatcher("/resource/jsp/main.jsp").forward(request, response);
-		
-		
-		 } else {
+		 if(duplicate == true){
 			 JSONObject obj = new JSONObject();
 	    		obj.put("result", "fail");
 	    		response.setContentType("application/json; charset=UTF-8");
 	    		response.getWriter().print(obj);
 	    		request.getRequestDispatcher("/resource/jsp/main.jsp").forward(request, response);
-	   }
+		
+		 } else {
+
+	    		JSONObject obj = new JSONObject();
+	        	obj.put("result", "success");
+	    		response.setContentType("application/json; charset=UTF-8");
+	    		response.getWriter().print(obj);
+	    		request.getRequestDispatcher("/resource/jsp/main.jsp").forward(request, response);
+		
+		 
+		 }
 		 
 
 		 
