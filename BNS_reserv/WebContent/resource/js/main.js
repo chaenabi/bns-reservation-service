@@ -16,13 +16,20 @@ $("#ck_bns_id").click(e=>{
 		        success: function(result){
 		        	
 		        	
-		        	//console.log("json_bns_id is: "+ bns_id);
+		        	console.log("json_bns_id is: "+ bns_id);
 		        	
+		        	//실제 존재하는 아이디를 담는다.
+		        	$('#bns_id').val(bns_id);
+		        	var test = $('#bns_id').val();
+		        	testdata = {
+		        			bns_id : test
+		        	}
+      	
 		        	/// bns_id check
      			   $.ajax({
      		            async: true,
      		            type : 'get',
-     		            data : $('#bns_id').val(bns_id),
+     		            data : testdata,
      		            url : "/BNS_reserv/idcheckServ",
      		            dataType : "text",
      		            contentType: "application/json; charset=UTF-8",
@@ -53,14 +60,16 @@ $("#ck_bns_id").click(e=>{
      		            },
 
      		            error : function(error) {
-     		                
+     		            	alert("code: "+request.status+"\n"+"message(json 데이터는?): "+request.responseText+"\n"+"error: "+error);
+     		               
+
+     		            	출처: http://shonm.tistory.com/454 [정윤재의 정리노트]
      		            	$('#notfound_id').val("예상치 못한 문제가 발생했습니다.");
  		        			$('#no_match_id').show();
      		            }
      		        });
 		        	
-		        	//실제 존재하는 아이디를 담는다.
-		        	$('#bns_id').val(bns_id);
+		        	
 
 		        	
 		        	//확인버튼으로 submit.
