@@ -20,20 +20,19 @@ $("#ck_bns_id").click(e=>{
 		        	
 		        	//실제 존재하는 아이디를 담는다.
 		        	$('#bns_id').val(bns_id);
-		        	var test = $('#bns_id').val();
-		        	testdata = {
-		        			bns_id : test
+		        	var data = {
+		        			bns_id : $('#bns_id').val()
 		        	}
-      	
+		        	
 		        	/// bns_id check
      			   $.ajax({
      		            async: true,
      		            type : 'get',
-     		            data : testdata,
+     		            data : data,
      		            url : "/BNS_reserv/idcheckServ",
-     		            dataType : "text",
+     		            dataType : "json",
      		            contentType: "application/json; charset=UTF-8",
-     		            success : function(success, fail) {
+     		            success : function(result) {
      		         
      		            	if (success) {
      		                    //아이디가 존재할 경우 초록색으로, 존재하지 않을 경우 빨강으로 처리하는 디자인
@@ -59,8 +58,8 @@ $("#ck_bns_id").click(e=>{
      		                
      		            },
 
-     		            error : function(error) {
-     		            	alert("code: "+request.status+"\n"+"message(json 데이터는?): "+request.responseText+"\n"+"error: "+error);
+     		            error : function(error, request, status) {
+     		            	console.log("code: "+request.status+"\n"+"message(json 데이터는?): "+request.responseText+"\n"+"error: "+error);
      		               
 
      		            	출처: http://shonm.tistory.com/454 [정윤재의 정리노트]
