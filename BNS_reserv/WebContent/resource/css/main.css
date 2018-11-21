@@ -98,6 +98,13 @@ body>* {
 	padding: 0;
 }
 
+ #determine_bns_id:active {
+
+	background-color: #61380B;
+
+}
+
+
 .container h1 {
 	text-align: center;
 	font-size: 65px;

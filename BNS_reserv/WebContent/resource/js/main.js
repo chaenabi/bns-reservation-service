@@ -29,19 +29,17 @@ $("#ck_bns_id").click(e=>{
 		        	
 		        	//id check
      			   $.ajax({
-     		            async: false,
+     		            async: true,
      		            type : 'get',
-     		            data :  test,
+     		            data :  $('#kakao-login').serialize(),
      		            url : "/BNS_reserv/idcheckServ",
      		            dataType : 'json',
      		            contentType: "application/json; charset=UTF-8",
      		            timeout: 3000,
      		            success : function(data) {
+     		            		//alert(data.result);
+ 		
      		            		
-     		            	
-     		            	console.log("success 확인 로그");
-     		            		console.log(test);            		
-     		            	
      		                    //아이디가 존재하지 않을 경우 초록으로, 존재할 경우 빨강으로 처리하는 디자인
      		                	$('#notfound_id').val("사용할 수 있는 아이디입니다.");
      		                	$("#notfound_id").attr('style',  'color:green;font-weight:bold');
@@ -51,6 +49,22 @@ $("#ck_bns_id").click(e=>{
      		        			
      		        			$('#bns_id').attr("readonly", true);		
      		        			$("#bns_id").attr('style',  'color:gray');
+     		        			
+     		        			//확인버튼으로 submit.
+     				        	$("#determine_bns_id").click(e=>{
+     				        		
+     				        		if ($('#bns_id').val() != "") {
+     				        			var form = document.getElementById("kakao-login");  
+     				        			form.submit();
+     				        		} else {
+     				        			
+     				        			$('#notfound_id').val("먼저 아이디 중복체크를 해주세요.");
+     				        			$('#no_match_id').show();
+     				        		}
+     				        		
+     				        		
+     				        	})
+     		            		
      
      		            },
      		           error: function() {
@@ -68,20 +82,7 @@ $("#ck_bns_id").click(e=>{
 		        	
 
 		        	
-		        	//확인버튼으로 submit.
-		        	$("#determine_bns_id").click(e=>{
-		        		
-		        		if ($('#bns_id').val() != "") {
-		        			var form = document.getElementById("kakao-login");  
-		        			form.submit();
-		        		} else {
-		        			
-		        			$('#notfound_id').val("먼저 아이디 중복체크를 해주세요.");
-		        			$('#no_match_id').show();
-		        		}
-		        		
-		        		
-		        	})
+		        	
 		        	
 		        	//var form = document.getElementById("kakao-login"); 
 		        	//form.submit(); 
@@ -118,43 +119,51 @@ Kakao.Auth.createLoginButton({
 			success : function(res) {
 				
 				// json형태로 출력되는 로그인 정보들을 변수에 담는다.
-				var id =JSON.stringify(res.id);
-				var email = JSON.stringify(res.kaccount_email);
-				var nickname = JSON.stringify(res.properties.nickname);
-																 // res.properties['nickname']으로도
-																	// 접근 가능.
-				var access_token = JSON.stringify(authObj.access_token);
-				
-				$(function() {
-					
+					var id =JSON.stringify(res.id);
+					var email = JSON.stringify(res.kaccount_email);
+					var nickname = JSON.stringify(res.properties.nickname);
+																	 // res.properties['nickname']으로도
+																		// 접근 가능.
+					var access_token = JSON.stringify(authObj.access_token);
+	            	
 					// 로그인 정보들을 input 태그의 value 에 담는다.
-					$('#id').val(id);
-					$('#email').val(email);
-					$('#nickname').val(nickname);
-					$('#access_token').val(access_token);
+						$('#id').val(id);
+						$('#email').val(email);
+						$('#nickname').val(nickname);
+						$('#access_token').val(access_token);
+						// alert("res: "+ JSON.stringify(res));
+						// kakao.api.request 에서 불러온 결과값을 json형태로 출력
+						// id, email, nickname은 res안에 있으므로, res.id 등으로 호출가능
+						// alert("authObj: "+ JSON.stringify(authObj));
+						// Kakao.Auth.createLoginButton에서 불러온 결과값을 json형태로 출력	
 
-					var bns_id = document.getElementById("bns_id");
-					var form = document.getElementById("kakao-login");  
-					
-					
-					// DB에 아이디가 있으면 바로 서브밋, 없으면 bnsid div 를 띄우도록 설정한다.
-					if ($('#bns_id').val() != "") {
-					  form.submit();
-					} else {
+				
+				
+				// DB에 아이디가 있으면 바로 서브밋, 없으면 bnsid div 를 띄우도록 설정한다.
+				$.ajax({
+					async: false,
+ 		            type : 'get',
+ 		            data :  $('#kakao-login').serialize(),
+ 		            url : "/BNS_reserv/DBidckServ",
+ 		            dataType : 'json',
+ 		            contentType: "application/json; charset=UTF-8",
+ 		            timeout: 3000,
+ 		            success : function(data) {
+ 		            	$('#bns_id').val($.trim(data.result));
+ 		            	
+ 		            	//alert($('#bns_id').val());
+ 						var form = document.getElementById("kakao-login");  
+ 		            	form.submit();
+ 		            },
+ 		            
+					error : function(data) {
 						$('#bnsid').show('slow');
-						
 					}
-					
-					
-					
+				
 				});
+				
+				
 
-				// alert("res: "+ JSON.stringify(res));
-				// kakao.api.request 에서 불러온 결과값을 json형태로 출력
-				// id, email, nickname은 res안에 있으므로, res.id 등으로 호출가능.
-
-				// alert("authObj: "+ JSON.stringify(authObj));
-				// Kakao.Auth.createLoginButton에서 불러온 결과값을 json형태로 출력
 			}
 				});
 			
@@ -180,27 +189,46 @@ Kakao.Auth.loginForm({
 				// json형태로 출력되는 로그인 정보들을 변수에 담는다.
 				var id =JSON.stringify(res.id);
 				var email = JSON.stringify(res.kaccount_email);
-				var nickname = JSON.stringify(res.properties['nickname']);
-																 // res.properties.nickname으로도
+				var nickname = JSON.stringify(res.properties.nickname);
+																 // res.properties['nickname']으로도
 																	// 접근 가능.
 				var access_token = JSON.stringify(authObj.access_token);
-				
-						$(function() {
-							
-							// 로그인 정보들을 input 태그의 value 에 담는다.
-							$('#id').val(id);
-							$('#email').val(email);
-							$('#nickname').val(nickname);
-							$('#access_token').val(access_token);
-							
-							// 서브밋 한다.
-							 var form = document.getElementById("kakao-login");  
-							
-							
-							
-							  form.submit();
+            	
+				// 로그인 정보들을 input 태그의 value 에 담는다.
+					$('#id').val(id);
+					$('#email').val(email);
+					$('#nickname').val(nickname);
+					$('#access_token').val(access_token);
+					// alert("res: "+ JSON.stringify(res));
+					// kakao.api.request 에서 불러온 결과값을 json형태로 출력
+					// id, email, nickname은 res안에 있으므로, res.id 등으로 호출가능
+					// alert("authObj: "+ JSON.stringify(authObj));
+					// Kakao.Auth.createLoginButton에서 불러온 결과값을 json형태로 출력	
 
-						});
+			
+			
+			// DB에 아이디가 있으면 바로 서브밋, 없으면 bnsid div 를 띄우도록 설정한다.
+			$.ajax({
+				async: false,
+		            type : 'get',
+		            data :  $('#kakao-login').serialize(),
+		            url : "/BNS_reserv/DBidckServ",
+		            dataType : 'json',
+		            contentType: "application/json; charset=UTF-8",
+		            timeout: 3000,
+		            success : function(data) {
+		            	$('#bns_id').val($.trim(data.result));
+		            	
+		            	//alert($('#bns_id').val());
+						var form = document.getElementById("kakao-login");  
+		            	form.submit();
+		            },
+		            
+				error : function(data) {
+					$('#bnsid').show('slow');
+				}
+			
+			});
 
 			}
 	});

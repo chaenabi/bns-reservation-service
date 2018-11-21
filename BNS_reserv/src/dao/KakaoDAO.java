@@ -4,7 +4,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+
 import common.JDBC;
+
 import vo.KakaoDTO;
 
 public class KakaoDAO extends JDBC {
@@ -90,6 +92,29 @@ public class KakaoDAO extends JDBC {
 
 	}
 	
+	public String selectOne(String id) {
+		String bns_id = null;
+		String sql = "select bns_id from users where id = ?";
+		try {
+			connect();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+
+			rs = pstmt.executeQuery();
+
+			if (rs.next()) {
+				bns_id = rs.getString("bns_id");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			// 연결해제
+			disconnect();
+		}
+		return bns_id;	
+	}
+	
+	
 
 	// 카카오톡 아이디 로그인 정보 DB 등록
 	public void insertID(KakaoDTO kvo) {
@@ -97,7 +122,7 @@ public class KakaoDAO extends JDBC {
 			connect();
 			System.out.println("세션 접속 완료.");
 			String sql = "INSERT INTO users (id, bns_id, email, nickname, access_token)" + "VALUES (?, ?, ?, ?, ?)"
-					+ "ON DUPLICATE KEY UPDATE bns_id=VALUES(bns_id)" + ", email=VALUES(email)"
+					+ "ON DUPLICATE KEY UPDATE bns_id=VALUES(bns_id), email=VALUES(email)"
 					+ ", nickname=VALUES(nickname)" + ", access_token=VALUES(access_token)";
 			// OR
 			// "INSERT INTO users (id, bns_id, email, nickname, access_token) VALUES (?, ?,

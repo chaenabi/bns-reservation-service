@@ -1,8 +1,6 @@
 package servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,49 +13,40 @@ import dao.KakaoDAO;
 import vo.KakaoDTO;
 
 
-
-
-@WebServlet("/idcheckServ")
-public class IdcheckServ extends HttpServlet {
+@WebServlet("/DBidckServ")
+public class DBidckServ extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+       
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		response.setContentType("application/json; charset=UTF-8");
 		request.setCharacterEncoding("utf-8");
 
-		// 내장객체 application, session, out
-		//ServletContext application = this.getServletContext();
-		//HttpSession session = request.getSession();
-		PrintWriter out = response.getWriter();
-		// 파라미터 인코딩
-		request.setCharacterEncoding("utf-8");
-		KakaoDTO kvo = new KakaoDTO();
-		KakaoDAO kdao = new KakaoDAO();	
-		String bns_id = request.getParameter("bns_id");
-		kvo.setBns_id(bns_id);
-
-		boolean duplicate = kdao.search_id(bns_id);
-
-
-		
 		JSONObject obj = new JSONObject();
-		response.setContentType("application/json; charset=UTF-8");
-		 if(duplicate == true){
-		 // 고의 error 발생
-	    			
-		 } else if(duplicate == false) {
-
-			 	obj.put("result","false"); 
-	    		response.getWriter().print(obj);
-
-	    }
-	
+		String id = request.getParameter("id");
+		
+		 KakaoDTO kvo = new KakaoDTO();
+		KakaoDAO kdao = new KakaoDAO();	
+		
+		//System.out.println("서블릿에 아이디가 받아와졌는가? "+ id);
 		 
+		 boolean DBduplicate = kdao.search_id2(id);
+		 response.setContentType("application/json; charset=UTF-8");
+		 
+		if(DBduplicate == true){	 			
+			 String bns_id = kdao.selectOne(id);
+		 		System.out.println(bns_id);
+		 		obj.put("result", bns_id); 
+	    		response.getWriter().print(obj);
+		 } else if(DBduplicate == false) {
+			// 고의 error 발생	    
+		 }
+
+ 		 response.getWriter().close();
+		
 	}
-	
-	
+
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
