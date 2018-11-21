@@ -103,6 +103,13 @@ $("#ck_bns_id").click(e=>{
 
 });
 
+$("#determine_bns_id").click(e=>{
+	if ($.trim($('#bns_id').val()) == "") {
+		$('#notfound_id').val("먼저 아이디 중복체크를 해주세요.");
+			$('#no_match_id').show();
+			
+	} 
+});
 
 
 
@@ -241,11 +248,6 @@ Kakao.Auth.loginForm({
 		alert("로그인 실패!");
 	}
 });
-};
-
-function form_submit() {
-var form = document.getElementById("kakao-login");  
-form.submit();
 };
 
 
