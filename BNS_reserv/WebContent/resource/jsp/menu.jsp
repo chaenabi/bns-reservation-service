@@ -15,7 +15,9 @@
 	src="${pageContext.request.contextPath}/resource/js/jquery/jquery.js"></script>
 <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 
-<script>
+<!-- <script>
+
+
 	//내역 클릭 이벤트 
 	function btn_history() {
 
@@ -25,9 +27,9 @@
 		//history.show();
 
 	}
-</script>
+</script> -->
 
-<script>
+<!-- <script>
 	$(document).ready(function() {
 		gethistory = {
 			"action" : "purchase_history",
@@ -51,7 +53,7 @@
 
 		});
 	});
-</script>
+</script> -->
 
 </head>
 <body>
