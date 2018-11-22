@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.beanutils.BeanUtils;
 
+import dao.KakaoDAO;
 import dao.TeamDAO;
 import vo.ItemDTO;
 import vo.TeamDTO;
@@ -39,12 +40,11 @@ public class TeamServ extends HttpServlet {
 				TeamDTO tvo = new TeamDTO();
 				ItemDTO ivo = new ItemDTO();
 				TeamDAO tdao = new TeamDAO();
-
+				KakaoDAO kdao = new KakaoDAO();
 				
 				
 				try {
 					BeanUtils.copyProperties(tvo, request.getParameterMap());
-					System.out.println(tdao);
 				} catch (IllegalAccessException e) {
 					e.printStackTrace();
 				} catch (InvocationTargetException e) {
@@ -65,9 +65,27 @@ public class TeamServ extends HttpServlet {
 					session.setAttribute("nickname", nickname);
 					session.setAttribute("id", id);
 					session.setAttribute("email", email);*/
+			
 					tdao.addTeam(tvo);
-					tdao.addItems(ivo);
 					
+					String id = request.getParameter("id");
+					String bns_id = kdao.selectOne(id);
+
+					System.out.println("DB에 저장된 bns_id는 : " + bns_id);
+					ivo.setBns_id(bns_id);
+					
+					String raid_type = request.getParameter("raid_type");
+					if(raid_type.equals("검은 마천루")) {
+						tdao.bs_addItems(ivo);
+					} else if (raid_type.equals("소용돌이 사원")) {
+						tdao.vt_addItems(ivo);
+					} else if (raid_type.equals("태천왕릉")) {
+						tdao.tw_addItems(ivo);
+					} else if (raid_type.equals("적몽의 비원")) {
+						
+					}
+
+
 					// 목록으로 페이지 이동
 					request.getRequestDispatcher("/resource/jsp/menu.jsp").forward(request, response);
 

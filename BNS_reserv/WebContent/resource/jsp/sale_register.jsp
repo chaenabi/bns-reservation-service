@@ -30,7 +30,7 @@
 					<p style="margin: 0; padding: 0; font-size:20px; color:#58FA58">
 		
 			
-
+	
 			
 				</p>
 				<hr>
@@ -571,7 +571,7 @@
 					</div>
 				
 					
-					<!-- 검은마천루  -->
+					<!-- 검은마천루 3네임드  -->
 					<div class="sale-item">
 						<div class="sale-item-name">
 							<a> 투쟁반지 1계열</a>
@@ -830,7 +830,6 @@
 
 					
 					<!-- 태천왕릉 3네임드 -->
-					
 		     		<div class="sale-item3">
 						<div class="sale-item-name">
 							<a> 투쟁반지 1계열</a>

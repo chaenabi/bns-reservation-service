@@ -80,236 +80,231 @@ $('input[type="radio"]').click(function() {
 $(document).ready(function() {
 	
 	//마천루
-	$('#ck_bs1').change(function() {
-		if ($("#ck_bs1").is(":checked")) {
-			$("#bs1").show('fast');
+	//마천루 1네임드
+	$('#bs_tujang_ring1').change(function() {
+		if ($("#bs_tujang_ring1").is(":checked")) {
+			$("#bs_tujang_ring1_price").show('fast');
 		} else {
-			$('#bs1').hide('fast');
+			$('#bs_tujang_ring1_price').hide('fast');
 		}
 	});
 
-	$('#ck_bs2').change(function() {
-		if ($("#ck_bs2").is(":checked")) {
-			$("#bs2").show('fast');
+	$('#bs_tujang_ring2').change(function() {
+		if ($("#bs_tujang_ring2").is(":checked")) {
+			$("#bs_tujang_ring2_price").show('fast');
 		} else {
-			$('#bs2').hide('fast');
+			$('#bs_tujang_ring2_price').hide('fast');
 		}
 	});
 	
-	$('#ck_bs3').change(function() {
-		if ($("#ck_bs3").is(":checked")) {
-			$("#bs3").show('fast');
+	$('#bs_tuji_ring1').change(function() {
+		if ($("#bs_tuji_ring1").is(":checked")) {
+			$("#bs_tuji_ring1_price").show('fast');
 		} else {
-			$('#bs3').hide('fast');
+			$('#bs_tuji_ring1_price').hide('fast');
 		}
 	});
 	
-	$('#ck_bs4').change(function() {
-		if ($("#ck_bs4").is(":checked")) {
-			$("#bs4").show('fast');
+	$('#bs_tuji_ring2').change(function() {
+		if ($("#bs_tuji_ring2").is(":checked")) {
+			$("#bs_tuji_ring2_price").show('fast');
 		} else {
-			$('#bs4').hide('fast');
+			$('#bs_tuji_ring2_price').hide('fast');
 		}
 	});
 	
-	$('#ck_bs5').change(function() {
-		if ($("#ck_bs5").is(":checked")) {
-			$("#bs5").show('fast');
+	$('#bs_tuhon_ring1').change(function() {
+		if ($("#bs_tuhon_ring1").is(":checked")) {
+			$("#bs_tuhon_ring1_price").show('fast');
 		} else {
-			$('#bs5').hide('fast');
+			$('#bs_tuhon_ring1_price').hide('fast');
 		}
 	});
 	
-	$('#ck_bs6').change(function() {
-		if ($("#ck_bs6").is(":checked")) {
-			$("#bs6").show('fast');
+	$('#bs_tuhon_ring2').change(function() {
+		if ($("#bs_tuhon_ring2").is(":checked")) {
+			$("#bs_tuhon_ring2_price").show('fast');
 		} else {
-			$('#bs6').hide('fast');
+			$('#bs_tuhon_ring2_price').hide('fast');
 		}
 	});
 	
-	$('#ck_bs7').change(function() {
-		if ($("#ck_bs7").is(":checked")) {
-			$("#bs7").show('fast');
+	//마천루 2네임드
+	$('#bs_tujang_earring1').change(function() {
+		if ($("#bs_tujang_earring1").is(":checked")) {
+			$("#bs_tujang_earring1_price").show('fast');
 		} else {
-			$('#bs7').hide('fast');
+			$('#bs_tujang_earring1_price').hide('fast');
 		}
 	});
 	
-	$('#ck_bs7').change(function() {
-		if ($("#ck_bs7").is(":checked")) {
-			$("#bs7").show('fast');
+	$('#bs_tujang_earring2').change(function() {
+		if ($("#bs_tujang_earring2").is(":checked")) {
+			$("#bs_tujang_earring2_price").show('fast');
 		} else {
-			$('#bs7').hide('fast');
+			$('#bs_tujang_earring2_price').hide('fast');
 		}
 	});
 	
-	$('#ck_bs8').change(function() {
-		if ($("#ck_bs8").is(":checked")) {
-			$("#bs8").show('fast');
+	$('#bs_tuji_earring1').change(function() {
+		if ($("#bs_tuji_earring1").is(":checked")) {
+			$("#bs_tuji_earring1_price").show('fast');
 		} else {
-			$('#bs8').hide('fast');
+			$('#bs_tuji_earring1_price').hide('fast');
 		}
 	});
 	
-	$('#ck_bs9').change(function() {
-		if ($("#ck_bs9").is(":checked")) {
-			$("#bs9").show('fast');
+	$('#bs_tuji_earring2').change(function() {
+		if ($("#bs_tuji_earring2").is(":checked")) {
+			$("#bs_tuji_earring2_price").show('fast');
 		} else {
-			$('#bs9').hide('fast');
+			$('#bs_tuji_earring2_price').hide('fast');
 		}
 	});
 	
-	$('#ck_bs10').change(function() {
-		if ($("#ck_bs10").is(":checked")) {
-			$("#bs10").show('fast');
+	$('#bs_tuhon_earring1').change(function() {
+		if ($("#bs_tuhon_earring1").is(":checked")) {
+			$("#bs_tuhon_earring1_price").show('fast');
 		} else {
-			$('#bs10').hide('fast');
+			$('#bs_tuhon_earring1_price').hide('fast');
 		}
 	});
 	
-	$('#ck_bs11').change(function() {
-		if ($("#ck_bs11").is(":checked")) {
-			$("#bs11").show('fast');
+	$('#bs_tuhon_earring2').change(function() {
+		if ($("#bs_tuhon_earring2").is(":checked")) {
+			$("#bs_tuhon_earring2_price").show('fast');
 		} else {
-			$('#bs11').hide('fast');
+			$('#bs_tuhon_earring2_price').hide('fast');
 		}
 	});
 	
-	$('#ck_bs12').change(function() {
-		if ($("#ck_bs12").is(":checked")) {
-			$("#bs12").show('fast');
+	//마천루 3네임드
+	$('#bs_tujang_ring3').change(function() {
+		if ($("#bs_tujang_ring3").is(":checked")) {
+			$("#bs_tujang_ring3_price").show('fast');
 		} else {
-			$('#bs12').hide('fast');
+			$('#bs_tujang_ring3_price').hide('fast');
 		}
 	});
 	
-	$('#ck_bs13').change(function() {
-		if ($("#ck_bs13").is(":checked")) {
-			$("#bs13").show('fast');
+	$('#bs_tujang_ring4').change(function() {
+		if ($("#bs_tujang_ring4").is(":checked")) {
+			$("#bs_tujang_ring4_price").show('fast');
 		} else {
-			$('#bs13').hide('fast');
+			$('#bs_tujang_ring4_price').hide('fast');
 		}
 	});
 	
-	$('#ck_bs14').change(function() {
-		if ($("#ck_bs14").is(":checked")) {
-			$("#bs14").show('fast');
+	$('#bs_tuji_ring3').change(function() {
+		if ($("#bs_tuji_ring3").is(":checked")) {
+			$("#bs_tuji_ring3_price").show('fast');
 		} else {
-			$('#bs14').hide('fast');
+			$('#bs_tuji_ring3_price').hide('fast');
 		}
 	});
 	
-	$('#ck_bs15').change(function() {
-		if ($("#ck_bs15").is(":checked")) {
-			$("#bs15").show('fast');
+	$('#bs_tuji_ring4').change(function() {
+		if ($("#bs_tuji_ring4").is(":checked")) {
+			$("#bs_tuji_ring4_price").show('fast');
 		} else {
-			$('#bs15').hide('fast');
+			$('#bs_tuji_ring4_price').hide('fast');
 		}
 	});
 	
-	$('#ck_bs16').change(function() {
-		if ($("#ck_bs16").is(":checked")) {
-			$("#bs16").show('fast');
+	$('#bs_tuhon_ring3').change(function() {
+		if ($("#bs_tuhon_ring3").is(":checked")) {
+			$("#bs_tuhon_ring3_price").show('fast');
 		} else {
-			$('#bs16').hide('fast');
+			$('#bs_tuhon_ring3_price').hide('fast');
 		}
 	});
 	
-	$('#ck_bs17').change(function() {
-		if ($("#ck_bs17").is(":checked")) {
-			$("#bs17").show('fast');
+	$('#bs_tuhon_ring4').change(function() {
+		if ($("#bs_tuhon_ring4").is(":checked")) {
+			$("#bs_tuhon_ring4_price").show('fast');
 		} else {
-			$('#bs17').hide('fast');
+			$('#bs_tuhon_ring4_price').hide('fast');
 		}
 	});
 	
-	$('#ck_bs18').change(function() {
-		if ($("#ck_bs18").is(":checked")) {
-			$("#bs18").show('fast');
+	$('#bs_tujang_earring3').change(function() {
+		if ($("#bs_tujang_earring3").is(":checked")) {
+			$("#bs_tujang_earring3_price").show('fast');
 		} else {
-			$('#bs18').hide('fast');
+			$('#bs_tujang_earring3_price').hide('fast');
 		}
 	});
 	
-	$('#ck_bs19').change(function() {
-		if ($("#ck_bs19").is(":checked")) {
-			$("#bs19").show('fast');
+	$('#bs_tujang_earring4').change(function() {
+		if ($("#bs_tujang_earring4").is(":checked")) {
+			$("#bs_tujang_earring4_price").show('fast');
 		} else {
-			$('#bs19').hide('fast');
+			$('#bs_tujang_earring4_price').hide('fast');
 		}
 	});
 	
-	$('#ck_bs20').change(function() {
-		if ($("#ck_bs20").is(":checked")) {
-			$("#bs20").show('fast');
+	$('#bs_tuji_earring3').change(function() {
+		if ($("#bs_tuji_earring3").is(":checked")) {
+			$("#bs_tuji_earring3_price").show('fast');
 		} else {
-			$('#bs20').hide('fast');
+			$('#bs_tuji_earring3_price').hide('fast');
 		}
 	});
 	
-	$('#ck_bs21').change(function() {
-		if ($("#ck_bs21").is(":checked")) {
-			$("#bs21").show('fast');
+	$('#bs_tuji_earring4').change(function() {
+		if ($("#bs_tuji_earring4").is(":checked")) {
+			$("#bs_tuji_earring4_price").show('fast');
 		} else {
-			$('#bs21').hide('fast');
+			$('#bs_tuji_earring4_price').hide('fast');
 		}
 	});
 	
-	$('#ck_bs22').change(function() {
-		if ($("#ck_bs22").is(":checked")) {
-			$("#bs22").show('fast');
+	$('#bs_tuhon_earring3').change(function() {
+		if ($("#bs_tuhon_earring3").is(":checked")) {
+			$("#bs_tuhon_earring3_price").show('fast');
 		} else {
-			$('#bs22').hide('fast');
+			$('#bs_tuhon_earring3_price').hide('fast');
 		}
 	});
 	
-	$('#ck_bs23').change(function() {
-		if ($("#ck_bs23").is(":checked")) {
-			$("#bs23").show('fast');
+	$('#bs_tuhon_earring4').change(function() {
+		if ($("#bs_tuhon_earring4").is(":checked")) {
+			$("#bs_tuhon_earring4_price").show('fast');
 		} else {
-			$('#bs23').hide('fast');
+			$('#bs_tuhon_earring4_price').hide('fast');
 		}
 	});
 	
-	$('#ck_bs24').change(function() {
-		if ($("#ck_bs24").is(":checked")) {
-			$("#bs24").show('fast');
+	//마천루 4네임드
+	$('#hukrin').change(function() {
+		if ($("#hukrin").is(":checked")) {
+			$("#hukrin_price").show('fast');
 		} else {
-			$('#bs24').hide('fast');
+			$('#hukrin_price').hide('fast');
 		}
 	});
 	
-	//
-	$('#ck_bs_gyukgol').change(function() {
-		if ($("#ck_bs_gyukgol").is(":checked")) {
-			$("#bs_gyukgol").show('fast');
+	$('#gyukgol').change(function() {
+		if ($("#gyukgol").is(":checked")) {
+			$("#gyukgol_price").show('fast');
 		} else {
-			$('#bs_gyukgol').hide('fast');
+			$('#gyukgol_price').hide('fast');
 		}
 	});
 	
-	$('#ck_bs_ginki').change(function() {
-		if ($("#ck_bs_ginki").is(":checked")) {
-			$("#bs_ginki").show('fast');
+	$('#ginki').change(function() {
+		if ($("#ginki").is(":checked")) {
+			$("#ginki_price").show('fast');
 		} else {
-			$('#bs_ginki').hide('fast');
+			$('#ginki_price').hide('fast');
 		}
 	});
 	
-	$('#ck_bs_hukrin').change(function() {
-		if ($("#ck_bs_hukrin").is(":checked")) {
-			$("#bs_hukrin").show('fast');
+	$('#bs_gang').change(function() {
+		if ($("#bs_gang").is(":checked")) {
+			$("#bs_gang_price").show('fast');
 		} else {
-			$('#bs_hukrin').hide('fast');
-		}
-	});
-	
-	$('#ck_bs_bsgang').change(function() {
-		if ($("#ck_bs_bsgang").is(":checked")) {
-			$("#bs_bsgang").show('fast');
-		} else {
-			$('#bs_bsgang').hide('fast');
+			$('#bs_gang_price').hide('fast');
 		}
 	});
 	
@@ -317,476 +312,469 @@ $(document).ready(function() {
 	
 	
 	//소용돌이 사원
-	$('#ck_vt1').change(function() {
-		if ($("#ck_vt1").is(":checked")) {
-			$("#vt1").show('fast');
+	//소용돌이 사원 1네임드
+	$('#vt_gon_tujang').change(function() {
+		if ($("#vt_gon_tujang").is(":checked")) {
+			$("#vt_gon_tujang_price").show('fast');
 		} else {
-			$('#vt1').hide('fast');
+			$('#vt_gon_tujang_price').hide('fast');
 		}
 	});
 
-	$('#ck_vt2').change(function() {
-		if ($("#ck_vt2").is(":checked")) {
-			$("#vt2").show('fast');
+	$('#vt_sun_tujang').change(function() {
+		if ($("#vt_sun_tujang").is(":checked")) {
+			$("#vt_sun_tujang_price").show('fast');
 		} else {
-			$('#vt2').hide('fast');
+			$('#vt_sun_tujang_price').hide('fast');
 		}
 	});
 	
-	$('#ck_vt3').change(function() {
-		if ($("#ck_vt3").is(":checked")) {
-			$("#vt3").show('fast');
+	$('#vt_gon_tuji').change(function() {
+		if ($("#vt_gon_tuji").is(":checked")) {
+			$("#vt_gon_tuji_price").show('fast');
 		} else {
-			$('#vt3').hide('fast');
+			$('#vt_gon_tuji_price').hide('fast');
 		}
 	});
 	
-	$('#ck_vt4').change(function() {
-		if ($("#ck_vt4").is(":checked")) {
-			$("#vt4").show('fast');
+	$('#vt_sun_tuji').change(function() {
+		if ($("#vt_sun_tuji").is(":checked")) {
+			$("#vt_sun_tuji_price").show('fast');
 		} else {
-			$('#vt4').hide('fast');
+			$('#vt_sun_tuji_price').hide('fast');
 		}
 	});
 	
-	$('#ck_vt5').change(function() {
-		if ($("#ck_vt5").is(":checked")) {
-			$("#vt5").show('fast');
+	$('#vt_gon_tuhon').change(function() {
+		if ($("#vt_gon_tuhon").is(":checked")) {
+			$("#vt_gon_tuhon_price").show('fast');
 		} else {
-			$('#vt5').hide('fast');
+			$('#vt_gon_tuhon_price').hide('fast');
 		}
 	});
 	
-	$('#ck_vt6').change(function() {
-		if ($("#ck_vt6").is(":checked")) {
-			$("#vt6").show('fast');
+	$('#vt_sun_tuhon').change(function() {
+		if ($("#vt_sun_tuhon").is(":checked")) {
+			$("#vt_sun_tuhon_price").show('fast');
 		} else {
-			$('#vt6').hide('fast');
+			$('#vt_sun_tuhon_price').hide('fast');
 		}
 	});
 	
-	$('#ck_vt7').change(function() {
-		if ($("#ck_vt7").is(":checked")) {
-			$("#vt7").show('fast');
+	//소용돌이 사원 2네임드
+	$('#vt_tujang1').change(function() {
+		if ($("#vt_tujang1").is(":checked")) {
+			$("#vt_tujang1_price").show('fast');
 		} else {
-			$('#vt7').hide('fast');
+			$('#vt_tujang1_price').hide('fast');
 		}
 	});
 	
-	$('#ck_vt7').change(function() {
-		if ($("#ck_vt7").is(":checked")) {
-			$("#vt7").show('fast');
+	$('#vt_tujang2').change(function() {
+		if ($("#vt_tujang2").is(":checked")) {
+			$("#vt_tujang2_price").show('fast');
 		} else {
-			$('#vt7').hide('fast');
+			$('#vt_tujang2_price').hide('fast');
 		}
 	});
 	
-	$('#ck_vt8').change(function() {
-		if ($("#ck_vt8").is(":checked")) {
-			$("#vt8").show('fast');
+	$('#vt_tuji1').change(function() {
+		if ($("#vt_tuji1").is(":checked")) {
+			$("#vt_tuji1_price").show('fast');
 		} else {
-			$('#vt8').hide('fast');
+			$('#vt_tuji1_price').hide('fast');
 		}
 	});
 	
-	$('#ck_vt9').change(function() {
-		if ($("#ck_vt9").is(":checked")) {
-			$("#vt9").show('fast');
+	$('#vt_tuji2').change(function() {
+		if ($("#vt_tuji2").is(":checked")) {
+			$("#vt_tuji2_price").show('fast');
 		} else {
-			$('#vt9').hide('fast');
+			$('#vt_tuji2_price').hide('fast');
 		}
 	});
 	
-	$('#ck_vt10').change(function() {
-		if ($("#ck_vt10").is(":checked")) {
-			$("#vt10").show('fast');
+	$('#vt_tuhon1').change(function() {
+		if ($("#vt_tuhon1").is(":checked")) {
+			$("#vt_tuhon1_price").show('fast');
 		} else {
-			$('#vt10').hide('fast');
+			$('#vt_tuhon1_price').hide('fast');
 		}
 	});
 	
-	$('#ck_vt11').change(function() {
-		if ($("#ck_vt11").is(":checked")) {
-			$("#vt11").show('fast');
+	$('#vt_tuhon2').change(function() {
+		if ($("#vt_tuhon2").is(":checked")) {
+			$("#vt_tuhon2_price").show('fast');
 		} else {
-			$('#vt11').hide('fast');
+			$('#vt_tuhon2_price').hide('fast');
 		}
 	});
 	
-	$('#ck_vt12').change(function() {
-		if ($("#ck_vt12").is(":checked")) {
-			$("#vt12").show('fast');
+	//소용돌이 사원 3네임드
+	$('#vt_tujang3').change(function() {
+		if ($("#vt_tujang3").is(":checked")) {
+			$("#vt_tujang3_price").show('fast');
 		} else {
-			$('#vt12').hide('fast');
+			$('#vt_tujang3_price').hide('fast');
 		}
 	});
 	
-	$('#ck_vt13').change(function() {
-		if ($("#ck_vt13").is(":checked")) {
-			$("#vt13").show('fast');
+	$('#vt_tujang4').change(function() {
+		if ($("#vt_tujang4").is(":checked")) {
+			$("#vt_tujang4_price").show('fast');
 		} else {
-			$('#vt13').hide('fast');
+			$('#vt_tujang4_price').hide('fast');
 		}
 	});
 	
-	$('#ck_vt14').change(function() {
-		if ($("#ck_vt14").is(":checked")) {
-			$("#vt14").show('fast');
+	$('#vt_tuji3').change(function() {
+		if ($("#vt_tuji3").is(":checked")) {
+			$("#vt_tuji3_price").show('fast');
 		} else {
-			$('#vt14').hide('fast');
+			$('#vt_tuji3_price').hide('fast');
 		}
 	});
 	
-	$('#ck_vt15').change(function() {
-		if ($("#ck_vt15").is(":checked")) {
-			$("#vt15").show('fast');
+	$('#vt_tuji4').change(function() {
+		if ($("#vt_tuji4").is(":checked")) {
+			$("#vt_tuji4_price").show('fast');
 		} else {
-			$('#vt15').hide('fast');
+			$('#vt_tuji4_price').hide('fast');
 		}
 	});
 	
-	$('#ck_vt16').change(function() {
-		if ($("#ck_vt16").is(":checked")) {
-			$("#vt16").show('fast');
+	$('#vt_tuhon3').change(function() {
+		if ($("#vt_tuhon3").is(":checked")) {
+			$("#vt_tuhon3_price").show('fast');
 		} else {
-			$('#vt16').hide('fast');
+			$('#vt_tuhon3_price').hide('fast');
 		}
 	});
 	
-	$('#ck_vt17').change(function() {
-		if ($("#ck_vt17").is(":checked")) {
-			$("#vt17").show('fast');
+	$('#vt_tuhon4').change(function() {
+		if ($("#vt_tuhon4").is(":checked")) {
+			$("#vt_tuhon4_price").show('fast');
 		} else {
-			$('#vt17').hide('fast');
+			$('#vt_tuhon4_price').hide('fast');
 		}
 	});
 	
-	$('#ck_vt18').change(function() {
-		if ($("#ck_vt18").is(":checked")) {
-			$("#vt18").show('fast');
+	$('#vt_gon_tujang2').change(function() {
+		if ($("#vt_gon_tujang2").is(":checked")) {
+			$("#vt_gon_tujang2_price").show('fast');
 		} else {
-			$('#vt18').hide('fast');
+			$('#vt_gon_tujang2_price').hide('fast');
 		}
 	});
 	
-	$('#ck_vt19').change(function() {
-		if ($("#ck_vt19").is(":checked")) {
-			$("#vt19").show('fast');
+	$('#vt_sun_tujang2').change(function() {
+		if ($("#vt_sun_tujang2").is(":checked")) {
+			$("#vt_sun_tujang2_price").show('fast');
 		} else {
-			$('#vt19').hide('fast');
+			$('#vt_sun_tujang2_price').hide('fast');
 		}
 	});
 	
-	$('#ck_vt20').change(function() {
-		if ($("#ck_vt20").is(":checked")) {
-			$("#vt20").show('fast');
+	$('#vt_gon_tuji2').change(function() {
+		if ($("#vt_gon_tuji2").is(":checked")) {
+			$("#vt_gon_tuji2_price").show('fast');
 		} else {
-			$('#vt20').hide('fast');
+			$('#vt_gon_tuji2_price').hide('fast');
 		}
 	});
 	
-	$('#ck_vt21').change(function() {
-		if ($("#ck_vt21").is(":checked")) {
-			$("#vt21").show('fast');
+	$('#vt_sun_tuji2').change(function() {
+		if ($("#vt_sun_tuji2").is(":checked")) {
+			$("#vt_sun_tuji2_price").show('fast');
 		} else {
-			$('#vt21').hide('fast');
+			$('#vt_sun_tuji2_price').hide('fast');
 		}
 	});
 	
-	$('#ck_vt22').change(function() {
-		if ($("#ck_vt22").is(":checked")) {
-			$("#vt22").show('fast');
+	$('#vt_gon_tuhon2').change(function() {
+		if ($("#vt_gon_tuhon2").is(":checked")) {
+			$("#vt_gon_tuhon2_price").show('fast');
 		} else {
-			$('#vt22').hide('fast');
+			$('#vt_gon_tuhon2_price').hide('fast');
 		}
 	});
 	
-	$('#ck_vt23').change(function() {
-		if ($("#ck_vt23").is(":checked")) {
-			$("#vt23").show('fast');
+	$('#vt_sun_tuhon2').change(function() {
+		if ($("#vt_sun_tuhon2").is(":checked")) {
+			$("#vt_sun_tuhon2_price").show('fast');
 		} else {
-			$('#vt23').hide('fast');
+			$('#vt_sun_tuhon2_price').hide('fast');
 		}
 	});
 	
-	$('#ck_vt24').change(function() {
-		if ($("#ck_vt24").is(":checked")) {
-			$("#vt24").show('fast');
+	$('#singongsuk').change(function() {
+		if ($("#singongsuk").is(":checked")) {
+			$("#singongsuk_price").show('fast');
 		} else {
-			$('#vt24').hide('fast');
+			$('#singongsuk_price').hide('fast');
 		}
 	});
-	$('#ck_vt25').change(function() {
-		if ($("#ck_vt25").is(":checked")) {
-			$("#vt25").show('fast');
+
+	//소용돌이 사원 4네임드
+	$('#muksi').change(function() {
+		if ($("#muksi").is(":checked")) {
+			$("#muksi_price").show('fast');
 		} else {
-			$('#vt25').hide('fast');
-		}
-	});
-	
-	$('#ck_vt_muksi').change(function() {
-		if ($("#ck_vt_muksi").is(":checked")) {
-			$("#vt_muksi").show('fast');
-		} else {
-			$('#vt_muksi').hide('fast');
+			$('#muksi_price').hide('fast');
 		}
 	});
 	
-	$('#ck_vt_hukcham').change(function() {
-		if ($("#ck_vt_hukcham").is(":checked")) {
-			$("#vt_hukcham").show('fast');
+	$('#hukcham').change(function() {
+		if ($("#hukcham").is(":checked")) {
+			$("#hukcham_price").show('fast');
 		} else {
-			$('#vt_hukcham').hide('fast');
+			$('#hukcham_price').hide('fast');
 		}
 	});
 	
-	$('#ck_vt_amgak').change(function() {
-		if ($("#ck_vt_amgak").is(":checked")) {
-			$("#vt_amgak").show('fast');
+	$('#amgak').change(function() {
+		if ($("#amgak").is(":checked")) {
+			$("#amgak_price").show('fast');
 		} else {
-			$('#vt_amgak').hide('fast');
+			$('#amgak_price').hide('fast');
 		}
 	});
-	$('#ck_vtgang').change(function() {
-		if ($("#ck_vtgang").is(":checked")) {
-			$("#vt_vtgang").show('fast');
+	$('#vt_gang').change(function() {
+		if ($("#vt_gang").is(":checked")) {
+			$("#vt_gang_price").show('fast');
 		} else {
-			$('#vt_vtgang').hide('fast');
+			$('#vt_gang_price').hide('fast');
 		}
 	});
 	
 	
 	
 	//태천왕릉
-	$('#ck_tw1').change(function() {
-		if ($("#ck_tw1").is(":checked")) {
-			$("#tw1").show('fast');
+	//태천왕릉 1네임드
+	$('#tw_tujang_ring1').change(function() {
+		if ($("#tw_tujang_ring1").is(":checked")) {
+			$("#tw_tujang_ring1_price").show('fast');
 		} else {
-			$('#tw1').hide('fast');
+			$('#tw_tujang_ring1_price').hide('fast');
+		}
+	});
+	
+	$('#tw_tujang_ring2').change(function() {
+		if ($("#tw_tujang_ring2").is(":checked")) {
+			$("#tw_tujang_ring2_price").show('fast');
+		} else {
+			$('#tw_tujang_ring2_price').hide('fast');
+		}
+	});
+	
+	$('#tw_tuji_ring1').change(function() {
+		if ($("#tw_tuji_ring1").is(":checked")) {
+			$("#tw_tuji_ring1_price").show('fast');
+		} else {
+			$('#tw_tuji_ring1_price').hide('fast');
+		}
+	});
+	
+	$('#tw_tuji_ring2').change(function() {
+		if ($("#tw_tuji_ring2").is(":checked")) {
+			$("#tw_tuji_ring2_price").show('fast');
+		} else {
+			$('#tw_tuji_ring2_price').hide('fast');
+		}
+	});
+	
+	$('#tw_tuhon_ring1').change(function() {
+		if ($("#tw_tuhon_ring1").is(":checked")) {
+			$("#tw_tuhon_ring1_price").show('fast');
+		} else {
+			$('#tw_tuhon_ring1_price').hide('fast');
+		}
+	});
+	
+	$('#tw_tuhon_ring2').change(function() {
+		if ($("#tw_tuhon_ring2").is(":checked")) {
+			$("#tw_tuhon_ring2_price").show('fast');
+		} else {
+			$('#tw_tuhon_ring2_price').hide('fast');
+		}
+	});
+	
+	//태천왕릉 2네임드
+	$('#tw_tujang_earring1').change(function() {
+		if ($("#tw_tujang_earring1").is(":checked")) {
+			$("#tw_tujang_earring1_price").show('fast');
+		} else {
+			$('#tw_tujang_earring1_price').hide('fast');
 		}
 	});
 
-	$('#ck_tw2').change(function() {
-		if ($("#ck_tw2").is(":checked")) {
-			$("#tw2").show('fast');
+	$('#tw_tujang_earring2').change(function() {
+		if ($("#tw_tujang_earring2").is(":checked")) {
+			$("#tw_tujang_earring2_price").show('fast');
 		} else {
-			$('#tw2').hide('fast');
+			$('#tw_tujang_earring2_price').hide('fast');
 		}
 	});
 	
-	$('#ck_tw3').change(function() {
-		if ($("#ck_tw3").is(":checked")) {
-			$("#tw3").show('fast');
+	$('#tw_tuji_earring1').change(function() {
+		if ($("#tw_tuji_earring1").is(":checked")) {
+			$("#tw_tuji_earring1_price").show('fast');
 		} else {
-			$('#tw3').hide('fast');
+			$('#tw_tuji_earring1_price').hide('fast');
 		}
 	});
 	
-	$('#ck_tw4').change(function() {
-		if ($("#ck_tw4").is(":checked")) {
-			$("#tw4").show('fast');
+	$('#tw_tuji_earring2').change(function() {
+		if ($("#tw_tuji_earring2").is(":checked")) {
+			$("#tw_tuji_earring2_price").show('fast');
 		} else {
-			$('#tw4').hide('fast');
+			$('#tw_tuji_earring2_price').hide('fast');
 		}
 	});
 	
-	$('#ck_tw5').change(function() {
-		if ($("#ck_tw5").is(":checked")) {
-			$("#tw5").show('fast');
+	$('#tw_tuhon_earring1').change(function() {
+		if ($("#tw_tuhon_earring1").is(":checked")) {
+			$("#tw_tuhon_earring1_price").show('fast');
 		} else {
-			$('#tw5').hide('fast');
+			$('#tw_tuhon_earring1_price').hide('fast');
 		}
 	});
 	
-	$('#ck_tw6').change(function() {
-		if ($("#ck_tw6").is(":checked")) {
-			$("#tw6").show('fast');
+	$('#tw_tuhon_earring2').change(function() {
+		if ($("#tw_tuhon_earring2").is(":checked")) {
+			$("#tw_tuhon_earring2_price").show('fast');
 		} else {
-			$('#tw6').hide('fast');
+			$('#tw_tuhon_earring2_price').hide('fast');
 		}
 	});
 	
-	$('#ck_tw7').change(function() {
-		if ($("#ck_tw7").is(":checked")) {
-			$("#tw7").show('fast');
+	//태천왕릉 3네임드
+	$('#tw_tujang_ring3').change(function() {
+		if ($("#tw_tujang_ring3").is(":checked")) {
+			$("#tw_tujang_ring3_price").show('fast');
 		} else {
-			$('#tw7').hide('fast');
+			$('#tw_tujang_ring3_price').hide('fast');
 		}
 	});
 	
-	$('#ck_tw7').change(function() {
-		if ($("#ck_tw7").is(":checked")) {
-			$("#tw7").show('fast');
+	$('#tw_tujang_ring4').change(function() {
+		if ($("#tw_tujang_ring4").is(":checked")) {
+			$("#tw_tujang_ring4_price").show('fast');
 		} else {
-			$('#tw7').hide('fast');
+			$('#tw_tujang_ring4_price').hide('fast');
 		}
 	});
 	
-	$('#ck_tw8').change(function() {
-		if ($("#ck_tw8").is(":checked")) {
-			$("#tw8").show('fast');
+	$('#tw_tuji_ring3').change(function() {
+		if ($("#tw_tuji_ring3").is(":checked")) {
+			$("#tw_tuji_ring3_price").show('fast');
 		} else {
-			$('#tw8').hide('fast');
+			$('#tw_tuji_ring3_price').hide('fast');
 		}
 	});
 	
-	$('#ck_tw9').change(function() {
-		if ($("#ck_tw9").is(":checked")) {
-			$("#tw9").show('fast');
+	$('#tw_tuji_ring4').change(function() {
+		if ($("#tw_tuji_ring4").is(":checked")) {
+			$("#tw_tuji_ring4_price").show('fast');
 		} else {
-			$('#tw9').hide('fast');
+			$('#tw_tuji_ring4_price').hide('fast');
 		}
 	});
 	
-	$('#ck_tw10').change(function() {
-		if ($("#ck_tw10").is(":checked")) {
-			$("#tw10").show('fast');
+	$('#tw_tuhon_ring3').change(function() {
+		if ($("#tw_tuhon_ring3").is(":checked")) {
+			$("#tw_tuhon_ring3_price").show('fast');
 		} else {
-			$('#tw10').hide('fast');
+			$('#tw_tuhon_ring3_price').hide('fast');
 		}
 	});
 	
-	$('#ck_tw11').change(function() {
-		if ($("#ck_tw11").is(":checked")) {
-			$("#tw11").show('fast');
+	$('#tw_tuhon_ring4').change(function() {
+		if ($("#tw_tuhon_ring4").is(":checked")) {
+			$("#tw_tuhon_ring4_price").show('fast');
 		} else {
-			$('#tw11').hide('fast');
+			$('#tw_tuhon_ring4_price').hide('fast');
 		}
 	});
 	
-	$('#ck_tw12').change(function() {
-		if ($("#ck_tw12").is(":checked")) {
-			$("#tw12").show('fast');
+	$('#tw_tujang_earring3').change(function() {
+		if ($("#tw_tujang_earring3").is(":checked")) {
+			$("#tw_tujang_earring3_price").show('fast');
 		} else {
-			$('#tw12').hide('fast');
+			$('#tw_tujang_earring3_price').hide('fast');
 		}
 	});
 	
-	$('#ck_tw13').change(function() {
-		if ($("#ck_tw13").is(":checked")) {
-			$("#tw13").show('fast');
+	$('#tw_tujang_earring4').change(function() {
+		if ($("#tw_tujang_earring4").is(":checked")) {
+			$("#tw_tujang_earring4_price").show('fast');
 		} else {
-			$('#tw13').hide('fast');
+			$('#tw_tujang_earring4_price').hide('fast');
 		}
 	});
 	
-	$('#ck_tw14').change(function() {
-		if ($("#ck_tw14").is(":checked")) {
-			$("#tw14").show('fast');
+	$('#tw_tuji_earring3').change(function() {
+		if ($("#tw_tuji_earring3").is(":checked")) {
+			$("#tw_tuji_earring3_price").show('fast');
 		} else {
-			$('#tw14').hide('fast');
+			$('#tw_tuji_earring3_price').hide('fast');
 		}
 	});
 	
-	$('#ck_tw15').change(function() {
-		if ($("#ck_tw15").is(":checked")) {
-			$("#tw15").show('fast');
+	$('#tw_tuji_earring4').change(function() {
+		if ($("#tw_tuji_earring4").is(":checked")) {
+			$("#tw_tuji_earring4_price").show('fast');
 		} else {
-			$('#tw15').hide('fast');
+			$('#tw_tuji_earring4_price').hide('fast');
 		}
 	});
 	
-	$('#ck_tw16').change(function() {
-		if ($("#ck_tw16").is(":checked")) {
-			$("#tw16").show('fast');
+	$('#tw_tuhon_earring3').change(function() {
+		if ($("#tw_tuhon_earring3").is(":checked")) {
+			$("#tw_tuhon_earring3_price").show('fast');
 		} else {
-			$('#tw16').hide('fast');
+			$('#tw_tuhon_earring3_price').hide('fast');
 		}
 	});
 	
-	$('#ck_tw17').change(function() {
-		if ($("#ck_tw17").is(":checked")) {
-			$("#tw17").show('fast');
+	$('#tw_tuhon_earring4').change(function() {
+		if ($("#tw_tuhon_earring4").is(":checked")) {
+			$("#tw_tuhon_earring4_price").show('fast');
 		} else {
-			$('#tw17').hide('fast');
+			$('#tw_tuhon_earring4_price').hide('fast');
 		}
 	});
 	
-	$('#ck_tw18').change(function() {
-		if ($("#ck_tw18").is(":checked")) {
-			$("#tw18").show('fast');
+	//태천왕릉 4네임드
+	$('#siik').change(function() {
+		if ($("#siik").is(":checked")) {
+			$("#siik_price").show('fast');
 		} else {
-			$('#tw18').hide('fast');
+			$('#siik_price').hide('fast');
 		}
 	});
 	
-	$('#ck_tw19').change(function() {
-		if ($("#ck_tw19").is(":checked")) {
-			$("#tw19").show('fast');
+	$('#nukgol').change(function() {
+		if ($("#nukgol").is(":checked")) {
+			$("#nukgol_price").show('fast');
 		} else {
-			$('#tw19').hide('fast');
+			$('#nukgol_price').hide('fast');
 		}
 	});
 	
-	$('#ck_tw20').change(function() {
-		if ($("#ck_tw20").is(":checked")) {
-			$("#tw20").show('fast');
+	$('#gwangbae').change(function() {
+		if ($("#gwangbae").is(":checked")) {
+			$("#gwangbae_price").show('fast');
 		} else {
-			$('#tw20').hide('fast');
+			$('#gwangbae_price').hide('fast');
 		}
 	});
 	
-	$('#ck_tw21').change(function() {
-		if ($("#ck_tw21").is(":checked")) {
-			$("#tw21").show('fast');
+	$('#tw_gang').change(function() {
+		if ($("#tw_gang").is(":checked")) {
+			$("#tw_gang_price").show('fast');
 		} else {
-			$('#tw21').hide('fast');
-		}
-	});
-	
-	$('#ck_tw22').change(function() {
-		if ($("#ck_tw22").is(":checked")) {
-			$("#tw22").show('fast');
-		} else {
-			$('#tw22').hide('fast');
-		}
-	});
-	
-	$('#ck_tw23').change(function() {
-		if ($("#ck_tw23").is(":checked")) {
-			$("#tw23").show('fast');
-		} else {
-			$('#tw23').hide('fast');
-		}
-	});
-	
-	$('#ck_tw24').change(function() {
-		if ($("#ck_tw24").is(":checked")) {
-			$("#tw24").show('fast');
-		} else {
-			$('#tw24').hide('fast');
-		}
-	});
-	
-	$('#ck_tw_siik').change(function() {
-		if ($("#ck_tw_siik").is(":checked")) {
-			$("#tw_siik").show('fast');
-		} else {
-			$('#tw_siik').hide('fast');
-		}
-	});
-	
-	$('#ck_tw_nukgol').change(function() {
-		if ($("#ck_tw_nukgol").is(":checked")) {
-			$("#tw_nukgol").show('fast');
-		} else {
-			$('#tw_nukgol').hide('fast');
-		}
-	});
-	
-	$('#ck_tw_gwangbae').change(function() {
-		if ($("#ck_tw_gwangbae").is(":checked")) {
-			$("#tw_gwangbae").show('fast');
-		} else {
-			$('#tw_gwangbae').hide('fast');
-		}
-	});
-	
-	$('#ck_twgang').change(function() {
-		if ($("#ck_twgang").is(":checked")) {
-			$("#tw_twgang").show('fast');
-		} else {
-			$('#tw_twgang').hide('fast');
+			$('#tw_gang_price').hide('fast');
 		}
 	});
 	

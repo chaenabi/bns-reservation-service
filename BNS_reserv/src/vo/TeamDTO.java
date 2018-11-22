@@ -2,6 +2,7 @@ package vo;
 
 public class TeamDTO {
 	private String id;
+	private String bns_id;
 	private String team_name;
 	private String go_date;
 	private String go_time;
@@ -13,6 +14,12 @@ public class TeamDTO {
 	}
 	public void setId(String id) {
 		this.id = id;
+	}
+	public String getBns_id() {
+		return bns_id;
+	}
+	public void setBns_id(String bns_id) {
+		this.bns_id = bns_id;
 	}
 	public String getTeam_name() {
 		return team_name;
@@ -40,9 +47,10 @@ public class TeamDTO {
 	}
 	@Override
 	public String toString() {
-		return "TeamDTO [id=" + id + ", team_name=" + team_name + ", go_date=" + go_date + ", go_time=" + go_time
-				+ ", raid_type=" + raid_type + "]";
+		return "TeamDTO [id=" + id + ", bns_id=" + bns_id + ", team_name=" + team_name + ", go_date=" + go_date
+				+ ", go_time=" + go_time + ", raid_type=" + raid_type + "]";
 	}
+	
 	
 	
 	
