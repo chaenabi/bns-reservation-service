@@ -79,6 +79,7 @@ public class TeamDAO extends JDBC {
 			pstmt.setString(26, tvo.getGinki());
 			pstmt.setString(27, tvo.getGyukgol());
 			pstmt.setString(28, tvo.getBs_gang());
+			pstmt.executeUpdate();
 			
 			//마천루 아이템 가격 등록
 			String bs_price_sql = "INSERT INTO black (bs_tujang_ring1_price, bs_tujang_ring2_price, bs_tuji_ring1_price, bs_tuji_ring2_price, bs_tuhon_ring1_price, bs_tuhon_ring2_price,"
@@ -116,6 +117,7 @@ public class TeamDAO extends JDBC {
 			pstmt.setString(26, tvo.getGinki_price());
 			pstmt.setString(27, tvo.getGyukgol_price());
 			pstmt.setString(28, tvo.getBs_gang_price());
+			pstmt.executeUpdate();
 			
 			//소용돌이 사원 아이템 등록
 			String vt_sql = "INSERT INTO vortex (vt_gon_tujang, vt_sun_tujang, vt_gon_tuji, vt_sun_tuji, vt_gon_tuhon, vt_sun_tuhon,"
@@ -152,6 +154,7 @@ public class TeamDAO extends JDBC {
 			pstmt.setString(27, tvo.getAmgak());
 			pstmt.setString(28, tvo.getMuksi());
 			pstmt.setString(29, tvo.getVt_gang());
+			pstmt.executeUpdate();
 			
 			//소용돌이 사원 아이템 가격 등록
 			String vt_price_sql = "INSERT INTO vortex (vt_gon_tujang, vt_sun_tujang, vt_gon_tuji, vt_sun_tuji, vt_gon_tuhon, vt_sun_tuhon,"
@@ -188,6 +191,7 @@ public class TeamDAO extends JDBC {
 			pstmt.setString(27, tvo.getAmgak_price());
 			pstmt.setString(28, tvo.getMuksi_price());
 			pstmt.setString(29, tvo.getVt_gang_price());
+			pstmt.executeUpdate();
 			
 			//태천왕릉 아이템 등록
 			String tw_sql = "INSERT INTO twilight (tw_tujang_ring1, tw_tujang_ring2, tw_tuji_ring1, tw_tuji_ring2, tw_tuhon_ring1, tw_tuhon_ring2, tw_tujang_earring1,tw_tujang_earring2,"
@@ -223,7 +227,7 @@ public class TeamDAO extends JDBC {
 			pstmt.setString(26, tvo.getGwangbae());
 			pstmt.setString(27, tvo.getNukgol());
 			pstmt.setString(28, tvo.getTw_gang());
-
+			pstmt.executeUpdate();
 			
 			//태천왕릉 아이템 가격 등록
 			String tw_price_sql = "INSERT INTO twilight (tw_tujang_ring1_price, tw_tujang_ring2_price, tw_tuji_ring1_price, tw_tuji_ring2_price, tw_tuhon_ring1_price, tw_tuhon_ring2_price, tw_tujang_earring1price,tw_tujang_earring2_price,"
@@ -259,10 +263,8 @@ public class TeamDAO extends JDBC {
 			pstmt.setString(26, tvo.getGwangbae_price());
 			pstmt.setString(27, tvo.getNukgol_price());
 			pstmt.setString(28, tvo.getTw_gang_price());
-			
-			
-					//int r = pstmt.executeUpdate();
-					//System.out.println(r + " 건 등록 완료");
+			pstmt.executeUpdate();
+
 
 		} catch (Exception e) {
 			e.printStackTrace();
