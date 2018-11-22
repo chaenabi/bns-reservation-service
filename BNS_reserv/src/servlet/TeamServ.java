@@ -45,6 +45,7 @@ public class TeamServ extends HttpServlet {
 				
 				try {
 					BeanUtils.copyProperties(tvo, request.getParameterMap());
+					BeanUtils.copyProperties(ivo, request.getParameterMap());
 				} catch (IllegalAccessException e) {
 					e.printStackTrace();
 				} catch (InvocationTargetException e) {
@@ -65,14 +66,15 @@ public class TeamServ extends HttpServlet {
 					session.setAttribute("nickname", nickname);
 					session.setAttribute("id", id);
 					session.setAttribute("email", email);*/
-			
-					tdao.addTeam(tvo);
-					
 					String id = request.getParameter("id");
 					String bns_id = kdao.selectOne(id);
-
+					tvo.setBns_id(bns_id);
+					tdao.addTeam(tvo);
+					
 					System.out.println("DB에 저장된 bns_id는 : " + bns_id);
+					ivo.setId(id);
 					ivo.setBns_id(bns_id);
+
 					
 					String raid_type = request.getParameter("raid_type");
 					if(raid_type.equals("검은 마천루")) {

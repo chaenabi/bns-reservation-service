@@ -1,4 +1,4 @@
-// 카카오 로그인시 bns_id 세팅하도록 
+// 카카오 첫로그인시 bns_id 세팅하도록 
 $("#ck_bns_id").click(e=>{
 
 	var bns_id = $('#bns_id').val();

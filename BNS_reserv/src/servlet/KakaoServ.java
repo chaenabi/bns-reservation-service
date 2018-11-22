@@ -43,7 +43,7 @@ public class KakaoServ extends HttpServlet {
 
 		try {
 			BeanUtils.copyProperties(kvo, request.getParameterMap());
-			System.out.println(kvo);
+			System.out.println("kvo: " + kvo);
 		} catch (IllegalAccessException e) {
 			e.printStackTrace();
 		} catch (InvocationTargetException e) {
@@ -58,6 +58,8 @@ public class KakaoServ extends HttpServlet {
 
 		} else if (action.equals("kakao-login")) {
 			// 로그인 시 개인정보 DB 등록 처리
+			//System.out.println("kvo.getBns_id(): "+kvo.getBns_id());
+			//System.out.println("kvo.getId(): "+kvo.getId());
 			kdao.insertID(kvo);
 			
 			//세션에서 아래의 정보를 사용하기 위하여 setAttribute 한다.

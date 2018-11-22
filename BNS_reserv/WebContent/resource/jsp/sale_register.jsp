@@ -99,7 +99,7 @@
 						<label class="checkbox">
 								<input type="checkbox" id="bs_tujang_ring2" name="bs_tujang_ring2" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="bs_tujang_ring2_price" name="bs_tujang_ring2_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs_tujang_ring2_price" name="bs_tujang_ring2_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item">
