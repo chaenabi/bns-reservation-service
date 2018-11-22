@@ -51,7 +51,7 @@
 					</label> 태천왕릉 <label class="radio"  > <input type="radio"
 						name="raid_type"  id="twilight"  value="태천왕릉" required> <i class="icon-radio"></i>
 					</label> 적몽의 비원 <label class="radio" > <input type="radio"
-						name="raid_type"  id="reddream"  value="적몽의 비원" readonly="readonly"> <i
+						name="raid_type"  id="reddream"  value="적몽의 비원" disabled="disabled"> <i
 						class="icon-radio"></i>
 					</label>
 
