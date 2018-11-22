@@ -10,10 +10,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 import org.apache.commons.beanutils.BeanUtils;
 
 import dao.TeamDAO;
+import vo.ItemDTO;
 import vo.TeamDTO;
 
 
@@ -37,7 +37,10 @@ public class TeamServ extends HttpServlet {
 
 				// DO, DAO 객체 생성
 				TeamDTO tvo = new TeamDTO();
+				ItemDTO ivo = new ItemDTO();
 				TeamDAO tdao = new TeamDAO();
+
+				
 				
 				try {
 					BeanUtils.copyProperties(tvo, request.getParameterMap());
@@ -63,7 +66,8 @@ public class TeamServ extends HttpServlet {
 					session.setAttribute("id", id);
 					session.setAttribute("email", email);*/
 					tdao.addTeam(tvo);
-
+					tdao.addItems(ivo);
+					
 					// 목록으로 페이지 이동
 					request.getRequestDispatcher("/resource/jsp/menu.jsp").forward(request, response);
 
