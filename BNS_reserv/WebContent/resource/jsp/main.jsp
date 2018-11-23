@@ -41,8 +41,7 @@
 				<p class="p"> 닉네임 설정은 최초 한번만 실행됩니다. </p>
 				<p class="p">신중하게 입력해주세요.</p>
 				<br>					
-					<select name="server">
-					    <option value="">서버선택</option>
+					<select name="server" id="servers">
 					    <option value="경국지색">경국지색</option>
 					    <option value="절세미인">절세미인</option>
 					    <option value="명불허전">명불허전</option>
@@ -60,6 +59,9 @@
 				
 				<div id="no_match_id" style="display: none;">
 				<input type="text" id="notfound_id" value="아이디를 찾을 수 없습니다. 다시 확인해주세요." readonly="readonly"/>
+				</div>
+				<div id="no_match_server" style="display: none;">
+				<input type="text" id="notfound_server" value="서버를 선택해주세요." readonly="readonly"/>
 				</div>
 				
 				

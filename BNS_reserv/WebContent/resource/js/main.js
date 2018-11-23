@@ -52,15 +52,19 @@ $("#ck_bns_id").click(e=>{
      		        			
      		        			//확인버튼으로 submit.
      				        	$("#determine_bns_id").click(e=>{
-     				        		
+
      				        		if ($('#bns_id').val() != "") {
      				        			var form = document.getElementById("kakao-login");  
-     				        			form.submit();
-     				        		} else {
      				        			
+     				        	
+     				        			form.submit();
+
+     				        			
+     				        		} else if ($('#bns_id').val() == null){
+     				        			console.log($('#servers').val());
      				        			$('#notfound_id').val("먼저 아이디 중복체크를 해주세요.");
      				        			$('#no_match_id').show();
-     				        		}
+     				        		} 
      				        		
      				        		
      				        	})

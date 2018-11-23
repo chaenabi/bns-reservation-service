@@ -25,6 +25,16 @@ body>* {
 	text-align: center;
 }
 
+select {
+    width: 110px;
+    height: 30px;
+    padding-left: 10px;
+    font-size: 18px;
+    color: #006fff;
+    border: 1px solid #006fff;
+    border-radius: 3px;
+}
+
 .bnsid {
 	padding-bottom: 20px;
 	color: #000;
@@ -80,7 +90,7 @@ body>* {
 	
 }
 
-#notfound_id, #ckfound_id {
+#notfound_id, #notfound_server {
 	width: 300px;
 	border: none;
     background: transparent;
