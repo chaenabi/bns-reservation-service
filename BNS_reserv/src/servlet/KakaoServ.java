@@ -60,6 +60,10 @@ public class KakaoServ extends HttpServlet {
 			// 로그인 시 개인정보 DB 등록 처리
 			//System.out.println("kvo.getBns_id(): "+kvo.getBns_id());
 			//System.out.println("kvo.getId(): "+kvo.getId());
+			
+			String server = request.getParameter("server");
+			System.out.println("server : " + server);
+			
 			kdao.insertID(kvo);
 			
 			//세션에서 아래의 정보를 사용하기 위하여 setAttribute 한다.

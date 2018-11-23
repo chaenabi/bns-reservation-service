@@ -71,10 +71,8 @@ public class TeamServ extends HttpServlet {
 					tvo.setBns_id(bns_id);
 					tdao.addTeam(tvo);
 					
-					System.out.println("DB에 저장된 bns_id는 : " + bns_id);
 					ivo.setId(id);
 					ivo.setBns_id(bns_id);
-
 					
 					String raid_type = request.getParameter("raid_type");
 					if(raid_type.equals("검은 마천루")) {

@@ -40,8 +40,21 @@
 				<p class="p"> 실제로 사용하는 닉네임을 입력해주세요.</p>
 				<p class="p"> 닉네임 설정은 최초 한번만 실행됩니다. </p>
 				<p class="p">신중하게 입력해주세요.</p>
-				<br>
-				<a style="color:#fff">ID)</a>&nbsp; 
+				<br>					
+					<select name="server">
+					    <option value="">서버선택</option>
+					    <option value="경국지색">경국지색</option>
+					    <option value="절세미인">절세미인</option>
+					    <option value="명불허전">명불허전</option>
+					    <option value="신검합일">신검합일</option>
+					    <option value="이심전심">이심전심</option>
+					    <option value="일확천금">일확천금</option>
+					    <option value="화룡점정">화룡점정</option>
+					    <option value="금강불괴">금강불괴</option>
+					    
+					</select>
+									&emsp;
+				
 				<input type="text"  id="bns_id" name="bns_id" placeholder="아이디 입력란" />
 				<input type="button" id="ck_bns_id" value="중복체크"/><br><br>
 				

@@ -28,8 +28,7 @@ public class DBidckServ extends HttpServlet {
 		
 		 KakaoDTO kvo = new KakaoDTO();
 		KakaoDAO kdao = new KakaoDAO();	
-		
-		//System.out.println("서블릿에 아이디가 받아와졌는가? "+ id);
+
 		 
 		 boolean DBduplicate = kdao.search_id2(id);
 		 response.setContentType("application/json; charset=UTF-8");

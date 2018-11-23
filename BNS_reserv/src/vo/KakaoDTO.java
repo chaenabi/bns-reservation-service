@@ -6,6 +6,7 @@ public class KakaoDTO {
 	private String email;
 	private String nickname;
 	private String access_token;
+	private String server;
 	private int log_count;
 	
 	public String getId() {
@@ -38,6 +39,13 @@ public class KakaoDTO {
 	public void setAccess_token(String access_token) {
 		this.access_token = access_token;
 	}
+	
+	public String getServer() {
+		return server;
+	}
+	public void setServer(String server) {
+		this.server = server;
+	}
 	public int getLog_count() {
 		return log_count;
 	}
@@ -47,8 +55,10 @@ public class KakaoDTO {
 	@Override
 	public String toString() {
 		return "KakaoDTO [id=" + id + ", bns_id=" + bns_id + ", email=" + email + ", nickname=" + nickname
-				+ ", access_token=" + access_token + ", log_count=" + log_count + "]";
+				+ ", access_token=" + access_token + ", server=" + server + ", log_count=" + log_count + "]";
 	}
+	
+	
 	
 	
 	

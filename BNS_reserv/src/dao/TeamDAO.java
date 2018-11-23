@@ -42,12 +42,9 @@ public class TeamDAO extends JDBC {
 	
 	//마천루 아이템 등록
 	public void bs_addItems(ItemDTO tvo) {
-
-		System.out.println(tvo.getId());
-		System.out.println(tvo.getBns_id());
 		try {
 			connect();
-			System.out.println(tvo.getBns_id());
+
 			// 검은 마천루 아이템 등록
 			String bs_sql = "INSERT INTO black (id, bns_id, bs_tujang_ring1, bs_tujang_ring2, bs_tuji_ring1, bs_tuji_ring2, bs_tuhon_ring1, bs_tuhon_ring2,"
 					+ "bs_tujang_earring1, bs_tujang_earring2, bs_tuji_earring1, bs_tuji_earring2, bs_tuhon_earring1, bs_tuhon_earring2,"
