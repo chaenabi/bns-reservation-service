@@ -58,10 +58,8 @@ public class ViewServ extends HttpServlet {
 		String isim = request.getParameter("isim");
 		String hwaryung = request.getParameter("hwaryung");
 		
-		System.out.println("gyungguk : " +gyungguk);
-		System.out.println("jeolse : "+jeolse);
 		
-		ArrayList<String> server = new ArrayList<String>();
+		/*ArrayList<String> server = new ArrayList<String>();
 
 		server.add(gyungguk);
 		server.add(jeolse);
@@ -70,11 +68,14 @@ public class ViewServ extends HttpServlet {
 		server.add(singum);
 		server.add(ilhwak);
 		server.add(isim);
-		server.add(hwaryung);
+		server.add(hwaryung);*/
+		
+		String[] server = {gyungguk, jeolse, gumgang, myungbul, singum, ilhwak, isim, hwaryung}; 
+		
 
 		if(action.equals("dynamicView")) {
 			
-			for(int i = 0; i < server.size(); i++) {
+			for(int i = 0; i < server.length; i++) {
 				ArrayList<TeamDTO> view_godate = idao.viewBS_godate(server);
 				obj.put("result", view_godate);
 			}

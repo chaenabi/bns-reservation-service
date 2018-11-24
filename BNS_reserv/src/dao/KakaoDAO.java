@@ -120,7 +120,7 @@ public class KakaoDAO extends JDBC {
 	public void insertID(KakaoDTO kvo) {
 		try {
 			connect();
-			System.out.println("세션 접속 완료.");
+			//System.out.println("세션 접속 완료.");
 			String sql = "INSERT INTO users (id, bns_id, email, nickname, access_token, server)" + "VALUES (?, ?, ?, ?, ?, ?)"
 					+ "ON DUPLICATE KEY UPDATE bns_id=VALUES(bns_id), email=VALUES(email)"
 					+ ", nickname=VALUES(nickname)" + ", access_token=VALUES(access_token)" + ", server=VALUES(server)";
@@ -128,7 +128,7 @@ public class KakaoDAO extends JDBC {
 			// "INSERT INTO users (id, bns_id, email, nickname, access_token) VALUES (?, ?,
 			// ?, ?, ?)"
 			// + "ON DUPLICATE KEY UPDATE bns_id=?, email=?, nickname=?, access_token=?";
-			System.out.println("ID정보를 DB에 적용합니다. : ");
+			//System.out.println("ID정보를 DB에 적용합니다. : ");
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, kvo.getId());
 			pstmt.setString(2, kvo.getBns_id());
@@ -138,15 +138,14 @@ public class KakaoDAO extends JDBC {
 			pstmt.setString(6, kvo.getServer());
 			// pstmt.setInt(7, kvo.getLog_count());
 
-			int r = pstmt.executeUpdate();
-
-			System.out.println(r + " 건 등록 완료");
+			/*int r =*/ pstmt.executeUpdate();
+			//System.out.println(r + " 건 등록 완료");
 			// }
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			disconnect();
-			System.out.println("세션 종료되었습니다.");
+			//System.out.println("세션 종료되었습니다.");
 		}
 
 	}

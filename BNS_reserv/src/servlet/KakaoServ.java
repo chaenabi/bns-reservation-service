@@ -43,7 +43,6 @@ public class KakaoServ extends HttpServlet {
 
 		try {
 			BeanUtils.copyProperties(kvo, request.getParameterMap());
-			System.out.println("kvo: " + kvo);
 		} catch (IllegalAccessException e) {
 			e.printStackTrace();
 		} catch (InvocationTargetException e) {

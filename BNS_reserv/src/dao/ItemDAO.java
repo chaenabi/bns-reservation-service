@@ -11,20 +11,21 @@ import vo.TeamDTO;
 public class ItemDAO extends JDBC {
 
 	
-	public ArrayList<TeamDTO> viewBS_godate(ArrayList<String> server) {
+	public ArrayList<TeamDTO> viewBS_godate(String[] server) {
 		connect();
 		System.out.println("세션 접속 완료.");
 		ArrayList<TeamDTO> datas = new ArrayList<TeamDTO>();
-		String sql = "select go_date, go_time from team, users where server="+server+" group by go_date, go_time";
-	
 		try {
-			pstmt = conn.prepareStatement(sql);
-			ResultSet rs = pstmt.executeQuery();
-			while(rs.next()) {
-				TeamDTO tvo = new TeamDTO();
-				datas.add(tvo);
-				 
-			}
+		for (int i=0; i < server.length; i++) {
+		String sql = "select go_date, go_time from team, users"
+						 + "where server="+server[i]+" group by go_date, go_time";
+		pstmt = conn.prepareStatement(sql);
+		ResultSet rs = pstmt.executeQuery();
+				while(rs.next()) {
+					TeamDTO tvo = new TeamDTO();
+					datas.add(tvo);
+				}
+		}			
 			rs.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
