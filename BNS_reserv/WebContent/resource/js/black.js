@@ -126,14 +126,42 @@ $('#test_server').click(function() {
 	$('#ninth_server').show();
 });
 
-$('a[class="time"]').click(function() {
+$('a[class="go_time"]').click(function() {
 	$(".teamlists").show();
 
 });
 
 $(".teamlists").click(function() {
-	$(".time").show();
-	$(".teamlists").show();
+	$(".go_time").show();
+	$(".team_name").show();
 	$(".menu").show();
 
 });
+
+$(".d1").click(e=>{
+
+
+   $.ajax({
+	            async: true,
+	            type : 'get',
+	            data :  $('#dynamicView').serialize(),
+	            url : "/BNS_reserv/ViewServ?action=dynamicView",
+	            dataType : 'json',
+	            contentType: "application/json; charset=UTF-8",
+	            timeout: 3000,
+	            success : function(data) {
+	            	alert("success 확인");
+	            	console.log(data.result);
+	            	
+	            },
+	            error: function() {
+	            	alert("error 확인");
+
+	            }
+     		        });
+
+});
+
+
+
+
