@@ -59,7 +59,8 @@ public class IdcheckServ extends HttpServlet {
 		tvo.setTeam_name(team_name);
 		boolean tn_duplicate = tdao.search_tn(team_name);
 		System.out.println("tn_duplicate : " + tn_duplicate);
-		response.setContentType("application/json; charset=UTF-8");
+		
+		//이해안되는 부분.. 왜 ajax에는 false가 넘어가는지?
 		if(tn_duplicate){
 	
 		}

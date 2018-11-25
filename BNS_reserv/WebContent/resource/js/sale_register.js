@@ -18,7 +18,7 @@ $("#multi_ck").click(e=>{
      		            success : function(data) {
      		            		alert(JSON.stringify(data));
      		            		// alert(data.result);
-     		            		
+     		            		//이해 안되는 부분. 왜 false가 넘어오는지?
      		            		if($.trim(data.result)  ==  "false") {
 		     		            		alert("사용할 수 있는 팀명입니다.");
 		     		            		$('#team_name').attr("readonly", true);		

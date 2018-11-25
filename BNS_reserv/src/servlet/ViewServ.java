@@ -72,7 +72,7 @@ public class ViewServ extends HttpServlet {
 		
 		String[] server = {gyungguk, jeolse, gumgang, myungbul, singum, ilhwak, isim, hwaryung}; 
 		
-
+		//이해 안되는 부분 black.jsp ajax 셀렉트
 		if(action.equals("dynamicView")) {
 			
 			for(int i = 0; i < server.length; i++) {

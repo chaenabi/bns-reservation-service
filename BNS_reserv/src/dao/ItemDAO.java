@@ -10,7 +10,7 @@ import vo.TeamDTO;
 
 public class ItemDAO extends JDBC {
 
-	
+	//알수 없는 부분 black.jsp 비동기 메소드
 	public ArrayList<TeamDTO> viewBS_godate(String[] server) {
 		connect();
 		ArrayList<TeamDTO> datas = new ArrayList<TeamDTO>();
