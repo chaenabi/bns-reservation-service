@@ -65,13 +65,7 @@
 					<script>
 						$("#go_time").datetimepicker({
 							locale : 'ko',
-							format : 'hh:mm',
-							showClose : true,
-							showClear : true,
-							showTodayButton : true,
-							stepping : 30,
-							//defaultDate : new Date(),
-							sideBySide : true
+							format : 'HH:mm'
 						});
 					</script>
 				</div>
