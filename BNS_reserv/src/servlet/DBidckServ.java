@@ -35,7 +35,6 @@ public class DBidckServ extends HttpServlet {
 		 
 		if(DBduplicate == true){	 			
 			 String bns_id = kdao.selectOne(id);
-		 		System.out.println(bns_id);
 		 		obj.put("result", bns_id); 
 	    		response.getWriter().print(obj);
 		 } else if(DBduplicate == false) {

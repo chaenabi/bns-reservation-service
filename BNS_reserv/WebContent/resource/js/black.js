@@ -138,7 +138,7 @@ $(".teamlists").click(function() {
 
 });
 
-$(".d1").click(e=>{
+/*$(".d1").click(e=>{
 
 
    $.ajax({
@@ -160,7 +160,7 @@ $(".d1").click(e=>{
 	            }
      		        });
 
-});
+});*/
 
 
 

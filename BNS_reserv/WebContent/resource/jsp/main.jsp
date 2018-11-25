@@ -67,6 +67,9 @@
 				
 				<br><br>
 				<input type="button" id="determine_bns_id" name="determine_bns_id" value="확인" />
+				<!-- <button style="display: none;" id="yes" value="결정" ></button>
+				<button style="display: none;" id="no" value="취소" ></button> -->
+				
 				 </div>
 				
 			</div>
