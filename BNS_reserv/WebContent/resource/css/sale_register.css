@@ -55,10 +55,16 @@ body {
 	margin-top: 10px;
 }
 
-.mainform>h2 {
-	padding-top: 10px;
+.mainform>h2, .mainform>h5 {
+
 	margin: 0;
 	text-align: center;
+}
+
+.hr {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	
 }
 
 .team_register {

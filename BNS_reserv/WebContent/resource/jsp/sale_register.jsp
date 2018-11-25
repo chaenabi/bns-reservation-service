@@ -37,8 +37,8 @@
 					value="<%=session.getAttribute("id")%>"/>
 					<a>팀명 : </a> <input type="text" id="team_name" name="team_name" placeholder="6글자이내">
 					<input type="button" id="multi_ck" value="중복체크"> &nbsp; 
-				<a> 출발 날짜 : </a>
-				<div style="display: inline-block;">
+				<label for="go_date" class="col-xs-2 control-label">출발 날짜</label>
+				<div class="col-xs-8" style="display: inline-block;">
 					<input type="text" class="form-control" id="go_date"
 						name="go_date">
 					<script>
@@ -56,10 +56,11 @@
 				</div>
 			
 					
-					
-						<a> 출발시각 : </a> 
+
+			
+					<label for="go_time" class="col-xs-2 control-label">출발 시간</label>
 				
-				<div style="display: inline-block;">
+				<div class="col-xs-8" style="display: inline-block;">
 					<input type="text" class="form-control" id="go_time"
 						name="go_time">
 					<script>
@@ -69,9 +70,8 @@
 						});
 					</script>
 				</div>
-				
-				</div>
-			
+
+			</div>
 									
 									
 									
@@ -88,10 +88,10 @@
 					</label>
 
 				</div>
-				<hr>
+				<hr class="hr">
 				
-				<h5 style="margin:10px;">판매할 아이템</h5>
-				<hr>
+				<h5>판매할 아이템</h5>
+				<hr class="hr">
 				
 				
 				

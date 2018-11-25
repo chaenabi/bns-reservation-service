@@ -11,7 +11,7 @@
 	display: block;
 	margin: 2px 0;
 	padding: 4px;
-	width: 19em
+	width: 19em;
 }
 
 @media ( min-width :768px) {
@@ -248,7 +248,7 @@
 
 .bootstrap-datetimepicker-widget .picker-switch td span {
 	line-height: 2.5;
-	height: 2.5em;
+	height: 1em;
 	width: 100%
 }
 
@@ -419,7 +419,7 @@
 }
 
 .bootstrap-datetimepicker-widget .datepicker-decades .decade {
-	line-height: 1.8em !important
+	line-height: 1em !important
 }
 
 .input-group.date .input-group-addon {
