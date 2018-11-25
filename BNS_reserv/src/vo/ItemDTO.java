@@ -190,7 +190,39 @@ public class ItemDTO {
 	private String tw_gang_price;
 
 	// 적몽의 비원
-	// DB 이름 확인후에 적용할 예정
+	private String rd_sa_tujang;
+	private String rd_sa_tujang_price;
+	private String rd_mo_tujang;
+	private String rd_mo_tujang_price;
+	private String rd_sa_tuji;
+	private String rd_sa_tuji_price;
+	private String rd_mo_tuji;
+	private String rd_mo_tuji_price;
+	private String rd_sa_tuhon;
+	private String rd_sa_tuhon_price;
+	private String rd_mo_tuhon;
+	private String rd_mo_tuhon_price;
+	private String rd_tujang1_neck;
+	private String rd_tujang1_neck_price;
+	private String rd_tujang2_neck;
+	private String rd_tujang2_neck_price;
+	private String rd_tuji1_neck;
+	private String rd_tuji1_neck_price;
+	private String rd_tuji2_neck;
+	private String rd_tuji2_neck_price;
+	private String rd_tuhon1_neck;
+	private String rd_tuhon1_neck_price;
+	private String rd_tuhon2_neck;
+	private String rd_tuhon2_neck_price;
+	private String poyup;
+	private String poyup_price;
+	private String jamo;
+	private String jamo_price;
+	private String ipmak;
+	private String ipmak_price;
+	private String rd_gang;
+	private String rd_gang_price;
+
 
 	// getter setter
 
@@ -1570,6 +1602,262 @@ public class ItemDTO {
 		this.tw_gang_price = tw_gang_price;
 	}
 
+	public String getRd_sa_tujang() {
+		return rd_sa_tujang;
+	}
+
+	public void setRd_sa_tujang(String rd_sa_tujang) {
+		this.rd_sa_tujang = rd_sa_tujang;
+	}
+
+	public String getRd_sa_tujang_price() {
+		return rd_sa_tujang_price;
+	}
+
+	public void setRd_sa_tujang_price(String rd_sa_tujang_price) {
+		this.rd_sa_tujang_price = rd_sa_tujang_price;
+	}
+
+	public String getRd_mo_tujang() {
+		return rd_mo_tujang;
+	}
+
+	public void setRd_mo_tujang(String rd_mo_tujang) {
+		this.rd_mo_tujang = rd_mo_tujang;
+	}
+
+	public String getRd_mo_tujang_price() {
+		return rd_mo_tujang_price;
+	}
+
+	public void setRd_mo_tujang_price(String rd_mo_tujang_price) {
+		this.rd_mo_tujang_price = rd_mo_tujang_price;
+	}
+
+	public String getRd_sa_tuji() {
+		return rd_sa_tuji;
+	}
+
+	public void setRd_sa_tuji(String rd_sa_tuji) {
+		this.rd_sa_tuji = rd_sa_tuji;
+	}
+
+	public String getRd_sa_tuji_price() {
+		return rd_sa_tuji_price;
+	}
+
+	public void setRd_sa_tuji_price(String rd_sa_tuji_price) {
+		this.rd_sa_tuji_price = rd_sa_tuji_price;
+	}
+
+	public String getRd_mo_tuji() {
+		return rd_mo_tuji;
+	}
+
+	public void setRd_mo_tuji(String rd_mo_tuji) {
+		this.rd_mo_tuji = rd_mo_tuji;
+	}
+
+	public String getRd_mo_tuji_price() {
+		return rd_mo_tuji_price;
+	}
+
+	public void setRd_mo_tuji_price(String rd_mo_tuji_price) {
+		this.rd_mo_tuji_price = rd_mo_tuji_price;
+	}
+
+	public String getRd_sa_tuhon() {
+		return rd_sa_tuhon;
+	}
+
+	public void setRd_sa_tuhon(String rd_sa_tuhon) {
+		this.rd_sa_tuhon = rd_sa_tuhon;
+	}
+
+	public String getRd_sa_tuhon_price() {
+		return rd_sa_tuhon_price;
+	}
+
+	public void setRd_sa_tuhon_price(String rd_sa_tuhon_price) {
+		this.rd_sa_tuhon_price = rd_sa_tuhon_price;
+	}
+
+	public String getRd_mo_tuhon() {
+		return rd_mo_tuhon;
+	}
+
+	public void setRd_mo_tuhon(String rd_mo_tuhon) {
+		this.rd_mo_tuhon = rd_mo_tuhon;
+	}
+
+	public String getRd_mo_tuhon_price() {
+		return rd_mo_tuhon_price;
+	}
+
+	public void setRd_mo_tuhon_price(String rd_mo_tuhon_price) {
+		this.rd_mo_tuhon_price = rd_mo_tuhon_price;
+	}
+
+	public String getRd_tujang1_neck() {
+		return rd_tujang1_neck;
+	}
+
+	public void setRd_tujang1_neck(String rd_tujang1_neck) {
+		this.rd_tujang1_neck = rd_tujang1_neck;
+	}
+
+	public String getRd_tujang1_neck_price() {
+		return rd_tujang1_neck_price;
+	}
+
+	public void setRd_tujang1_neck_price(String rd_tujang1_neck_price) {
+		this.rd_tujang1_neck_price = rd_tujang1_neck_price;
+	}
+
+	public String getRd_tujang2_neck() {
+		return rd_tujang2_neck;
+	}
+
+	public void setRd_tujang2_neck(String rd_tujang2_neck) {
+		this.rd_tujang2_neck = rd_tujang2_neck;
+	}
+
+	public String getRd_tujang2_neck_price() {
+		return rd_tujang2_neck_price;
+	}
+
+	public void setRd_tujang2_neck_price(String rd_tujang2_neck_price) {
+		this.rd_tujang2_neck_price = rd_tujang2_neck_price;
+	}
+
+	public String getRd_tuji1_neck() {
+		return rd_tuji1_neck;
+	}
+
+	public void setRd_tuji1_neck(String rd_tuji1_neck) {
+		this.rd_tuji1_neck = rd_tuji1_neck;
+	}
+
+	public String getRd_tuji1_neck_price() {
+		return rd_tuji1_neck_price;
+	}
+
+	public void setRd_tuji1_neck_price(String rd_tuji1_neck_price) {
+		this.rd_tuji1_neck_price = rd_tuji1_neck_price;
+	}
+
+	public String getRd_tuji2_neck() {
+		return rd_tuji2_neck;
+	}
+
+	public void setRd_tuji2_neck(String rd_tuji2_neck) {
+		this.rd_tuji2_neck = rd_tuji2_neck;
+	}
+
+	public String getRd_tuji2_neck_price() {
+		return rd_tuji2_neck_price;
+	}
+
+	public void setRd_tuji2_neck_price(String rd_tuji2_neck_price) {
+		this.rd_tuji2_neck_price = rd_tuji2_neck_price;
+	}
+
+	public String getRd_tuhon1_neck() {
+		return rd_tuhon1_neck;
+	}
+
+	public void setRd_tuhon1_neck(String rd_tuhon1_neck) {
+		this.rd_tuhon1_neck = rd_tuhon1_neck;
+	}
+
+	public String getRd_tuhon1_neck_price() {
+		return rd_tuhon1_neck_price;
+	}
+
+	public void setRd_tuhon1_neck_price(String rd_tuhon1_neck_price) {
+		this.rd_tuhon1_neck_price = rd_tuhon1_neck_price;
+	}
+
+	public String getRd_tuhon2_neck() {
+		return rd_tuhon2_neck;
+	}
+
+	public void setRd_tuhon2_neck(String rd_tuhon2_neck) {
+		this.rd_tuhon2_neck = rd_tuhon2_neck;
+	}
+
+	public String getRd_tuhon2_neck_price() {
+		return rd_tuhon2_neck_price;
+	}
+
+	public void setRd_tuhon2_neck_price(String rd_tuhon2_neck_price) {
+		this.rd_tuhon2_neck_price = rd_tuhon2_neck_price;
+	}
+
+	public String getPoyup() {
+		return poyup;
+	}
+
+	public void setPoyup(String poyup) {
+		this.poyup = poyup;
+	}
+
+	public String getPoyup_price() {
+		return poyup_price;
+	}
+
+	public void setPoyup_price(String poyup_price) {
+		this.poyup_price = poyup_price;
+	}
+
+	public String getJamo() {
+		return jamo;
+	}
+
+	public void setJamo(String jamo) {
+		this.jamo = jamo;
+	}
+
+	public String getJamo_price() {
+		return jamo_price;
+	}
+
+	public void setJamo_price(String jamo_price) {
+		this.jamo_price = jamo_price;
+	}
+
+	public String getIpmak() {
+		return ipmak;
+	}
+
+	public void setIpmak(String ipmak) {
+		this.ipmak = ipmak;
+	}
+
+	public String getIpmak_price() {
+		return ipmak_price;
+	}
+
+	public void setIpmak_price(String ipmak_price) {
+		this.ipmak_price = ipmak_price;
+	}
+
+	public String getRd_gang() {
+		return rd_gang;
+	}
+
+	public void setRd_gang(String rd_gang) {
+		this.rd_gang = rd_gang;
+	}
+
+	public String getRd_gang_price() {
+		return rd_gang_price;
+	}
+
+	public void setRd_gang_price(String rd_gang_price) {
+		this.rd_gang_price = rd_gang_price;
+	}
+
 	@Override
 	public String toString() {
 		return "ItemDTO [id=" + id + ", bns_id=" + bns_id + ", bs_tujang_ring1=" + bs_tujang_ring1
@@ -1651,8 +1939,23 @@ public class ItemDTO {
 				+ tw_tuji_earring4_price + ", tw_tuhon_earring3_price=" + tw_tuhon_earring3_price
 				+ ", tw_tuhon_earring4_price=" + tw_tuhon_earring4_price + ", siik_price=" + siik_price
 				+ ", gwangbae_price=" + gwangbae_price + ", nukgol_price=" + nukgol_price + ", tw_gang_price="
-				+ tw_gang_price + "]";
+				+ tw_gang_price + ", rd_sa_tujang=" + rd_sa_tujang + ", rd_sa_tujang_price=" + rd_sa_tujang_price
+				+ ", rd_mo_tujang=" + rd_mo_tujang + ", rd_mo_tujang_price=" + rd_mo_tujang_price + ", rd_sa_tuji="
+				+ rd_sa_tuji + ", rd_sa_tuji_price=" + rd_sa_tuji_price + ", rd_mo_tuji=" + rd_mo_tuji
+				+ ", rd_mo_tuji_price=" + rd_mo_tuji_price + ", rd_sa_tuhon=" + rd_sa_tuhon + ", rd_sa_tuhon_price="
+				+ rd_sa_tuhon_price + ", rd_mo_tuhon=" + rd_mo_tuhon + ", rd_mo_tuhon_price=" + rd_mo_tuhon_price
+				+ ", rd_tujang1_neck=" + rd_tujang1_neck + ", rd_tujang1_neck_price=" + rd_tujang1_neck_price
+				+ ", rd_tujang2_neck=" + rd_tujang2_neck + ", rd_tujang2_neck_price=" + rd_tujang2_neck_price
+				+ ", rd_tuji1_neck=" + rd_tuji1_neck + ", rd_tuji1_neck_price=" + rd_tuji1_neck_price
+				+ ", rd_tuji2_neck=" + rd_tuji2_neck + ", rd_tuji2_neck_price=" + rd_tuji2_neck_price
+				+ ", rd_tuhon1_neck=" + rd_tuhon1_neck + ", rd_tuhon1_neck_price=" + rd_tuhon1_neck_price
+				+ ", rd_tuhon2_neck=" + rd_tuhon2_neck + ", rd_tuhon2_neck_price=" + rd_tuhon2_neck_price + ", poyup="
+				+ poyup + ", poyup_price=" + poyup_price + ", jamo=" + jamo + ", jamo_price=" + jamo_price + ", ipmak="
+				+ ipmak + ", ipmak_price=" + ipmak_price + ", rd_gang=" + rd_gang + ", rd_gang_price=" + rd_gang_price
+				+ "]";
 	}
+
+	
 
 
 	

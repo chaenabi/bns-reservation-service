@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.beanutils.BeanUtils;
 
+import dao.ItemDAO;
 import dao.KakaoDAO;
 import dao.TeamDAO;
 import vo.ItemDTO;
@@ -41,7 +42,7 @@ public class TeamServ extends HttpServlet {
 				ItemDTO ivo = new ItemDTO();
 				TeamDAO tdao = new TeamDAO();
 				KakaoDAO kdao = new KakaoDAO();
-				
+				ItemDAO idao = new ItemDAO();
 				
 				try {
 					BeanUtils.copyProperties(tvo, request.getParameterMap());
@@ -76,11 +77,11 @@ public class TeamServ extends HttpServlet {
 					
 					String raid_type = request.getParameter("raid_type");
 					if(raid_type.equals("검은 마천루")) {
-						tdao.bs_addItems(ivo);
+						idao.bs_addItems(ivo);
 					} else if (raid_type.equals("소용돌이 사원")) {
-						tdao.vt_addItems(ivo);
+						idao.vt_addItems(ivo);
 					} else if (raid_type.equals("태천왕릉")) {
-						tdao.tw_addItems(ivo);
+						idao.tw_addItems(ivo);
 					} else if (raid_type.equals("적몽의 비원")) {
 						
 					}

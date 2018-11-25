@@ -76,7 +76,7 @@
 					<a class="named3"> 결계천수 </a>	
 					</div>
 					<div class="named_class">
-					<a class="named4"> 적몽 1네임드 </a>	
+					<a class="named4"> 기미접수 </a>	
 					</div>
 					
 					
@@ -269,43 +269,43 @@
 					<!-- 적몽의 비원 1네임드 -->
 					<div class="sale-item4">
 						<div class="sale-item-name">
-							<a> 천독귀걸이(번개)</a>
+							<a> 투쟁비공패 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" name="" value="0"> <i
+								<input type="checkbox" id="rd_sa_tujang"  name="rd_sa_tujang" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="g" name="" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="rd_sa_tujang_price" name="rd_sa_tujang_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item4">
 						<div class="sale-item-name">
-							<a> 천독귀걸이(화염)</a>
+							<a> 투쟁비공패 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox"name="" value="0"> <i
+								<input type="checkbox" id="rd_mo_tujang" name="rd_mo_tujang" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="h"  name="" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="rd_mo_tujang_price"  name="rd_mo_tujang_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					
 					<div class="sale-item4">
 						<div class="sale-item-name">
-							<a> 천독귀걸이(번개)</a>
+							<a> 투지비공패 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox"name="" value="0"> <i
+								<input type="checkbox" id="rd_sa_tuji" name="rd_sa_tuji" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="o"  name="" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="rd_sa_tuji_price"  name="rd_sa_tuji_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item4">
 						<div class="sale-item-name">
-							<a> 천독귀걸이(화염)</a>
+							<a> 투지비공패 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox"name="" value="0"> <i
+								<input type="checkbox" id="rd_mo_tuji" name="rd_mo_tuji" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="p" name="" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="rd_mo_tuji_price" name="rd_mo_tuji_price" class="writeprice" placeholder="금액">
 					</div>	
 
 
@@ -322,7 +322,7 @@
 					<a class="named3"> 결계천수 </a>
 					</div>
 					<div class="named_class">	
-					<a class="named4"> 적몽 2네임드 </a>	
+					<a class="named4"> 진교악 </a>	
 					</div>
 					
 					
@@ -515,43 +515,64 @@
 					<!-- 적몽의 비원 2네임드 -->
 					<div class="sale-item4">
 						<div class="sale-item-name">
-							<a> 천독귀걸이(번개)</a>
+							<a> 투쟁목걸이 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" name="" value="0"> <i
+								<input type="checkbox" id="rd_tujang1_neck" name="rd_tujang1_neck" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="w" name="" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="rd_tujang1_neck_price" name="rd_tujang1_neck_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item4">
 						<div class="sale-item-name">
-							<a> 천독귀걸이(화염)</a>
+							<a> 투쟁목걸이 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox"name="" value="0"> <i
+								<input type="checkbox" id="rd_tujang2_neck" name="rd_tujang2_neck" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="x"  name="" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="rd_tujang2_neck_price"  name="rd_tujang2_neck_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="sale-item4">
 						<div class="sale-item-name">
-							<a> 천독귀걸이(번개)</a>
+							<a> 투지목걸이 1계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox"name="" value="0"> <i
+								<input type="checkbox" id="rd_tuji1_neck" name="rd_tuji1_neck" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="e0"  name="" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="rd_tuji1_neck_price"  name="rd_tuji1_neck_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item4">
 						<div class="sale-item-name">
-							<a> 천독귀걸이(화염)</a>
+							<a> 투지목걸이 2계열</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox"name="" value="0"> <i
+								<input type="checkbox" id="rd_tuji2_neck" name="rd_tuji2_neck" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="f0" name="" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="rd_tuji1_neck_price" name="rd_tuji1_neck_price" class="writeprice" placeholder="금액">
 					</div>	
+					
+					<div class="sale-item4">
+						<div class="sale-item-name">
+							<a> 투혼목걸이 1계열</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" id="rd_tuhon1_neck" name="rd_tuhon1_neck" value="0"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="rd_tuhon1_neck_price"  name="rd_tuhon1_neck_price" class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item4">
+						<div class="sale-item-name">
+							<a> 투혼목걸이 2계열</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" id="rd_tuhon2_neck" name="rd_tuhon2_neck" value="0"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="rd_tuhon2_neck_price" name="rd_tuhon2_neck_price" class="writeprice" placeholder="금액">
+					</div>	
+					
 
 						<div class="info" style="padding-top: 30px;">
 							<a> 먼저 등록할 팀의 레이드 종류를 선택해주세요 !</a>
@@ -957,24 +978,44 @@
 					<!-- 적몽의 비원 3네임드 -->
 					<div class="sale-item4">
 						<div class="sale-item-name">
-							<a> 천독귀걸이(번개)</a>
+							<a> 사화마녀의 포엽</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox"name="" value="0"> <i
+								<input type="checkbox" id="poyup" name="poyup" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="u0" name="" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="poyup_price" name="poyup_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="sale-item4">
 						<div class="sale-item-name">
-							<a> 천독귀걸이(화염)</a>
+							<a> 사화마녀의 자모</a>
 						</div>
 						<label class="checkbox">
-								<input type="checkbox"name="" value="0"> <i
+								<input type="checkbox" id="jamo" name="jamo"  value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="v0" name="" class="writeprice" placeholder="금액">
-							
+						</label> <input type="text"  id="jamo_price" name="jamo_price" class="writeprice" placeholder="금액">				
 					</div>	
+					
+					<div class="sale-item4">
+						<div class="sale-item-name">
+							<a> 사화마녀의 잎맥</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" id="ipmak" name="ipmak" value="0"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text"  id="ipmak_price" name="ipmak_price" class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item4">
+						<div class="sale-item-name">
+							<a> 사화강</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" id="rd_gang" name="rd_gang" value="0"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text"  id="rd_gang_price" name="rd_gang_price" class="writeprice" placeholder="금액">				
+					</div>	
+					
 					<div class="named_class">
 					<a class="named"> 촉마왕 </a>
 					</div>
@@ -1109,27 +1150,6 @@
 					</div>
 
 	
-					
-					<!-- 적몽의 비원 4네임드 미구현인듯  -->
-			<!-- 		<div class="sale-item4">
-						<div class="sale-item-name">
-							<a> 천독귀걸이(번개)</a>
-						</div>
-						<label class="checkbox">
-								<input type="checkbox"value="0"> <i
-								class="icon-checkbox"></i>
-						</label> <input type="text"  name="" class="writeprice" placeholder="금액">
-					</div>
-
-					<div class="sale-item4">
-						<div class="sale-item-name">
-							<a> 천독귀걸이(화염)</a>
-						</div>
-						<label class="checkbox">
-								<input type="checkbox"name="" value="0"> <i
-								class="icon-checkbox"></i>
-						</label> <input type="text"  name="" class="writeprice" placeholder="금액">
-					</div>	 -->
 
 					
 						<div class="info2" style="display:none;">
