@@ -338,46 +338,48 @@ public class ItemDAO extends JDBC {
 	public void rd_addItems(ItemDTO ivo) {
 		try {
 			connect();
-	String rd_sql = "INSERT INTO reddream (rd_sa_tujang, rd_mo_tujang, rd_sa_tuji, rd_mo_tuji, rd_sa_tuhon, rd_mo_tuhon, "
+	String rd_sql = "INSERT INTO reddream (id, bns_id, rd_sa_tujang, rd_mo_tujang, rd_sa_tuji, rd_mo_tuji, rd_sa_tuhon, rd_mo_tuhon, "
 						  + "rd_tujang1_neck,  rd_tujang2_neck, rd_tuji1_neck, rd_tuji2_neck, rd_tuhon1_neck, rd_tuhon2_neck,"
 						  + "poyup, jamo, ipmak, rd_gang,"
 						  + "rd_sa_tujang_price, rd_mo_tujang_price, rd_sa_tuji_price, rd_mo_tuji_price, rd_sa_tuhon_price, rd_mo_tuhon_price,"
 						  + "rd_tujang1_neck_price, rd_tujang2_neck_price, rd_tuji1_neck_price, rd_tuji2_neck_price, rd_tuhon1_neck_price, rd_tuhon2_neck_price,"
 						  + "poyup_price, jamo_price, ipmak_price, rd_gang_price)"
-			+ " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+			+ " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 	pstmt = conn.prepareStatement(rd_sql);
-	pstmt.setString(1, ivo.getRd_sa_tujang());
-	pstmt.setString(2, ivo.getRd_mo_tujang());
-	pstmt.setString(3, ivo.getRd_sa_tuji());
-	pstmt.setString(4, ivo.getRd_mo_tuji());
-	pstmt.setString(5, ivo.getRd_sa_tuhon());
-	pstmt.setString(6, ivo.getRd_mo_tuhon());
-	pstmt.setString(7, ivo.getRd_tujang1_neck());
-	pstmt.setString(8, ivo.getRd_tujang2_neck());
-	pstmt.setString(9, ivo.getRd_tuji1_neck());
-	pstmt.setString(10, ivo.getRd_tuji2_neck());
-	pstmt.setString(11, ivo.getRd_tuhon1_neck());
-	pstmt.setString(12, ivo.getRd_tuhon2_neck());
-	pstmt.setString(13, ivo.getPoyup());
-	pstmt.setString(14, ivo.getJamo());
-	pstmt.setString(15, ivo.getIpmak());
-	pstmt.setString(16,  ivo.getRd_gang());
-	pstmt.setString(17, ivo.getRd_sa_tujang_price());
-	pstmt.setString(18, ivo.getRd_mo_tujang_price());
-	pstmt.setString(19, ivo.getRd_sa_tuji_price());
-	pstmt.setString(20, ivo.getRd_mo_tuji_price());
-	pstmt.setString(21, ivo.getRd_sa_tuhon_price());
-	pstmt.setString(22, ivo.getRd_mo_tuhon_price());
-	pstmt.setString(23, ivo.getRd_tujang1_neck_price());
-	pstmt.setString(24, ivo.getRd_tujang2_neck_price());
-	pstmt.setString(25, ivo.getRd_tuji1_neck_price());
-	pstmt.setString(26, ivo.getRd_tuji2_neck_price());
-	pstmt.setString(27, ivo.getRd_tuhon1_neck_price());
-	pstmt.setString(28, ivo.getRd_tuhon2_neck_price());
-	pstmt.setString(29, ivo.getPoyup_price());
-	pstmt.setString(30, ivo.getJamo_price());
-	pstmt.setString(31, ivo.getIpmak_price());
-	pstmt.setString(32, ivo.getRd_gang_price());
+	pstmt.setString(1, ivo.getId());
+	pstmt.setString(2, ivo.getBns_id());
+	pstmt.setString(3, ivo.getRd_sa_tujang());
+	pstmt.setString(4, ivo.getRd_mo_tujang());
+	pstmt.setString(5, ivo.getRd_sa_tuji());
+	pstmt.setString(6, ivo.getRd_mo_tuji());
+	pstmt.setString(7, ivo.getRd_sa_tuhon());
+	pstmt.setString(8, ivo.getRd_mo_tuhon());
+	pstmt.setString(9, ivo.getRd_tujang1_neck());
+	pstmt.setString(10, ivo.getRd_tujang2_neck());
+	pstmt.setString(11, ivo.getRd_tuji1_neck());
+	pstmt.setString(12, ivo.getRd_tuji2_neck());
+	pstmt.setString(13, ivo.getRd_tuhon1_neck());
+	pstmt.setString(14, ivo.getRd_tuhon2_neck());
+	pstmt.setString(15, ivo.getPoyup());
+	pstmt.setString(16, ivo.getJamo());
+	pstmt.setString(17, ivo.getIpmak());
+	pstmt.setString(18,  ivo.getRd_gang());
+	pstmt.setString(19, ivo.getRd_sa_tujang_price());
+	pstmt.setString(20, ivo.getRd_mo_tujang_price());
+	pstmt.setString(21, ivo.getRd_sa_tuji_price());
+	pstmt.setString(22, ivo.getRd_mo_tuji_price());
+	pstmt.setString(23, ivo.getRd_sa_tuhon_price());
+	pstmt.setString(24, ivo.getRd_mo_tuhon_price());
+	pstmt.setString(25, ivo.getRd_tujang1_neck_price());
+	pstmt.setString(26, ivo.getRd_tujang2_neck_price());
+	pstmt.setString(27, ivo.getRd_tuji1_neck_price());
+	pstmt.setString(28, ivo.getRd_tuji2_neck_price());
+	pstmt.setString(29, ivo.getRd_tuhon1_neck_price());
+	pstmt.setString(30, ivo.getRd_tuhon2_neck_price());
+	pstmt.setString(31, ivo.getPoyup_price());
+	pstmt.setString(32, ivo.getJamo_price());
+	pstmt.setString(33, ivo.getIpmak_price());
+	pstmt.setString(34, ivo.getRd_gang_price());
 	
 	pstmt.executeUpdate();
 

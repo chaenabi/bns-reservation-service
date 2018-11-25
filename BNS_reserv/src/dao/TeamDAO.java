@@ -1,12 +1,8 @@
 
 package dao;
 
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-
 import common.JDBC;
-import vo.ItemDTO;
 import vo.TeamDTO;
 
 public class TeamDAO extends JDBC {
@@ -31,7 +27,7 @@ public class TeamDAO extends JDBC {
 			/*int r = */ pstmt.executeUpdate();
 			//System.out.println(r + " 건 등록 완료");
 			// }
-		} catch (Exception e) {
+		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			disconnect();

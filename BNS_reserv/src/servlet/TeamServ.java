@@ -83,7 +83,7 @@ public class TeamServ extends HttpServlet {
 					} else if (raid_type.equals("태천왕릉")) {
 						idao.tw_addItems(ivo);
 					} else if (raid_type.equals("적몽의 비원")) {
-						
+						idao.rd_addItems(ivo);
 					}
 
 

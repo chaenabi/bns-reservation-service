@@ -51,7 +51,7 @@
 					</label> 태천왕릉 <label class="radio"  > <input type="radio"
 						name="raid_type"  id="twilight"  value="태천왕릉" required> <i class="icon-radio"></i>
 					</label> 적몽의 비원 <label class="radio" > <input type="radio"
-						name="raid_type"  id="reddream"  value="적몽의 비원" disabled="disabled"> <i
+						name="raid_type"  id="reddream"  value="적몽의 비원"> <i
 						class="icon-radio"></i>
 					</label>
 
@@ -308,6 +308,25 @@
 						</label> <input type="text" id="rd_mo_tuji_price" name="rd_mo_tuji_price" class="writeprice" placeholder="금액">
 					</div>	
 
+					<div class="sale-item4">
+						<div class="sale-item-name">
+							<a> 투지비공패 1계열</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" id="rd_sa_tuhon" name="rd_sa_tuhon" value="0"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="rd_sa_tuhon_price"  name="rd_sa_tuhon_price" class="writeprice" placeholder="금액">
+					</div>
+
+					<div class="sale-item4">
+						<div class="sale-item-name">
+							<a> 투지비공패 2계열</a>
+						</div>
+						<label class="checkbox">
+								<input type="checkbox" id="rd_mo_tuhon" name="rd_mo_tuhon" value="0"> <i
+								class="icon-checkbox"></i>
+						</label> <input type="text" id="rd_mo_tuhon_price" name="rd_mo_tuhon_price" class="writeprice" placeholder="금액">
+					</div>	
 
 					
 					
@@ -550,7 +569,7 @@
 						<label class="checkbox">
 								<input type="checkbox" id="rd_tuji2_neck" name="rd_tuji2_neck" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="rd_tuji1_neck_price" name="rd_tuji1_neck_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="rd_tuji2_neck_price" name="rd_tuji2_neck_price" class="writeprice" placeholder="금액">
 					</div>	
 					
 					<div class="sale-item4">
@@ -971,9 +990,6 @@
 						</label> <input type="text"id="tw_tuhon_earring4_price"  name="tw_tuhon_earring4_price" class="writeprice" placeholder="금액">
 					</div>
 					
-				
-
-
 					
 					<!-- 적몽의 비원 3네임드 -->
 					<div class="sale-item4">

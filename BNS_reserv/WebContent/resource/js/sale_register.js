@@ -778,4 +778,135 @@ $(document).ready(function() {
 		}
 	});
 	
+	//적몽의 비원 1네임드
+	$('#rd_sa_tujang').change(function() {
+		if ($("#rd_sa_tujang").is(":checked")) {
+			$("#rd_sa_tujang_price").show('fast');
+		} else {
+			$('#rd_sa_tujang_price').hide('fast');
+		}
+	});
+	
+	$('#rd_mo_tujang').change(function() {
+		if ($("#rd_mo_tujang").is(":checked")) {
+			$("#rd_mo_tujang_price").show('fast');
+		} else {
+			$('#rd_mo_tujang_price').hide('fast');
+		}
+	});
+	
+	$('#rd_sa_tuji').change(function() {
+		if ($("#rd_sa_tuji").is(":checked")) {
+			$("#rd_sa_tuji_price").show('fast');
+		} else {
+			$('#rd_sa_tuji_price').hide('fast');
+		}
+	});
+	
+	$('#rd_mo_tuji').change(function() {
+		if ($("#rd_mo_tuji").is(":checked")) {
+			$("#rd_mo_tuji_price").show('fast');
+		} else {
+			$('#rd_mo_tuji_price').hide('fast');
+		}
+	});
+	
+	$('#rd_sa_tuhon').change(function() {
+		if ($("#rd_sa_tuhon").is(":checked")) {
+			$("#rd_sa_tuhon_price").show('fast');
+		} else {
+			$('#rd_sa_tuhon_price').hide('fast');
+		}
+	});
+	
+	$('#rd_mo_tuhon').change(function() {
+		if ($("#rd_mo_tuhon").is(":checked")) {
+			$("#rd_mo_tuhon_price").show('fast');
+		} else {
+			$('#rd_mo_tuhon_price').hide('fast');
+		}
+	});
+	
+	//적몽의 비원 2네임드
+	$('#rd_tujang1_neck').change(function() {
+		if ($("#rd_tujang1_neck").is(":checked")) {
+			$("#rd_tujang1_neck_price").show('fast');
+		} else {
+			$('#rd_tujang1_neck_price').hide('fast');
+		}
+	});
+	
+	$('#rd_tujang2_neck').change(function() {
+		if ($("#rd_tujang2_neck").is(":checked")) {
+			$("#rd_tujang2_neck_price").show('fast');
+		} else {
+			$('#rd_tujang2_neck_price').hide('fast');
+		}
+	});
+	
+	$('#rd_tuji1_neck').change(function() {
+		if ($("#rd_tuji1_neck").is(":checked")) {
+			$("#rd_tuji1_neck_price").show('fast');
+		} else {
+			$('#rd_tuji1_neck_price').hide('fast');
+		}
+	});
+	
+	$('#rd_tuji2_neck').change(function() {
+		if ($("#rd_tuji2_neck").is(":checked")) {
+			$("#rd_tuji2_neck_price").show('fast');
+		} else {
+			$('#rd_tuji2_neck_price').hide('fast');
+		}
+	});
+	
+	$('#rd_tuhon1_neck').change(function() {
+		if ($("#rd_tuhon1_neck").is(":checked")) {
+			$("#rd_tuhon1_neck_price").show('fast');
+		} else {
+			$('#rd_tuhon1_neck_price').hide('fast');
+		}
+	});
+	
+	$('#rd_tuhon2_neck').change(function() {
+		if ($("#rd_tuhon2_neck").is(":checked")) {
+			$("#rd_tuhon2_neck_price").show('fast');
+		} else {
+			$('#rd_tuhon2_neck_price').hide('fast');
+		}
+	});
+
+	//적몽의 비원 3네임드
+	$('#poyup').change(function() {
+		if ($("#poyup").is(":checked")) {
+			$("#poyup_price").show('fast');
+		} else {
+			$('#poyup_price').hide('fast');
+		}
+	});
+	
+	$('#jamo').change(function() {
+		if ($("#jamo").is(":checked")) {
+			$("#jamo_price").show('fast');
+		} else {
+			$('#jamo_price').hide('fast');
+		}
+	});
+	
+	$('#ipmak').change(function() {
+		if ($("#ipmak").is(":checked")) {
+			$("#ipmak_price").show('fast');
+		} else {
+			$('#ipmak_price').hide('fast');
+		}
+	});
+	
+	$('#rd_gang').change(function() {
+		if ($("#rd_gang").is(":checked")) {
+			$("#rd_gang_price").show('fast');
+		} else {
+			$('#rd_gang_price').hide('fast');
+		}
+	});
+	
 });
