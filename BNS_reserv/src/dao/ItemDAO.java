@@ -13,7 +13,6 @@ public class ItemDAO extends JDBC {
 	
 	public ArrayList<TeamDTO> viewBS_godate(String[] server) {
 		connect();
-		System.out.println("세션 접속 완료.");
 		ArrayList<TeamDTO> datas = new ArrayList<TeamDTO>();
 		try {
 		for (int i=0; i < server.length; i++) {
@@ -31,7 +30,6 @@ public class ItemDAO extends JDBC {
 			e.printStackTrace();
 		} finally {
 			disconnect();
-			System.out.println("세션 종료되었습니다.");
 		}
 		return datas;
 	}
@@ -46,7 +44,6 @@ public class ItemDAO extends JDBC {
 	public ArrayList<ItemDTO> getPurchasehistory() {
 		
 		connect();
-		System.out.println("세션 접속 완료.");
 		
 		ArrayList<ItemDTO> datas = new ArrayList<ItemDTO>();
 		
@@ -70,7 +67,6 @@ public class ItemDAO extends JDBC {
 		e.printStackTrace();
 	} finally {
 		disconnect();
-		System.out.println("세션 종료되었습니다.");
 	}
 	return datas;
 	}
@@ -159,7 +155,6 @@ public class ItemDAO extends JDBC {
 			e.printStackTrace();
 		} finally {
 			disconnect();
-			System.out.println("세션 종료되었습니다.");
 		}
 
 	}
@@ -169,13 +164,13 @@ public class ItemDAO extends JDBC {
 	public void vt_addItems(ItemDTO ivo) {
 		try {
 			connect();
-	String vt_sql = "INSERT INTO vortex (id, bns_id, vt_gon_tujang, vt_sun_tujang, vt_gon_tuji, vt_sun_tuji, vt_gon_tuhon, vt_sun_tuhon,"
-			+ "vt_tujang1, vt_tujang2, vt_tuji1, vt_tuji2, vt_tuhon1, vt_tuhon2, vt_gon_tujang2, vt_sun_tujang2, vt_gon_tuji2, vt_sun_tuji2,"
-			+ "vt_gon_tuhon2, vt_sun_tuhon2, vt_tujang3, vt_tujang4, vt_tuji3, vt_tuji4, vt_tuhon3, vt_tuhon4, singongsuk, hukcham, amgak, muksi, vt_gang"
-			+ "vt_gon_tujang_price, vt_sun_tujang_price, vt_gon_tuji_price, vt_sun_tuji_price, vt_gon_tuhon_price, vt_sun_tuhon_price, vt_tujang1_price, vt_tujang2_price,"
-			+ "vt_tuji1_price, vt_tuji2_price, vt_tuhon1_price, vt_tuhon2_price, vt_gon_tujang2_price, vt_sun_tujang2_price, vt_gon_tuji2_price, vt_sun_tuji2_price,"
-			+ "vt_gon_tuhon2_price, vt_sun_tuhon2_price, vt_tujang3_price, vt_tujang4_price, vt_tuji3_price, vt_tuji4_price, vt_tuhon3_price, vt_tuhon4_price,"
-			+ "singongsuk_price, hukcham_price, amgak_price, muksi_price, vt_gang_price)"
+	String vt_sql = "INSERT INTO vortex (id, bns_id, vt_gon_tujang, vt_sun_tujang, vt_gon_tuji, vt_sun_tuji, vt_gon_tuhon, vt_sun_tuhon, "
+			+ "vt_tujang1, vt_tujang2, vt_tuji1, vt_tuji2, vt_tuhon1, vt_tuhon2, vt_gon_tujang2, vt_sun_tujang2, vt_gon_tuji2, vt_sun_tuji2, vt_gon_tuhon2, vt_sun_tuhon2,"
+			+ "vt_tujang3, vt_tujang4, vt_tuji3, vt_tuji4, vt_tuhon3, vt_tuhon4, singongsuk, hukcham, amgak, muksi, vt_gang,"
+			+ "vt_gon_tujang_price, vt_sun_tujang_price, vt_gon_tuji_price, vt_sun_tuji_price, vt_gon_tuhon_price, vt_sun_tuhon_price, "
+			+ "vt_tujang1_price, vt_tujang2_price, vt_tuji1_price, vt_tuji2_price, vt_tuhon1_price, vt_tuhon2_price, vt_gon_tujang2_price, vt_sun_tujang2_price,"
+			+ "vt_gon_tuji2_price, vt_sun_tuji2_price, vt_gon_tuhon2_price, vt_sun_tuhon2_price, vt_tujang3_price, vt_tujang4_price, vt_tuji3_price, vt_tuji4_price,"
+			+ "vt_tuhon3_price, vt_tuhon4_price, singongsuk_price, hukcham_price, amgak_price, muksi_price, vt_gang_price)"
 			+ " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 	pstmt = conn.prepareStatement(vt_sql);
 	pstmt.setString(1, ivo.getId());
@@ -239,14 +234,11 @@ public class ItemDAO extends JDBC {
 	pstmt.setString(59, ivo.getMuksi_price());
 	pstmt.setString(60, ivo.getVt_gang_price());
 	pstmt.executeUpdate();
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			disconnect();
-			System.out.println("세션 종료되었습니다.");
 		}
-
 	}
 
 
@@ -255,12 +247,13 @@ public class ItemDAO extends JDBC {
 	public void tw_addItems(ItemDTO ivo) {
 		try {
 			connect();
-	String tw_sql = "INSERT INTO twilight (id, bns_id, tw_tujang_ring1, tw_tujang_ring2, tw_tuji_ring1, tw_tuji_ring2, tw_tuhon_ring1, tw_tuhon_ring2, tw_tujang_earring1,tw_tujang_earring2,"
-			+ "tw_tuji_earring1, tw_tuji_earring2, tw_tuhon_earring1, tw_tuhon_earring2, tw_tujang_ring3, tw_tujang_ring4, tw_tuji_ring3, tw_tuji_ring4, tw_tuhon_ring3, tw_tuhon_ring4,"
-			+ "tw_tujang_earring3, tw_tujang_earring4, tw_tuji_earring3, tw_tuji_earring4, tw_tuhon_earring3, tw_tuhon_earring4, siik, gwangbae, nukgol, tw_gang"
-			+ "tw_tujang_ring1_price, tw_tujang_ring2_price, tw_tuji_ring1_price, tw_tuji_ring2_price, tw_tuhon_ring1_price, tw_tuhon_ring2_price, tw_tujang_earring1price,tw_tujang_earring2_price,"
-			+ "tw_tuji_earring1_price, tw_tuji_earring2_price, tw_tuhon_earring1_price, tw_tuhon_earring2_price, tw_tujang_ring3_price, tw_tujang_ring4_price,"
-			+ "tw_tuji_ring3_price, tw_tuji_ring4_price, tw_tuhon_ring3_price, tw_tuhon_ring4_price,"
+	String tw_sql = "INSERT INTO twilight (id, bns_id, tw_tujang_ring1, tw_tujang_ring2, tw_tuji_ring1, tw_tuji_ring2, tw_tuhon_ring1, tw_tuhon_ring2,"
+			+ "tw_tujang_earring1, tw_tujang_earring2, tw_tuji_earring1, tw_tuji_earring2, tw_tuhon_earring1, tw_tuhon_earring2, tw_tujang_ring3, tw_tujang_ring4,"
+			+ "tw_tuji_ring3, tw_tuji_ring4, tw_tuhon_ring3, tw_tuhon_ring4, tw_tujang_earring3, tw_tujang_earring4, tw_tuji_earring3, tw_tuji_earring4,"
+			+ "tw_tuhon_earring3, tw_tuhon_earring4, siik, gwangbae, nukgol, tw_gang,"
+			+ "tw_tujang_ring1_price, tw_tujang_ring2_price, tw_tuji_ring1_price, tw_tuji_ring2_price, tw_tuhon_ring1_price, tw_tuhon_ring2_price,"
+			+ "tw_tujang_earring1_price, tw_tujang_earring2_price, tw_tuji_earring1_price, tw_tuji_earring2_price, tw_tuhon_earring1_price, tw_tuhon_earring2_price,"
+			+ "tw_tujang_ring3_price, tw_tujang_ring4_price, tw_tuji_ring3_price, tw_tuji_ring4_price, tw_tuhon_ring3_price, tw_tuhon_ring4_price,"
 			+ "tw_tujang_earring3_price, tw_tujang_earring4_price, tw_tuji_earring3_price, tw_tuji_earring4_price, tw_tuhon_earring3_price, tw_tuhon_earring4_price,"
 			+ "siik_price, gwangbae_price, nukgol_price, tw_gang_price)"
 			+ " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -329,7 +322,7 @@ public class ItemDAO extends JDBC {
 			e.printStackTrace();
 		} finally {
 			disconnect();
-			System.out.println("세션 종료되었습니다.");
+
 		}
 
 	}
@@ -387,7 +380,6 @@ public class ItemDAO extends JDBC {
 			e.printStackTrace();
 		} finally {
 			disconnect();
-			System.out.println("세션 종료되었습니다.");
 		}
 
 	}
