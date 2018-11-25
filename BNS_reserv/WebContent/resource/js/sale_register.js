@@ -1,4 +1,70 @@
-//$(document).ready(function () {/// 페이지 오픈시 검은마천루 radio 자동선택
+// 팀명 중복 체크
+$("#multi_ck").click(e=>{
+
+	var team_name = $('#team_name').val();
+
+	if($.trim(team_name) == "") {
+		alert('아이디를 입력해주세요');
+	} else {
+		 
+     			   $.ajax({
+     		            async: false,
+     		            type : 'get',
+     		            data :  $('#sale_register').serialize(),
+     		            url : "/BNS_reserv/idcheckServ",
+     		            dataType : 'json',
+     		            contentType: "application/json; charset=UTF-8",
+     		            timeout: 3000,
+     		            success : function(data) {
+     		            		alert(JSON.stringify(data));
+     		            		// alert(data.result);
+     		            		
+     		            		if($.trim(data.result)  ==  "false") {
+		     		            		alert("사용할 수 있는 팀명입니다.");
+		     		            		$('#team_name').attr("readonly", true);		
+		     		        			$("#team_name").attr('style',  'color:gray');
+		     		        			
+		     		        			$("#btn_submit").click(e=>{
+		     		        			
+		     		        				var go_date = $('#go_date').val();
+		     		        				var go_time = $('#go_time').val();
+		     		        				
+		     		        				if($.trim(go_date) == "") {
+		     		        					alert("출발 날짜를 적어주세요.");
+		     		        				} else if ($.trim(go_time) == "") {
+		     		        					alert("출발 시간을 적어주세요.");
+		     		        				} else {
+		     		        				var form = document.getElementById("sale_register");
+		     		        				form.submit();
+		     		        				}
+		     		        	
+		     		        			
+		     		        			});
+		     		        			
+     		            		} else {
+     		            			alert("이미 존재하는 팀명입니다.");
+     		            		}			
+
+     		            },
+     		           error: function(data) {
+     		             
+     		        	  alert("오류 발생 !!");
+     		        
+     		            }
+     			  
+     			   });
+	}
+});
+		        	
+$("#btn_submit").click(e=>{
+	if ($.trim($('#team_name').val()) == "") {
+		alert("먼저 팀명 중복체크를 해주세요");
+			
+	} 
+});
+
+
+// $(document).ready(function () {/// 페이지 오픈시 검은마천루 radio 자동선택
 $('input[type="radio"]').click(function() {
 
 	if ($(this).attr("value") == "검은 마천루") {
@@ -72,15 +138,26 @@ $('input[type="radio"]').click(function() {
 	}
 
 });
+function showdatetime() {
+$("#go_date").datetimepicker({
+	locale : 'ko',
+	format : 'YYYY/MM/DD',
+	showClose : true,
+	showClear : true,
+	showTodayButton : true,
+	stepping : 30,
+	// defaultDate : new Date(),
+	sideBySide : true
+});
+}
+
 
 // $('#black').trigger('click'); }); // 페이지 오픈시 검은마천루 radio 자동선택
-
-
-//체크박스 금액 표시기
+// 체크박스 금액 표시기
 $(document).ready(function() {
 	
-	//마천루
-	//마천루 1네임드
+	// 마천루
+	// 마천루 1네임드
 	$('#bs_tujang_ring1').change(function() {
 		if ($("#bs_tujang_ring1").is(":checked")) {
 			$("#bs_tujang_ring1_price").show('fast');
@@ -129,7 +206,7 @@ $(document).ready(function() {
 		}
 	});
 	
-	//마천루 2네임드
+	// 마천루 2네임드
 	$('#bs_tujang_earring1').change(function() {
 		if ($("#bs_tujang_earring1").is(":checked")) {
 			$("#bs_tujang_earring1_price").show('fast');
@@ -178,7 +255,7 @@ $(document).ready(function() {
 		}
 	});
 	
-	//마천루 3네임드
+	// 마천루 3네임드
 	$('#bs_tujang_ring3').change(function() {
 		if ($("#bs_tujang_ring3").is(":checked")) {
 			$("#bs_tujang_ring3_price").show('fast');
@@ -275,7 +352,7 @@ $(document).ready(function() {
 		}
 	});
 	
-	//마천루 4네임드
+	// 마천루 4네임드
 	$('#hukrin').change(function() {
 		if ($("#hukrin").is(":checked")) {
 			$("#hukrin_price").show('fast');
@@ -311,8 +388,8 @@ $(document).ready(function() {
 	
 	
 	
-	//소용돌이 사원
-	//소용돌이 사원 1네임드
+	// 소용돌이 사원
+	// 소용돌이 사원 1네임드
 	$('#vt_gon_tujang').change(function() {
 		if ($("#vt_gon_tujang").is(":checked")) {
 			$("#vt_gon_tujang_price").show('fast');
@@ -361,7 +438,7 @@ $(document).ready(function() {
 		}
 	});
 	
-	//소용돌이 사원 2네임드
+	// 소용돌이 사원 2네임드
 	$('#vt_tujang1').change(function() {
 		if ($("#vt_tujang1").is(":checked")) {
 			$("#vt_tujang1_price").show('fast');
@@ -410,7 +487,7 @@ $(document).ready(function() {
 		}
 	});
 	
-	//소용돌이 사원 3네임드
+	// 소용돌이 사원 3네임드
 	$('#vt_tujang3').change(function() {
 		if ($("#vt_tujang3").is(":checked")) {
 			$("#vt_tujang3_price").show('fast');
@@ -515,7 +592,7 @@ $(document).ready(function() {
 		}
 	});
 
-	//소용돌이 사원 4네임드
+	// 소용돌이 사원 4네임드
 	$('#muksi').change(function() {
 		if ($("#muksi").is(":checked")) {
 			$("#muksi_price").show('fast');
@@ -549,8 +626,8 @@ $(document).ready(function() {
 	
 	
 	
-	//태천왕릉
-	//태천왕릉 1네임드
+	// 태천왕릉
+	// 태천왕릉 1네임드
 	$('#tw_tujang_ring1').change(function() {
 		if ($("#tw_tujang_ring1").is(":checked")) {
 			$("#tw_tujang_ring1_price").show('fast');
@@ -599,7 +676,7 @@ $(document).ready(function() {
 		}
 	});
 	
-	//태천왕릉 2네임드
+	// 태천왕릉 2네임드
 	$('#tw_tujang_earring1').change(function() {
 		if ($("#tw_tujang_earring1").is(":checked")) {
 			$("#tw_tujang_earring1_price").show('fast');
@@ -648,7 +725,7 @@ $(document).ready(function() {
 		}
 	});
 	
-	//태천왕릉 3네임드
+	// 태천왕릉 3네임드
 	$('#tw_tujang_ring3').change(function() {
 		if ($("#tw_tujang_ring3").is(":checked")) {
 			$("#tw_tujang_ring3_price").show('fast');
@@ -745,7 +822,7 @@ $(document).ready(function() {
 		}
 	});
 	
-	//태천왕릉 4네임드
+	// 태천왕릉 4네임드
 	$('#siik').change(function() {
 		if ($("#siik").is(":checked")) {
 			$("#siik_price").show('fast');
@@ -778,7 +855,7 @@ $(document).ready(function() {
 		}
 	});
 	
-	//적몽의 비원 1네임드
+	// 적몽의 비원 1네임드
 	$('#rd_sa_tujang').change(function() {
 		if ($("#rd_sa_tujang").is(":checked")) {
 			$("#rd_sa_tujang_price").show('fast');
@@ -827,7 +904,7 @@ $(document).ready(function() {
 		}
 	});
 	
-	//적몽의 비원 2네임드
+	// 적몽의 비원 2네임드
 	$('#rd_tujang1_neck').change(function() {
 		if ($("#rd_tujang1_neck").is(":checked")) {
 			$("#rd_tujang1_neck_price").show('fast');
@@ -876,7 +953,7 @@ $(document).ready(function() {
 		}
 	});
 
-	//적몽의 비원 3네임드
+	// 적몽의 비원 3네임드
 	$('#poyup').change(function() {
 		if ($("#poyup").is(":checked")) {
 			$("#poyup_price").show('fast');

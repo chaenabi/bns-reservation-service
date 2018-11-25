@@ -5,13 +5,17 @@
 <html>
 <head>
 <title></title>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resource/css/bootstrap/bootstrap.css"/>
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/resource/css/sale_register.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/resource/css/checkbox/checkbox_radio_img_sprite.css">
-
+<link rel="stylesheet" type="text/css" media="screen"
+	href="${pageContext.request.contextPath}/resource/css/datetimepicker/bootstrap-datetimepicker.min.css" />
 <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/jquery/jquery.js"></script>
-
+<script src="${pageContext.request.contextPath}/resource/js/datetimepicker/moment.min.js"></script>
+<script src="${pageContext.request.contextPath}/resource/js/datetimepicker/ko.js"></script>
+<script src="${pageContext.request.contextPath}/resource/js/datetimepicker/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -20,30 +24,64 @@
 			src="${pageContext.request.contextPath}/resource/assets/video/vi3.mp4"
 			type="video/mp4">
 	</video>
-	<form action="${pageContext.request.contextPath}/servlet/TeamServ?action=team_reg" method="post">
+	<form action="${pageContext.request.contextPath}/servlet/TeamServ?action=team_reg" method="post" id="sale_register">
 	<div class="container">
 		<div class="content">
 
 			<div class="mainform">
 
 				<h2>등록</h2>
-					<p style="margin: 0; padding: 0; font-size:20px; color:#58FA58">
-		
-			
-	
-			
-				</p>
 				<hr>
-				<br>
 				<div class="team_register">
 					<input type="hidden" id="id"  name="id" 
 					value="<%=session.getAttribute("id")%>"/>
-					<a>팀명</a> : <input type="text" id="team_name" name="team_name" placeholder="6글자이내">
-					<input type="button" id="multi_ck" value="중복체크"> &nbsp; <a>진행날짜
-						: </a> <input type="text" id="go_date" name="go_date" placeholder="timeplickr 적용예정">
-						출발시각 : <input type="text" id="go_time" name="go_time" placeholder="출발시각">
-						</div>
-						
+					<a>팀명 : </a> <input type="text" id="team_name" name="team_name" placeholder="6글자이내">
+					<input type="button" id="multi_ck" value="중복체크"> &nbsp; 
+				<a> 출발 날짜 : </a>
+				<div style="display: inline-block;">
+					<input type="text" class="form-control" id="go_date"
+						name="go_date">
+					<script>
+						$("#go_date").datetimepicker({
+							locale : 'ko',
+							format : 'YY/MM/DD',
+							showClose : true,
+							showClear : true,
+							showTodayButton : true,
+							stepping : 30,
+							//defaultDate : new Date(),
+							sideBySide : true
+						});
+					</script>
+				</div>
+			
+					
+					
+						<a> 출발시각 : </a> 
+				
+				<div style="display: inline-block;">
+					<input type="text" class="form-control" id="go_time"
+						name="go_time">
+					<script>
+						$("#go_time").datetimepicker({
+							locale : 'ko',
+							format : 'hh:mm',
+							showClose : true,
+							showClear : true,
+							showTodayButton : true,
+							stepping : 30,
+							//defaultDate : new Date(),
+							sideBySide : true
+						});
+					</script>
+				</div>
+				
+				</div>
+			
+									
+									
+									
+									
 					<div class="team_raid"> 레이드 종류 : 검은 마천루 <label class="radio"> <input
 						type="radio" name="raid_type" id="black" value="검은 마천루"  required> <i class="icon-radio"></i>
 					</label> 소용돌이 사원 <label class="radio"> <input type="radio"
@@ -58,7 +96,7 @@
 				</div>
 				<hr>
 				
-				<h3 style="margin:10px;">판매할 아이템</h3>
+				<h5 style="margin:10px;">판매할 아이템</h5>
 				<hr>
 				
 				
@@ -1093,7 +1131,6 @@
 								class="icon-checkbox"></i>
 						</label> <input type="text" id="muksi_price" name="muksi_price" class="writeprice" placeholder="금액">
 					</div>
-
 					<div class="sale-item2">
 						<div class="sale-item-name">
 							<a>흑풍마녀의 흑참</a>
@@ -1172,7 +1209,7 @@
 						
 				
 					<div style=" height: 40px; padding-top: 20px; display: inline-block;" >
-					<input type="submit" class="btn_submit" value="팀등록하기">
+					<input type="button" class="btn_submit" id="btn_submit" value="팀등록하기">
 					</div>
 				</div>
 
@@ -1189,3 +1226,4 @@
 
 </body>
 </html>
+

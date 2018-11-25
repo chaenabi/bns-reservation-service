@@ -33,6 +33,29 @@ public class TeamDAO extends JDBC {
 
 	}
 	
+	// bns 아이디가 db에 등록되어 있는지 중복체크
+	public Boolean search_tn(String team_name) {
+		boolean result = false;
+		String sql = "select team_name from team where team_name = ?";
+		try {
+			connect();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, team_name);
+
+			rs = pstmt.executeQuery();
+			if (rs.next()) {	
+				result = true;
+			} 
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			// 연결해제
+			disconnect();
+		}
+		return result;
+
+	}
+	
 	
 	
 }

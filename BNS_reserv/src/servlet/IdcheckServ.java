@@ -12,7 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.simple.JSONObject;
 
 import dao.KakaoDAO;
+import dao.TeamDAO;
 import vo.KakaoDTO;
+import vo.TeamDTO;
 
 
 
@@ -35,26 +37,36 @@ public class IdcheckServ extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		KakaoDTO kvo = new KakaoDTO();
 		KakaoDAO kdao = new KakaoDAO();	
+		TeamDTO tvo = new TeamDTO();
+		TeamDAO tdao = new TeamDAO();
 		String bns_id = request.getParameter("bns_id");
 		kvo.setBns_id(bns_id);
 
-		boolean duplicate = kdao.search_id(bns_id);
-
-
-		
+		//main.js 블소ID 중복체크
+		boolean bnsid_duplicate = kdao.search_id(bns_id);
 		JSONObject obj = new JSONObject();
 		response.setContentType("application/json; charset=UTF-8");
-		 if(duplicate == true){
+		if(bnsid_duplicate == true){
 		 // 고의 error 발생
-	    			
-		 } else if(duplicate == false) {
-
+		 
+		} else if(bnsid_duplicate == false) {
 			 	obj.put("result","false"); 
 	    		response.getWriter().print(obj);
-
-	    }
+	    } 
+		
+		//sale_register.jsp 팀ID 중복체크
+		String team_name = request.getParameter("team_name");
+		tvo.setTeam_name(team_name);
+		boolean tn_duplicate = tdao.search_tn(team_name);
+		System.out.println("tn_duplicate : " + tn_duplicate);
+		response.setContentType("application/json; charset=UTF-8");
+		if(tn_duplicate){
 	
-		 
+		}
+		if(tn_duplicate == false) {
+		 	obj.put("result","false"); 
+		 	response.getWriter().print(obj);
+		}
 	}
 	
 	

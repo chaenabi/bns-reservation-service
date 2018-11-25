@@ -29,10 +29,20 @@ body {
 	top: 50%;
 	left: 50%;
 	display: block;
-	color: #000; position : absolute;
-	transform: translate(-50%, -50%); 
+	color: #000;
+	position: absolute;
+	transform: translate(-50%, -50%);
 	padding: 30px 30px;
-	box-sizing: border-box; 
+	box-sizing: border-box;
+	position: absolute;
+}
+
+.datetimepicker {
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 20px;
+	display: none;
+	color: #000;
+	box-sizing: border-box;
 	position: absolute;
 }
 
@@ -70,14 +80,14 @@ body {
 	margin-bottom: 2px;
 }
 
-.named, .named2, .named3, .named4{
+.named, .named2, .named3, .named4 {
 	font-size: 20px;
 	font-weight: bold;
 	display: none;
 	color: #000;
 }
 
-.sale-item, .sale-item2,.sale-item3,.sale-item4 {
+.sale-item, .sale-item2, .sale-item3, .sale-item4 {
 	width: 50%;
 	display: none;
 	float: left;
@@ -97,7 +107,6 @@ body {
 	display: inline-block;
 }
 
-
 #multi_ck {
 	border: none;
 	outline: none;
@@ -108,16 +117,14 @@ body {
 	border-radius: 20px;
 }
 
-#multi_ck:hover
-{
-cursor: pointer;
-background:#ffc107;
-color:#000;
+#multi_ck:hover {
+	cursor: pointer;
+	background: #ffc107;
+	color: #000;
 }
 
-
 .mainform  input[type=text], .sales input[type=text] {
-	width: 100px;
+	width: 110px;
 	border: none;
 	border-bottom: 1px solid #fff;
 	background: transparent;
@@ -127,11 +134,10 @@ color:#000;
 }
 
 .writeprice {
-	
 	display: none;
 }
 
-.sales input[type="submit"] {
+.sales input[type="button"] {
 	border: none;
 	outline: none;
 	height: 40px;
@@ -143,7 +149,7 @@ color:#000;
 	display: none;
 }
 
-.sales input[type="submit"]:hover {
+.sales input[type="button"]:hover {
 	cursor: pointer;
 	background: #ffc107;
 	color: #000;
