@@ -147,7 +147,7 @@
 					<div class="ordered_history_item">
 
 						<div class="history_item">
-							<p>화염귀걸이</p>
+							<p>사화비공패 1계열</p>
 						</div>
 						<div class="item_price">
 							<p>3000금</p>
@@ -157,7 +157,7 @@
 					<br>
 					<div class="ordered_history_item">
 						<div class="history_item">
-							<p>냉기귀걸이</p>
+							<p>몽화비공패 2계열</p>
 						</div>
 						<div class="item_price">
 							<p>2000금</p>
@@ -167,7 +167,7 @@
 
 					<div class="ordered_history_item">
 						<div class="history_item">
-							<p>초마령의 심장</p>
+							<p>투쟁반지 1계열</p>
 						</div>
 						<div class="item_price">
 							<p>5000금</p>
@@ -176,7 +176,7 @@
 					<br>
 					<div class="ordered_history_item">
 						<div class="history_item">
-							<p>대지목걸이</p>
+							<p>투지귀걸이 2계열</p>
 						</div>
 						<div class="item_price">
 							<p>3000금</p>
