@@ -15,19 +15,7 @@
 	src="${pageContext.request.contextPath}/resource/js/jquery/jquery.js"></script>
 <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 
-<!-- <script>
 
-
-	//내역 클릭 이벤트 
-	function btn_history() {
-
-		request_history();
-
-		//var history = document.getElementById("history_reserv");
-		//history.show();
-
-	}
-</script> -->
 
 <!-- <script>
 	$(document).ready(function() {
@@ -75,7 +63,7 @@
 					style="font-weight: bold;" value="판매등록"
 					onclick="location.href='${pageContext.request.contextPath}/resource/jsp/sale_register.jsp';">
 				&emsp; <input type="button" class="btn btn-default" id="history"
-					style="font-weight: bold;" value="주문내역" onclick="btn_history();">
+					style="font-weight: bold;" value="주문내역" />
 				&emsp; <a
 					href="${pageContext.request.contextPath}/resource/jsp/main.jsp"
 					onclick="logoutFromKakao();"> <img
@@ -120,7 +108,8 @@
 		<div class="history_reserv" id="history_reserv">
 			<div class="history_frame">
 				<div class="history_summary">
-
+					
+					<br>
 					<div class="history_sum">
 						<p>날짜</p>
 						<p>2018. 03. 29</p>
@@ -136,6 +125,9 @@
 					<div class="history_sum">
 						<p>팀장명</p>
 						<p>기공사초보</p>
+					</div>
+					<div style="float: right; padding-right: 10px;">
+					<input type="button" style="border: none; background: black; color: white; border-radius: 5px; text-align:center;  width: 30px;" id="hide_history" Value="X">
 					</div>
 					<hr>
 				</div>
@@ -227,7 +219,25 @@
 
 	</div>
 
+<script>
 
+
+	//내역 클릭 이벤트 
+
+		
+		$('#history').click(function() {
+				$("#history_reserv").show('fast');
+			
+		});
+	
+		$('#hide_history').click(function() {
+		$('#history_reserv').hide();
+			
+		});
+		
+
+	
+</script>
 
 </body>
 
