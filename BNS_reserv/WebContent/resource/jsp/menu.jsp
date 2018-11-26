@@ -16,33 +16,6 @@
 <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 
 
-
-<!-- <script>
-	$(document).ready(function() {
-		gethistory = {
-			"action" : "purchase_history",
-		
-			//"delete_in" : totalval[i]
-		
-		};
-
-		$.getJSON("./InterestController", gethistory, function(data) {
-		
-			
-			/* 	if (data.status == "스카웃요청" || data.status == "이적요청") {
-
-				status++;
-
-			} else {
-
-				status2++;
-
-			} */
-
-		});
-	});
-</script> -->
-
 </head>
 <body>
 
@@ -143,7 +116,6 @@
 
 					<hr>
 
-					<br>
 					<div class="ordered_history_item">
 
 						<div class="history_item">
@@ -218,27 +190,8 @@
 		</div>
 
 	</div>
-
-<script>
-
-
-	//내역 클릭 이벤트 
-
-		
-		$('#history').click(function() {
-				$("#history_reserv").show('fast');
-			
-		});
-	
-		$('#hide_history').click(function() {
-		$('#history_reserv').hide();
-			
-		});
-		
-
-	
-</script>
-
+<script
+	src="${pageContext.request.contextPath}/resource/js/menu.js"></script>
 </body>
 
 
