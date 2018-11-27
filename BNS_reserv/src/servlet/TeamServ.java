@@ -3,6 +3,9 @@ package servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,7 +23,7 @@ import vo.TeamDTO;
 
 
 
-@WebServlet("/servlet/TeamServ")
+@WebServlet("/TeamServ")
 public class TeamServ extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -54,7 +57,7 @@ public class TeamServ extends HttpServlet {
 				}
 
 				String action = request.getParameter("action");
-
+				//System.out.println("test");
 				if (action == null) {
 
 					out.print("어떤 form의 action도 넘겨받지 못했습니다.");
@@ -90,7 +93,27 @@ public class TeamServ extends HttpServlet {
 					// 목록으로 페이지 이동
 					request.getRequestDispatcher("/resource/jsp/menu.jsp").forward(request, response);
 
-				} else if(action.equals("purchase_history")) {
+				}else if(action.equals("getTeams")) {
+					String go_time = request.getParameter("go_time");
+					List<HashMap<String,Object>> lis = new ArrayList<>();
+					lis = TeamDAO.getInstance().getTeams(go_time);
+					String sq ="{\"team_name\":[";
+					int cnt=0;
+					for(HashMap<String,Object> n :lis) {
+						if(cnt==0) {
+							sq+="\""+n.get("team_name")+"\"";
+							cnt++;
+						}
+						else {
+							sq+=",\""+n.get("team_name")+"\"";
+						}
+					}
+					sq+="]}";
+					System.out.println(sq);
+					out.print(sq);
+					
+				}
+				else if(action.equals("purchase_history")) {
 				
 					
 					

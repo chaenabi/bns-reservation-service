@@ -6,6 +6,28 @@
 <head>
 <link rel="import"
 	href="${pageContext.request.contextPath}/resource/jsp/common/header.jsp">
+<script src="resource/js/jquery-1.8.3.min.js"></script>
+	
+<script>
+
+function getTeams(gt){
+	//alert(gt);
+	var requestDate = {"action":"getTeams",	    			
+			"go_time":gt
+	 };
+	
+	$.getJSON("../../TeamServ", requestDate , function(data){
+		$("#team_manage").empty();
+		
+		for(var i=0;i<data.team_name.length;i++){
+			$("#team_manage").append("<li id='ab"+i+"'><a href='#' class='go_time'><span>"+data.team_name[i]+"</span></a></li>");	
+		}
+		
+		
+	});
+}
+	
+</script>
 </head>
 
 <body>
@@ -35,17 +57,17 @@
 				<li class="d1"><a href="#" class="d1" id="gyungguk"><span><input type="hidden" name="gyungguk" value="경국지색"/>경국지색</span></a>
 					<div class="inner" id="first_server">
 						<div class="core">
-							<strong class="go_date">10월 31일</strong> <strong
-								class="go_date">수요일</strong>
-							<ul class="list">
-								<li id="a"><a href="#" class="go_time"><span>오전 10시 30분</span></a></li>
-								<li id="b"><a href="#" class="go_time"><span>오전 11시 30분</span></a></li>
-								<li id="c"><a href="#" class="go_time"><span>오후 3시</span></a></li>
-								<li id="d"><a href="#" class="go_time"><span>오후 6시</span></a></li>
+							<strong class="go_date">경국지색</strong>
+							<ul class="list" id="append_test">
+								<li id="a"><a href="#" onclick="getTeams('오전 10시 30분');" class="go_time" id="showtest"><span>오전 10시 30분</span></a></li>
+								<li id="b"><a href="#" onclick="getTeams('오전 11시 30분');" class="go_time"><span>오전 11시 30분</span></a></li>
+								<li id="c"><a href="#" onclick="getTeams('오후 3시');" class="go_time"><span>오후 3시</span></a></li>
+								<!-- <li id="d"><a href="#" class="go_time"><span>오후 6시</span></a></li>
 								<li id="e"><a href="#" class="go_time"><span>오후 6시</span></a></li>
 								<li id="f"><a href="#" class="go_time"><span>오후 6시</span></a></li>
-								<li id="g"><a href="#" class="go_time"><span>오후 6시</span></a></li>
-								<li id="h"><a href="#" class="go_time"><span>오후 6시</span></a></li>
+								 -->
+								<li id="g"><a href="#" onclick="getTeams('오후 6시');" class="go_time"><span>오후 6시</span></a></li>
+								<li id="h"><a href="#" onclick="getTeams('오후 10시');" class="go_time"><span>오후 10시</span></a></li>
 							</ul>
 						</div>
 					</div></li>
@@ -183,8 +205,8 @@
 					</div></li>
 			</ul>
 
-			<div class="teamlists">
-				<ul class="team_name">
+			<div class="teamlists" id="teams_hide">
+				<ul class="team_name" id="team_manage">
 					<li id="ab"><a href="#" class="go_time"><span>룩덕호</span></a></li>
 					<li id="cd"><a href="#" class="go_time"><span>경국왕릉2</span></a></li>
 					<li id="ef"><a href="#" class="go_time"><span>경국왕릉3</span></a></li>
@@ -203,7 +225,7 @@
 
 
 		<div class="order" id="order">
-			<div class="menu">
+			<div class="menu" id="menu_hide">
 
 				<section class="menupan">
 
@@ -243,7 +265,7 @@
 									  <i class="icon-radio"></i>
 									</label> -->
 								</div>
-								<div class=item_c>
+								<div class="item_c">
 								<a> 노어트 : </a>
 								<a> 300,000금 </a>
 									<span>
@@ -589,7 +611,7 @@
 									  <i class="icon-radio"></i>
 									</label> -->
 								</div>
-								<div class=item_c>
+								<div class="item_c">
 								<a> 노어트 : </a>
 								<a> 300,000금 </a>
 									<span>
@@ -700,6 +722,7 @@
 
 
 		</div>
+		
 
 	</form>
 

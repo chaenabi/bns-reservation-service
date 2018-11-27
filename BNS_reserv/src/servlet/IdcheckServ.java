@@ -17,8 +17,6 @@ import vo.KakaoDTO;
 import vo.TeamDTO;
 
 
-
-
 @WebServlet("/idcheckServ")
 public class IdcheckServ extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -61,13 +59,21 @@ public class IdcheckServ extends HttpServlet {
 		System.out.println("tn_duplicate : " + tn_duplicate);
 		
 		//이해안되는 부분.. 왜 ajax에는 false가 넘어가는지?
-		if(tn_duplicate){
+		//새로운 JSON 객체 호출 (초기화)
+
+		
+		 if(tn_duplicate == true) {
+				obj = new JSONObject();
+			obj.put("result","true"); 
+			response.getWriter().print(obj);
+		}
+		else if(tn_duplicate == false) {
+			obj = new JSONObject();
+		 	obj.put("result","fals2e"); 
+			response.getWriter().print(obj);
+		}
+
 	
-		}
-		if(tn_duplicate == false) {
-		 	obj.put("result","false"); 
-		 	response.getWriter().print(obj);
-		}
 	}
 	
 	
