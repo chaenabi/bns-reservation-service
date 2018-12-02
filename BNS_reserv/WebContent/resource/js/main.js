@@ -1,4 +1,4 @@
-// 카카오 첫로그인시 bns_id 세팅하도록 
+
 $("#ck_bns_id").click(e=>{
 
 	var bns_id = $('#bns_id').val();
@@ -15,6 +15,12 @@ $("#ck_bns_id").click(e=>{
 		        type : "GET",
 		        url : "http://a.bns.plaync.com/bnsapi/character/equipments/"+bns_id,
 		        dataType: 'jsonp',
+		        headers: {
+		            'Access-Control-Allow-Credentials' : true,
+		            'Access-Control-Allow-Origin':'*',
+		            'Access-Control-Allow-Methods':'GET',
+		            'Access-Control-Allow-Headers':'application/www-form-urlencoded',
+		          },
 		        success: function(result){
 		        	
 		        	
@@ -33,9 +39,15 @@ $("#ck_bns_id").click(e=>{
      		            type : 'get',
      		            data :  $('#kakao-login').serialize(),
      		            url : "/BNS_reserv/idcheckServ",
-     		            dataType : 'json',
-     		            contentType: "application/json; charset=UTF-8",
+     		            dataType : 'jsonp',
+     		            contentType: "application/www-form-urlencoded; charset=UTF-8",
      		            timeout: 3000,
+     		            headers: {
+     		        	    'Access-Control-Allow-Credentials' : true,
+     		        	    'Access-Control-Allow-Origin':'*',
+     		        	    'Access-Control-Allow-Methods':'GET',
+     		        	    'Access-Control-Allow-Headers':'application/www-form-urlencoded',
+     		        	  },
      		            success : function(data) {
      		            		//alert(data.result);
  		

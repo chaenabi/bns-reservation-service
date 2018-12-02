@@ -10,8 +10,9 @@
 	href="${pageContext.request.contextPath}/resource/css/main.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/resource/css/bootstrap/bootstrap.min.css" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+<script
+	src="${pageContext.request.contextPath}/resource/js/jquery/jquery.min.js"></script>
 
 <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 
