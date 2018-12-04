@@ -24,23 +24,25 @@ public class DBidckServ extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
  		response.addHeader("Access-Control-Allow-Origin", "*");  
  		response.setHeader("Access-Control-Allow-Headers", "origin, x-requested-with, content-type, accept");
-		JSONObject obj = new JSONObject();
+		JSONObject okay = new JSONObject();
 		String id = request.getParameter("id");
 		
 		 KakaoDTO kvo = new KakaoDTO();
 		KakaoDAO kdao = new KakaoDAO();	
 
-		 
+		// DB에 아이디가 있으면 바로 서브밋, 없으면 bnsid div 를 띄우도록 설정한다.
 		 boolean DBduplicate = kdao.search_id2(id);
 		 response.setContentType("application/www-form-urlencoded; charset=UTF-8");
 		 
 		if(DBduplicate == true){	 			
 			 String bns_id = kdao.selectOne(id);
-		 		obj.put("result", bns_id); 
-	    		response.getWriter().print(obj);
+			 okay.put("result", bns_id); 
+	    		response.getWriter().print(okay);
 	    		
 		 } else if(DBduplicate == false) {
-			// 고의 error 발생	    
+			 JSONObject cannot = new JSONObject();
+			 cannot.put("result", false); 
+	    	response.getWriter().print(cannot);
 		 }
 
  		 response.getWriter().close();

@@ -38,7 +38,7 @@ $("#ck_bns_id").click(e=>{
      		            async: true,
      		            type : 'get',
      		            data :  $('#kakao-login').serialize(),
-     		            url : "/BNS_reserv/idcheckServ",
+     		            url : "/BNS_reserv/BNSidckServ",
      		            dataType : 'json',
      		            contentType: "application/www-form-urlencoded; charset=UTF-8",
      		            timeout: 3000,
@@ -167,15 +167,21 @@ Kakao.Auth.createLoginButton({
  		            contentType: "application/json; charset=UTF-8",
  		            timeout: 3000,
  		            success : function(data) {
- 		            	$('#bns_id').val($.trim(data.result));
  		            	
+ 		            	if($.trim(data.result)  ==  "false") {
+							$('#bnsid').show('slow');
+						} else {
+ 		            	$('#bns_id').val($.trim(data.result));
  		            	//alert($('#bns_id').val());
  						var form = document.getElementById("kakao-login");  
  		            	form.submit();
+ 		            	
+						}
+ 		            	
  		            },
  		            
 					error : function(data) {
-						$('#bnsid').show('slow');
+						
 					}
 				
 				});

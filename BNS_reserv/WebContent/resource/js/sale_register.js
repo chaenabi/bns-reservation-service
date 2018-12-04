@@ -8,16 +8,16 @@ $("#multi_ck").click(e=>{
 	} else {
 		 
      			   $.ajax({
-     		            async: false,
+     		            async: true,
      		            type : 'get',
      		            data :  $('#sale_register').serialize(),
-     		            url : "/BNS_reserv/idcheckServ",
+     		            url : "/BNS_reserv/teamidcheckServ",
      		            dataType : 'json',
      		            contentType: "application/json; charset=UTF-8",
      		            timeout: 3000,
      		            success : function(data) {
      		            		alert(JSON.stringify(data));
-     		            		// alert(data.result);
+     		            		alert(data.result);
      		            		//이해 안되는 부분. 왜 false가 넘어오는지?
      		            		if($.trim(data.result)  ==  "false") {
 		     		            		alert("사용할 수 있는 팀명입니다.");
@@ -46,10 +46,11 @@ $("#multi_ck").click(e=>{
      		            		}			
 
      		            },
-     		           error: function(data) {
+     		           error: function(data, status) {
      		             
      		        	  alert("오류 발생 !!");
-     		        
+     		        	  alert(data);
+     		        	  alert(status);
      		            }
      			  
      			   });
