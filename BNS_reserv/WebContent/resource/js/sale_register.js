@@ -8,7 +8,7 @@ $("#multi_ck").click(e=>{
 	} else {
 		 
      			   $.ajax({
-     		            async: true,
+     		            async: false,
      		            type : 'get',
      		            data :  $('#sale_register').serialize(),
      		            url : "/BNS_reserv/teamidcheckServ",
@@ -16,8 +16,8 @@ $("#multi_ck").click(e=>{
      		            contentType: "application/json; charset=UTF-8",
      		            timeout: 3000,
      		            success : function(data) {
-     		            		alert(JSON.stringify(data));
-     		            		alert(data.result);
+     		            		//alert(JSON.stringify(data));
+     		            		//alert(data.result);
      		            		if($.trim(data.result)  ==  "false") {
 		     		            		alert("사용할 수 있는 팀명입니다.");
 		     		            		$('#team_name').attr("readonly", true);		
@@ -29,9 +29,9 @@ $("#multi_ck").click(e=>{
 		     		        				var go_time = $('#go_time').val();
 		     		        				
 		     		        				if($.trim(go_date) == "") {
-		     		        					alert("출발 날짜를 적어주세요.");
+		     		        					alert("출발 날짜는 필수입니다.");
 		     		        				} else if ($.trim(go_time) == "") {
-		     		        					alert("출발 시간을 적어주세요.");
+		     		        					alert("출발 시간은 필수입니다.");
 		     		        				} else {
 		     		        				var form = document.getElementById("sale_register");
 		     		        				form.submit();
@@ -42,14 +42,19 @@ $("#multi_ck").click(e=>{
 		     		        			
      		            		} else {
      		            			alert("이미 존재하는 팀명입니다.");
+     		            			
+     		            			$("#btn_submit").click(e=>{
+     		            				
+     		            				alert("먼저 사용할 수 있는 팀명을 결정해주세요.!");
+     		            				
+     		            			})
+     		            			
      		            		}			
 
      		            },
-     		           error: function(data, status) {
+     		           error: function() {
      		             
-     		        	  alert("오류 발생 !!");
-     		        	  alert(data);
-     		        	  alert(status);
+     		        	  alert("오류 발생 !! 관리자에게 문의해주세요");
      		            }
      			  
      			   });
