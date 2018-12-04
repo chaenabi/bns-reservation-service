@@ -99,7 +99,7 @@ public class TeamDAO extends JDBC {
 	public List<HashMap<String,Object>> getDate(String server){
 		List<HashMap<String,Object>> list = new ArrayList<>();
 		HashMap<String,Object> pl;
-		String sql="SELECT DISTINCT t.go_date from team t, users u where u.server ='"+server+"' and u.bns_id = t.bns_id;";
+		String sql="SELECT DISTINCT t.go_date from team t, users u where u.server ='"+server+"' and u.bns_id = t.bns_id";
 		
 		try {
 			connect();
@@ -123,5 +123,34 @@ public class TeamDAO extends JDBC {
 		}
 		return list;
 	}
+	
+	//서버클릭시 시간 출력하는 메소드
+		public List<HashMap<String,Object>> getTime(String server){
+			List<HashMap<String,Object>> list = new ArrayList<>();
+			HashMap<String,Object> pl;
+			String sql="SELECT DISTINCT t.go_time from team t, users u where u.server ='"+server+"' and u.bns_id = t.bns_id";
+			
+			try {
+				connect();
+				pstmt = conn.prepareStatement(sql);
+
+				rs = pstmt.executeQuery();
+				
+				while(rs.next()) {
+					pl = new HashMap<>();
+					
+					pl.put("go_time", rs.getString("go_time"));
+					
+					list.add(pl);
+				}
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				// 연결해제
+				disconnect();
+			}
+			return list;
+		}
 	
 }

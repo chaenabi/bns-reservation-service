@@ -57,15 +57,19 @@
 	padding-top: 14px;
 }
 
-strong {
+.date_manage {
+	padding-left: 5px;
+}
+
+.go_date {
 	color: red;
 	margin-top: 5px;
+	list-style: none;
 }
 
 /* 두번째 목록 ul 위치, 스타일 제어  */
 .sidenav .inner .list, .sidenav .inner .list {
 	padding-left: 0px;
-	padding-top: 20px;
 	padding-bottom: 10px;
 	text-decoration: none;
 	list-style: none;

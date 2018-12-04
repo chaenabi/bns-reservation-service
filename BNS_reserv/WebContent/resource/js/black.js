@@ -1,17 +1,44 @@
 
-//클릭이벤트: 서버 클릭시 날짜 리스트 출력
+//클릭이벤트: 서버 클릭시 날짜 출력
 function getDate(server){
 	var requestServerDate= {"action":"getDate",	    			
 			"server":server
 	 };
 	
-	$.getJSON("../../TeamServ", requestServerDate , function(data){
+	$.getJSON("../../TeamServ", requestServerDate, function(data){
 		$(".go_date").empty();
 		
+		if(server === '경국지색') {
+			for(var i=0;i<data.go_date.length;i++){
+				$("#gyungguk_teamlist").append("<li id='date'"+ i +" class='go_date' onclick='getTime("+ '"경국지색"' +")'>"+data.go_date[i]+"</li>");	
+			}
+			
 		
-		for(var i=0;i<data.go_date.length;i++){
-			$(".append_test").before("<strong class='go_date'>"+data.go_date[i]+"</strong>");
+		} else if(server === '절세미인') {
+			for(var i=0;i<data.go_date.length;i++){
+				$("#jeolse_teamlist").append("<li id='date"+i+"'" +"class='go_date' onclick='getTime('절세미인')'>"+data.go_date[i]+"</li>");	
+			}
 		}
+		
+	});
+}
+
+//클릭이벤트: 날짜리스트 클릭시 시간 출력
+
+function getTime(server){
+	var requestServerTime= {"action":"getTime",	    			
+			"server":server
+	 };
+	
+	$.getJSON("../../TeamServ", requestServerTime, function(data){
+		
+			$(".go_date").append("<ul class='list'>");
+			for(var i=0;i<data.go_time.length;i++){
+				
+				$(".go_date").append("<li id='time"+i+"'><a href='#' class='go_time' onclick='getTeams(" +data.go_time[i]+");'><span>"+data.go_time[i]+"</span></li>");	
+				
+			}
+			$(".go_date").append("</ul>");
 
 	});
 }
@@ -24,14 +51,17 @@ function getTeams(gt){
 	 };
 	
 	$.getJSON("../../TeamServ", requestDate , function(data){
+
 		$("#team_manage").empty();
 		
 		for(var i=0;i<data.team_name.length;i++){
-			$("#team_manage").append("<li id='ab"+i+"'><a href='#' class='go_time'><span>"+data.team_name[i]+"</span></a></li>");	
+			$("#team_manage").append("<li id='team"+i+"'><a href='#' class='team_name'><span>"+data.team_name[i]+"</span></a></li>");	
 		}
 
 	});
 }
+
+
 
 
 /* 서버 사이드바 열림 애니메이션 (클릭이벤트) */

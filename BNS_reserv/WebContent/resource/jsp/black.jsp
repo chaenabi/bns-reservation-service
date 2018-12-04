@@ -30,70 +30,29 @@
 			<!-- 서버 -->
 			<ul class="sidemenu">
 				<!-- 경국지색 -->
-				<li class="d1"><a href="#" class="d1" id="gyungguk" onclick="getDate('경국지색')"><span><input type="hidden" name="gyungguk" value="경국지색"/>경국지색</span></a>
+				<li class="d1"><a href="#" class="d1" id="gyungguk" onclick="javascript:getDate('경국지색');"><span><input type="hidden" name="gyungguk" value="경국지색"/>경국지색</span></a>
 					<div class="inner" id="first_server">
 						<div class="core">
-							<!-- <strong class="go_date">날짜</strong> -->
-							<ul class="list append_test">
-								<li id="a"><a href="#" onclick="getTeams('오전 10시 30분');" class="go_time" id="showtest"><span>오전 10시 30분</span></a></li>
-								<li id="b"><a href="#" onclick="getTeams('오전 11시 30분');" class="go_time"><span>오전 11시 30분</span></a></li>
-								<li id="c"><a href="#" onclick="getTeams('오후 3시');" class="go_time"><span>오후 3시</span></a></li>
-								<!-- <li id="d"><a href="#" class="go_time"><span>오후 6시</span></a></li>
-								<li id="e"><a href="#" class="go_time"><span>오후 6시</span></a></li>
-								<li id="f"><a href="#" class="go_time"><span>오후 6시</span></a></li>
-								 -->
-								<li id="g"><a href="#" onclick="getTeams('오후 6시');" class="go_time"><span>오후 6시</span></a></li>
-								<li id="h"><a href="#" onclick="getTeams('오후 10시');" class="go_time"><span>오후 10시</span></a></li>
-							</ul>
-							
-							<!-- <strong class="go_date">날짜</strong> -->
-							<ul class="list append_test">
-							</ul>
-							
-							<!-- <strong class="go_date">날짜</strong> -->
-							<ul class="list append_test">
-							</ul>
-							
-							<!-- <strong class="go_date">날짜</strong> -->
-							<ul class="list append_test">
-							</ul>
-							
-							<!-- <strong class="go_date">날짜</strong> -->
-							<ul class="list append_test">
-							</ul>
-							
-							<!-- <strong class="go_date">날짜</strong> -->
-							<ul class="list append_test">	
-							</ul>
-		
+						
+						<ul class="date_manage" id="gyungguk_teamlist">
+						</ul>
+										
 						</div>
 					</div></li>
-
+					
 				<!-- 절세미인 -->
-				<li class="d1"><a href="#" class="d1" id="jeolse"  onclick="getDate('절세미인')"><span><input type="hidden" name="jeolse" value="절세미인"/>절세미인</span></a>
+				<li class="d1"><a href="#" class="d1" id="jeolse" onclick="javascript:getDate('절세미인');"><span><input type="hidden" name="jeolse" value="절세미인"/>절세미인</span></a>
 					<div class="inner" id="second_server">
 						<div class="core">
 
-							<strong class="go_date">월요일</strong>
-							<ul class="list append_test">
-								<li id="i"><a href="#" class="go_time"><span>오후 9시</span></a></li>
-								<li id="j"><a href="#" class="go_time"><span>오후 6시</span></a></li>
-								<li id="k"><a href="#" class="go_time"><span>오후 12시</span></a></li>
-								<li id="l"><a href="#" class="go_time"><span>오전 1시</span></a></li>
-								<li id="m"><a href="#" class="go_time"><span>오전 10시</span></a></li>
-								<li id="n"><a href="#" class="go_time"><span>오후 3시</span></a></li>							
-								<li id="o"><a href="#" class="go_time"><span>오후 5시</span></a></li>
-								<li id="p"><a href="#" class="go_time"><span>오후 7시</span></a></li>
-							</ul>
-							
-							<strong class="go_date">화요일</strong>
-							
+						<ul class="date_manage" id="jeolse_teamlist">							
+						</ul>
 							
 						</div>
 					</div></li>
 
 				<!-- 금강불괴 -->
-				<li class="d1"><a href="#" class="d1"  id="gumgang"><span><input type="hidden" name="gumgang" value="금강불괴"/>금강불괴</span></a>
+				<li class="d1"><a href="#" class="d1"  id="gumgang" onclick="getDate('금강불괴')"><span><input type="hidden" name="gumgang" value="금강불괴"/>금강불괴</span></a>
 					<div class="inner" id="third_server">
 						<div class="core">
 
@@ -112,7 +71,7 @@
 					</div></li>
 
 				<!-- 명불허전 -->
-				<li class="d1"><a href="#" class="d1"  id="myungbul"><span><input type="hidden" name="myungbul" value="명불허전"/>명불허전</span></a>
+				<li class="d1"><a href="#" class="d1"  id="myungbul" onclick="getDate('명불허전')"><span><input type="hidden" name="myungbul" value="명불허전"/>명불허전</span></a>
 					<div class="inner" id="fourth_server">
 						<div class="core">
 
@@ -131,7 +90,7 @@
 					</div></li>
 
 				<!-- 신검합일 -->
-				<li class="d1"><a href="#" class="d1"  id="singum"><span><input type="hidden" name="singum" value="신검합일"/>신검합일</span></a>
+				<li class="d1"><a href="#" class="d1"  id="singum"onclick="getDate('신검합일')"><span><input type="hidden" name="singum" value="신검합일"/>신검합일</span></a>
 					<div class="inner" id="fifth_server">
 						<div class="core">
 
@@ -150,7 +109,7 @@
 					</div></li>
 
 				<!-- 일확천금 -->
-				<li class="d1"><a href="#" class="d1"  id="ilhwak"><span><input type="hidden" name="ilhwak" value="일확천금"/>일확천금</span></a>
+				<li class="d1"><a href="#" class="d1"  id="ilhwak" onclick="getDate('일확천금')"><span><input type="hidden" name="ilhwak" value="일확천금"/>일확천금</span></a>
 					<div class="inner" id="sixth_server">
 						<div class="core">
 
@@ -169,7 +128,7 @@
 					</div></li>
 
 				<!-- 이심전심 -->
-				<li class="d1"><a href="#" class="d1"  id="isim"><span><input type="hidden" name="isim" value="이심전심"/>이심전심</span></a>
+				<li class="d1"><a href="#" class="d1"  id="isim" onclick="getDate('이심전심')"><span><input type="hidden" name="isim" value="이심전심"/>이심전심</span></a>
 					<div class="inner" id="seventh_server">
 						<div class="core">
 
@@ -186,8 +145,8 @@
 							</ul>
 						</div>
 					</div></li>
-				<!-- 이심전심 -->
-				<li class="d1"><a href="#" class="d1" id="hwaryung"><span><input type="hidden" name="hwaryung" value="화룡점정"/>화룡점정</span></a>
+				<!-- 화룡점정 -->
+				<li class="d1"><a href="#" class="d1" id="hwaryung" onclick="getDate('화룡점정')"><span><input type="hidden" name="hwaryung" value="화룡점정"/>화룡점정</span></a>
 					<div class="inner" id="eighth_server">
 						<div class="core">
 
