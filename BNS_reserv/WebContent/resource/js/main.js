@@ -15,12 +15,12 @@ $("#ck_bns_id").click(e=>{
 		        type : "GET",
 		        url : "http://a.bns.plaync.com/bnsapi/character/equipments/"+bns_id,
 		        dataType: 'jsonp',
-		        headers: {
+		        /*headers: {
 		            'Access-Control-Allow-Credentials' : true,
 		            'Access-Control-Allow-Origin':'*',
 		            'Access-Control-Allow-Methods':'GET',
 		            'Access-Control-Allow-Headers':'application/www-form-urlencoded',
-		          },
+		          },*/
 		        success: function(result){
 		        	
 		        	
@@ -39,15 +39,10 @@ $("#ck_bns_id").click(e=>{
      		            type : 'get',
      		            data :  $('#kakao-login').serialize(),
      		            url : "/BNS_reserv/idcheckServ",
-     		            dataType : 'jsonp',
+     		            dataType : 'json',
      		            contentType: "application/www-form-urlencoded; charset=UTF-8",
      		            timeout: 3000,
-     		            headers: {
-     		        	    'Access-Control-Allow-Credentials' : true,
-     		        	    'Access-Control-Allow-Origin':'*',
-     		        	    'Access-Control-Allow-Methods':'GET',
-     		        	    'Access-Control-Allow-Headers':'application/www-form-urlencoded',
-     		        	  },
+     		      
      		            success : function(data) {
      		            		//alert(data.result);
  		

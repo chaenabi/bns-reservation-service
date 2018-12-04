@@ -59,12 +59,14 @@
 
 strong {
 	color: red;
+	margin-top: 5px;
 }
 
 /* 두번째 목록 ul 위치, 스타일 제어  */
 .sidenav .inner .list, .sidenav .inner .list {
 	padding-left: 0px;
 	padding-top: 20px;
+	padding-bottom: 10px;
 	text-decoration: none;
 	list-style: none;
 	color: white;

@@ -6,28 +6,6 @@
 <head>
 <link rel="import"
 	href="${pageContext.request.contextPath}/resource/jsp/common/header.jsp">
-<script src="resource/js/jquery-1.8.3.min.js"></script>
-	
-<script>
-
-function getTeams(gt){
-	//alert(gt);
-	var requestDate = {"action":"getTeams",	    			
-			"go_time":gt
-	 };
-	
-	$.getJSON("../../TeamServ", requestDate , function(data){
-		$("#team_manage").empty();
-		
-		for(var i=0;i<data.team_name.length;i++){
-			$("#team_manage").append("<li id='ab"+i+"'><a href='#' class='go_time'><span>"+data.team_name[i]+"</span></a></li>");	
-		}
-		
-		
-	});
-}
-	
-</script>
 </head>
 
 <body>
@@ -39,7 +17,7 @@ function getTeams(gt){
 	</video>
 
 	<!-- 중앙 글씨 -->
-	<div class="container">
+	<div class="container" id="container">
 		<h1>Blade and Soul</h1>
 		<p>Welcome to BNS BUS reservation guide</p>
 	</div>
@@ -47,18 +25,16 @@ function getTeams(gt){
 	<!-- 사이드바 열림 애니메이션 (onload click) -->
 	<input type="hidden" id="nav" onclick="openNav();" />
 
-
-	<form action="${pageContext.request.contextPath}/servlet/ViewServ?action=dynamicView" method="post" id="dynamicView">
 		<!-- 사이드바 -->
 		<div class="sidenav" id="sidenav">
 			<!-- 서버 -->
 			<ul class="sidemenu">
 				<!-- 경국지색 -->
-				<li class="d1"><a href="#" class="d1" id="gyungguk"><span><input type="hidden" name="gyungguk" value="경국지색"/>경국지색</span></a>
+				<li class="d1"><a href="#" class="d1" id="gyungguk" onclick="getDate('경국지색')"><span><input type="hidden" name="gyungguk" value="경국지색"/>경국지색</span></a>
 					<div class="inner" id="first_server">
 						<div class="core">
-							<strong class="go_date">경국지색</strong>
-							<ul class="list" id="append_test">
+							<!-- <strong class="go_date">날짜</strong> -->
+							<ul class="list append_test">
 								<li id="a"><a href="#" onclick="getTeams('오전 10시 30분');" class="go_time" id="showtest"><span>오전 10시 30분</span></a></li>
 								<li id="b"><a href="#" onclick="getTeams('오전 11시 30분');" class="go_time"><span>오전 11시 30분</span></a></li>
 								<li id="c"><a href="#" onclick="getTeams('오후 3시');" class="go_time"><span>오후 3시</span></a></li>
@@ -69,16 +45,37 @@ function getTeams(gt){
 								<li id="g"><a href="#" onclick="getTeams('오후 6시');" class="go_time"><span>오후 6시</span></a></li>
 								<li id="h"><a href="#" onclick="getTeams('오후 10시');" class="go_time"><span>오후 10시</span></a></li>
 							</ul>
+							
+							<!-- <strong class="go_date">날짜</strong> -->
+							<ul class="list append_test">
+							</ul>
+							
+							<!-- <strong class="go_date">날짜</strong> -->
+							<ul class="list append_test">
+							</ul>
+							
+							<!-- <strong class="go_date">날짜</strong> -->
+							<ul class="list append_test">
+							</ul>
+							
+							<!-- <strong class="go_date">날짜</strong> -->
+							<ul class="list append_test">
+							</ul>
+							
+							<!-- <strong class="go_date">날짜</strong> -->
+							<ul class="list append_test">	
+							</ul>
+		
 						</div>
 					</div></li>
 
 				<!-- 절세미인 -->
-				<li class="d1"><a href="#" class="d1" id="jeolse"><span><input type="hidden" name="jeolse" value="절세미인"/>절세미인</span></a>
+				<li class="d1"><a href="#" class="d1" id="jeolse"  onclick="getDate('절세미인')"><span><input type="hidden" name="jeolse" value="절세미인"/>절세미인</span></a>
 					<div class="inner" id="second_server">
 						<div class="core">
 
-							<strong class="go_date">절세미인</strong>
-							<ul class="list">
+							<strong class="go_date">월요일</strong>
+							<ul class="list append_test">
 								<li id="i"><a href="#" class="go_time"><span>오후 9시</span></a></li>
 								<li id="j"><a href="#" class="go_time"><span>오후 6시</span></a></li>
 								<li id="k"><a href="#" class="go_time"><span>오후 12시</span></a></li>
@@ -88,6 +85,10 @@ function getTeams(gt){
 								<li id="o"><a href="#" class="go_time"><span>오후 5시</span></a></li>
 								<li id="p"><a href="#" class="go_time"><span>오후 7시</span></a></li>
 							</ul>
+							
+							<strong class="go_date">화요일</strong>
+							
+							
 						</div>
 					</div></li>
 
@@ -207,14 +208,14 @@ function getTeams(gt){
 
 			<div class="teamlists" id="teams_hide">
 				<ul class="team_name" id="team_manage">
-					<li id="ab"><a href="#" class="go_time"><span>룩덕호</span></a></li>
+<!-- 					<li id="ab"><a href="#" class="go_time"><span>룩덕호</span></a></li>
 					<li id="cd"><a href="#" class="go_time"><span>경국왕릉2</span></a></li>
 					<li id="ef"><a href="#" class="go_time"><span>경국왕릉3</span></a></li>
 					<li id="gh"><a href="#" class="go_time"><span>절세4팀</span></a></li>
 					<li id="ij"><a href="#" class="go_time"><span>절세5팀</span></a></li>
 					<li id="kl"><a href="#" class="go_time"><span>절세6팀</span></a></li>
 					<li id="mn"><a href="#" class="go_time"><span>절세7팀</span></a></li>
-					<li id="op"><a href="#" class="go_time"><span>절세8팀</span></a></li>
+					<li id="op"><a href="#" class="go_time"><span>절세8팀</span></a></li> -->
 				</ul>
 
 
@@ -723,8 +724,6 @@ function getTeams(gt){
 
 		</div>
 		
-
-	</form>
 
 </body>
 <script src="${pageContext.request.contextPath}/resource/js/black.js"></script>

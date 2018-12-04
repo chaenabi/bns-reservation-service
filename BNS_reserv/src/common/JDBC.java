@@ -19,13 +19,13 @@ public class JDBC {
  
         try {
             Class.forName("com.mysql.jdbc.Driver"); 
-            //String url =  "jdbc:mysql://localhost:3306/bns_reserv";
-            String url =  "jdbc:mysql://db.bns-reserv.com/dbtom8672";
-            //String db_id = "hr";
-            //String db_pw ="hr";
+            String url =  "jdbc:mysql://localhost:3306/bns_reserv";
+            //String url =  "jdbc:mysql://db.bns-reserv.com/dbtom8672";
+            String db_id = "hr";
+            String db_pw ="hr";
             
-            String db_id = "tom8672";
-            String db_pw = "npc2023per4@e";
+            //String db_id = "tom8672";
+            //String db_pw = "npc2023per4@e";
             conn = DriverManager.getConnection(url, db_id, db_pw);
             
         } catch(Exception e) {

@@ -111,8 +111,31 @@ public class TeamServ extends HttpServlet {
 					sq+="]}";
 					System.out.println(sq);
 					out.print(sq);
+
+				}
+				
+				else if(action.equals("getDate")) {
+					String server = request.getParameter("server");
+					List<HashMap<String,Object>> lis = new ArrayList<>();
+					lis = TeamDAO.getInstance().getDate(server);
+					String sq ="{\"go_date\":[";
+					int cnt=0;
+					for(HashMap<String,Object> n :lis) {
+						if(cnt==0) {
+							sq+="\""+n.get("go_date")+"\"";
+							cnt++;
+						}
+						else {
+							sq+=",\""+n.get("go_date")+"\"";
+						}
+					}
+					sq+="]}";
+					System.out.println(sq);
+					out.print(sq);
 					
 				}
+
+				
 				else if(action.equals("purchase_history")) {
 				
 					
