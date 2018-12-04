@@ -9,8 +9,9 @@ function getDate(server){
 		$(".go_date").empty();
 		
 		if(server === '경국지색') {
+			
 			for(var i=0;i<data.go_date.length;i++){
-				$("#gyungguk_teamlist").append("<li id='date'"+ i +" class='go_date' onclick='getTime("+ '"경국지색"' +")'>"+data.go_date[i]+"</li>");	
+				$("#gyungguk_teamlist").append("<div id='date'"+ i +" class='go_date' onclick='getTime("+ '"경국지색"' +")'>"+data.go_date[i]+"</div>");	
 			}
 			
 		
@@ -26,19 +27,16 @@ function getDate(server){
 //클릭이벤트: 날짜리스트 클릭시 시간 출력
 
 function getTime(server){
+	console.log("getTime입니다.");
 	var requestServerTime= {"action":"getTime",	    			
 			"server":server
 	 };
 	
 	$.getJSON("../../TeamServ", requestServerTime, function(data){
 		
-			$(".go_date").append("<ul class='list'>");
 			for(var i=0;i<data.go_time.length;i++){
-				
-				$(".go_date").append("<li id='time"+i+"'><a href='#' class='go_time' onclick='getTeams(" +data.go_time[i]+");'><span>"+data.go_time[i]+"</span></li>");	
-				
+				$(".time_manage").append("<div id='time"+i+"' onclick='getTeams("+ '"' + data.go_time[i] + '"'+")'><span>"+data.go_time[i]+"</span></div>");	
 			}
-			$(".go_date").append("</ul>");
 
 	});
 }
@@ -46,6 +44,7 @@ function getTime(server){
 
 //클릭이벤트: 시간표 클릭시 해당 팀 리스트 출력
 function getTeams(gt){
+	console.log("getTeams입니다."+gt);
 	var requestDate = {"action":"getTeams",	    			
 			"go_time":gt
 	 };
@@ -53,7 +52,8 @@ function getTeams(gt){
 	$.getJSON("../../TeamServ", requestDate , function(data){
 
 		$("#team_manage").empty();
-		
+		$("#teams_hide").show();
+		console.log(data);
 		for(var i=0;i<data.team_name.length;i++){
 			$("#team_manage").append("<li id='team"+i+"'><a href='#' class='team_name'><span>"+data.team_name[i]+"</span></a></li>");	
 		}

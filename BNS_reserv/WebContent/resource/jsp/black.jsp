@@ -34,8 +34,11 @@
 					<div class="inner" id="first_server">
 						<div class="core">
 						
-						<ul class="date_manage" id="gyungguk_teamlist">
-						</ul>
+						<div class="date_manage" id="gyungguk_teamlist">
+						</div>
+						
+						<div class="time_manage" id="gyungguk_timelist">
+						</div>
 										
 						</div>
 					</div></li>
