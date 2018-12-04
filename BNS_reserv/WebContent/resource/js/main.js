@@ -46,7 +46,7 @@ $("#ck_bns_id").click(e=>{
      		            success : function(data) {
      		            		//alert(data.result);
  		
-     		            		
+     		            		if($.trim(data.result)  ==  "false") {
      		                    //아이디가 존재하지 않을 경우 초록으로, 존재할 경우 빨강으로 처리하는 디자인
      		                	$('#notfound_id').val("사용할 수 있는 아이디입니다.");
      		                	$("#notfound_id").attr('style',  'color:green;font-weight:bold');
@@ -56,37 +56,40 @@ $("#ck_bns_id").click(e=>{
      		        			
      		        			$('#bns_id').attr("readonly", true);		
      		        			$("#bns_id").attr('style',  'color:gray');
-     		        			
+     		            		
      		        			//확인버튼으로 submit.
      				        	$("#determine_bns_id").click(e=>{
 
      				        		if ($('#bns_id').val() != "") {
      				        			var form = document.getElementById("kakao-login");  
-     				        			
-     				        	
+     				        			        	
      				        			form.submit();
-
      				        			
      				        		} else if ($('#bns_id').val() == null){
      				        			console.log($('#servers').val());
      				        			$('#notfound_id').val("먼저 아이디 중복체크를 해주세요.");
      				        			$('#no_match_id').show();
      				        		} 
-     				        		
-     				        		
+   		
      				        	})
+     		            		
+     		            		} else {
+     		        			  $('#notfound_id').val("이미 존재하는 아이디입니다.");
+     	  		            	 //아이디가 존재하지 않을 경우 초록으로, 존재할 경우 빨강으로 처리하는 디자인
+     			                    $("#notfound_id").attr('style',  'color:red;font-weight:bold');
+     			                   
+     			                    $('#no_match_id').show();
+     			                    $("#bns_id").focus();
+     		            		}
+     		        			
+     		        			
+     		        			
      		            		
      
      		            },
      		           error: function() {
-     		             
-     		          
-     		        	  $('#notfound_id').val("이미 존재하는 아이디입니다.");
-  		            	 //아이디가 존재하지 않을 경우 초록으로, 존재할 경우 빨강으로 처리하는 디자인
-		                    $("#notfound_id").attr('style',  'color:red;font-weight:bold');
-		                   
-		                    $('#no_match_id').show();
-		                    $("#bns_id").focus();
+     		        	  $('#notfound_id').val("알수 없는 오류가 발생했습니다");
+		        			$('#no_match_id').show();            		        
      		            }
      		        });
 		        	
@@ -159,7 +162,7 @@ Kakao.Auth.createLoginButton({
 				
 				// DB에 아이디가 있으면 바로 서브밋, 없으면 bnsid div 를 띄우도록 설정한다.
 				$.ajax({
-					async: false,
+					async: true,
  		            type : 'get',
  		            data :  $('#kakao-login').serialize(),
  		            url : "/BNS_reserv/DBidckServ",
@@ -180,8 +183,9 @@ Kakao.Auth.createLoginButton({
  		            	
  		            },
  		            
-					error : function(data) {
-						
+					error : function() {
+						$('#notfound_id').val("알수 없는 오류가 발생했습니다");
+		        			$('#no_match_id').show();
 					}
 				
 				});
@@ -233,7 +237,7 @@ Kakao.Auth.loginForm({
 			
 			// DB에 아이디가 있으면 바로 서브밋, 없으면 bnsid div 를 띄우도록 설정한다.
 			$.ajax({
-				async: false,
+				async: true,
 		            type : 'get',
 		            data :  $('#kakao-login').serialize(),
 		            url : "/BNS_reserv/DBidckServ",
@@ -241,15 +245,20 @@ Kakao.Auth.loginForm({
 		            contentType: "application/json; charset=UTF-8",
 		            timeout: 3000,
 		            success : function(data) {
-		            	$('#bns_id').val($.trim(data.result));
-		            	
-		            	//alert($('#bns_id').val());
-						var form = document.getElementById("kakao-login");  
-		            	form.submit();
+		            	if($.trim(data.result)  ==  "false") {
+							$('#bnsid').show('slow');
+						} else {
+ 		            	$('#bns_id').val($.trim(data.result));
+ 		            	//alert($('#bns_id').val());
+ 						var form = document.getElementById("kakao-login");  
+ 		            	form.submit();
+ 		            	
+						}
 		            },
 		            
-				error : function(data) {
-					$('#bnsid').show('slow');
+				error : function() {
+					$('#notfound_id').val("알수 없는 오류가 발생했습니다");
+        			$('#no_match_id').show();
 				}
 			
 			});
