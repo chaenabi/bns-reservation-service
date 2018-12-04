@@ -35,10 +35,11 @@
 						<div class="core">
 						
 						<div class="date_manage" id="gyungguk_teamlist">
+								
 						</div>
 						
 						<div class="time_manage" id="gyungguk_timelist">
-						</div>
+								</div>
 										
 						</div>
 					</div></li>
@@ -169,7 +170,7 @@
 			</ul>
 
 			<div class="teamlists" id="teams_hide">
-				<ul class="team_name" id="team_manage">
+				<div class="team_name" id="team_manage">
 <!-- 					<li id="ab"><a href="#" class="go_time"><span>룩덕호</span></a></li>
 					<li id="cd"><a href="#" class="go_time"><span>경국왕릉2</span></a></li>
 					<li id="ef"><a href="#" class="go_time"><span>경국왕릉3</span></a></li>
@@ -178,7 +179,7 @@
 					<li id="kl"><a href="#" class="go_time"><span>절세6팀</span></a></li>
 					<li id="mn"><a href="#" class="go_time"><span>절세7팀</span></a></li>
 					<li id="op"><a href="#" class="go_time"><span>절세8팀</span></a></li> -->
-				</ul>
+				</div>
 
 
 

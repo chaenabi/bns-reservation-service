@@ -125,10 +125,10 @@ public class TeamDAO extends JDBC {
 	}
 	
 	//서버클릭시 시간 출력하는 메소드
-		public List<HashMap<String,Object>> getTime(String server){
+		public List<HashMap<String,Object>> getTime(String server, String date){
 			List<HashMap<String,Object>> list = new ArrayList<>();
 			HashMap<String,Object> pl;
-			String sql="SELECT DISTINCT t.go_time from team t, users u where u.server ='"+server+"' and u.bns_id = t.bns_id";
+			String sql="SELECT DISTINCT t.go_time from team t, users u where u.server ='"+server+"' and t.go_date ='"+date+"' and u.bns_id = t.bns_id";
 			
 			try {
 				connect();

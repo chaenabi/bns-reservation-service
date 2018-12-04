@@ -11,13 +11,13 @@ function getDate(server){
 		if(server === '경국지색') {
 			
 			for(var i=0;i<data.go_date.length;i++){
-				$("#gyungguk_teamlist").append("<div id='date'"+ i +" class='go_date' onclick='getTime("+ '"경국지색"' +")'>"+data.go_date[i]+"</div>");	
+				$("#gyungguk_teamlist").append("<div id='date'"+ i +" class='go_date' onclick='getTime("+ '"경국지색"'+',"'+data.go_date[i] +'"'+")'>"+data.go_date[i]+"</div>");	
 			}
 			
 		
 		} else if(server === '절세미인') {
 			for(var i=0;i<data.go_date.length;i++){
-				$("#jeolse_teamlist").append("<li id='date"+i+"'" +"class='go_date' onclick='getTime('절세미인')'>"+data.go_date[i]+"</li>");	
+				$("#jeolse_teamlist").append("<div id='date'"+ i +" class='go_date' onclick='getTime("+ '"절세미인"'+',"'+data.go_date[i] +'"'+")'>"+data.go_date[i]+"</div>");	
 			}
 		}
 		
@@ -26,16 +26,17 @@ function getDate(server){
 
 //클릭이벤트: 날짜리스트 클릭시 시간 출력
 
-function getTime(server){
-	console.log("getTime입니다.");
+function getTime(server, date){
 	var requestServerTime= {"action":"getTime",	    			
-			"server":server
+			"server":server,
+			"date":date
 	 };
 	
 	$.getJSON("../../TeamServ", requestServerTime, function(data){
 		
 			for(var i=0;i<data.go_time.length;i++){
-				$(".time_manage").append("<div id='time"+i+"' onclick='getTeams("+ '"' + data.go_time[i] + '"'+")'><span>"+data.go_time[i]+"</span></div>");	
+				
+				$(".go_date").append("<div id='time"+i+"'class='go_time' onclick='getTeams("+ '"' + data.go_time[i] + '"'+")'><span>"+data.go_time[i]+"</span></div>");	
 			}
 
 	});
@@ -44,7 +45,6 @@ function getTime(server){
 
 //클릭이벤트: 시간표 클릭시 해당 팀 리스트 출력
 function getTeams(gt){
-	console.log("getTeams입니다."+gt);
 	var requestDate = {"action":"getTeams",	    			
 			"go_time":gt
 	 };
@@ -55,7 +55,7 @@ function getTeams(gt){
 		$("#teams_hide").show();
 		console.log(data);
 		for(var i=0;i<data.team_name.length;i++){
-			$("#team_manage").append("<li id='team"+i+"'><a href='#' class='team_name'><span>"+data.team_name[i]+"</span></a></li>");	
+			$("#team_manage").append("<div id='team"+i+"'><a href='#' class='team_name'><span>"+data.team_name[i]+"</span></a></div>");	
 		}
 
 	});
@@ -238,30 +238,6 @@ $(".teamlists").click(function() {
 	$(".menu").show();
 
 });
-
-/*$(".d1").click(e=>{
-
-
-   $.ajax({
-	            async: true,
-	            type : 'get',
-	            data :  $('#dynamicView').serialize(),
-	            url : "/BNS_reserv/ViewServ?action=dynamicView",
-	            dataType : 'json',
-	            contentType: "application/json; charset=UTF-8",
-	            timeout: 3000,
-	            success : function(data) {
-	            	alert("success 확인");
-	            	console.log(data.result);
-	            	
-	            },
-	            error: function() {
-	            	alert("error 확인");
-
-	            }
-     		        });
-
-});*/
 
 
 

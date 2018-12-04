@@ -114,6 +114,7 @@ public class TeamServ extends HttpServlet {
 
 				} else if(action.equals("getDate")) {
 					String server = request.getParameter("server");
+					
 					List<HashMap<String,Object>> lis = new ArrayList<>();
 					lis = TeamDAO.getInstance().getDate(server);
 					String sq ="{\"go_date\":[";
@@ -134,8 +135,9 @@ public class TeamServ extends HttpServlet {
 					
 				} else if(action.equals("getTime")) {
 					String server = request.getParameter("server");
+					String date = request.getParameter("date");
 					List<HashMap<String,Object>> lis = new ArrayList<>();
-					lis = TeamDAO.getInstance().getTime(server);
+					lis = TeamDAO.getInstance().getTime(server, date);
 					String sq ="{\"go_time\":[";
 					int cnt=0;
 					for(HashMap<String,Object> n :lis) {
