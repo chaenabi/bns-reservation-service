@@ -30,7 +30,7 @@
 			<!-- 서버 -->
 			<ul class="sidemenu">
 				<!-- 경국지색 -->
-				<li class="d1"><a href="#" class="d1" id="gyungguk" onclick="javascript:getDate('경국지색');"><span><input type="hidden" name="gyungguk" value="경국지색"/>경국지색</span></a>
+				<li class="d1"><a href="#" class="d1" id="gyungguk" onclick="javascript:getDate('경국지색'); this.onclick=null;"><span><input type="hidden" name="gyungguk" value="경국지색"/>경국지색</span></a>
 					<div class="inner" id="first_server">
 						<div class="core">
 						
@@ -45,7 +45,7 @@
 					</div></li>
 					
 				<!-- 절세미인 -->
-				<li class="d1"><a href="#" class="d1" id="jeolse" onclick="javascript:getDate('절세미인');"><span><input type="hidden" name="jeolse" value="절세미인"/>절세미인</span></a>
+				<li class="d1"><a href="#" class="d1" id="jeolse" onclick="javascript:getDate('절세미인'); this.onclick=null;"><span><input type="hidden" name="jeolse" value="절세미인"/>절세미인</span></a>
 					<div class="inner" id="second_server">
 						<div class="core">
 

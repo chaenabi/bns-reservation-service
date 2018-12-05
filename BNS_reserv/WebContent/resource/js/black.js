@@ -9,15 +9,21 @@ function getDate(server){
 		$(".go_date").empty();
 		
 		if(server === '경국지색') {
-			
+
 			for(var i=0;i<data.go_date.length;i++){
-				$("#gyungguk_teamlist").append("<div id='date'"+ i +" class='go_date' onclick='getTime("+ '"경국지색"'+',"'+data.go_date[i] +'"'+")'>"+data.go_date[i]+"</div>");	
+				
+				teamlist = "<div id='date"+ i +"'"+" class='go_date' onclick='getTime("+ '"경국지색"'+',"'+data.go_date[i] +'"'+");this.onclick=null;'>"+data.go_date[i]+"</div>";	
+				$('#gyungguk_teamlist').append(teamlist);
 			}
+
+		
 			
+
+
 		
 		} else if(server === '절세미인') {
 			for(var i=0;i<data.go_date.length;i++){
-				$("#jeolse_teamlist").append("<div id='date'"+ i +" class='go_date' onclick='getTime("+ '"절세미인"'+',"'+data.go_date[i] +'"'+")'>"+data.go_date[i]+"</div>");	
+				$("#jeolse_teamlist").append("<div id='date'"+ i +" class='go_date' onclick='getTime("+ '"절세미인"'+',"'+data.go_date[i] +'"'+");this.onclick=null;'>"+data.go_date[i]+"</div>");	
 			}
 		}
 		
@@ -36,8 +42,10 @@ function getTime(server, date){
 		
 			for(var i=0;i<data.go_time.length;i++){
 				
-				$(".go_date").append("<div id='time"+i+"'class='go_time' onclick='getTeams("+ '"' + data.go_time[i] + '"'+")'><span>"+data.go_time[i]+"</span></div>");	
+				$(".go_date").append("<div id='time"+i+"'class='go_time' onclick='getTeams("+ '"' + data.go_time[i] + '"'+");this.onclick=null;'><span>"+data.go_time[i]+"</span></div>");	
 			}
+		
+
 
 	});
 }
@@ -55,7 +63,7 @@ function getTeams(gt){
 		$("#teams_hide").show();
 		console.log(data);
 		for(var i=0;i<data.team_name.length;i++){
-			$("#team_manage").append("<div id='team"+i+"'><a href='#' class='team_name'><span>"+data.team_name[i]+"</span></a></div>");	
+			$("#team_manage").append("<div id='team"+i+"'><a href='#' class='team_name' onclick='this.onclick=null;'><span>"+data.team_name[i]+"</span></a></div>");	
 		}
 
 	});
