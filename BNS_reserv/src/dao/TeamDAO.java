@@ -65,6 +65,36 @@ public class TeamDAO extends JDBC {
 
 	}
 	
+	//팀명 클릭시 아이템리스트 출력하는 메소드
+	public List<HashMap<String,Object>> getItemList(String team_name){
+		System.out.println("method: team_name: " + team_name);
+		List<HashMap<String,Object>> list = new ArrayList<>();
+		HashMap<String,Object> pl;
+		String sql="SELECT DISTINCT bs_tujang_ring1 from team t, black b where t.team_name ='"+team_name+"'";
+		try {
+			connect();
+			pstmt = conn.prepareStatement(sql);
+
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				pl = new HashMap<>();
+				
+				pl.put("bs_tujang_ring1", rs.getString("bs_tujang_ring1"));
+				
+				list.add(pl);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			// 연결해제
+			disconnect();
+		}
+		return list;
+	}
+	
+	
 	//시간클릭시 팀명 출력하는 메소드
 	public List<HashMap<String,Object>> getTeams(String go_time){
 		List<HashMap<String,Object>> list = new ArrayList<>();
@@ -154,3 +184,5 @@ public class TeamDAO extends JDBC {
 		}
 	
 }
+
+

@@ -16,15 +16,14 @@ function getDate(server){
 				$('#gyungguk_teamlist').append(teamlist);
 			}
 
-		
-			
 
-
-		
 		} else if(server === '절세미인') {
 			for(var i=0;i<data.go_date.length;i++){
-				$("#jeolse_teamlist").append("<div id='date'"+ i +" class='go_date' onclick='getTime("+ '"절세미인"'+',"'+data.go_date[i] +'"'+");this.onclick=null;'>"+data.go_date[i]+"</div>");	
+		
+				teamlist = "<div id='date"+ i +"'"+" class='go_date' onclick='getTime("+ '"절세미인"'+',"'+data.go_date[i] +'"'+");this.onclick=null;'>"+data.go_date[i]+"</div>";	
+				$("#jeolse_teamlist").append(teamlist);
 			}
+		
 		}
 		
 	});
@@ -63,11 +62,33 @@ function getTeams(gt){
 		$("#teams_hide").show();
 		console.log(data);
 		for(var i=0;i<data.team_name.length;i++){
-			$("#team_manage").append("<div id='team"+i+"'><a href='#' class='team_name' onclick='this.onclick=null;'><span>"+data.team_name[i]+"</span></a></div>");	
+			$("#team_manage").append("<div id='team"+i+"'><a href='#' class='team_name' onclick='getItemList("+ '"' + data.team_name[i] + '"'+"); this.onclick=null;'><span>"+data.team_name[i]+"</span></a></div>");	
 		}
 
 	});
 }
+
+//클릭이벤트: 팀 리스트 중 하나 클릭시 해당팀 판매아이템목록 출력
+function getItemList(team_name){
+	alert(team_name);
+	var requestItemList = {"action":"getItemList",	    			
+			"team_name":team_name
+	 };
+	
+	$.getJSON("../../TeamServ", requestItemList , function(data){
+
+		$(".itemname").empty();
+		$(".item").empty();
+		$("#menu_hide").show();
+		console.log(data);
+		for(var i=0;i<data.item_name.length;i++){
+			$(".item").append("<div class='itemname'><a>"+ data.item_name[i] + "</a></div");	
+		}
+		$("#item").append("<hr style='margin: 5px 0 8px 0;'>");
+
+	});
+}
+
 
 
 

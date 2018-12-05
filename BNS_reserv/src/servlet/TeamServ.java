@@ -153,6 +153,26 @@ public class TeamServ extends HttpServlet {
 					System.out.println(sq);
 					out.print(sq);
 					
+				} else if(action.equals("getItemList")) {
+					String team_name = request.getParameter("team_name");
+					System.out.println("team_name: " + team_name);
+					List<HashMap<String,Object>> lis = new ArrayList<>();
+					lis = TeamDAO.getInstance().getItemList(team_name);
+					String sq ="{\"item_name\":[";
+					int cnt=0;
+					for(HashMap<String,Object> n :lis) {
+						if(cnt==0) {
+							sq+="\""+n.get("bs_tujang_ring1")+"\"";
+							cnt++;
+						}
+						else {
+							sq+=",\""+n.get("bs_tujang_ring1")+"\"";
+						}
+					}
+					sq+="]}";
+					System.out.println(sq);
+					out.print(sq);
+					
 				}
 
 				
