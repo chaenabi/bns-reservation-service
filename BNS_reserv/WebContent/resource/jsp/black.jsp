@@ -7,6 +7,12 @@
 <link rel="import"
 	href="${pageContext.request.contextPath}/resource/jsp/common/header.jsp">
 </head>
+<script type="text/javascript">
+
+
+
+</script>
+
 
 <body>
 	<!--  마천루 비디오 제어 -->
@@ -30,31 +36,22 @@
 			<!-- 서버 -->
 			<ul class="sidemenu">
 				<!-- 경국지색 -->
-				<li class="d1"><a href="#" class="d1" id="gyungguk" onclick="javascript:getDate('경국지색'); this.onclick=null;"><span><input type="hidden" name="gyungguk" value="경국지색"/>경국지색</span></a>
+				<li class="d1"><a href="#" class="d1" id="gyungguk" onclick="javascript:getDate('경국지색', 'gyungguk_datelist'); this.onclick=null;"><span><input type="hidden" name="gyungguk" value="경국지색"/>경국지색</span></a>
 					<div class="inner" id="first_server">
 						<div class="core">
-						
-						<div class="date_manage" id="gyungguk_teamlist">
-								
+							<div class="date_manage" id="gyungguk_datelist"></div>
 						</div>
-						
-						<div class="time_manage" id="gyungguk_timelist">
-								</div>
-										
-						</div>
-					</div></li>
-					
-				<!-- 절세미인 -->
-				<li class="d1"><a href="#" class="d1" id="jeolse" onclick="javascript:getDate('절세미인'); this.onclick=null;"><span><input type="hidden" name="jeolse" value="절세미인"/>절세미인</span></a>
-					<div class="inner" id="second_server">
+					</div>
+				</li>
+				
+				<li class="d1"><a href="#" class="d1" id="jeolse" onclick="javascript:getDate('절세미인', 'gyungguk_datelist'); this.onclick=null;"><span><input type="hidden" name="jeolse" value="절세미인"/>절세미인</span></a>
+					<div class="inner" id="first_server">
 						<div class="core">
-
-						<ul class="date_manage" id="jeolse_teamlist">							
-						</ul>
-							
+							<div class="date_manage" id="jeolse_datelist"></div>
 						</div>
-					</div></li>
-
+					</div>
+				</li>
+				
 				<!-- 금강불괴 -->
 				<li class="d1"><a href="#" class="d1"  id="gumgang" onclick="getDate('금강불괴')"><span><input type="hidden" name="gumgang" value="금강불괴"/>금강불괴</span></a>
 					<div class="inner" id="third_server">
@@ -117,7 +114,7 @@
 					<div class="inner" id="sixth_server">
 						<div class="core">
 
-							<strong>일확천금</strong>
+							<strong>일확천금</strong>			
 							<ul class="list">
 								<li id="nn"><a href="#" class="go_time"><span>절세1팀</span></a></li>
 								<li id="oo"><a href="#" class="go_time"><span>절세2팀</span></a></li>
@@ -169,6 +166,13 @@
 					</div></li>
 			</ul>
 
+
+			<div class="timebar" id="timebar">
+				<div class="timestamp" id="timestamp">
+			
+				</div>
+			</div>
+
 			<div class="teamlists" id="teams_hide">
 				<div class="team_name" id="team_manage">
 <!-- 					<li id="ab"><a href="#" class="go_time"><span>룩덕호</span></a></li>
@@ -180,9 +184,6 @@
 					<li id="mn"><a href="#" class="go_time"><span>절세7팀</span></a></li>
 					<li id="op"><a href="#" class="go_time"><span>절세8팀</span></a></li> -->
 				</div>
-
-
-
 			</div>
 
 		</div>

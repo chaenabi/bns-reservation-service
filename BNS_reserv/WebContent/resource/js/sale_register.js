@@ -55,6 +55,7 @@ $("#multi_ck").click(e=>{
      		           error: function() {
      		             
      		        	  alert("오류 발생 !! 관리자에게 문의해주세요");
+     		        	  alert("NCSoft 점검시간중에는 사용이 불가능합니다...!");
      		            }
      			  
      			   });

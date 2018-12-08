@@ -93,6 +93,34 @@
 	color: #1EA4FF;
 }
 
+#timebar {
+	display: none;
+	/* 마우스 호버시 작동해야함 display: inline-block; */
+	/* 호버시 작동해야할 스타일이지만 임시로 기본 세팅해놓았음 */
+	background: rgba(0, 0, 0, 0.7);
+	height: 100%;
+	width: 150px;
+	position: fixed;
+	z-index: 0;
+	top: 0;
+	left: 290px;
+	overflow: hidden;
+	transition: 0.5s;
+	color: white;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+#timebar>#timestamp {
+	padding-left: 0px;
+	padding-top: 5px;
+	text-decoration: none;
+	list-style: none;
+	color: white;
+	transition: 0.3s;
+	overflow: hidden;
+}
+
 .sidenav>.teamlists>.team_name {
 	padding-left: 0px;
 	padding-top: 5px;
@@ -127,7 +155,7 @@
 	position: fixed;
 	z-index: 0;
 	top: 0;
-	left: 290px;
+	left: 440px;
 	overflow: hidden;
 	transition: 0.5s;
 	color: white;
@@ -169,7 +197,7 @@
 	position: fixed;
 	z-index: 0;
 	top: 0;
-	left: 440px;
+	left: 590px;
 	background-color: rgba(0, 0, 0, 0.9);
 	overflow: hidden;
 	transition: 0.5s;

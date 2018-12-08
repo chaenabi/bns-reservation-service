@@ -1,6 +1,45 @@
 
 //클릭이벤트: 서버 클릭시 날짜 출력
-function getDate(server){
+function getDate(server, divTagID){
+	var requestServerDate= {"action":"getDate",	    			
+			"server":server
+	 }; 
+	
+	$.getJSON("../../TeamServ", requestServerDate, function(data){
+		var htmlTag ='';
+		
+		for(var i=0;i<data.go_date.length;i++){
+			var divid= server + "date" + i;
+			dateList = "<div id='"+ divid + "' class='go_date' onclick='getTime(\""+server+"\", \""+ data.go_date[i] + "\");' style='cursor: pointer;'>" + data.go_date[i] + "</div>";
+			htmlTag= htmlTag + dateList;
+		}
+		$('#' + divTagID).html(htmlTag);
+	});
+}
+//클릭이벤트: 날짜리스트 클릭시 시간 출력
+function getTime(server, date){
+	var requestServerTime= {"action":"getTime",	    			
+			"server":server,
+			"date":date
+	 };
+	
+	$.getJSON("../../TeamServ", requestServerTime, function(data){
+		var htmlTag = '';
+		
+		$("#timestamp").empty();
+		$("#timebar").show();
+		
+		for(var i=0;i<data.go_time.length;i++){
+			var divid= server + "time" + i;
+			timeList = "<div id='"+ divid + "' class='go_time' onclick='getTeams("+ '"' + data.go_time[i] + '"'+");' style='cursor: pointer;'><span>"+data.go_time[i]+"</span></div>";
+			htmlTag= htmlTag +timeList;
+		}
+		$('#timestamp').html(htmlTag);
+	});
+}
+
+
+/*function getDate(server){
 	var requestServerDate= {"action":"getDate",	    			
 			"server":server
 	 };
@@ -12,42 +51,49 @@ function getDate(server){
 
 			for(var i=0;i<data.go_date.length;i++){
 				
-				teamlist = "<div id='date"+ i +"'"+" class='go_date' onclick='getTime("+ '"경국지색"'+',"'+data.go_date[i] +'"'+");this.onclick=null;'>"+data.go_date[i]+"</div>";	
-				$('#gyungguk_teamlist').append(teamlist);
+				
+				datelist = "<div id='date"+ i +"'"+" class='go_date' onclick='getTime("+ '"경국지색"'+',"'+data.go_date[i] +'"'+");this.onclick=null;'>"+data.go_date[i]+"</div>";	
+				$('#gyungguk_teamlist').append(datelist);
+				
 			}
 
 
 		} else if(server === '절세미인') {
 			for(var i=0;i<data.go_date.length;i++){
 		
-				teamlist = "<div id='date"+ i +"'"+" class='go_date' onclick='getTime("+ '"절세미인"'+',"'+data.go_date[i] +'"'+");this.onclick=null;'>"+data.go_date[i]+"</div>";	
-				$("#jeolse_teamlist").append(teamlist);
+				datelist = "<div id='date"+ i +"'"+" class='go_date' onclick='getTime("+ '"절세미인"'+',"'+data.go_date[i] +'"'+");this.onclick=null;'>"+data.go_date[i]+"</div>";	
+				$("#jeolse_teamlist").append(datelist);	
+			
 			}
 		
 		}
 		
 	});
-}
+}*/
 
 //클릭이벤트: 날짜리스트 클릭시 시간 출력
 
-function getTime(server, date){
+/*function getTime(server, date){
+
 	var requestServerTime= {"action":"getTime",	    			
 			"server":server,
 			"date":date
 	 };
-	
+
 	$.getJSON("../../TeamServ", requestServerTime, function(data){
 		
 			for(var i=0;i<data.go_time.length;i++){
 				
-				$(".go_date").append("<div id='time"+i+"'class='go_time' onclick='getTeams("+ '"' + data.go_time[i] + '"'+");this.onclick=null;'><span>"+data.go_time[i]+"</span></div>");	
+				timelist = "<div id='time"+i+"'class='go_time' onclick='getTeams("+ '"' + data.go_time[i] + '"'+");this.onclick=null;'><span>"+data.go_time[i]+"</span></div>";	
+				//$("#date"+ i +"").append(timelist);
+				$(".go_date").append(timelist);
 			}
+
 		
 
 
 	});
-}
+}*/
 
 
 //클릭이벤트: 시간표 클릭시 해당 팀 리스트 출력
@@ -70,7 +116,7 @@ function getTeams(gt){
 
 //클릭이벤트: 팀 리스트 중 하나 클릭시 해당팀 판매아이템목록 출력
 function getItemList(team_name){
-	alert(team_name);
+
 	var requestItemList = {"action":"getItemList",	    			
 			"team_name":team_name
 	 };
@@ -104,6 +150,7 @@ function openNav() {
 }
 
 $('#container').click(function() {
+	$('#first_server').hide();
 	$('#second_server').hide();
 	$('#third_server').hide();
 	$('#fourth_server').hide();
@@ -115,7 +162,8 @@ $('#container').click(function() {
 
 	$('#teams_hide').hide();
 	$('#menu_hide').hide();
-	$('#first_server').hide();
+	$('#timebar').hide();
+
 	
 });
 
