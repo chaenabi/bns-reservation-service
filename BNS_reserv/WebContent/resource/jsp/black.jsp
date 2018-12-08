@@ -44,8 +44,9 @@
 					</div>
 				</li>
 				
-				<li class="d1"><a href="#" class="d1" id="jeolse" onclick="javascript:getDate('절세미인', 'gyungguk_datelist'); this.onclick=null;"><span><input type="hidden" name="jeolse" value="절세미인"/>절세미인</span></a>
-					<div class="inner" id="first_server">
+				<!-- 절세미인  -->
+				<li class="d1"><a href="#" class="d1" id="jeolse" onclick="javascript:getDate('절세미인', 'jeolse_datelist'); this.onclick=null;"><span><input type="hidden" name="jeolse" value="절세미인"/>절세미인</span></a>
+					<div class="inner" id="second_server">
 						<div class="core">
 							<div class="date_manage" id="jeolse_datelist"></div>
 						</div>
@@ -53,120 +54,60 @@
 				</li>
 				
 				<!-- 금강불괴 -->
-				<li class="d1"><a href="#" class="d1"  id="gumgang" onclick="getDate('금강불괴')"><span><input type="hidden" name="gumgang" value="금강불괴"/>금강불괴</span></a>
+				<li class="d1"><a href="#" class="d1"  id="gumgang" onclick="javascript:getDate('금강불괴', 'gumgang_datelist'); this.onclick=null;"><span><input type="hidden" name="gumgang" value="금강불괴"/>금강불괴</span></a>
 					<div class="inner" id="third_server">
 						<div class="core">
-
-							<strong class="go_date">금강불괴</strong>
-							<ul class="list">
-								<li id="q"><a href="#" class="go_time"><span>절세1팀</span></a></li>
-								<li id="r"><a href="#" class="go_time"><span>절세2팀</span></a></li>
-								<li id="s"><a href="#" class="go_time"><span>절세3팀</span></a></li>
-								<li id="t"><a href="#" class="go_time"><span>절세4팀</span></a></li>
-								<li id="u"><a href="#" class="go_time"><span>절세5팀</span></a></li>
-								<li id="v"><a href="#" class="go_time"><span>절세6팀</span></a></li>
-								<li id="w"><a href="#" class="go_time"><span>절세7팀</span></a></li>
-								<li id="x"><a href="#" class="go_time"><span>절세8팀</span></a></li>
-							</ul>
+							<div class="date_manage" id="gumgang_datelist"></div>
 						</div>
-					</div></li>
+					</div>
+				</li>
 
 				<!-- 명불허전 -->
-				<li class="d1"><a href="#" class="d1"  id="myungbul" onclick="getDate('명불허전')"><span><input type="hidden" name="myungbul" value="명불허전"/>명불허전</span></a>
+				<li class="d1"><a href="#" class="d1"  id="myungbul" onclick="javascript:getDate('명불허전', 'myungbul_datelist'); this.onclick=null;"><span><input type="hidden" name="myungbul" value="명불허전"/>명불허전</span></a>
 					<div class="inner" id="fourth_server">
 						<div class="core">
 
-							<strong class="go_date">명불허전</strong>
-							<ul class="list">
-								<li id="y"><a><span>절세1팀</span></a></li>
-								<li id="z"><a><span>절세2팀</span></a></li>
-								<li id="aa"><a><span>절세3팀</span></a></li>
-								<li id="bb"><a><span>절세4팀</span></a></li>
-								<li id="cc"><a><span>절세5팀</span></a></li>
-								<li id="dd"><a><span>절세6팀</span></a></li>
-								<li id="ee"><a><span>절세7팀</span></a></li>
-								<li id="ff"><a><span>절세8팀</span></a></li>
-							</ul>
+							<div class="date_manage" id="myungbul_datelist"></div>
 						</div>
 					</div></li>
 
 				<!-- 신검합일 -->
-				<li class="d1"><a href="#" class="d1"  id="singum"onclick="getDate('신검합일')"><span><input type="hidden" name="singum" value="신검합일"/>신검합일</span></a>
+				<li class="d1"><a href="#" class="d1"  id="singum" onclick="javascript:getDate('신검합일', 'singum_datelist'); this.onclick=null;"><span><input type="hidden" name="singum" value="신검합일"/>신검합일</span></a>
 					<div class="inner" id="fifth_server">
 						<div class="core">
 
-							<strong>신검합일</strong>
-							<ul class="list">
-								<li id="gg"><a href="#" class="go_time"><span>절세1팀</span></a></li>
-								<li id="hh"><a href="#" class="go_time"><span>절세2팀</span></a></li>
-								<li id="hh"><a href="#" class="go_time"><span>절세3팀</span></a></li>
-								<li id="ii"><a href="#" class="go_time"><span>절세4팀</span></a></li>
-								<li id="jj"><a href="#" class="go_time"><span>절세5팀</span></a></li>
-								<li id="kk"><a href="#" class="go_time"><span>절세6팀</span></a></li>
-								<li id="ll"><a href="#" class="go_time"><span>절세7팀</span></a></li>
-								<li id="mm"><a href="#" class="go_time"><span>절세8팀</span></a></li>
-							</ul>
+							<div class="date_manage" id="singum_datelist"></div>
 						</div>
 					</div></li>
 
 				<!-- 일확천금 -->
-				<li class="d1"><a href="#" class="d1"  id="ilhwak" onclick="getDate('일확천금')"><span><input type="hidden" name="ilhwak" value="일확천금"/>일확천금</span></a>
+				<li class="d1"><a href="#" class="d1"  id="ilhwak" onclick="javascript:getDate('일확천금', 'ilhwak_datelist'); this.onclick=null;"><span><input type="hidden" name="ilhwak" value="일확천금"/>일확천금</span></a>
 					<div class="inner" id="sixth_server">
 						<div class="core">
 
-							<strong>일확천금</strong>			
-							<ul class="list">
-								<li id="nn"><a href="#" class="go_time"><span>절세1팀</span></a></li>
-								<li id="oo"><a href="#" class="go_time"><span>절세2팀</span></a></li>
-								<li id="pp"><a href="#" class="go_time"><span>절세3팀</span></a></li>
-								<li id="qq"><a href="#" class="go_time"><span>절세4팀</span></a></li>
-								<li id="rr"><a href="#" class="go_time"><span>절세5팀</span></a></li>
-								<li id="ss"><a href="#" class="go_time"><span>절세6팀</span></a></li>
-								<li id="tt"><a href="#" class="go_time"><span>절세7팀</span></a></li>
-								<li id="uu"><a href="#" class="go_time"><span>절세8팀</span></a></li>
-							</ul>
+							<div class="date_manage" id="ilhwak_datelist"></div>
 						</div>
 					</div></li>
 
 				<!-- 이심전심 -->
-				<li class="d1"><a href="#" class="d1"  id="isim" onclick="getDate('이심전심')"><span><input type="hidden" name="isim" value="이심전심"/>이심전심</span></a>
+				<li class="d1"><a href="#" class="d1"  id="isim" onclick="javascript:getDate('이심전심', 'isim_datelist'); this.onclick=null;"><span><input type="hidden" name="isim" value="이심전심"/>이심전심</span></a>
 					<div class="inner" id="seventh_server">
 						<div class="core">
 
-							<strong>이심전심</strong>
-							<ul class="list">
-								<li id="vv"><a href="#" class="go_time"><span>절세1팀</span></a></li>
-								<li id="ww"><a href="#" class="go_time"><span>절세2팀</span></a></li>
-								<li id="xx"><a href="#" class="go_time"><span>절세3팀</span></a></li>
-								<li id="yy"><a href="#" class="go_time"><span>절세4팀</span></a></li>
-								<li id="zz"><a href="#" class="go_time"><span>절세5팀</span></a></li>
-								<li id="aaa"><a href="#" class="go_time"><span>절세6팀</span></a></li>
-								<li id="bbb"><a href="#" class="go_time"><span>절세7팀</span></a></li>
-								<li id="ccc"><a href="#" class="go_time"><span>절세8팀</span></a></li>
-							</ul>
+							<div class="date_manage" id="isim_datelist"></div>
 						</div>
 					</div></li>
 				<!-- 화룡점정 -->
-				<li class="d1"><a href="#" class="d1" id="hwaryung" onclick="getDate('화룡점정')"><span><input type="hidden" name="hwaryung" value="화룡점정"/>화룡점정</span></a>
+				<li class="d1"><a href="#" class="d1" id="hwaryung" onclick="javascript:getDate('화룡점정', 'hwaryung_datelist'); this.onclick=null;"><span><input type="hidden" name="hwaryung" value="화룡점정"/>화룡점정</span></a>
 					<div class="inner" id="eighth_server">
 						<div class="core">
 
-							<strong>화룡점정</strong>
-							<ul class="list">
-								<li id="ddd"><a href="#" class="go_time"><span>절세1팀</span></a></li>
-								<li id="eee"><a href="#" class="go_time"><span>절세2팀</span></a></li>
-								<li id="fff"><a href="#" class="go_time"><span>절세3팀</span></a></li>
-								<li id="ggg"><a href="#" class="go_time"><span>절세4팀</span></a></li>
-								<li id="hhh"><a href="#" class="go_time"><span>절세5팀</span></a></li>
-								<li id="iii"><a href="#" class="go_time"><span>절세6팀</span></a></li>
-								<li id="jjj"><a href="#" class="go_time"><span>절세7팀</span></a></li>
-								<li id="kkk"><a href="#" class="go_time"><span>절세8팀</span></a></li>
-							</ul>
+						<div class="date_manage" id="hwaryung_datelist"></div>
 						</div>
 					</div></li>
 			</ul>
 
-
+			
 			<div class="timebar" id="timebar">
 				<div class="timestamp" id="timestamp">
 			

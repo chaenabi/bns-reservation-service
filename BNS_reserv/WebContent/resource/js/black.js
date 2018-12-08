@@ -38,12 +38,12 @@ function getTime(server, date){
 	});
 }
 
-
+//기존 코드. 
+//클릭이벤트: 서버 클릭시 날짜 출력
 /*function getDate(server){
 	var requestServerDate= {"action":"getDate",	    			
 			"server":server
 	 };
-	
 	$.getJSON("../../TeamServ", requestServerDate, function(data){
 		$(".go_date").empty();
 		
@@ -54,10 +54,7 @@ function getTime(server, date){
 				
 				datelist = "<div id='date"+ i +"'"+" class='go_date' onclick='getTime("+ '"경국지색"'+',"'+data.go_date[i] +'"'+");this.onclick=null;'>"+data.go_date[i]+"</div>";	
 				$('#gyungguk_teamlist').append(datelist);
-				
 			}
-
-
 		} else if(server === '절세미인') {
 			for(var i=0;i<data.go_date.length;i++){
 		
@@ -71,6 +68,7 @@ function getTime(server, date){
 	});
 }*/
 
+//기존 코드. 
 //클릭이벤트: 날짜리스트 클릭시 시간 출력
 
 /*function getTime(server, date){
@@ -88,9 +86,6 @@ function getTime(server, date){
 				//$("#date"+ i +"").append(timelist);
 				$(".go_date").append(timelist);
 			}
-
-		
-
 
 	});
 }*/
@@ -160,9 +155,10 @@ $('#container').click(function() {
 	$('#eighth_server').hide();
 	$('#ninth_server').hide();
 
+	$('#timebar').hide();
 	$('#teams_hide').hide();
 	$('#menu_hide').hide();
-	$('#timebar').hide();
+
 
 	
 });
@@ -178,6 +174,7 @@ $('#gyungguk').click(function() {
 	$('#eighth_server').hide();
 	$('#ninth_server').hide();
 
+	$('#timebar').hide();
 	$('#teams_hide').hide();
 	$('#menu_hide').hide();
 	$('#first_server').show();
@@ -192,7 +189,7 @@ $('#jeolse').click(function() {
 	$('#seventh_server').hide();
 	$('#eighth_server').hide();
 	$('#ninth_server').hide();
-
+	$('#timebar').hide();
 	$('#teams_hide').hide();
 	$('#menu_hide').hide();
 	$('#second_server').show();
@@ -207,7 +204,7 @@ $('#gumgang').click(function() {
 	$('#seventh_server').hide();
 	$('#eighth_server').hide();
 	$('#ninth_server').hide();
-
+	$('#timebar').hide();
 	$('#teams_hide').hide();
 	$('#menu_hide').hide();
 	$('#third_server').show();
@@ -223,7 +220,7 @@ $('#myungbul').click(function() {
 	$('#seventh_server').hide();
 	$('#eighth_server').hide();
 	$('#ninth_server').hide();
-
+	$('#timebar').hide();
 	$('#teams_hide').hide();
 	$('#menu_hide').hide();
 	$('#fourth_server').show();
@@ -238,7 +235,7 @@ $('#singum').click(function() {
 	$('#seventh_server').hide();
 	$('#eighth_server').hide();
 	$('#ninth_server').hide();
-
+	$('#timebar').hide();
 	$('#teams_hide').hide();
 	$('#menu_hide').hide();
 	$('#fifth_server').show();
@@ -253,7 +250,7 @@ $('#ilhwak').click(function() {
 	$('#seventh_server').hide();
 	$('#eighth_server').hide();
 	$('#ninth_server').hide();
-
+	$('#timebar').hide();
 	$('#teams_hide').hide();
 	$('#menu_hide').hide();
 	$('#sixth_server').show();
@@ -268,7 +265,7 @@ $('#isim').click(function() {
 	$('#sixth_server').hide();
 	$('#eighth_server').hide();
 	$('#ninth_server').hide();
-
+	$('#timebar').hide();
 	$('#teams_hide').hide();
 	$('#menu_hide').hide();
 	$('#seventh_server').show();
@@ -283,7 +280,7 @@ $('#hwaryung').click(function() {
 	$('#sixth_server').hide();
 	$('#seventh_server').hide();
 	$('#ninth_server').hide();
-
+	$('#timebar').hide();
 	$('#teams_hide').hide();
 	$('#menu_hide').hide();
 	$('#eighth_server').show();
@@ -298,7 +295,7 @@ $('#test_server').click(function() {
 	$('#sixth_server').hide();
 	$('#seventh_server').hide();
 	$('#eighth_server').hide();
-
+	$('#timebar').hide();
 	$('#teams_hide').hide();
 	$('#menu_hide').hide();
 	$('#ninth_server').show();

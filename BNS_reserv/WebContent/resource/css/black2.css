@@ -62,9 +62,24 @@
 }
 
 .go_date {
-	color: red;
+	color: white;
 	margin-top: 5px;
 	list-style: none;
+}
+
+.go_date:hover, .go_date:active {
+	background: rgba(0, 0, 0, 0.7);
+	color: #1EA4FF;
+}
+
+.go_time {
+	color: white;
+	list-style: none;
+}
+
+.go_time:hover, .go_time:active {
+	background: rgba(0, 0, 0, 0.7);
+	color: #1EA4FF;
 }
 
 /* 두번째 목록 ul 위치, 스타일 제어  */
@@ -80,7 +95,7 @@
 
 /* 두번째 목록 li 위치, 스타일 제어 */
 .core li a {
-	padding: 8px;
+	padding: 10px;
 	text-decoration: none;
 	font-size: 20px;
 	color: white;
@@ -113,12 +128,13 @@
 
 #timebar>#timestamp {
 	padding-left: 0px;
-	padding-top: 5px;
+	padding-top: 15px;
 	text-decoration: none;
 	list-style: none;
 	color: white;
 	transition: 0.3s;
 	overflow: hidden;
+	font-size: 1.5em;
 }
 
 .sidenav>.teamlists>.team_name {
@@ -132,7 +148,7 @@
 }
 
 .sidenav>.teamlists>.team_name a {
-	padding: 8px;
+	padding: 10px;
 	text-decoration: none;
 	font-size: 20px;
 	color: white;
