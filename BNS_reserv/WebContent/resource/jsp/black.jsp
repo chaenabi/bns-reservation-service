@@ -138,11 +138,11 @@
 				<div class="team_info">
 					<div class="team_sn">
 						<a class="text-right text-default" style="text-decoration: none !important;"> 경국지색 : </a>
-						<a class="team_name">룩덕호</a>
+						<a class="team_name" id="team_name">룩덕호</a>
 					</div>
 					<div class="team_tn">
 						<a class="text-right text-default" style="text-decoration: none !important;"> 팀장명 : </a>
-						<a class="team_name">기공사초보</a>
+						<a class="team_name" id="team_leader">기공사초보</a>
 					</div>
 				</div>
 					<h2 class="text-center text-success" style="margin: 0;">판매 목록</h2>

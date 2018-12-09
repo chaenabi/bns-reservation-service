@@ -21,8 +21,6 @@ import dao.TeamDAO;
 import vo.ItemDTO;
 import vo.TeamDTO;
 
-
-
 @WebServlet("/TeamServ")
 public class TeamServ extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -130,7 +128,7 @@ public class TeamServ extends HttpServlet {
 					}
 					sq+="]}";
 		
-					System.out.println(sq);
+
 					out.print(sq);
 					
 				} else if(action.equals("getTime")) {
@@ -150,14 +148,13 @@ public class TeamServ extends HttpServlet {
 						}
 					}
 					sq+="]}";
-					System.out.println(sq);
 					out.print(sq);
 					
 				} else if(action.equals("getItemList")) {
 					String team_name = request.getParameter("team_name");
-					System.out.println("team_name: " + team_name);
 					List<HashMap<String,Object>> lis = new ArrayList<>();
 					lis = TeamDAO.getInstance().getItemList(team_name);
+			
 					String sq ="{\"item_name\":[";
 					int cnt=0;
 					for(HashMap<String,Object> n :lis) {
@@ -169,14 +166,76 @@ public class TeamServ extends HttpServlet {
 							sq+=",\""+n.get("bs_tujang_ring1")+"\"";
 						}
 					}
-					sq+="]}";
+					sq+="]";
+					
+					
+					String sn = "\"server\":[";
+					for(HashMap<String,Object> ns :lis) {
+					  sn+="\""+ns.get("server")+"\"";
+					}
+					sn+="]";
+					
+					String tn = "\"team_name\":[";
+					for(HashMap<String,Object> ns :lis) {
+					tn+="\""+ns.get("team_name")+"\"";
+					}
+					tn+="]";
+					
+					String tln = "\"team_leader\":[";
+					for(HashMap<String,Object> ns :lis) {
+					tln+="\""+ns.get("bns_id")+"\"";
+					}
+					tln+="]";
+					
+					System.out.println(sn);
+					System.out.println(tn);
+					System.out.println(tln);
+					System.out.println(sq);
+					//out.print(tn);
+					//out.print(tln);
+					//out.print(sn);
+					sq+=","+sn+",";
+					sq+=tn+",";
+					sq+=tln;
+					sq+="}";
 					System.out.println(sq);
 					out.print(sq);
 					
-				}
-
+					
 				
-				else if(action.equals("purchase_history")) {
+				} else if(action.equals("getTeamInfo")) {
+
+					/*String team_name = request.getParameter("team_name");	
+					List<HashMap<String,Object>> lis = new ArrayList<>();					
+					lis = TeamDAO.getInstance().getTeamInfo(team_name);
+				
+					String sn = "{\"server\":[";
+					for(HashMap<String,Object> ns :lis) {
+					  sn+="\""+ns.get("server")+"\"";
+					}
+					sn+="]}";
+					
+					String tn = "{\"team_name\":[";
+					for(HashMap<String,Object> ns :lis) {
+					tn+="\""+ns.get("team_name")+"\"";
+					}
+					tn+="]}";
+					
+					String tln = "{\"team_leader\":[";
+					for(HashMap<String,Object> ns :lis) {
+					tln+="\""+ns.get("bns_id")+"\"";
+					}
+					tln+="]}";
+					
+					System.out.println(sn);
+					System.out.println(tn);
+					System.out.println(tln);
+					
+					out.print(tn);
+					out.print(tln);
+					out.print(sn);*/
+					
+				} else if(action.equals("purchase_history")) {
 				
 					
 					
@@ -194,8 +253,8 @@ public class TeamServ extends HttpServlet {
 				}
 	}
 
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
 		doGet(request, response);
 	}

@@ -67,10 +67,9 @@ public class TeamDAO extends JDBC {
 	
 	//팀명 클릭시 아이템리스트 출력하는 메소드
 	public List<HashMap<String,Object>> getItemList(String team_name){
-		System.out.println("method: team_name: " + team_name);
 		List<HashMap<String,Object>> list = new ArrayList<>();
 		HashMap<String,Object> pl;
-		String sql="SELECT DISTINCT bs_tujang_ring1 from team t, black b where t.team_name ='"+team_name+"'";
+		String sql="SELECT DISTINCT t.bns_id, server, team_name, bs_tujang_ring1 from team t, black b, users u where t.team_name ='"+team_name+"'";
 		try {
 			connect();
 			pstmt = conn.prepareStatement(sql);
@@ -82,6 +81,9 @@ public class TeamDAO extends JDBC {
 				
 				pl.put("bs_tujang_ring1", rs.getString("bs_tujang_ring1"));
 				
+				pl.put("bns_id", rs.getString("bns_id"));
+				pl.put("server", rs.getString("server"));
+				pl.put("team_name", rs.getString("team_name"));
 				list.add(pl);
 			}
 			
@@ -93,6 +95,41 @@ public class TeamDAO extends JDBC {
 		}
 		return list;
 	}
+
+	
+	//팀명 클릭시 팀의 정보 출력하는 메소드
+	public List<HashMap<String,Object>> getTeamInfo(String team_name){
+		List<HashMap<String,Object>> list = new ArrayList<>();
+		HashMap<String,Object> pl;
+		System.out.println("팀명은~! :" +team_name);
+	
+	
+		String sql="SELECT DISTINCT t.bns_id, server, team_name from team t, users u where t.team_name ='" + team_name + "'";
+			try {
+				connect();
+				pstmt = conn.prepareStatement(sql);
+
+				rs = pstmt.executeQuery();
+				
+				while(rs.next()) {
+					pl = new HashMap<>();
+					
+					pl.put("bns_id", rs.getString("bns_id"));
+					pl.put("server", rs.getString("server"));
+					pl.put("team_name", rs.getString("team_name"));
+					
+					list.add(pl);
+				}
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				// 연결해제
+				disconnect();
+			}
+			return list;
+		}
+
 	
 	
 	//시간클릭시 팀명 출력하는 메소드
@@ -182,7 +219,9 @@ public class TeamDAO extends JDBC {
 			}
 			return list;
 		}
-	
+		
+		
+
 }
 
 
