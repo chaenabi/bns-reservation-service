@@ -152,12 +152,12 @@
 					<div class="in_menu">
 						<div class="items">
 							<div class="item">
-								<div class="itemname">
+								<div class="itemname" id="bs_tujang_ring1">
 									<a>천독귀걸이(번개)</a>
 									<hr style="margin: 5px 0 8px 0;">
 								</div>
 
-								<div class="item_c">
+								<div class="item_c" id="bs_tujang_ring1_price">
 								<!-- radio 쓰는법. 추가
 									 <label class="radio">
 									  <input type="radio" name="group-radio">

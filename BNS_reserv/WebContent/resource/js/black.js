@@ -79,15 +79,12 @@ function getItemList(team_name){
 		$(".item_c").empty();
 		$("#menu_hide").show();
 
-		
-		//for(var i=0;i<data.item_name.length;i++){
-			if(data.item_name==0){
-			$(".itemname").append("<a>마천루반지</a>");	
-			$(".itemname").append("<hr style='margin: 5px 0 8px 0;'>");
-			$(".item_c").append("<a> 어트 : </a><a>200,000금</a>");
-			$(".item_c").append("<span><label class='checkbox'> <input type='checkbox' value='천독귀걸이(번개)'><i class='icon-checkbox'></i></span>");
+			if(data.bs_tujang_ring1==0){
+			$("#bs_tujang_ring1").append("<a>투쟁반지 1계열</a>");	
+			$("#bs_tujang_ring1").append("<hr style='margin: 5px 0 8px 0;'>");
+			$("#bs_tujang_ring1_price").append("<a>가격 : </a><a>"+data.bs_tujang_ring1_price+"</a>");
+			$("#bs_tujang_ring1_price").append("<span><label class='checkbox'> <input type='checkbox' value='천독귀걸이(번개)'><i class='icon-checkbox'></i></span>");
 			}
-		//}
 		
 
 	});

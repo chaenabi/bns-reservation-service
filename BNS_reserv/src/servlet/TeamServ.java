@@ -155,19 +155,25 @@ public class TeamServ extends HttpServlet {
 					List<HashMap<String,Object>> lis = new ArrayList<>();
 					lis = TeamDAO.getInstance().getItemList(team_name);
 			
-					String sq ="{\"item_name\":[";
+					String bs_item1 ="{\"bs_tujang_ring1\":[";
 					int cnt=0;
 					for(HashMap<String,Object> n :lis) {
 						if(cnt==0) {
-							sq+="\""+n.get("bs_tujang_ring1")+"\"";
+							bs_item1+="\""+n.get("bs_tujang_ring1")+"\"";
 							cnt++;
 						}
 						else {
-							sq+=",\""+n.get("bs_tujang_ring1")+"\"";
+							bs_item1+=",\""+n.get("bs_tujang_ring1")+"\"";
 						}
 					}
-					sq+="]";
-					
+					bs_item1+="]";
+
+					String bs_item1_price ="\"bs_tujang_ring1_price\":[";
+
+					for(HashMap<String,Object> n :lis) {		
+						bs_item1_price+="\""+n.get("bs_tujang_ring1_price")+"\"";
+					}
+					bs_item1_price+="]";
 					
 					String sn = "\"server\":[";
 					for(HashMap<String,Object> ns :lis) {
@@ -190,54 +196,22 @@ public class TeamServ extends HttpServlet {
 					System.out.println(sn);
 					System.out.println(tn);
 					System.out.println(tln);
-					System.out.println(sq);
-					//out.print(tn);
-					//out.print(tln);
-					//out.print(sn);
-					sq+=","+sn+",";
-					sq+=tn+",";
-					sq+=tln;
-					sq+="}";
-					System.out.println(sq);
-					out.print(sq);
-					
-					
-				
-				} else if(action.equals("getTeamInfo")) {
+					System.out.println(bs_item1);
 
-					/*String team_name = request.getParameter("team_name");	
-					List<HashMap<String,Object>> lis = new ArrayList<>();					
-					lis = TeamDAO.getInstance().getTeamInfo(team_name);
+					
+					bs_item1+=","+bs_item1_price+",";
+					bs_item1+=sn+",";
+					bs_item1+=tn+",";
+					bs_item1+=tln;
+					bs_item1+="}";
+					System.out.println(bs_item1);
+					out.print(bs_item1);
+					
+					
 				
-					String sn = "{\"server\":[";
-					for(HashMap<String,Object> ns :lis) {
-					  sn+="\""+ns.get("server")+"\"";
-					}
-					sn+="]}";
-					
-					String tn = "{\"team_name\":[";
-					for(HashMap<String,Object> ns :lis) {
-					tn+="\""+ns.get("team_name")+"\"";
-					}
-					tn+="]}";
-					
-					String tln = "{\"team_leader\":[";
-					for(HashMap<String,Object> ns :lis) {
-					tln+="\""+ns.get("bns_id")+"\"";
-					}
-					tln+="]}";
-					
-					System.out.println(sn);
-					System.out.println(tn);
-					System.out.println(tln);
-					
-					out.print(tn);
-					out.print(tln);
-					out.print(sn);*/
-					
 				} else if(action.equals("purchase_history")) {
 				
-					
+					//구현 예정 menu.jsp 에서.
 					
 				}			
 				else if (action.equals("list")) {

@@ -69,7 +69,15 @@ public class TeamDAO extends JDBC {
 	public List<HashMap<String,Object>> getItemList(String team_name){
 		List<HashMap<String,Object>> list = new ArrayList<>();
 		HashMap<String,Object> pl;
-		String sql="SELECT DISTINCT t.bns_id, server, team_name, bs_tujang_ring1 from team t, black b, users u where t.team_name ='"+team_name+"'";
+		String sql="SELECT DISTINCT t.bns_id, u.server, t.team_name, bs_tujang_ring1, bs_tujang_ring2, bs_tuji_ring1, bs_tuji_ring2, bs_tuhon_ring1, bs_tuhon_ring2,"
+				+ " bs_tujang_earring1, bs_tujang_earring2, bs_tuji_earring1, bs_tuji_earring2, bs_tuhon_earring1, bs_tuhon_earring2,"
+				+ " bs_tujang_ring3, bs_tujang_ring4, bs_tuji_ring3, bs_tuji_ring4, bs_tuhon_ring3, bs_tuhon_ring4, bs_tujang_earring3, bs_tujang_earring4,"
+				+ " bs_tuji_earring3, bs_tuji_earring4, bs_tuhon_earring3, bs_tuhon_earring4, hukrin, ginki, gyukgol, bs_gang,"
+				+ " bs_tujang_ring1_price, bs_tujang_ring2_price, bs_tuji_ring1_price, bs_tuji_ring2_price, bs_tuhon_ring1_price, bs_tuhon_ring2_price,"
+				+"	 bs_tujang_earring1_price, bs_tujang_earring2_price, bs_tuji_earring1_price, bs_tuji_earring2_price, bs_tuhon_earring1_price, bs_tuhon_earring2_price,"
+				+"	 bs_tujang_ring3_price, bs_tujang_ring4_price, bs_tuji_ring3_price, bs_tuji_ring4_price, bs_tuhon_ring3_price, bs_tuhon_ring4_price, bs_tujang_earring3_price, bs_tujang_earring4_price,"
+				+"	 bs_tuji_earring3_price, bs_tuji_earring4_price, bs_tuhon_earring3_price, bs_tuhon_earring4_price, hukrin_price, ginki_price, gyukgol_price, bs_gang_price"
+				+" FROM team t, black b, users u where t.team_name ='"+team_name+"' AND t.bns_id = b.bns_id";
 		try {
 			connect();
 			pstmt = conn.prepareStatement(sql);
@@ -78,12 +86,98 @@ public class TeamDAO extends JDBC {
 			
 			while(rs.next()) {
 				pl = new HashMap<>();
-				
-				pl.put("bs_tujang_ring1", rs.getString("bs_tujang_ring1"));
-				
+
 				pl.put("bns_id", rs.getString("bns_id"));
 				pl.put("server", rs.getString("server"));
 				pl.put("team_name", rs.getString("team_name"));
+				
+				pl.put("bs_tujang_ring1", rs.getString("bs_tujang_ring1"));
+
+				/*
+				pl.put("bs_tujang_ring2", rs.getString("bs_tujang_ring2"));
+				pl.put("bs_tuji_ring1", rs.getString("bs_tuji_ring1"));
+				pl.put("bs_tuji_ring2", rs.getString("bs_tuji_ring2"));
+				pl.put("bs_tuhon_ring1", rs.getString("bs_tuhon_ring1"));
+				pl.put("bs_tuhon_ring2", rs.getString("bs_tuhon_ring2"));
+				
+	
+				pl.put("bs_tujang_earring1", rs.getString("bs_tujang_earring1"));
+				pl.put("bs_tujang_earring2", rs.getString("bs_tujang_earring2"));
+				pl.put("bs_tuji_earring1", rs.getString("bs_tujang_earring1"));
+				pl.put("bs_tuji_earring2", rs.getString("bs_tujang_earring2"));
+				pl.put("bs_tuhon_earring1", rs.getString("bs_tuhon_earring1"));
+				pl.put("bs_tuhon_earring2", rs.getString("bs_tuhon_earring2"));
+				
+		
+				pl.put("bs_tujang_ring3", rs.getString("bs_tujang_ring3"));
+				pl.put("bs_tujang_ring4", rs.getString("bs_tujang_ring4"));
+				pl.put("bs_tuji_ring3", rs.getString("bs_tuji_ring3"));
+				pl.put("bs_tuji_ring4", rs.getString("bs_tuji_ring4"));
+				pl.put("bs_tuhon_ring3", rs.getString("bs_tuhon_ring3"));
+				pl.put("bs_tuhon_ring4", rs.getString("bs_tuhon_ring4"));		
+				
+
+				pl.put("bs_tujang_earring3", rs.getString("bs_tujang_earring3"));
+				pl.put("bs_tujang_earring4", rs.getString("bs_tujang_earring4"));
+				pl.put("bs_tuji_earring3", rs.getString("bs_tuji_earring3"));
+				pl.put("bs_tuji_earring4", rs.getString("bs_tuji_earring4"));
+				
+				
+				pl.put("bs_tuhon_earring3", rs.getString("bs_tuhon_earring3"));
+				pl.put("bs_tuhon_earring4", rs.getString("bs_tuhon_earring4"));
+				pl.put("bs_tuhon_ring3", rs.getString("bs_tuhon_ring3"));
+				pl.put("bs_tuhon_ring4", rs.getString("bs_tuhon_ring4"));
+				pl.put("hukrin", rs.getString("hukrin"));
+				pl.put("ginki", rs.getString("ginki"));		
+				pl.put("gyukgol", rs.getString("gyukgol"));
+				pl.put("bs_gang", rs.getString("bs_gang"));
+
+				*/
+				pl.put("bs_tujang_ring1_price", rs.getString("bs_tujang_ring1_price"));
+				
+				/*
+				pl.put("bs_tujang_ring2_price", rs.getString("bs_tujang_ring2_price"));
+				pl.put("bs_tuji_ring1_price", rs.getString("bs_tuji_ring1_price"));
+				pl.put("bs_tuji_ring2_price", rs.getString("bs_tuji_ring2_price"));
+				pl.put("bs_tuhon_ring1_price", rs.getString("bs_tuhon_ring1_price"));
+				pl.put("bs_tuhon_ring2_price", rs.getString("bs_tuhon_ring2_price"));
+				
+			
+				pl.put("bs_tujang_earring1_price", rs.getString("bs_tujang_earring1_price"));
+				pl.put("bs_tujang_earring2_price", rs.getString("bs_tujang_earring2_price"));
+				pl.put("bs_tuji_earring1_price", rs.getString("bs_tujang_earring1_price"));
+				pl.put("bs_tuji_earring2_price", rs.getString("bs_tujang_earring2_price"));
+				pl.put("bs_tuhon_earring1_price", rs.getString("bs_tuhon_earring1_price"));
+				pl.put("bs_tuhon_earring2_price", rs.getString("bs_tuhon_earring2_price"));
+			
+				pl.put("bs_tujang_ring3_price", rs.getString("bs_tujang_ring3_price"));
+				pl.put("bs_tujang_ring4_price", rs.getString("bs_tujang_ring4_price"));
+				pl.put("bs_tuji_ring3_price", rs.getString("bs_tuji_ring3_price"));
+				pl.put("bs_tuji_ring4_price", rs.getString("bs_tuji_ring4_price"));
+				pl.put("bs_tuhon_ring3_price", rs.getString("bs_tuhon_ring3_price"));
+				pl.put("bs_tuhon_ring4_price", rs.getString("bs_tuhon_ring4_price"));		
+				
+			
+				pl.put("bs_tujang_earring3_price", rs.getString("bs_tujang_earring3_price"));
+				pl.put("bs_tujang_earring4_price", rs.getString("bs_tujang_earring4_price"));
+				pl.put("bs_tuji_earring3_price", rs.getString("bs_tuji_earring3_price"));
+				pl.put("bs_tuji_earring4_price", rs.getString("bs_tuji_earring4_price"));
+				
+				
+				pl.put("bs_tuhon_earring3_price", rs.getString("bs_tuhon_earring3_price"));
+				pl.put("bs_tuhon_earring4_price", rs.getString("bs_tuhon_earring4_price"));
+				pl.put("bs_tuhon_ring3_price", rs.getString("bs_tuhon_ring3_price"));
+				pl.put("bs_tuhon_ring4_price", rs.getString("bs_tuhon_ring4_price"));
+				pl.put("hukrin_price", rs.getString("hukrin_price"));
+				pl.put("ginki_price", rs.getString("ginki_price"));		
+				pl.put("gyukgol_price", rs.getString("gyukgol_price"));
+				pl.put("bs_gang_price", rs.getString("bs_gang_price"));
+		
+				*/
+			
+				
+				
+				
 				list.add(pl);
 			}
 			
