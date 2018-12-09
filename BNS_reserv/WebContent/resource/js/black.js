@@ -76,10 +76,10 @@ function getItemList(team_name){
 			$(".item").append("<div class='itemname'><a>"+ data.item_name[i] + "</a></div");	
 		}
 		$("#item").append("<hr style='margin: 5px 0 8px 0;'>");
-		$(".team_sn").append("<a class='text-right text-default' style='text-decoration: none !important;'>"+data.server[0]+" : </a>;");
-		$(".team_sn").append("<a class='team_name' id='team_name'>"+ data.team_name[0]+"</a>");
+		$(".team_sn").append("<a class='text-right text-default' style='text-decoration: none !important;'>"+data.server+" : </a>;");
+		$(".team_sn").append("<a class='team_name' id='team_name'>"+ data.team_name+"</a>");
 		$(".team_tn").append("<a class='text-right text-default' style='text-decoration: none !important;'>팀장명 : </a>;");
-		$(".team_tn").append("<a class='team_name' id='team_leader'>"+ data.team_leader[0] +"</a>");
+		$(".team_tn").append("<a class='team_name' id='team_leader'>"+ data.team_leader +"</a>");
 
 	});
 }
