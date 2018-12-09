@@ -58,7 +58,7 @@ function getTeams(gt){
 	});
 }
 
-//클릭이벤트: 팀 리스트 중 하나 클릭시 해당팀 판매아이템목록 출력
+//클릭이벤트: 팀 리스트 중 하나 클릭시 해당 팀 기본정보 및 판매아이템목록 출력
 function getItemList(team_name){
 
 	var requestItemList = {"action":"getItemList",	    			
@@ -87,24 +87,6 @@ function getItemList(team_name){
 
 	});
 }
-//클릭이벤트: 팀 리스트 중 하나 클릭시 해당팀명, 팀장명, 서버명 출력 
-/*function getTeamInfo(team_name){
-	var requestTeamInfo = {"action":"getTeamInfo",	    			
-			"team_name":team_name
-	 };
-
-	$.getJSON("../../TeamServ", requestTeamInfo, function(data){
-		$(".team_sn").empty();
-		$(".team_tn").empty();	
-		
-		alert(data);
-		
-		$(".team_sn").append("<a class='text-right text-default' style='text-decoration: none !important;'>"+data.server[0]+" : </a>;");
-		$(".team_sn").append("<a class='team_name' id='team_name'>"+ data.team_name[0]+"</a>");
-		$(".team_tn").append("a class='text-right text-default' style='text-decoration: none !important;'>팀장명 : </a>;");
-		$(".team_tn").append("<a class='team_name' id='team_leader'>"+ data.team_leader[0] +"</a>");
-	});
-}*/
 
 /* 서버 사이드바 열림 애니메이션 (클릭이벤트) */
 var nav = document.getElementById('nav');

@@ -128,7 +128,6 @@
 			<div class="menu" id="menu_hide">
 
 				<section class="menupan">
-					
 				<div class="team_info">
 					<div class="team_sn">
 					</div>
