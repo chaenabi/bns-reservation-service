@@ -116,33 +116,23 @@
 
 			<div class="teamlists" id="teams_hide">
 				<div class="team_name" id="team_manage">
-<!-- 					<li id="ab"><a href="#" class="go_time"><span>룩덕호</span></a></li>
-					<li id="cd"><a href="#" class="go_time"><span>경국왕릉2</span></a></li>
-					<li id="ef"><a href="#" class="go_time"><span>경국왕릉3</span></a></li>
-					<li id="gh"><a href="#" class="go_time"><span>절세4팀</span></a></li>
-					<li id="ij"><a href="#" class="go_time"><span>절세5팀</span></a></li>
-					<li id="kl"><a href="#" class="go_time"><span>절세6팀</span></a></li>
-					<li id="mn"><a href="#" class="go_time"><span>절세7팀</span></a></li>
-					<li id="op"><a href="#" class="go_time"><span>절세8팀</span></a></li> -->
 				</div>
 			</div>
 
 		</div>
 
-
+<form action="../../ApplyReservServ?action=item_reserv" method="post">
+	<input type="hidden" value="<%=session.getAttribute("bns_id")%>">
+		
 		<div class="order" id="order">
 			<div class="menu" id="menu_hide">
 
 				<section class="menupan">
-
+					
 				<div class="team_info">
 					<div class="team_sn">
-						<a class="text-right text-default" style="text-decoration: none !important;"> 경국지색 : </a>
-						<a class="team_name" id="team_name">룩덕호</a>
 					</div>
 					<div class="team_tn">
-						<a class="text-right text-default" style="text-decoration: none !important;"> 팀장명 : </a>
-						<a class="team_name" id="team_leader">기공사초보</a>
 					</div>
 				</div>
 					<h2 class="text-center text-success" style="margin: 0;">판매 목록</h2>
@@ -152,212 +142,101 @@
 					<div class="in_menu">
 						<div class="items">
 							<div class="item">
-								<div class="itemname" id="bs_tujang_ring1">
-									<a>천독귀걸이(번개)</a>
-									<hr style="margin: 5px 0 8px 0;">
+								<div class="itemname" id="bs_tujang_ring1">		
+											
 								</div>
-
 								<div class="item_c" id="bs_tujang_ring1_price">
 								<!-- radio 쓰는법. 추가
 									 <label class="radio">
 									  <input type="radio" name="group-radio">
 									  <i class="icon-radio"></i>
 									</label> -->
-
 								</div>
 							</div> 
 							<div class="item">
-								<div class="itemname">
-									<a>천독귀걸이(화염)</a>
-									<hr style="margin: 5px 0 8px 0;">
+								<div class="itemname" id="bs_tujang_ring2">
 								</div>
-								<div class="item_c">
-									<a> 어트 : </a>
-									<a> 200,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독귀걸이(화염)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-									</span>
-								</div>
-								<div class="item_c">
-									<a> 노어트 : </a>
-									<a> 300,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독귀걸이(화염)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-										</span>
+								<div class="item_c" id="bs_tujang_ring2_price">
 								</div>
 							</div>
 							<div class="item">
-								<div class="itemname">
-									<a> 천독반지(바람)</a>
-									<hr style="margin: 5px 0 8px 0;">
+								<div class="itemname" id="bs_tuji_ring1">					
 								</div>
-								<div class="item_c">
-									<a> 어트 : </a>
-									<a> 200,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독반지(바람)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-										</span>
-								</div>
-								<div class="item_c">
-									<a> 노어트 : </a>
-									<a> 300,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독반지(바람)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-										</span>
+								<div class="item_c" id="bs_tuji_ring1_price">
 								</div>
 							</div>
 
 							<div class="item">
-								<div class="itemname">
-									<a> 천독반지(암흑) </a>
-									<hr style="margin: 5px 0 8px 0;">
+								<div class="itemname" id="bs_tuji_ring2">
 								</div>
-								<div class="item_c">
-									<a> 어트 : </a>
-									<a> 200,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독반지(암흑)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-										</span>
-								</div>
-								<div class="item_c">
-									<a> 노어트 : </a>
-									<a> 300,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독반지(암흑)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-										</span>
+								<div class="item_c" id="bs_tuji_ring2_price">
 								</div>
 							</div>
+							
+							<div class="item">
+								<div class="itemname" id="bs_tuhon_ring1">				
+								</div>
+								<div class="item_c" id="bs_tuhon_ring1_price">				
+								</div>
+							</div>
+							
+							<div class="item">
+								<div class="itemname" id="bs_tuhon_ring2">				
+								</div>
+								<div class="item_c" id="bs_tuhon_ring2_price">				
+								</div>
+							</div>
+							
 						</div>
 					</div>
 					
 						<h3 class="text-center text-danger" style="font-weight: bold">2네임드
 							: 사안장군</h3>
+						
 						<div class="in_menu">
 						<div class="items">
 							<div class="item">
-								<div class="itemname">
-									<a>천독귀걸이(번개)</a>
+								<div class="itemname" id="bs_tujang_earring1">
 								</div>
-								<div class="item_c" >
-									<a> 어트 : </a>
-									<a> 200,000금 </a>					
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독귀걸이(번개)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-									</span>
-									<!-- radio 쓰는법.
-									 <label class="radio">
-									  <input type="radio" name="group-radio">
-									  <i class="icon-radio"></i>
-									</label> -->
+								<div class="item_c"  id="bs_tujang_earring1_price">
+								</div>	
+							</div>
+							
+							<div class="item">
+								<div class="itemname" id="bs_tujang_earring2">
 								</div>
-								<div class=item_c>
-								<a> 노어트 : </a>
-								<a> 300,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독귀걸이(번개)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-									</span>
+								<div class="item_c" id="bs_tujang_earring2_price">	
 								</div>
 							</div>
+							
 							<div class="item">
-								<div class="itemname">
-									<a>천독귀걸이(화염)</a>
+								<div class="itemname" id="bs_tuji_earring1">
 								</div>
-								<div class="item_c">
-									<a> 어트 : </a>
-									<a> 200,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독귀걸이(화염)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-									</span>
-								</div>
-								<div class="item_c">
-									<a> 노어트 : </a>
-									<a> 300,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독귀걸이(화염)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-										</span>
-								</div>
-							</div>
-							<div class="item">
-								<div class="itemname">
-									<a> 천독반지(바람)</a>
-								</div>
-								<div class="item_c">
-									<a> 어트 : </a>
-									<a> 200,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독반지(바람)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-										</span>
-								</div>
-								<div class="item_c">
-									<a> 노어트 : </a>
-									<a> 300,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독반지(바람)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-										</span>
+								<div class="item_c" id="bs_tuji_earring1_price">
 								</div>
 							</div>
 
 							<div class="item">
-								<div class="itemname">
-									<a> 천독반지(암흑) </a>
+								<div class="itemname" id="bs_tuji_earring2">
 								</div>
-								<div class="item_c">
-									<a> 어트 : </a>
-									<a> 200,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독반지(암흑)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-										</span>
-								</div>
-								<div class="item_c">
-									<a> 노어트 : </a>
-									<a> 300,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독반지(암흑)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-										</span>
+								<div class="item_c" id="bs_tuji_earring2_price">
 								</div>
 							</div>
+							
+							<div class="item">
+								<div class="itemname" id="bs_tuhon_earring1">
+								</div>
+								<div class="item_c" id="bs_tuhon_earring1_price">
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="itemname" id="bs_tuhon_earring2">
+								</div>
+								<div class="item_c" id="bs_tuhon_earring2_price">
+								</div>
+							</div>
+			
 						</div>
 					</div>
 
@@ -365,114 +244,92 @@
 			
 						<h3 class="text-center text-danger" style="font-weight: bold">3네임드
 							: 모순장군</h3>
-						<div class="in_menu">
-												<div class="items">
+					<div class="in_menu">
+						<div class="items">
+						
 							<div class="item">
-								<div class="itemname">
-									<a>천독귀걸이(번개)</a>
+								<div class="itemname" id="bs_tujang_ring3">
 								</div>
-								<div class="item_c" >
-									<a> 어트 : </a>
-									<a> 200,000금 </a>					
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독귀걸이(번개)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-									</span>
-									<!-- radio 쓰는법.
-									 <label class="radio">
-									  <input type="radio" name="group-radio">
-									  <i class="icon-radio"></i>
-									</label> -->
-								</div>
-								<div class=item_c>
-								<a> 노어트 : </a>
-								<a> 300,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독귀걸이(번개)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-									</span>
-								</div>
-							</div>
-							<div class="item">
-								<div class="itemname">
-									<a>천독귀걸이(화염)</a>
-								</div>
-								<div class="item_c">
-									<a> 어트 : </a>
-									<a> 200,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독귀걸이(화염)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-									</span>
-								</div>
-								<div class="item_c">
-									<a> 노어트 : </a>
-									<a> 300,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독귀걸이(화염)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-										</span>
-								</div>
-							</div>
-							<div class="item">
-								<div class="itemname">
-									<a> 천독반지(바람)</a>
-								</div>
-								<div class="item_c">
-									<a> 어트 : </a>
-									<a> 200,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독반지(바람)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-										</span>
-								</div>
-								<div class="item_c">
-									<a> 노어트 : </a>
-									<a> 300,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독반지(바람)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-										</span>
+								<div class="item_c" id="bs_tujang_ring3_price">
 								</div>
 							</div>
 
 							<div class="item">
-								<div class="itemname">
-									<a> 천독반지(암흑) </a>
+								<div class="itemname" id="bs_tujang_ring4">
 								</div>
-								<div class="item_c">
-									<a> 어트 : </a>
-									<a> 200,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독반지(암흑)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-										</span>
-								</div>
-								<div class="item_c">
-									<a> 노어트 : </a>
-									<a> 300,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독반지(암흑)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-										</span>
+								<div class="item_c" id="bs_tujang_ring4_price">
 								</div>
 							</div>
+						
+							<div class="item">
+								<div class="itemname" id="bs_tuji_ring3">
+								</div>
+								<div class="item_c" id="bs_tuji_ring3_price">
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="itemname" id="bs_tuji_ring4">
+								</div>
+								<div class="item_c" id="bs_tuji_ring4_price">
+								</div>
+							</div>
+						
+							<div class="item">
+								<div class="itemname" id="bs_tuhon_ring3">
+								</div>
+								<div class="item_c" id="bs_tuhon_ring3_price">
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="itemname" id="bs_tuhon_ring4">
+								</div>
+								<div class="item_c" id="bs_tuhon_ring4_price">
+								</div>
+							</div>
+						
+							<div class="item">
+								<div class="itemname" id="bs_tujang_earring3">
+								</div>
+								<div class="item_c" id="bs_tujang_earring3_price">
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="itemname" id="bs_tujang_earring4">
+								</div>
+								<div class="item_c" id="bs_tujang_earring4_price">
+								</div>
+							</div>
+						
+							<div class="item">
+								<div class="itemname" id="bs_tuji_earring3">
+								</div>
+								<div class="item_c" id="bs_tuji_earring3_price">
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="itemname" id="bs_tuji_earring4">
+								</div>
+								<div class="item_c" id="bs_tuji_earring4_price">
+								</div>
+							</div>
+						
+							<div class="item">
+								<div class="itemname" id="bs_tuhon_earring3">
+								</div>
+								<div class="item_c" id="bs_tuhon_earring3_price">
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="itemname" id="bs_tuhon_earring4">
+								</div>
+								<div class="item_c" id="bs_tuhon_earring4_price">
+								</div>
+							</div>		
 						</div>
 					</div>
 
@@ -483,118 +340,40 @@
 						<div class="in_menu">
 						<div class="items">
 							<div class="item">
-								<div class="itemname">
-									<a>천독귀걸이(번개)</a>
+								<div class="itemname" id="hukrin">
 								</div>
-								<div class="item_c" >
-									<a> 어트 : </a>
-									<a> 200,000금 </a>					
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독귀걸이(번개)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-									</span>
-									<!-- radio 쓰는법.
-									 <label class="radio">
-									  <input type="radio" name="group-radio">
-									  <i class="icon-radio"></i>
-									</label> -->
-								</div>
-								<div class="item_c">
-								<a> 노어트 : </a>
-								<a> 300,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독귀걸이(번개)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-									</span>
-								</div>
-							</div>
-							<div class="item">
-								<div class="itemname">
-									<a>천독귀걸이(화염)</a>
-								</div>
-								<div class="item_c">
-									<a> 어트 : </a>
-									<a> 200,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독귀걸이(화염)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-									</span>
-								</div>
-								<div class="item_c">
-									<a> 노어트 : </a>
-									<a> 300,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독귀걸이(화염)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-										</span>
-								</div>
-							</div>
-							<div class="item">
-								<div class="itemname">
-									<a> 천독반지(바람)</a>
-								</div>
-								<div class="item_c">
-									<a> 어트 : </a>
-									<a> 200,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독반지(바람)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-										</span>
-								</div>
-								<div class="item_c">
-									<a> 노어트 : </a>
-									<a> 300,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독반지(바람)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-										</span>
+								<div class="item_c" id="hukrin_price">
 								</div>
 							</div>
 
 							<div class="item">
-								<div class="itemname">
-									<a> 천독반지(암흑) </a>
+								<div class="itemname" id="ginki">
 								</div>
-								<div class="item_c">
-									<a> 어트 : </a>
-									<a> 200,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독반지(암흑)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-										</span>
+								<div class="item_c" id="ginki_price">
 								</div>
-								<div class="item_c">
-									<a> 노어트 : </a>
-									<a> 300,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독반지(암흑)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-										</span>
+							</div>		
+							
+							<div class="item">
+								<div class="itemname" id="gyukgol">
+								</div>
+								<div class="item_c" id="gyukgol_price">
+								</div>
+							</div>		
+							
+							<div class="item">
+								<div class="itemname" id="bs_gang">
+								</div>
+								<div class="item_c" id="bs_gang_price">
 								</div>
 							</div>
+
 						</div>
 					</div>
 
 					<div class="call-to-action text-center">
 						<h2 class="text-center text-primary" style="margin: 40px; margin-bottom:0;">검은 마천루 버스</h2>
 						<br>
-						<a class="btn center btn-default" type="submit">예약하기</a>
+						<input class="btn center btn-default"  value="예약하기" type="submit">
 					</div>
 					<hr>
 					<div class="row">
@@ -612,7 +391,7 @@
 
 
 		</div>
-		
+</form>
 
 </body>
 <script src="${pageContext.request.contextPath}/resource/js/black.js"></script>

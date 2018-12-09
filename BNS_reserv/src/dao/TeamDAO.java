@@ -91,8 +91,7 @@ public class TeamDAO extends JDBC {
 				pl.put("server", rs.getString("server"));
 				pl.put("team_name", rs.getString("team_name"));			
 				
-				pl.put("bs_tujang_ring1", rs.getString("bs_tujang_ring1"));
-				
+				pl.put("bs_tujang_ring1", rs.getString("bs_tujang_ring1"));			
 				pl.put("bs_tujang_ring2", rs.getString("bs_tujang_ring2"));
 				pl.put("bs_tuji_ring1", rs.getString("bs_tuji_ring1"));
 				pl.put("bs_tuji_ring2", rs.getString("bs_tuji_ring2"));
@@ -123,8 +122,7 @@ public class TeamDAO extends JDBC {
 				pl.put("gyukgol", rs.getString("gyukgol"));
 				pl.put("bs_gang", rs.getString("bs_gang"));
 
-				pl.put("bs_tujang_ring1_price", rs.getString("bs_tujang_ring1_price"));
-				
+				pl.put("bs_tujang_ring1_price", rs.getString("bs_tujang_ring1_price"));		
 				pl.put("bs_tujang_ring2_price", rs.getString("bs_tujang_ring2_price"));
 				pl.put("bs_tuji_ring1_price", rs.getString("bs_tuji_ring1_price"));
 				pl.put("bs_tuji_ring2_price", rs.getString("bs_tuji_ring2_price"));
@@ -154,9 +152,6 @@ public class TeamDAO extends JDBC {
 				pl.put("ginki_price", rs.getString("ginki_price"));		
 				pl.put("gyukgol_price", rs.getString("gyukgol_price"));
 				pl.put("bs_gang_price", rs.getString("bs_gang_price"));
-		
-
-				
 				
 				list.add(pl);
 			}

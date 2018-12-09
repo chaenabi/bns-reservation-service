@@ -6,41 +6,10 @@ import java.util.ArrayList;
 
 import common.JDBC;
 import vo.ItemDTO;
-import vo.TeamDTO;
 
 public class ItemDAO extends JDBC {
 
-	//알수 없는 부분 black.jsp 비동기 메소드
-	public ArrayList<TeamDTO> viewBS_godate(String[] server) {
-		connect();
-		ArrayList<TeamDTO> datas = new ArrayList<TeamDTO>();
-		try {
-		for (int i=0; i < server.length; i++) {
-		String sql = "select go_date, go_time from team, users"
-						 + "where server="+server[i]+" group by go_date, go_time";
-		pstmt = conn.prepareStatement(sql);
-		ResultSet rs = pstmt.executeQuery();
-				while(rs.next()) {
-					TeamDTO tvo = new TeamDTO();
-					datas.add(tvo);
-				}
-		}			
-			rs.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			disconnect();
-		}
-		return datas;
-	}
-	
-	
-	
-	
-	
-	
-	
-	
+	//주문내역 보기. 아직 미구현 
 	public ArrayList<ItemDTO> getPurchasehistory() {
 		
 		connect();
@@ -72,9 +41,60 @@ public class ItemDAO extends JDBC {
 	}
 
 	
+	//아이템 예약 적용 메소드
+	public void bs_item_update(String bns_id) {
+		ItemDTO ivo = new ItemDTO();
+		try {
+			connect();
 
+			// 검은 마천루 아이템 등록
+			String bsi_sql = "UPDATE black SET bs_tujang_ring1=?, bs_tujang_ring2=?, bs_tuji_ring1=?, bs_tuji_ring2=?, bs_tuhon_ring1=?, bs_tuhon_ring2=?,"
+					+ "bs_tujang_earring1=?, bs_tujang_earring2=?, bs_tuji_earring1=?, bs_tuji_earring2=?, bs_tuhon_earring1=?, bs_tuhon_earring2=?,"
+					+ "bs_tujang_ring3=?, bs_tujang_ring4=?, bs_tuji_ring3=?, bs_tuji_ring4=?, bs_tuhon_ring3=?, bs_tuhon_ring4=?, bs_tujang_earring3=?, bs_tujang_earring4=?,"
+					+ "bs_tuji_earring3=?, bs_tuji_earring4=?, bs_tuhon_earring3=?, bs_tuhon_earring4=?, hukrin=?, ginki=?, gyukgol=?, bs_gang=?";
 
-//마천루 아이템 등록
+			pstmt = conn.prepareStatement(bsi_sql);
+
+			pstmt.setString(1, ivo.getBs_tujang_ring1());
+			pstmt.setString(2, ivo.getBs_tujang_ring2());
+			pstmt.setString(3, ivo.getBs_tuji_ring1());
+			pstmt.setString(4, ivo.getBs_tuji_ring2());
+			pstmt.setString(5, ivo.getBs_tuhon_ring1());
+			pstmt.setString(6, ivo.getBs_tuhon_ring2());
+			pstmt.setString(7, ivo.getBs_tujang_earring1());
+			pstmt.setString(8, ivo.getBs_tujang_earring2());
+			pstmt.setString(9, ivo.getBs_tuji_earring1());
+			pstmt.setString(10, ivo.getBs_tuji_earring2());
+			pstmt.setString(11, ivo.getBs_tuhon_earring1());
+			pstmt.setString(12, ivo.getBs_tuhon_earring2());
+			pstmt.setString(13, ivo.getBs_tujang_ring3());
+			pstmt.setString(14, ivo.getBs_tujang_ring4());
+			pstmt.setString(15, ivo.getBs_tuji_ring3());
+			pstmt.setString(16, ivo.getBs_tuji_ring4());
+			pstmt.setString(17, ivo.getBs_tuhon_ring3());
+			pstmt.setString(18, ivo.getBs_tuhon_ring4());
+			pstmt.setString(19, ivo.getBs_tujang_earring3());
+			pstmt.setString(20, ivo.getBs_tujang_earring4());
+			pstmt.setString(21, ivo.getBs_tuji_earring3());
+			pstmt.setString(22, ivo.getBs_tuji_earring4());
+			pstmt.setString(23, ivo.getBs_tuhon_earring3());
+			pstmt.setString(24, ivo.getBs_tuhon_earring4());
+			pstmt.setString(25, ivo.getHukrin());
+			pstmt.setString(26, ivo.getGinki());
+			pstmt.setString(27, ivo.getGyukgol());
+			pstmt.setString(28, ivo.getBs_gang());
+			pstmt.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			disconnect();
+		}
+	}
+	
+	
+	
+	//마천루 아이템 등록
 	public void bs_addItems(ItemDTO ivo) {
 		try {
 			connect();

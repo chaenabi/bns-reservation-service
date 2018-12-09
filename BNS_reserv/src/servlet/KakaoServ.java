@@ -67,11 +67,12 @@ public class KakaoServ extends HttpServlet {
 			String nickname = request.getParameter("nickname");
 			String id = request.getParameter("id");
 			String email = request.getParameter("email");
+			String bns_id = request.getParameter("bns_id");
 			
 			session.setAttribute("nickname", nickname);
 			session.setAttribute("id", id);
 			session.setAttribute("email", email);
-			
+			session.setAttribute("bns_id", bns_id);
 			// 목록으로 페이지 이동
 			
 			request.getRequestDispatcher("/resource/jsp/menu.jsp").forward(request, response);

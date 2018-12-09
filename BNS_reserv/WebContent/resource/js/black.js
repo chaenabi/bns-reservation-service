@@ -75,16 +75,14 @@ function getItemList(team_name){
 		$(".team_tn").append("<a class='text-right text-default' style='text-decoration: none !important;'>팀장명 : </a>;");
 		$(".team_tn").append("<a class='team_name' id='team_leader'>"+ data.team_leader +"</a>");
 				
-		$(".itemname").empty();
-		$(".item_c").empty();
 		$("#menu_hide").show();
 
 			if(data.bs_tujang_ring1==0){
 			$("#bs_tujang_ring1").append("<a>투쟁반지 1계열</a>");	
 			$("#bs_tujang_ring1").append("<hr style='margin: 5px 0 8px 0;'>");
 			$("#bs_tujang_ring1_price").append("<a>가격 : </a><a>"+data.bs_tujang_ring1_price+"</a>");
-			$("#bs_tujang_ring1_price").append("<span><label class='checkbox'> <input type='checkbox' value='천독귀걸이(번개)'><i class='icon-checkbox'></i></span>");
-			}
+			$("#bs_tujang_ring1_price").append("<span><label class='checkbox'> <input type='checkbox' name="+ data.bs_tujang_ring1+"'><i class='icon-checkbox'></i></span>");
+			} 
 		
 
 	});
