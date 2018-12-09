@@ -156,32 +156,16 @@
 									<a>천독귀걸이(번개)</a>
 									<hr style="margin: 5px 0 8px 0;">
 								</div>
-								<div class="item_c" >
-									<a> 어트 : </a>
-									<a> 200,000금 </a>					
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독귀걸이(번개)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-									</span>
-									<!-- radio 쓰는법.
+
+								<div class="item_c">
+								<!-- radio 쓰는법. 추가
 									 <label class="radio">
 									  <input type="radio" name="group-radio">
 									  <i class="icon-radio"></i>
 									</label> -->
+
 								</div>
-								<div class="item_c">
-								<a> 노어트 : </a>
-								<a> 300,000금 </a>
-									<span>
-									<label class="checkbox">
-										  <input type="checkbox" value="천독귀걸이(번개)">									
-										  <i class="icon-checkbox"></i>										
-										</label>
-									</span>
-								</div>
-							</div>
+							</div> 
 							<div class="item">
 								<div class="itemname">
 									<a>천독귀걸이(화염)</a>

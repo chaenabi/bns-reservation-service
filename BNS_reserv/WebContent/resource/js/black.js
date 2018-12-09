@@ -65,21 +65,30 @@ function getItemList(team_name){
 			"team_name":team_name
 	 };
 	$.getJSON("../../TeamServ", requestItemList, function(data){
+
 		$(".team_sn").empty();
 		$(".team_tn").empty();	
-		$(".itemname").empty();
-		$(".item").empty();
-		$("#menu_hide").show();
 
-		
-		for(var i=0;i<data.item_name.length;i++){
-			$(".item").append("<div class='itemname'><a>"+ data.item_name[i] + "</a></div");	
-		}
 		$("#item").append("<hr style='margin: 5px 0 8px 0;'>");
 		$(".team_sn").append("<a class='text-right text-default' style='text-decoration: none !important;'>"+data.server+" : </a>;");
 		$(".team_sn").append("<a class='team_name' id='team_name'>"+ data.team_name+"</a>");
 		$(".team_tn").append("<a class='text-right text-default' style='text-decoration: none !important;'>팀장명 : </a>;");
 		$(".team_tn").append("<a class='team_name' id='team_leader'>"+ data.team_leader +"</a>");
+				
+		$(".itemname").empty();
+		$(".item_c").empty();
+		$("#menu_hide").show();
+
+		
+		//for(var i=0;i<data.item_name.length;i++){
+			if(data.item_name==0){
+			$(".itemname").append("<a>마천루반지</a>");	
+			$(".itemname").append("<hr style='margin: 5px 0 8px 0;'>");
+			$(".item_c").append("<a> 어트 : </a><a>200,000금</a>");
+			$(".item_c").append("<span><label class='checkbox'> <input type='checkbox' value='천독귀걸이(번개)'><i class='icon-checkbox'></i></span>");
+			}
+		//}
+		
 
 	});
 }
