@@ -89,40 +89,31 @@ public class TeamDAO extends JDBC {
 
 				pl.put("bns_id", rs.getString("bns_id"));
 				pl.put("server", rs.getString("server"));
-				pl.put("team_name", rs.getString("team_name"));
+				pl.put("team_name", rs.getString("team_name"));			
 				
 				pl.put("bs_tujang_ring1", rs.getString("bs_tujang_ring1"));
-
-				/*
+				
 				pl.put("bs_tujang_ring2", rs.getString("bs_tujang_ring2"));
 				pl.put("bs_tuji_ring1", rs.getString("bs_tuji_ring1"));
 				pl.put("bs_tuji_ring2", rs.getString("bs_tuji_ring2"));
 				pl.put("bs_tuhon_ring1", rs.getString("bs_tuhon_ring1"));
 				pl.put("bs_tuhon_ring2", rs.getString("bs_tuhon_ring2"));
-				
-	
 				pl.put("bs_tujang_earring1", rs.getString("bs_tujang_earring1"));
 				pl.put("bs_tujang_earring2", rs.getString("bs_tujang_earring2"));
 				pl.put("bs_tuji_earring1", rs.getString("bs_tujang_earring1"));
 				pl.put("bs_tuji_earring2", rs.getString("bs_tujang_earring2"));
 				pl.put("bs_tuhon_earring1", rs.getString("bs_tuhon_earring1"));
 				pl.put("bs_tuhon_earring2", rs.getString("bs_tuhon_earring2"));
-				
-		
 				pl.put("bs_tujang_ring3", rs.getString("bs_tujang_ring3"));
 				pl.put("bs_tujang_ring4", rs.getString("bs_tujang_ring4"));
 				pl.put("bs_tuji_ring3", rs.getString("bs_tuji_ring3"));
 				pl.put("bs_tuji_ring4", rs.getString("bs_tuji_ring4"));
 				pl.put("bs_tuhon_ring3", rs.getString("bs_tuhon_ring3"));
 				pl.put("bs_tuhon_ring4", rs.getString("bs_tuhon_ring4"));		
-				
-
 				pl.put("bs_tujang_earring3", rs.getString("bs_tujang_earring3"));
 				pl.put("bs_tujang_earring4", rs.getString("bs_tujang_earring4"));
 				pl.put("bs_tuji_earring3", rs.getString("bs_tuji_earring3"));
-				pl.put("bs_tuji_earring4", rs.getString("bs_tuji_earring4"));
-				
-				
+				pl.put("bs_tuji_earring4", rs.getString("bs_tuji_earring4"));		
 				pl.put("bs_tuhon_earring3", rs.getString("bs_tuhon_earring3"));
 				pl.put("bs_tuhon_earring4", rs.getString("bs_tuhon_earring4"));
 				pl.put("bs_tuhon_ring3", rs.getString("bs_tuhon_ring3"));
@@ -132,38 +123,29 @@ public class TeamDAO extends JDBC {
 				pl.put("gyukgol", rs.getString("gyukgol"));
 				pl.put("bs_gang", rs.getString("bs_gang"));
 
-				*/
 				pl.put("bs_tujang_ring1_price", rs.getString("bs_tujang_ring1_price"));
 				
-				/*
 				pl.put("bs_tujang_ring2_price", rs.getString("bs_tujang_ring2_price"));
 				pl.put("bs_tuji_ring1_price", rs.getString("bs_tuji_ring1_price"));
 				pl.put("bs_tuji_ring2_price", rs.getString("bs_tuji_ring2_price"));
 				pl.put("bs_tuhon_ring1_price", rs.getString("bs_tuhon_ring1_price"));
-				pl.put("bs_tuhon_ring2_price", rs.getString("bs_tuhon_ring2_price"));
-				
-			
+				pl.put("bs_tuhon_ring2_price", rs.getString("bs_tuhon_ring2_price"));			
 				pl.put("bs_tujang_earring1_price", rs.getString("bs_tujang_earring1_price"));
 				pl.put("bs_tujang_earring2_price", rs.getString("bs_tujang_earring2_price"));
 				pl.put("bs_tuji_earring1_price", rs.getString("bs_tujang_earring1_price"));
 				pl.put("bs_tuji_earring2_price", rs.getString("bs_tujang_earring2_price"));
 				pl.put("bs_tuhon_earring1_price", rs.getString("bs_tuhon_earring1_price"));
-				pl.put("bs_tuhon_earring2_price", rs.getString("bs_tuhon_earring2_price"));
-			
+				pl.put("bs_tuhon_earring2_price", rs.getString("bs_tuhon_earring2_price"));		
 				pl.put("bs_tujang_ring3_price", rs.getString("bs_tujang_ring3_price"));
 				pl.put("bs_tujang_ring4_price", rs.getString("bs_tujang_ring4_price"));
 				pl.put("bs_tuji_ring3_price", rs.getString("bs_tuji_ring3_price"));
 				pl.put("bs_tuji_ring4_price", rs.getString("bs_tuji_ring4_price"));
 				pl.put("bs_tuhon_ring3_price", rs.getString("bs_tuhon_ring3_price"));
 				pl.put("bs_tuhon_ring4_price", rs.getString("bs_tuhon_ring4_price"));		
-				
-			
 				pl.put("bs_tujang_earring3_price", rs.getString("bs_tujang_earring3_price"));
 				pl.put("bs_tujang_earring4_price", rs.getString("bs_tujang_earring4_price"));
 				pl.put("bs_tuji_earring3_price", rs.getString("bs_tuji_earring3_price"));
-				pl.put("bs_tuji_earring4_price", rs.getString("bs_tuji_earring4_price"));
-				
-				
+				pl.put("bs_tuji_earring4_price", rs.getString("bs_tuji_earring4_price"));		
 				pl.put("bs_tuhon_earring3_price", rs.getString("bs_tuhon_earring3_price"));
 				pl.put("bs_tuhon_earring4_price", rs.getString("bs_tuhon_earring4_price"));
 				pl.put("bs_tuhon_ring3_price", rs.getString("bs_tuhon_ring3_price"));
@@ -173,9 +155,7 @@ public class TeamDAO extends JDBC {
 				pl.put("gyukgol_price", rs.getString("gyukgol_price"));
 				pl.put("bs_gang_price", rs.getString("bs_gang_price"));
 		
-				*/
-			
-				
+
 				
 				
 				list.add(pl);
