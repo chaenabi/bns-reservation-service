@@ -60,8 +60,11 @@ public class ApplyReservServ extends HttpServlet {
 			//System.out.println("team_leader : "+team_leader);
 			//String test = request.getParameter("bs_tujang_ring1");
 			//System.out.println(test);
-			String bns_id = request.getParameter("bns_id");
-			idao.bs_item_update(bns_id);
+			String bs_tujang_ring1 = request.getParameter("bs_tujang_ring1");
+			System.out.println("session_bns_id : "+ bs_tujang_ring1);
+			String team_leader = request.getParameter("bns_id");
+			System.out.println("team_leader : " +team_leader);
+			idao.bs_item_update(ivo, team_leader);
 			
 			request.getRequestDispatcher("/resource/jsp/menu.jsp").forward(request, response);
 			

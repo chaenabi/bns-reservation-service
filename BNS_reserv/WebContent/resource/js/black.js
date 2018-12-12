@@ -61,32 +61,40 @@ function getTeams(gt){
 //클릭이벤트: 팀 리스트 중 하나 클릭시 해당 팀 기본정보 및 판매아이템목록 출력
 function getItemList(team_name){
 
+	
+	
 	var requestItemList = {"action":"getItemList",	    			
 			"team_name":team_name
 	 };
 	$.getJSON("../../TeamServ", requestItemList, function(data){
-
-		$(".team_sn").empty();
-		$(".team_tn").empty();	
+		
+	
+			
 
 		$("#item").append("<hr style='margin: 5px 0 8px 0;'>");
-		$(".team_sn").append("<a class='text-right text-default' style='text-decoration: none !important;'>"+data.server+" : </a>;");
+		$(".team_sn").append("<a class='text-right text-default' style='text-decoration: none !important;'>"+data.server+" : </a>");
 		$(".team_sn").append("<a class='team_name' id='team_name'>"+ data.team_name+"</a>");
-		$(".team_tn").append("<a class='text-right text-default' style='text-decoration: none !important;'>팀장명 : </a>;");
+		$(".team_tn").append("<a class='text-right text-default' style='text-decoration: none !important;'>팀장명 : </a>");
 		$(".team_tn").append("<a class='team_name' id='team_leader'>"+ data.team_leader +"</a>");
-				
+		$(".team_tn").append("<input type='hidden' id='team_leader' name='bns_id' value='"+data.team_leader+"'>");
 		$("#menu_hide").show();
 
+		//alert(session_bns_id);
 			if(data.bs_tujang_ring1==0){
+				session_bns_id = $('#session_bns_id').attr('value');
+				
 			$("#bs_tujang_ring1").append("<a>투쟁반지 1계열</a>");	
 			$("#bs_tujang_ring1").append("<hr style='margin: 5px 0 8px 0;'>");
 			$("#bs_tujang_ring1_price").append("<a>가격 : </a><a>"+data.bs_tujang_ring1_price+"</a>");
-			$("#bs_tujang_ring1_price").append("<span><label class='checkbox'> <input type='checkbox' name="+ data.bs_tujang_ring1+"'><i class='icon-checkbox'></i></span>");
+			$("#bs_tujang_ring1_price").append("<span><label class='checkbox' for='ck_bs_tujang_ring1'> <input type='checkbox' id='ck_bs_tujang_ring1' name='bs_tujang_ring1' value='"+session_bns_id+"'><i class='icon-checkbox' for='bs_tujang_ring1'></i></span>");
+			
+			
 			} 
-		
 
 	});
 }
+
+
 
 /* 서버 사이드바 열림 애니메이션 (클릭이벤트) */
 var nav = document.getElementById('nav');

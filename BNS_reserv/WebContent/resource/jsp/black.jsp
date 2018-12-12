@@ -7,12 +7,6 @@
 <link rel="import"
 	href="${pageContext.request.contextPath}/resource/jsp/common/header.jsp">
 </head>
-<script type="text/javascript">
-
-
-
-</script>
-
 
 <body>
 	<!--  마천루 비디오 제어 -->
@@ -121,8 +115,8 @@
 
 		</div>
 
-<form action="../../ApplyReservServ?action=item_reserv" method="post">
-	<input type="hidden" value="<%=session.getAttribute("bns_id")%>">
+<form action="../../ApplyReservServ?action=item_reserv" method="post" id="form">
+	<input type="hidden" id="session_bns_id" name="session_bns_id" value="<%=session.getAttribute("bns_id")%>"/>
 		
 		<div class="order" id="order">
 			<div class="menu" id="menu_hide">
@@ -132,6 +126,7 @@
 					<div class="team_sn">
 					</div>
 					<div class="team_tn">
+					
 					</div>
 				</div>
 					<h2 class="text-center text-success" style="margin: 0;">판매 목록</h2>

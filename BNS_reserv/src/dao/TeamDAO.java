@@ -152,7 +152,7 @@ public class TeamDAO extends JDBC {
 				pl.put("ginki_price", rs.getString("ginki_price"));		
 				pl.put("gyukgol_price", rs.getString("gyukgol_price"));
 				pl.put("bs_gang_price", rs.getString("bs_gang_price"));
-				
+
 				list.add(pl);
 			}
 			

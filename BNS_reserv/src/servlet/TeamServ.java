@@ -12,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.commons.beanutils.BeanUtils;
 
@@ -33,7 +34,7 @@ public class TeamServ extends HttpServlet {
 
 				// 내장객체 application, session, out
 				//ServletContext application = this.getServletContext();
-				//HttpSession session = request.getSession();
+				HttpSession session = request.getSession();
 				PrintWriter out = response.getWriter();
 				// 파라미터 인코딩
 				request.setCharacterEncoding("utf-8");
@@ -154,7 +155,7 @@ public class TeamServ extends HttpServlet {
 					String team_name = request.getParameter("team_name");
 					List<HashMap<String,Object>> lis = new ArrayList<>();
 					lis = TeamDAO.getInstance().getItemList(team_name);
-			
+
 					String bs_item1 ="{\"bs_tujang_ring1\":[";
 					int cnt=0;
 					for(HashMap<String,Object> n :lis) {

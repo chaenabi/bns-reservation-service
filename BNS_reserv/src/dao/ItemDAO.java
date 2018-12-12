@@ -42,19 +42,17 @@ public class ItemDAO extends JDBC {
 
 	
 	//아이템 예약 적용 메소드
-	public void bs_item_update(String bns_id) {
-		ItemDTO ivo = new ItemDTO();
+	public void bs_item_update(ItemDTO ivo, String team_leader) {
 		try {
 			connect();
-
 			// 검은 마천루 아이템 등록
-			String bsi_sql = "UPDATE black SET bs_tujang_ring1=?, bs_tujang_ring2=?, bs_tuji_ring1=?, bs_tuji_ring2=?, bs_tuhon_ring1=?, bs_tuhon_ring2=?,"
+			String bsi_sql = "UPDATE black b, team t SET bs_tujang_ring1=?, bs_tujang_ring2=?, bs_tuji_ring1=?, bs_tuji_ring2=?, bs_tuhon_ring1=?, bs_tuhon_ring2=?,"
 					+ "bs_tujang_earring1=?, bs_tujang_earring2=?, bs_tuji_earring1=?, bs_tuji_earring2=?, bs_tuhon_earring1=?, bs_tuhon_earring2=?,"
 					+ "bs_tujang_ring3=?, bs_tujang_ring4=?, bs_tuji_ring3=?, bs_tuji_ring4=?, bs_tuhon_ring3=?, bs_tuhon_ring4=?, bs_tujang_earring3=?, bs_tujang_earring4=?,"
-					+ "bs_tuji_earring3=?, bs_tuji_earring4=?, bs_tuhon_earring3=?, bs_tuhon_earring4=?, hukrin=?, ginki=?, gyukgol=?, bs_gang=?";
+					+ "bs_tuji_earring3=?, bs_tuji_earring4=?, bs_tuhon_earring3=?, bs_tuhon_earring4=?, hukrin=?, ginki=?, gyukgol=?, bs_gang=? WHERE b.bns_id='"+team_leader+"'"; 
 
 			pstmt = conn.prepareStatement(bsi_sql);
-
+			
 			pstmt.setString(1, ivo.getBs_tujang_ring1());
 			pstmt.setString(2, ivo.getBs_tujang_ring2());
 			pstmt.setString(3, ivo.getBs_tuji_ring1());
@@ -84,15 +82,13 @@ public class ItemDAO extends JDBC {
 			pstmt.setString(27, ivo.getGyukgol());
 			pstmt.setString(28, ivo.getBs_gang());
 			pstmt.executeUpdate();
-			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			disconnect();
 		}
 	}
-	
-	
+
 	
 	//마천루 아이템 등록
 	public void bs_addItems(ItemDTO ivo) {
