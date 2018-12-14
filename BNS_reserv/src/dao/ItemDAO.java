@@ -91,7 +91,7 @@ public class ItemDAO extends JDBC {
 
 	
 	//마천루 아이템 등록
-	public void bs_addItems(ItemDTO ivo) {
+	/*public void bs_addItems(ItemDTO ivo) {
 		try {
 			connect();
 
@@ -398,6 +398,6 @@ public class ItemDAO extends JDBC {
 			disconnect();
 		}
 
-	}
+	}*/
 	
 }

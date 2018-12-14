@@ -12,11 +12,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+
 
 import org.apache.commons.beanutils.BeanUtils;
 
-import dao.ItemDAO;
+
 import dao.KakaoDAO;
 import dao.TeamDAO;
 import vo.ItemDTO;
@@ -34,7 +34,7 @@ public class TeamServ extends HttpServlet {
 
 				// 내장객체 application, session, out
 				//ServletContext application = this.getServletContext();
-				HttpSession session = request.getSession();
+				/*HttpSession session = request.getSession();*/
 				PrintWriter out = response.getWriter();
 				// 파라미터 인코딩
 				request.setCharacterEncoding("utf-8");
@@ -44,7 +44,7 @@ public class TeamServ extends HttpServlet {
 				ItemDTO ivo = new ItemDTO();
 				TeamDAO tdao = new TeamDAO();
 				KakaoDAO kdao = new KakaoDAO();
-				ItemDAO idao = new ItemDAO();
+				/*ItemDAO idao = new ItemDAO();*/
 				
 				try {
 					BeanUtils.copyProperties(tvo, request.getParameterMap());
@@ -77,7 +77,7 @@ public class TeamServ extends HttpServlet {
 					ivo.setId(id);
 					ivo.setBns_id(bns_id);
 					
-					String raid_type = request.getParameter("raid_type");
+				/*	String raid_type = request.getParameter("raid_type");
 					if(raid_type.equals("검은 마천루")) {
 						idao.bs_addItems(ivo);
 					} else if (raid_type.equals("소용돌이 사원")) {
@@ -86,14 +86,14 @@ public class TeamServ extends HttpServlet {
 						idao.tw_addItems(ivo);
 					} else if (raid_type.equals("적몽의 비원")) {
 						idao.rd_addItems(ivo);
-					}
+					}*/
 
 
 					// 목록으로 페이지 이동
 					request.getRequestDispatcher("/resource/jsp/menu.jsp").forward(request, response);
 
 				}else if(action.equals("getTeams")) {
-					String go_time = request.getParameter("go_time");
+					/*String go_time = request.getParameter("go_time");
 					List<HashMap<String,Object>> lis = new ArrayList<>();
 					lis = TeamDAO.getInstance().getTeams(go_time);
 					String sq ="{\"team_name\":[";
@@ -109,7 +109,7 @@ public class TeamServ extends HttpServlet {
 					}
 					sq+="]}";
 					System.out.println(sq);
-					out.print(sq);
+					out.print(sq);*/
 
 				} else if(action.equals("getDate")) {
 					String server = request.getParameter("server");
@@ -152,9 +152,9 @@ public class TeamServ extends HttpServlet {
 					out.print(sq);
 					
 				} else if(action.equals("getItemList")) {
-					String team_name = request.getParameter("team_name");
+					/*String team_name = request.getParameter("team_name");*/
 					List<HashMap<String,Object>> lis = new ArrayList<>();
-					lis = TeamDAO.getInstance().getItemList(team_name);
+					/*lis = TeamDAO.getInstance().getItemList(team_name);*/
 
 					String bs_item1 ="{\"bs_tujang_ring1\":[";
 					int cnt=0;

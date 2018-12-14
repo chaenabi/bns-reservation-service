@@ -74,7 +74,7 @@ $("#ck_bns_id").click(e=>{
      				        	})
      		            		
      		            		} else {
-     		        			  $('#notfound_id').val("이미 존재하는 아이디입니다.");
+     		        			  $('#notfound_id').val("이미 등록되어 있는 아이디입니다.");
      	  		            	 //아이디가 존재하지 않을 경우 초록으로, 존재할 경우 빨강으로 처리하는 디자인
      			                    $("#notfound_id").attr('style',  'color:red;font-weight:bold');
      			                   

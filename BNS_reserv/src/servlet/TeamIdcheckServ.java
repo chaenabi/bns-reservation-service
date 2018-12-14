@@ -1,7 +1,6 @@
 package servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,9 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.json.simple.JSONObject;
 
-import dao.KakaoDAO;
 import dao.TeamDAO;
-import vo.KakaoDTO;
 import vo.TeamDTO;
 
 
@@ -31,11 +28,11 @@ public class TeamIdcheckServ extends HttpServlet {
 		// 내장객체 application, session, out
 		//ServletContext application = this.getServletContext();
 		//HttpSession session = request.getSession();
-		PrintWriter out = response.getWriter();
+		//PrintWriter out = response.getWriter();
 		// 파라미터 인코딩
 		request.setCharacterEncoding("utf-8");
-		KakaoDTO kvo = new KakaoDTO();
-		KakaoDAO kdao = new KakaoDAO();	
+		//KakaoDTO kvo = new KakaoDTO();
+		//KakaoDAO kdao = new KakaoDAO();	
 		TeamDTO tvo = new TeamDTO();
 		TeamDAO tdao = new TeamDAO();
 
