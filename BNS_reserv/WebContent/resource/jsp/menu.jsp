@@ -26,7 +26,7 @@
 	<div class="container">
 		<div class="content">
 			<div class="aside">
-				<form action="../../TeamServ" method="post">
+				<form action="${pageContext.request.contextPath}/servlet/TeamServ" method="post">
 				<input type="hidden" name="action" value="showitemlist"/>
 				<%=session.getAttribute("bns_id")%>님 환영합니다. &emsp;
 				
