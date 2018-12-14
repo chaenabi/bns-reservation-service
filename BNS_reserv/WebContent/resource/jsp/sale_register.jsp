@@ -24,7 +24,8 @@
 			src="${pageContext.request.contextPath}/resource/assets/video/vi3.mp4"
 			type="video/mp4">
 	</video>
-	<form action="../../TeamServ?action=team_reg" method="post" id="sale_register">
+	<form action="../../TeamServ" method="post" id="sale_register">
+	<input type="hidden" name="action" value="team_reg"/>
 	<div class="container">
 		<div class="content">
 

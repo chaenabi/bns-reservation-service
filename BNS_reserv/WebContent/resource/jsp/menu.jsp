@@ -1,5 +1,3 @@
-<%@page import="java.util.List"%>
-<%@page import="vo.KakaoDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -30,12 +28,13 @@
 			<div class="aside">
 
 
-
-				<%=session.getAttribute("bns_id")%>님 환영합니다. 
+				<%=session.getAttribute("bns_id")%>님 환영합니다. &emsp;
+				
 				<input type="button"
 					class="btn btn-danger" id="register" style="font-weight: bold;"
-					value="판매등록"
-					onclick="location.href='${pageContext.request.contextPath}/resource/jsp/sale_register.jsp';">
+					value="판매등록" 
+					onclick="location.href='${pageContext.request.contextPath}/resource/jsp/sale_register.jsp';" />
+		
 				&emsp; <input type="button" class="btn btn-default" id="history"
 					style="font-weight: bold;" value="주문내역" /> &emsp; <a
 					href="${pageContext.request.contextPath}/resource/jsp/main.jsp"
@@ -43,8 +42,9 @@
 					src="${pageContext.request.contextPath}/resource/assets/image/Klogout.png"
 					class="kakao-logout-btn" style="width: 100px; height: 100px;" />
 				</a>
-			</div>
 
+			</div>
+	
 
 			<script>
 				//카카오톡 로그아웃.
@@ -61,10 +61,6 @@
 
 			<h1>Blade and Soul</h1>
 			<p>Welcome to BNS BUS reservation guide</p>
-
-
-
-
 
 
 			<br> <br> <input type="button" id="goblack" value="검은 마천루"

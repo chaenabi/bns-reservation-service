@@ -20,7 +20,7 @@ public class TeamDAO extends JDBC {
 	public void addTeam(TeamDTO tvo) {
 		try {
 			connect();
-			String sql = "INSERT INTO teams (id, bns_id, team_name, go_date, go_time, raid_type)" + "VALUES (?, ?, ?, ?, ?, ?)";
+			String sql = "INSERT INTO teams (id, team_leader, team_name, go_date, go_time, raid_type)" + "VALUES (?, ?, ?, ?, ?, ?)";
 
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, tvo.getId());
@@ -30,9 +30,8 @@ public class TeamDAO extends JDBC {
 			pstmt.setString(5, tvo.getGo_time());
 			pstmt.setString(6, tvo.getRaid_type());
 
-			/*int r = */ pstmt.executeUpdate();
-			//System.out.println(r + " 건 등록 완료");
-			// }
+			pstmt.executeUpdate();
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
@@ -70,7 +69,7 @@ public class TeamDAO extends JDBC {
 	public List<HashMap<String,Object>> getDate(String server){
 		List<HashMap<String,Object>> list = new ArrayList<>();
 		HashMap<String,Object> pl;
-		String sql="SELECT DISTINCT t.go_date from teams t, users u where u.server ='"+server+"' and u.bns_id = t.bns_id";
+		String sql="SELECT DISTINCT t.go_date from teams t, users u where u.server ='"+server+"' and u.bns_id = t.team_leader";
 		
 		try {
 			connect();
@@ -99,7 +98,7 @@ public class TeamDAO extends JDBC {
 		public List<HashMap<String,Object>> getTime(String server, String date){
 			List<HashMap<String,Object>> list = new ArrayList<>();
 			HashMap<String,Object> pl;
-			String sql="SELECT DISTINCT t.go_time from teams t, users u where u.server ='"+server+"' and t.go_date ='"+date+"' and u.bns_id = t.bns_id";
+			String sql="SELECT DISTINCT t.go_time from teams t, users u where u.server ='"+server+"' and t.go_date ='"+date+"' and u.bns_id = t.team_leader";
 			
 			try {
 				connect();
@@ -124,7 +123,37 @@ public class TeamDAO extends JDBC {
 			return list;
 		}
 		
+		//시간클릭시 팀명 출력하는 메소드
+		public List<HashMap<String,Object>> getTeams(String go_time){
+			List<HashMap<String,Object>> list = new ArrayList<>();
+			HashMap<String,Object> pl;
+			String sql="select team_name from teams where go_time ='"+go_time+"'";
+			
+			try {
+				connect();
+				pstmt = conn.prepareStatement(sql);
 
+				rs = pstmt.executeQuery();
+				
+				while(rs.next()) {
+					pl = new HashMap<>();
+					
+					pl.put("team_name", rs.getString("team_name"));
+					
+					list.add(pl);
+				}
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				// 연결해제
+				disconnect();
+			}
+			return list;
+		}
+		
+		
+		
 	//팀명 클릭시 아이템리스트 출력하는 메소드
 	/*public List<HashMap<String,Object>> getItemList(String team_name){
 		List<HashMap<String,Object>> list = new ArrayList<>();
@@ -261,35 +290,7 @@ public class TeamDAO extends JDBC {
 
 	
 	
-	//시간클릭시 팀명 출력하는 메소드
-	public List<HashMap<String,Object>> getTeams(String go_time){
-		List<HashMap<String,Object>> list = new ArrayList<>();
-		HashMap<String,Object> pl;
-		String sql="select team_name from teams where go_time ='"+go_time+"'";
-		
-		try {
-			connect();
-			pstmt = conn.prepareStatement(sql);
-
-			rs = pstmt.executeQuery();
-			
-			while(rs.next()) {
-				pl = new HashMap<>();
-				
-				pl.put("team_name", rs.getString("team_name"));
-				
-				list.add(pl);
-			}
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			// 연결해제
-			disconnect();
-		}
-		return list;
-	}*/
-	
+	*/
 		
 }
 

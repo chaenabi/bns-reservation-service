@@ -62,13 +62,13 @@ public class KakaoServ extends HttpServlet {
 			//세션에서 아래의 정보를 사용하기 위하여 setAttribute 한다.
 			String nickname = request.getParameter("nickname");
 			String bns_id = request.getParameter("bns_id");
-			//String id = request.getParameter("id");
+			String id = request.getParameter("id");
 			//String email = request.getParameter("email");
 			
 			
 			session.setAttribute("nickname", nickname);
 			session.setAttribute("bns_id", bns_id);
-			//session.setAttribute("id", id);
+			session.setAttribute("id", id);
 			//session.setAttribute("email", email);
 		
 			

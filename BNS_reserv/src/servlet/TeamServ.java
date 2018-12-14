@@ -53,18 +53,14 @@ public class TeamServ extends HttpServlet {
 				} catch (InvocationTargetException e) {
 					e.printStackTrace();
 				}
-
 				String action = request.getParameter("action");
-				//System.out.println("test");
 				if (action == null) {
-
 					out.print("어떤 form의 action도 넘겨받지 못했습니다.");
-
-				} else if (action.equals("showitemlist")) {
-				
-					idao.showItems();
-					request.getRequestDispatcher("/resource/jsp/sale_register.jsp").forward(request, response);
+				} else if (action.equals("showItemlist")) {
 					
+					idao.showItems();
+					request.getRequestDispatcher("/resource/jsp/sale_register.jsp").forward(request, response);				
+		
 				} else if (action.equals("team_reg")) {
 
 					String id = request.getParameter("id");
@@ -79,7 +75,7 @@ public class TeamServ extends HttpServlet {
 					request.getRequestDispatcher("/resource/jsp/menu.jsp").forward(request, response);
 
 				}else if(action.equals("getTeams")) {
-					/*String go_time = request.getParameter("go_time");
+					String go_time = request.getParameter("go_time");
 					List<HashMap<String,Object>> lis = new ArrayList<>();
 					lis = TeamDAO.getInstance().getTeams(go_time);
 					String sq ="{\"team_name\":[";
@@ -95,7 +91,7 @@ public class TeamServ extends HttpServlet {
 					}
 					sq+="]}";
 					System.out.println(sq);
-					out.print(sq);*/
+					out.print(sq);
 
 				} else if(action.equals("getDate")) {
 					String server = request.getParameter("server");
@@ -138,9 +134,9 @@ public class TeamServ extends HttpServlet {
 					out.print(sq);
 					
 				} else if(action.equals("getItemList")) {
-					/*String team_name = request.getParameter("team_name");*/
+					/*String team_name = request.getParameter("team_name");
 					List<HashMap<String,Object>> lis = new ArrayList<>();
-					/*lis = TeamDAO.getInstance().getItemList(team_name);*/
+					lis = TeamDAO.getInstance().getItemList(team_name);
 
 					String bs_item1 ="{\"bs_tujang_ring1\":[";
 					int cnt=0;
@@ -193,7 +189,7 @@ public class TeamServ extends HttpServlet {
 					bs_item1+="}";
 					System.out.println(bs_item1);
 					out.print(bs_item1);
-					
+					*/
 					
 				
 				} else if(action.equals("purchase_history")) {
@@ -208,7 +204,6 @@ public class TeamServ extends HttpServlet {
 
 					// 뷰 페이지로 포워드
 					// request.getRequestDispatcher("--갈곳이 아직 없는.jsp--").forward(request, response);
-
 				} else {
 					out.print("잘못된 action입니다. 해당 jsp파일의 form action 값을 확인해주세요.");
 				}

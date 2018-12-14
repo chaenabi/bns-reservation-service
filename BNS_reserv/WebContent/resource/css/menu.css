@@ -77,8 +77,9 @@ body > * {
 	border-radius: 30px;
 	display: none;
 	/* 마우스 클릭시 열람가능  */
-	float: right;
-	top: -125px;
+	top: 13%;
+	left: 75%;
+	position: absolute;
 }
 
 .history_reserv hr {
