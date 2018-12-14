@@ -56,7 +56,7 @@ public class TeamServ extends HttpServlet {
 				String action = request.getParameter("action");
 				if (action == null) {
 					out.print("어떤 form의 action도 넘겨받지 못했습니다.");
-				} else if (action.equals("showItemlist")) {
+				} else if (action.equals("showitemlist")) {
 					
 					idao.showItems();
 					request.getRequestDispatcher("/resource/jsp/sale_register.jsp").forward(request, response);				

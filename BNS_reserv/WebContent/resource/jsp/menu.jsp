@@ -26,14 +26,14 @@
 	<div class="container">
 		<div class="content">
 			<div class="aside">
-
-
+				<form action="../../TeamServ" method="post">
+				<input type="hidden" name="action" value="showitemlist"/>
 				<%=session.getAttribute("bns_id")%>님 환영합니다. &emsp;
 				
-				<input type="button"
+				<input type="submit"
 					class="btn btn-danger" id="register" style="font-weight: bold;"
-					value="판매등록" 
-					onclick="location.href='${pageContext.request.contextPath}/resource/jsp/sale_register.jsp';" />
+					value="판매등록" />
+					<%-- onclick="location.href='${pageContext.request.contextPath}/resource/jsp/sale_register.jsp';" /> --%>
 		
 				&emsp; <input type="button" class="btn btn-default" id="history"
 					style="font-weight: bold;" value="주문내역" /> &emsp; <a
@@ -42,7 +42,7 @@
 					src="${pageContext.request.contextPath}/resource/assets/image/Klogout.png"
 					class="kakao-logout-btn" style="width: 100px; height: 100px;" />
 				</a>
-
+			</form>
 			</div>
 	
 

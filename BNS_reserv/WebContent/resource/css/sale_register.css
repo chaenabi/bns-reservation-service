@@ -62,8 +62,8 @@ body {
 }
 
 .hr {
-	margin-top: 1em;
-	margin-bottom: 1em;
+	margin-top: 2%;
+	margin-bottom: 2%;
 	
 }
 
@@ -130,7 +130,7 @@ body {
 }
 
 .mainform  input[type=text], .sales input[type=text] {
-	width: 110px;
+	width: 115px;
 	border: none;
 	border-bottom: 1px solid #fff;
 	background: transparent;

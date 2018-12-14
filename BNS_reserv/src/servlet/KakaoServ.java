@@ -5,13 +5,11 @@ import java.io.PrintWriter;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import javax.servlet.http.HttpSession;
 
 import org.apache.commons.beanutils.BeanUtils;
@@ -63,14 +61,10 @@ public class KakaoServ extends HttpServlet {
 			String nickname = request.getParameter("nickname");
 			String bns_id = request.getParameter("bns_id");
 			String id = request.getParameter("id");
-			//String email = request.getParameter("email");
-			
-			
+				
 			session.setAttribute("nickname", nickname);
 			session.setAttribute("bns_id", bns_id);
 			session.setAttribute("id", id);
-			//session.setAttribute("email", email);
-		
 			
 			// 목록으로 페이지 이동
 			request.getRequestDispatcher("/resource/jsp/menu.jsp").forward(request, response);
