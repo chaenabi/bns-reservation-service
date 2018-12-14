@@ -31,13 +31,13 @@
 
 
 
-				<%=session.getAttribute("nickname")%>
-				님 환영합니다. <input type="button" class="btn btn-danger" id="register"
-					style="font-weight: bold;" value="판매등록"
+				<%=session.getAttribute("bns_id")%>님 환영합니다. 
+				<input type="button"
+					class="btn btn-danger" id="register" style="font-weight: bold;"
+					value="판매등록"
 					onclick="location.href='${pageContext.request.contextPath}/resource/jsp/sale_register.jsp';">
 				&emsp; <input type="button" class="btn btn-default" id="history"
-					style="font-weight: bold;" value="주문내역" />
-				&emsp; <a
+					style="font-weight: bold;" value="주문내역" /> &emsp; <a
 					href="${pageContext.request.contextPath}/resource/jsp/main.jsp"
 					onclick="logoutFromKakao();"> <img
 					src="${pageContext.request.contextPath}/resource/assets/image/Klogout.png"
@@ -81,7 +81,7 @@
 		<div class="history_reserv" id="history_reserv">
 			<div class="history_frame">
 				<div class="history_summary">
-					
+
 					<br>
 					<div class="history_sum">
 						<p>날짜</p>
@@ -100,7 +100,9 @@
 						<p>기공사초보</p>
 					</div>
 					<div style="float: right; padding-right: 10px;">
-					<input type="button" style="border: none; background: black; color: white; border-radius: 5px; text-align:center;  width: 30px;" id="hide_history" Value="X">
+						<input type="button"
+							style="border: none; background: black; color: white; border-radius: 5px; text-align: center; width: 30px;"
+							id="hide_history" Value="X">
 					</div>
 					<hr>
 				</div>
@@ -190,8 +192,7 @@
 		</div>
 
 	</div>
-<script
-	src="${pageContext.request.contextPath}/resource/js/menu.js"></script>
+	<script src="${pageContext.request.contextPath}/resource/js/menu.js"></script>
 </body>
 
 

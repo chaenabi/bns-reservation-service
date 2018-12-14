@@ -10,7 +10,7 @@ import vo.KakaoDTO;
 
 public class KakaoDAO extends JDBC {
 
-	// 카카오톡 정보 전체 조회
+	// 카카오톡 정보 전체 조회 //언제 사용할지는 모름
 	public ArrayList<KakaoDTO> getIdList() {
 		connect();
 		ArrayList<KakaoDTO> datas = new ArrayList<KakaoDTO>();
@@ -45,13 +45,11 @@ public class KakaoDAO extends JDBC {
 		try {
 			connect();
 			pstmt = conn.prepareStatement(sql);
-			//System.out.println("bns_id is null? " +bns_id);
 			pstmt.setString(1, bns_id);
 
 			rs = pstmt.executeQuery();
 			
-			if (rs.next()) {
-				
+			if (rs.next()) {			
 				result = true;
 			} 
 		} catch (Exception e) {
@@ -64,7 +62,6 @@ public class KakaoDAO extends JDBC {
 
 	}
 	
-
 	// bns 아이디가 db에 등록되어 있는지 중복체크2. 
 	//다른 점은 확인 후 아이디가 있으면 아이디를 입력하는 창이 뜨지 않고 넘어가게
 	// 처리하기 위해 만든 메서드라는 점.
@@ -127,7 +124,6 @@ public class KakaoDAO extends JDBC {
 			// "INSERT INTO users (id, bns_id, email, nickname, access_token) VALUES (?, ?,
 			// ?, ?, ?)"
 			// + "ON DUPLICATE KEY UPDATE bns_id=?, email=?, nickname=?, access_token=?";
-			//System.out.println("ID정보를 DB에 적용합니다. : ");
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, kvo.getId());
 			pstmt.setString(2, kvo.getBns_id());
@@ -137,14 +133,13 @@ public class KakaoDAO extends JDBC {
 			pstmt.setString(6, kvo.getServer());
 			// pstmt.setInt(7, kvo.getLog_count());
 
-			/*int r =*/ pstmt.executeUpdate();
-			//System.out.println(r + " 건 등록 완료");
-			// }
+			pstmt.executeUpdate();
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			disconnect();
-			//System.out.println("세션 종료되었습니다.");
+
 		}
 
 	}

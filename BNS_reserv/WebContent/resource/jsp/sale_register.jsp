@@ -115,7 +115,7 @@
 					<!-- 검은마천루 1네임드  -->
 					<div class="sale-item">
 						<div class="sale-item-name">
-							<a>투쟁반지 1계열</a>
+							<a>투쟁반지 1계열 {</a>
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="bs_tujang_ring1" name="bs_tujang_ring1"value="0"> <i

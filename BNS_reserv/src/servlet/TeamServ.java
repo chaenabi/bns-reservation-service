@@ -13,10 +13,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 import org.apache.commons.beanutils.BeanUtils;
 
-
+import dao.ItemDAO;
 import dao.KakaoDAO;
 import dao.TeamDAO;
 import vo.ItemDTO;
@@ -44,7 +43,7 @@ public class TeamServ extends HttpServlet {
 				ItemDTO ivo = new ItemDTO();
 				TeamDAO tdao = new TeamDAO();
 				KakaoDAO kdao = new KakaoDAO();
-				/*ItemDAO idao = new ItemDAO();*/
+				ItemDAO idao = new ItemDAO();
 				
 				try {
 					BeanUtils.copyProperties(tvo, request.getParameterMap());
@@ -61,33 +60,20 @@ public class TeamServ extends HttpServlet {
 
 					out.print("어떤 form의 action도 넘겨받지 못했습니다.");
 
+				} else if (action.equals("showitemlist")) {
+				
+					idao.showItems();
+					request.getRequestDispatcher("/resource/jsp/sale_register.jsp").forward(request, response);
+					
 				} else if (action.equals("team_reg")) {
-					// 팀 등록
-					/*String nickname = request.getParameter("nickname");
-					String id = request.getParameter("id");
-					String email = request.getParameter("email");
-					session.setAttribute("nickname", nickname);
-					session.setAttribute("id", id);
-					session.setAttribute("email", email);*/
+
 					String id = request.getParameter("id");
 					String bns_id = kdao.selectOne(id);
 					tvo.setBns_id(bns_id);
 					tdao.addTeam(tvo);
 					
-					ivo.setId(id);
-					ivo.setBns_id(bns_id);
-					
-				/*	String raid_type = request.getParameter("raid_type");
-					if(raid_type.equals("검은 마천루")) {
-						idao.bs_addItems(ivo);
-					} else if (raid_type.equals("소용돌이 사원")) {
-						idao.vt_addItems(ivo);
-					} else if (raid_type.equals("태천왕릉")) {
-						idao.tw_addItems(ivo);
-					} else if (raid_type.equals("적몽의 비원")) {
-						idao.rd_addItems(ivo);
-					}*/
-
+					tvo.setId(id);
+					tvo.setBns_id(bns_id);
 
 					// 목록으로 페이지 이동
 					request.getRequestDispatcher("/resource/jsp/menu.jsp").forward(request, response);

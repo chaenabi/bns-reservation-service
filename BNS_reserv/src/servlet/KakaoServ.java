@@ -57,26 +57,24 @@ public class KakaoServ extends HttpServlet {
 
 		} else if (action.equals("kakao-login")) {
 			// 로그인 시 개인정보 DB 등록 처리
-			//System.out.println("kvo.getBns_id(): "+kvo.getBns_id());
-			//System.out.println("kvo.getId(): "+kvo.getId());
-		
-			
 			kdao.insertID(kvo);
 			
 			//세션에서 아래의 정보를 사용하기 위하여 setAttribute 한다.
 			String nickname = request.getParameter("nickname");
-			String id = request.getParameter("id");
-			String email = request.getParameter("email");
 			String bns_id = request.getParameter("bns_id");
+			//String id = request.getParameter("id");
+			//String email = request.getParameter("email");
+			
 			
 			session.setAttribute("nickname", nickname);
-			session.setAttribute("id", id);
-			session.setAttribute("email", email);
 			session.setAttribute("bns_id", bns_id);
-			// 목록으로 페이지 이동
+			//session.setAttribute("id", id);
+			//session.setAttribute("email", email);
+		
 			
+			// 목록으로 페이지 이동
 			request.getRequestDispatcher("/resource/jsp/menu.jsp").forward(request, response);
-
+	
 		} else if (action.equals("list")) {
 			// 가입된 데이터 전체 조회
 			ArrayList<KakaoDTO> datas = kdao.getIdList();
