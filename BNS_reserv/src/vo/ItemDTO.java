@@ -4,6 +4,7 @@ public class ItemDTO {
 
 	private String item_name;
 	private String item_type;
+	private String boss_level;
 	
 	public String getItem_name() {
 		return item_name;
@@ -17,11 +18,16 @@ public class ItemDTO {
 	public void setItem_type(String item_type) {
 		this.item_type = item_type;
 	}
-	
+	public String getBoss_level() {
+		return boss_level;
+	}
+	public void setBoss_level(String boss_level) {
+		this.boss_level = boss_level;
+	}
 	@Override
 	public String toString() {
-		return "ItemDTO [item_name=" + item_name + ", item_type=" + item_type + "]";
+		return "ItemDTO [item_name=" + item_name + ", item_type=" + item_type + ", boss_level=" + boss_level + "]";
 	}
-
+	
 	
 }

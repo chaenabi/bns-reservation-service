@@ -77,9 +77,13 @@
 									
 									
 									
-					<div class="team_raid"> 레이드 종류 : 검은 마천루 <label class="radio"> <input
-						type="radio" name="raid_type" id="black" value="검은 마천루" > <i class="icon-radio"></i>
-					</label> 소용돌이 사원 <label class="radio"> <input type="radio"
+					<div class="team_raid">
+					레이드 종류 : 검은 마천루
+					<label class="radio">
+					<input type="radio" name="raid_type" id="black" value="검은 마천루" > <i class="icon-radio"></i>
+					</label>
+					
+					 소용돌이 사원 <label class="radio"> <input type="radio"
 						name="raid_type" id="vortex"  value="소용돌이 사원"  required> <i class="icon-radio"></i>
 					</label> 태천왕릉 <label class="radio" > <input type="radio"
 						name="raid_type"  id="twilight"  value="태천왕릉" required> <i class="icon-radio"></i>

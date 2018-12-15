@@ -158,6 +158,8 @@ $("#go_date").datetimepicker({
 }
 
 
+
+
 // $('#black').trigger('click'); }); // 페이지 오픈시 검은마천루 radio 자동선택
 // 체크박스 금액 표시기
 $(document).ready(function() {

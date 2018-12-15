@@ -9,14 +9,14 @@ import vo.ItemDTO;
 
 public class ItemDAO extends JDBC {
 
-	//Items 테이블의 아이템목록과, (레이드 기준에 따른) 아이템구분값을 모두 가지고 오는 메소드.
-	public ArrayList<ItemDTO> showItems() {
+	// 레이드 타입에 따라 Items 테이블의 아이템목록을 가지고 오는 메소드
+	public ArrayList<ItemDTO> showItems(String item_type) {
 		
 		connect();
 		
 		ArrayList<ItemDTO> items = new ArrayList<ItemDTO>();		
-		
-		String sql = "select item_name, item_type from items";
+
+		String sql = "select item_name from items where item_type = '"+item_type+"'";
 		try {
 			pstmt = conn.prepareStatement(sql);
 			ResultSet rs = pstmt.executeQuery();
@@ -24,9 +24,7 @@ public class ItemDAO extends JDBC {
 			while(rs.next()) {
 	
 				ItemDTO ivo = new ItemDTO();
-				ivo.setItem_name(rs.getString("item_name"));
-				ivo.setItem_type(rs.getString("item_type"));
-				
+				ivo.setItem_name(rs.getString("item_name"));				
 				items.add(ivo);
 			}
 		} catch (SQLException e) {
@@ -39,6 +37,12 @@ public class ItemDAO extends JDBC {
 
 	}
 }
+
+
+
+
+
+
 	/*//주문내역 보기. 아직 미구현 
 	public ArrayList<ItemDTO> getPurchasehistory() {
 		

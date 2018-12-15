@@ -21,7 +21,7 @@ import dao.TeamDAO;
 import vo.ItemDTO;
 import vo.TeamDTO;
 
-@WebServlet("/TeamServ")
+@WebServlet("/servlet/TeamServ")
 public class TeamServ extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -57,8 +57,9 @@ public class TeamServ extends HttpServlet {
 				if (action == null) {
 					out.print("어떤 form의 action도 넘겨받지 못했습니다.");
 				} else if (action.equals("showitemlist")) {
+					String item_type = request.getParameter("raid_type");
+					idao.showItems(item_type);
 					
-					idao.showItems();
 					request.getRequestDispatcher("/resource/jsp/sale_register.jsp").forward(request, response);				
 		
 				} else if (action.equals("team_reg")) {
