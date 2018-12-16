@@ -70,12 +70,10 @@ $("#btn_submit").click(e=>{
 });
 
 
-$("input[name=bs_1st]").change(function(){
+$("#bs_1st, #bs_2nd, #bs_3rd, #bs_4th").change(function(){
 
 	var item_type = $("input[name=raid_type").val();
 	var boss_level = $(this).val();
-	
-	
 
 		var request_itemlist= {"action":"showitemlist",	    			
 				"item_type":item_type,
@@ -83,23 +81,25 @@ $("input[name=bs_1st]").change(function(){
 				}
 
 		$.getJSON("../../ItemServ", request_itemlist, function(data){
-			
-			alert("통신 확인");
-			
-			
-			/*
-			 * for(var i=0;i<data.item_name.length;i++){
-			 * 
-			 * alert("통신 성공"); alert(data.item_name); var divid= "time" + i;
-			 * timeList = "<div id='"+ divid + "' class='go_time'
-			 * onclick='getTeams("+ '"' + data.go_time[i] + '"'+");'
-			 * style='cursor: pointer;'><span>"+data.go_time[i]+"</span></div>";
-			 * htmlTag= htmlTag +timeList; }
-			 */
-			// $('#timestamp').html(htmlTag);
-		});
-	
 
+			$('.sale-item-name').empty();
+
+			  for(var i=0;i<data.item_name.length;i++){
+			console.log(data.item_name[i]);
+			htmlTag = ''; 
+			itemList = "<a>"+ data.item_name[i] +"</a>";
+			  text=htmlTag+itemList;
+			  $('.sale-item-name:eq('+i+')').html(text);
+			 }
+		
+			  
+		
+	
+		
+			  	 
+		 });
+	
+		
 
 
     

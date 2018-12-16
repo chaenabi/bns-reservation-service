@@ -51,14 +51,13 @@ public class ItemServ extends HttpServlet {
 		sq+="]}";
 		System.out.println(sq);
 		out.print(sq);
+		
 		}
 		
 		
 
 
-		
-		request.getRequestDispatcher("/resource/jsp/sale_register.jsp").forward(request, response);				
-		
+		out.flush();
 		
 		
 		

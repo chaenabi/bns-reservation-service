@@ -88,6 +88,7 @@ public class TeamServ extends HttpServlet {
 					sq+="]}";
 					System.out.println(sq);
 					out.print(sq);
+					out.flush();
 
 				} else if(action.equals("getDate")) {
 					String server = request.getParameter("server");
