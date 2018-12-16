@@ -102,25 +102,25 @@
 					<div class="named_class">
 						<a class="named"> 천독룡 
 							<label class="checkbox">
-								<input type="checkbox" id="bs_1st" name="bs_1st"value="0"> <i class="icon-checkbox"></i>
+								<input type="checkbox" id="bs_1st" name="bs_1st"value="1"> <i class="icon-checkbox"></i>
 							</label> </a>
 					</div>
 					<div class="named_class">
 					<a class="named2"> 초열혹한검
 							<label class="checkbox">
-								<input type="checkbox" id="vt_1st" name="vt_1st"value="0"> <i class="icon-checkbox"></i>
+								<input type="checkbox" id="vt_1st" name="vt_1st"value="1"> <i class="icon-checkbox"></i>
 							</label> </a>
 					</div>
 					<div class="named_class">
 					<a class="named3"> 결계천수 
 							<label class="checkbox">
-								<input type="checkbox" id="tw_1st" name="tw_1st"value="0"> <i class="icon-checkbox"></i>
+								<input type="checkbox" id="tw_1st" name="tw_1st"value="1"> <i class="icon-checkbox"></i>
 							</label> </a>	
 					</div>
 					<div class="named_class">
 					<a class="named4"> 기미접수 
 							<label class="checkbox">
-								<input type="checkbox" id="rd_1st" name="rd_1st"value="0"> <i class="icon-checkbox"></i>
+								<input type="checkbox" id="rd_1st" name="rd_1st"value="1"> <i class="icon-checkbox"></i>
 							</label> </a>	
 					</div>
 					
@@ -376,23 +376,23 @@
 					
 					<div class="named_class">
 					<a class="named"> 사안장군 <label class="checkbox">
-								<input type="checkbox" id="bs_2nd" name="bs_2nd"value="0"> <i class="icon-checkbox"></i>
+								<input type="checkbox" id="bs_2nd" name="bs_2nd"value="2"> <i class="icon-checkbox"></i>
 							</label> </a>
 					</div>
 					<div class="named_class">
 					<a class="named2"> 초마령 <label class="checkbox">
-								<input type="checkbox" id="vt_2nd" name="vt_2nd"value="0"> <i class="icon-checkbox"></i>
+								<input type="checkbox" id="vt_2nd" name="vt_2nd"value="2"> <i class="icon-checkbox"></i>
 							</label></a>
 					</div>
 					
 					<div class="named_class">
 					<a class="named3"> 섬천대장군<label class="checkbox">
-								<input type="checkbox" id="tw_2nd" name="tw_2nd"value="0"> <i class="icon-checkbox"></i>
+								<input type="checkbox" id="tw_2nd" name="tw_2nd"value="2"> <i class="icon-checkbox"></i>
 							</label> </a>
 					</div>
 					<div class="named_class">	
 					<a class="named4"> 진교악<label class="checkbox">
-								<input type="checkbox" id="rd_2nd" name="rd_2nd"value="0"> <i class="icon-checkbox"></i>
+								<input type="checkbox" id="rd_2nd" name="rd_2nd"value="2"> <i class="icon-checkbox"></i>
 							</label> </a>	
 					</div>
 					
@@ -651,22 +651,22 @@
 
 					<div class="named_class">
 					<a class="named">모순장군<label class="checkbox">
-								<input type="checkbox" id="bs_3rd" name="bs_3rd"value="0"> <i class="icon-checkbox"></i>
+								<input type="checkbox" id="bs_3rd" name="bs_3rd"value="3"> <i class="icon-checkbox"></i>
 							</label> </a>
 					</div>
 					<div class="named_class">
 					<a class="named2">적패왕<label class="checkbox">
-								<input type="checkbox" id="vt_3rd" name="vt_3rd"value="0"> <i class="icon-checkbox"></i>
+								<input type="checkbox" id="vt_3rd" name="vt_3rd"value="3"> <i class="icon-checkbox"></i>
 							</label></a>
 					</div>
 					<div class="named_class">
 					<a class="named3">폭염갈기<label class="checkbox">
-								<input type="checkbox" id="tw_3rd" name="tw_3rd"value="0"> <i class="icon-checkbox"></i>
+								<input type="checkbox" id="tw_3rd" name="tw_3rd"value="3"> <i class="icon-checkbox"></i>
 							</label> </a>
 					</div>
 					<div class="named_class">	
 					<a class="named4">사화마녀<label class="checkbox">
-								<input type="checkbox" id="rd_3rd" name="rd_3rd"value="0"> <i class="icon-checkbox"></i>
+								<input type="checkbox" id="rd_3rd" name="rd_3rd"value="3"> <i class="icon-checkbox"></i>
 							</label></a>		
 					</div>
 				
@@ -1094,17 +1094,17 @@
 					
 					<div class="named_class">
 					<a class="named"> 촉마왕 <label class="checkbox">
-								<input type="checkbox" id="bs_4th" name="bs_4th"value="0"> <i class="icon-checkbox"></i>
+								<input type="checkbox" id="bs_4th" name="bs_4th"value="4"> <i class="icon-checkbox"></i>
 							</label></a>
 					</div>
 					<div class="named_class">
 					<a class="named2"> 흑풍마녀<label class="checkbox">
-								<input type="checkbox" id="vt_4th" name="vt_4th"value="0"> <i class="icon-checkbox"></i>
+								<input type="checkbox" id="vt_4th" name="vt_4th"value="4"> <i class="icon-checkbox"></i>
 							</label></a>
 					</div>
 					<div class="named_class">
 					<a class="named3"> 태천명왕<label class="checkbox">
-								<input type="checkbox" id="tw_4th" name="tw_4th"value="0"> <i class="icon-checkbox"></i>
+								<input type="checkbox" id="tw_4th" name="tw_4th"value="4"> <i class="icon-checkbox"></i>
 							</label> </a>	
 					</div>
 					

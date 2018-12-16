@@ -28,14 +28,15 @@ public class ItemServ extends HttpServlet {
 		//ItemDTO ivo = new ItemDTO();
 		//ItemDAO idao = new ItemDAO();
 		PrintWriter out = response.getWriter();
-		request.setCharacterEncoding("utf-8");
 		String action = request.getParameter("action");
 		String item_type = request.getParameter("item_type");
-		System.out.println(item_type);
+		String boss_level = request.getParameter("boss_level");
+		System.out.println("item_type : "+ item_type);
+		System.out.println("boss_level : " + boss_level);
 		
 		if (action.equals("showitemlist")) {
 		List<HashMap<String,Object>> lis = new ArrayList<>();
-		lis = ItemDAO.getInstance().showItems(item_type);
+		lis = ItemDAO.getInstance().showItems(item_type, boss_level);
 		String sq ="{\"item_name\":[";
 		int cnt=0;
 		for(HashMap<String,Object> n :lis) {

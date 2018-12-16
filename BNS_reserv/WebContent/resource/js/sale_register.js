@@ -69,17 +69,24 @@ $("#btn_submit").click(e=>{
 	} 
 });
 
-$("input[name=raid_type]").change(function(){
 
-	var item_type = $(this).val();
+$("input[name=bs_1st]").change(function(){
 
+	var item_type = $("input[name=raid_type").val();
+	var boss_level = $(this).val();
+	
+	
 
 		var request_itemlist= {"action":"showitemlist",	    			
-				"item_type":item_type}
+				"item_type":item_type,
+				"boss_level":boss_level
+				}
 
 		$.getJSON("../../ItemServ", request_itemlist, function(data){
-			// var htmlTag = '';
+			
 			alert("통신 확인");
+			
+			
 			/*
 			 * for(var i=0;i<data.item_name.length;i++){
 			 * 

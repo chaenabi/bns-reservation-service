@@ -7,7 +7,6 @@ import java.util.HashMap;
 import java.util.List;
 
 import common.JDBC;
-import vo.ItemDTO;
 
 public class ItemDAO extends JDBC {
 
@@ -18,7 +17,7 @@ public class ItemDAO extends JDBC {
 	
 	
 	// 레이드 타입에 따라 Items 테이블의 아이템목록을 가지고 오는 메소드
-	public List<HashMap<String,Object>> showItems(String item_type) {
+	public List<HashMap<String,Object>> showItems(String item_type, String boss_level) {
 
 		
 	
@@ -26,7 +25,7 @@ public class ItemDAO extends JDBC {
 		HashMap<String,Object> pl;
 		connect();
 			
-		String sql = "select item_name from items where item_type = '"+item_type+"'";
+		String sql = "select item_name from items where item_type = '"+item_type+"' and boss_level ='"+boss_level+"'";
 		try {
 			pstmt = conn.prepareStatement(sql);
 			ResultSet rs = pstmt.executeQuery();
