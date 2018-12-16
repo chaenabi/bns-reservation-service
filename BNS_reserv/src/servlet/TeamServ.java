@@ -56,14 +56,9 @@ public class TeamServ extends HttpServlet {
 				String action = request.getParameter("action");
 				if (action == null) {
 					out.print("어떤 form의 action도 넘겨받지 못했습니다.");
-				} else if (action.equals("showitemlist")) {
-					String item_type = request.getParameter("raid_type");
-					idao.showItems(item_type);
-					
-					request.getRequestDispatcher("/resource/jsp/sale_register.jsp").forward(request, response);				
-		
+				
 				} else if (action.equals("team_reg")) {
-
+					
 					String id = request.getParameter("id");
 					String bns_id = kdao.selectOne(id);
 					tvo.setBns_id(bns_id);

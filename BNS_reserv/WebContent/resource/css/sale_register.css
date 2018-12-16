@@ -93,7 +93,24 @@ body {
 	color: #000;
 }
 
-.sale-item, .sale-item2, .sale-item3, .sale-item4 {
+.bs_item_1st {
+	display: none;
+	float: left;
+	margin-top: 2px;
+	margin-bottom: 5px;
+	text-align: left;
+}
+
+.bs-sale-item1, .bs-sale-item2, .bs-sale-item3, .bs-sale-item4 {
+	width: 50%;
+	display: none; 
+	float: left;
+	margin-top: 2px;
+	margin-bottom: 5px;
+	text-align: left;
+}
+
+.vt-sale-item1, .vt-sale-item2, .vt-sale-item3, .vt-sale-item4 {
 	width: 50%;
 	display: none;
 	float: left;
@@ -101,6 +118,26 @@ body {
 	margin-bottom: 5px;
 	text-align: left;
 }
+
+.tw-sale-item1, .tw-sale-item2, .tw-sale-item3, .tw-sale-item4 {
+	width: 50%;
+	display: none;
+	float: left;
+	margin-top: 2px;
+	margin-bottom: 5px;
+	text-align: left;
+}
+
+.rd-sale-item1, .rd-sale-item2, .rd-sale-item3 {
+	width: 50%;
+	display: none;
+	float: left;
+	margin-top: 2px;
+	margin-bottom: 5px;
+	text-align: left;
+}
+
+
 
 .sale-item-name a {
 	color: #000;

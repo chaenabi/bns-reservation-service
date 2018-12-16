@@ -16,8 +16,8 @@ $("#multi_ck").click(e=>{
      		            contentType: "application/json; charset=UTF-8",
      		            timeout: 3000,
      		            success : function(data) {
-     		            		//alert(JSON.stringify(data));
-     		            		//alert(data.result);
+     		            		// alert(JSON.stringify(data));
+     		            		// alert(data.result);
      		            		if($.trim(data.result)  ==  "false") {
 		     		            		alert("사용할 수 있는 팀명입니다.");
 		     		            		$('#team_name').attr("readonly", true);		
@@ -69,8 +69,40 @@ $("#btn_submit").click(e=>{
 	} 
 });
 
+$("input[name=raid_type]").change(function(){
+
+	var item_type = $(this).val();
+
+
+		var request_itemlist= {"action":"showitemlist",	    			
+				"item_type":item_type}
+
+		$.getJSON("../../ItemServ", request_itemlist, function(data){
+			// var htmlTag = '';
+			alert("통신 확인");
+			/*
+			 * for(var i=0;i<data.item_name.length;i++){
+			 * 
+			 * alert("통신 성공"); alert(data.item_name); var divid= "time" + i;
+			 * timeList = "<div id='"+ divid + "' class='go_time'
+			 * onclick='getTeams("+ '"' + data.go_time[i] + '"'+");'
+			 * style='cursor: pointer;'><span>"+data.go_time[i]+"</span></div>";
+			 * htmlTag= htmlTag +timeList; }
+			 */
+			// $('#timestamp').html(htmlTag);
+		});
+	
+
+
+
+    
+
+});
+
 
 // $(document).ready(function () {/// 페이지 오픈시 검은마천루 radio 자동선택
+// 던전별 네임드 체크박스 표시기
+
 $('input[type="radio"]').click(function() {
 
 	if ($(this).attr("value") == "검은 마천루") {
@@ -82,13 +114,20 @@ $('input[type="radio"]').click(function() {
 		$(".named4").hide();
 		$(".named").show('fast');
 
-		$(".sale-item2").hide();
-		$(".sale-item3").hide();
-		$(".sale-item4").hide();
-		$(".sale-item").show('fast');
-
-		$('.btn_submit').show('slow');
-
+		$('.vt-sale-item1').hide();
+		$('.vt-sale-item2').hide();
+		$('.vt-sale-item3').hide();
+		$('.vt-sale-item4').hide();
+		
+		$('.tw-sale-item1').hide();
+		$('.tw-sale-item2').hide();
+		$('.tw-sale-item3').hide();
+		$('.tw-sale-item4').hide();
+		
+		$('.rd-sale-item1').hide();
+		$('.rd-sale-item2').hide();
+		$('.rd-sale-item3').hide();
+		
 	} else if ($(this).attr("value") == "소용돌이 사원") {
 		$('.info').hide();
 		$('.info2').hide();
@@ -98,13 +137,21 @@ $('input[type="radio"]').click(function() {
 		$(".named4").hide();
 		$(".named2").show('fast');
 
-		$(".sale-item").hide();
-		$(".sale-item3").hide();
-		$(".sale-item4").hide();
-		$(".sale-item2").show('fast');
-
-		$('.btn_submit').show('slow');
-
+		$('.bs-sale-item1').hide();
+		$('.bs-sale-item2').hide();
+		$('.bs-sale-item3').hide();
+		$('.bs-sale-item4').hide();
+		
+		$('.tw-sale-item1').hide();
+		$('.tw-sale-item2').hide();
+		$('.tw-sale-item3').hide();
+		$('.tw-sale-item4').hide();
+		
+		$('.rd-sale-item1').hide();
+		$('.rd-sale-item2').hide();
+		$('.rd-sale-item3').hide();
+		
+		
 	} else if ($(this).attr("value") == "태천왕릉") {
 		$('.info').hide();
 		$('.info2').hide();
@@ -113,16 +160,23 @@ $('input[type="radio"]').click(function() {
 		$(".named2").hide();
 		$(".named4").hide();
 		$(".named3").show('fast');
-
-		$(".sale-item").hide();
-		$(".sale-item2").hide();
-		$(".sale-item4").hide();
-		$(".sale-item3").show('fast');
-
-		$('.btn_submit').show('slow');
-	}
-
-	else if ($(this).attr("value") == "적몽의 비원") {
+		
+		$('.bs-sale-item1').hide();
+		$('.bs-sale-item2').hide();
+		$('.bs-sale-item3').hide();
+		$('.bs-sale-item4').hide();
+		
+		$('.vt-sale-item1').hide();
+		$('.vt-sale-item2').hide();
+		$('.vt-sale-item3').hide();
+		$('.vt-sale-item4').hide();
+		
+		$('.rd-sale-item1').hide();
+		$('.rd-sale-item2').hide();
+		$('.rd-sale-item3').hide();
+		
+	
+	} else if ($(this).attr("value") == "적몽의 비원") {
 		$('.info').hide();
 		$('.info2').hide();
 
@@ -130,13 +184,22 @@ $('input[type="radio"]').click(function() {
 		$(".named2").hide();
 		$(".named3").hide();
 		$(".named4").show('fast');
-
-		$(".sale-item").hide();
-		$(".sale-item2").hide();
-		$(".sale-item3").hide();
-		$(".sale-item4").show('fast');
-
-		$('.btn_submit').show('slow');
+		
+		$('.bs-sale-item1').hide();
+		$('.bs-sale-item2').hide();
+		$('.bs-sale-item3').hide();
+		$('.bs-sale-item4').hide();
+		
+		$('.vt-sale-item1').hide();
+		$('.vt-sale-item2').hide();
+		$('.vt-sale-item3').hide();
+		$('.vt-sale-item4').hide();
+		
+		$('.tw-sale-item1').hide();
+		$('.tw-sale-item2').hide();
+		$('.tw-sale-item3').hide();
+		$('.tw-sale-item4').hide();
+		
 	}
 
 	else {
@@ -144,6 +207,163 @@ $('input[type="radio"]').click(function() {
 	}
 
 });
+// 네임드별 체크박스 활성화 유무
+// 검은 마천루 1~4네임드 체크박스
+$('#bs_1st').change(function() {
+	if ($("#bs_1st").is(":checked")) {
+	$('.bs-sale-item1').show();
+	
+	} else {
+		$(".bs-sale-item1").hide('fast');
+
+	}
+});
+
+$('#bs_2nd').change(function() {
+	if ($("#bs_2nd").is(":checked")) {
+	$('.bs-sale-item2').show();
+	
+	} else {
+		$(".bs-sale-item2").hide('fast');
+
+	}
+});
+
+$('#bs_3rd').change(function() {
+	if ($("#bs_3rd").is(":checked")) {
+	$('.bs-sale-item3').show();
+	
+	} else {
+		$(".bs-sale-item3").hide('fast');
+
+	}
+});
+
+$('#bs_4th').change(function() {
+	if ($("#bs_4th").is(":checked")) {
+	$('.bs-sale-item4').show();
+
+	} else {
+		$(".bs-sale-item4").hide('fast');
+
+	}
+});
+
+// 소용돌이 사원 1~4네임드 체크박스
+$('#vt_1st').change(function() {
+	if ($("#vt_1st").is(":checked")) {
+	$('.vt-sale-item1').show();
+	
+	} else {
+		$(".vt-sale-item1").hide('fast');
+
+	}
+});
+
+$('#vt_2nd').change(function() {
+	if ($("#vt_2nd").is(":checked")) {
+	$('.vt-sale-item2').show();
+	
+	} else {
+		$(".vt-sale-item2").hide('fast');
+
+	}
+});
+
+$('#vt_3rd').change(function() {
+	if ($("#vt_3rd").is(":checked")) {
+	$('.vt-sale-item3').show();
+
+	} else {
+		$(".vt-sale-item3").hide('fast');
+
+	}
+});
+
+$('#vt_4th').change(function() {
+	if ($("#vt_4th").is(":checked")) {
+	$('.vt-sale-item4').show();
+
+	} else {
+		$(".vt-sale-item4").hide('fast');
+
+	}
+});
+
+//태천왕릉 1~4네임드 체크박스
+$('#tw_1st').change(function() {
+	if ($("#tw_1st").is(":checked")) {
+	$('.tw-sale-item1').show();
+	
+	} else {
+		$(".tw-sale-item1").hide('fast');
+
+	}
+});
+
+$('#tw_2nd').change(function() {
+	if ($("#tw_2nd").is(":checked")) {
+	$('.tw-sale-item2').show();
+	
+	} else {
+		$(".tw-sale-item2").hide('fast');
+
+	}
+});
+
+$('#tw_3rd').change(function() {
+	if ($("#tw_3rd").is(":checked")) {
+	$('.tw-sale-item3').show();
+
+	} else {
+		$(".tw-sale-item3").hide('fast');
+
+	}
+});
+
+$('#tw_4th').change(function() {
+	if ($("#tw_4th").is(":checked")) {
+	$('.tw-sale-item4').show();
+
+	} else {
+		$(".tw-sale-item4").hide('fast');
+
+	}
+});
+
+//적몽의 비원 1~3네임드 체크박스
+$('#rd_1st').change(function() {
+	if ($("#rd_1st").is(":checked")) {
+	$('.rd-sale-item1').show();
+	
+	} else {
+		$(".rd-sale-item1").hide('fast');
+
+	}
+});
+
+$('#rd_2nd').change(function() {
+	if ($("#rd_2nd").is(":checked")) {
+	$('.rd-sale-item2').show();
+	
+	} else {
+		$(".rd-sale-item2").hide('fast');
+
+	}
+});
+
+$('#rd_3rd').change(function() {
+	if ($("#rd_3rd").is(":checked")) {
+	$('.rd-sale-item3').show();
+
+	} else {
+		$(".rd-sale-item3").hide('fast');
+
+	}
+});
+
+
+// 데이트타임피커
 function showdatetime() {
 $("#go_date").datetimepicker({
 	locale : 'ko',
@@ -156,6 +376,19 @@ $("#go_date").datetimepicker({
 	sideBySide : true
 });
 }
+
+// 팀등록하기 서브밋 버튼
+$(".writeprice").on("propertychange change keyup paste input", function() {
+    var currentVal = $(this).val();
+    if($.trim(currentVal) != "") {
+        $('#btn_submit').show();
+    } else {
+    	   $('#btn_submit').hide();
+    }
+});
+
+   
+	
 
 
 
