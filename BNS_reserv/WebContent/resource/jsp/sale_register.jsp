@@ -128,8 +128,7 @@
 					<!-- 검은마천루 1네임드  -->
 				
 					<div class="bs-sale-item1">
-						<div class="sale-item-name">
-							<a>투쟁반지 1계열</a>
+						<div class="sale-item-name-bs1">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="bs_tujang_ring1" name="bs_tujang_ring1"value="0"> <i
@@ -139,8 +138,7 @@
 					</div>
 
 					<div class="bs-sale-item1">
-						<div class="sale-item-name">
-							<a>투쟁반지 2계열</a>
+						<div class="sale-item-name-bs1">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="bs_tujang_ring2" name="bs_tujang_ring2" value="0"> <i
@@ -149,8 +147,8 @@
 					</div>
 					
 					<div class="bs-sale-item1">
-						<div class="sale-item-name">
-							<a>투지반지 1계열</a>
+						<div class="sale-item-name-bs1">
+
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="bs_tuji_ring1"  name="bs_tuji_ring1" value="0"> <i
@@ -159,8 +157,7 @@
 					</div>
 
 					<div class="bs-sale-item1">
-						<div class="sale-item-name">
-							<a>투지반지 2계열</a>
+						<div class="sale-item-name-bs1">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="bs_tuji_ring2" name="bs_tuji_ring2" value="0"> <i
@@ -169,8 +166,7 @@
 					</div>
 					
 					<div class="bs-sale-item1">
-						<div class="sale-item-name">
-							<a>투혼반지 1계열</a>
+						<div class="sale-item-name-bs1">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="bs_tuhon_ring1"  name="bs_tuhon_ring1" value="0"> <i
@@ -179,8 +175,7 @@
 					</div>
 
 					<div class="bs-sale-item1">
-						<div class="sale-item-name">
-							<a>투혼반지 2계열</a>
+						<div class="sale-item-name-bs1">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="bs_tuhon_ring2"name="bs_tuhon_ring2" value="0"> <i
@@ -191,8 +186,7 @@
 
 					<!-- 소용돌이 사원 1네임드 -->
 					<div class="vt-sale-item1">
-						<div class="sale-item-name">
-							<a>곤륜비공패 투쟁</a>
+						<div class="sale-item-name-vt1">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="vt_gon_tujang"name="vt_gon_tujang" value="0"> <i
@@ -201,8 +195,7 @@
 					</div>
 
 					<div class="vt-sale-item1">
-						<div class="sale-item-name">
-							<a>선륜비공패 투쟁</a>
+						<div class="sale-item-name-vt1">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="vt_sun_tujang"name="vt_sun_tujang" value="0"> <i
@@ -211,8 +204,7 @@
 					</div>
 							
 					<div class="vt-sale-item1">
-						<div class="sale-item-name">
-							<a>곤륜비공패 투지</a>
+						<div class="sale-item-name-vt1">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="vt_gon_tuji"name="vt_gon_tuji" value="0"> <i
@@ -221,8 +213,7 @@
 					</div>
 					
 					<div class="vt-sale-item1">
-						<div class="sale-item-name">
-							<a>선륜비공패 투지</a>
+						<div class="sale-item-name-vt1">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="vt_sun_tuji"name="vt_sun_tuji" value="0"> <i
@@ -231,8 +222,7 @@
 					</div>
 					
 					<div class="vt-sale-item1">
-						<div class="sale-item-name">
-							<a>곤륜비공패 투혼</a>
+						<div class="sale-item-name-vt1">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="vt_gon_tuhon"name="vt_gon_tuhon" value="0"> <i
@@ -241,8 +231,7 @@
 					</div>
 					
 					<div class="vt-sale-item1">
-						<div class="sale-item-name">
-							<a>선륜비공패 투혼</a>
+						<div class="sale-item-name-vt1">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="vt_sun_tuhon"name="vt_sun_tuhon" value="0"> <i
@@ -252,8 +241,7 @@
 					
 					<!-- 태천왕릉 1네임드 -->
 					<div class="tw-sale-item1">
-						<div class="sale-item-name">
-							<a>투쟁반지 1계열</a>
+						<div class="sale-item-name-tw1">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox"id="tw_tujang_ring1"name="tw_tujang_ring1" value="0"> <i
@@ -262,8 +250,7 @@
 					</div>
 
 					<div class="tw-sale-item1">
-						<div class="sale-item-name">
-							<a>투쟁반지 2계열</a>
+						<div class="sale-item-name-tw1">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="tw_tujang_ring2"name="tw_tujang_ring2" value="0"> <i
@@ -272,8 +259,7 @@
 					</div>
 					
 					<div class="tw-sale-item1">
-						<div class="sale-item-name">
-							<a>투지반지 1계열</a>
+						<div class="sale-item-name-tw1">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="tw_tuji_ring1"name="tw_tuji_ring1" value="0"> <i
@@ -282,8 +268,7 @@
 					</div>
 
 					<div class="tw-sale-item1">
-						<div class="sale-item-name">
-							<a>투지반지 2계열</a>
+						<div class="sale-item-name-tw1">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox"  id="tw_tuji_ring2" name="tw_tuji_ring2" value="0"> <i
@@ -292,8 +277,7 @@
 					</div>
 					
 					<div class="tw-sale-item1">
-						<div class="sale-item-name">
-							<a>투혼반지 1계열</a>
+						<div class="sale-item-name-tw1">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="tw_tuhon_ring1"name="tw_tuhon_ring1" value="0"> <i
@@ -302,8 +286,7 @@
 					</div>
 
 					<div class="tw-sale-item1">
-						<div class="sale-item-name">
-							<a>투혼반지 2계열</a>
+						<div class="sale-item-name-tw1">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="tw_tuhon_ring2"name="tw_tuhon_ring2" value="0"> <i
@@ -314,8 +297,7 @@
 					
 					<!-- 적몽의 비원 1네임드 -->
 					<div class="rd-sale-item1">
-						<div class="sale-item-name">
-							<a>사화비공패 투쟁</a>
+						<div class="sale-item-name-rd1">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="rd_sa_tujang"  name="rd_sa_tujang" value="0"> <i
@@ -324,8 +306,7 @@
 					</div>
 
 					<div class="rd-sale-item1">
-						<div class="sale-item-name">
-							<a>몽화비공패 투쟁</a>
+						<div class="sale-item-name-rd1">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="rd_mo_tujang" name="rd_mo_tujang" value="0"> <i
@@ -335,8 +316,7 @@
 					
 					
 					<div class="rd-sale-item1">
-						<div class="sale-item-name">
-							<a>사화비공패 투지</a>
+						<div class="sale-item-name-rd1">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="rd_sa_tuji" name="rd_sa_tuji" value="0"> <i
@@ -345,8 +325,7 @@
 					</div>
 
 					<div class="rd-sale-item1">
-						<div class="sale-item-name">
-							<a>몽화비공패 투지</a>
+						<div class="sale-item-name-rd1">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="rd_mo_tuji" name="rd_mo_tuji" value="0"> <i
@@ -355,8 +334,7 @@
 					</div>	
 
 					<div class="rd-sale-item1">
-						<div class="sale-item-name">
-							<a>사화비공패 투혼</a>
+						<div class="sale-item-name-rd1">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="rd_sa_tuhon" name="rd_sa_tuhon" value="0"> <i
@@ -365,8 +343,7 @@
 					</div>
 
 					<div class="rd-sale-item1">
-						<div class="sale-item-name">
-							<a>몽화비공패 투혼</a>
+						<div class="sale-item-name-rd1">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="rd_mo_tuhon" name="rd_mo_tuhon" value="0"> <i
@@ -400,8 +377,7 @@
 					<!-- 검은마천루 2네임드 -->
 					
 					<div class="bs-sale-item2">
-						<div class="sale-item-name">
-							<a>투쟁귀걸이 1계열</a>
+						<div class="sale-item-name-bs2">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="bs_tujang_earring1"name="bs_tujang_earring1" value="0"> <i
@@ -410,8 +386,7 @@
 					</div>
 
 					<div class="bs-sale-item2">
-						<div class="sale-item-name">
-							<a>투쟁귀걸이 2계열</a>
+						<div class="sale-item-name-bs2">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="bs_tujang_earring2"name="bs_tujang_earring2" value="0"> <i
@@ -420,8 +395,7 @@
 					</div>
 					
 					<div class="bs-sale-item2">
-						<div class="sale-item-name">
-							<a>투지귀걸이 1계열</a>
+						<div class="sale-item-name-bs2">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="bs_tuji_earring1"name="bs_tuji_earring1" value="0"> <i
@@ -430,8 +404,7 @@
 					</div>
 
 					<div class="bs-sale-item2">
-						<div class="sale-item-name">
-							<a>투지귀걸이 2계열</a>
+						<div class="sale-item-name-bs2">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="bs_tuji_earring2" name="bs_tuji_earring2" value="0"> <i
@@ -440,8 +413,7 @@
 					</div>
 					
 					<div class="bs-sale-item2">
-						<div class="sale-item-name">
-							<a>투혼귀걸이 1계열</a>
+						<div class="sale-item-name-bs2">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="bs_tuhon_earring1"name="bs_tuhon_earring1" value="0"> <i
@@ -450,8 +422,7 @@
 					</div>
 
 					<div class="bs-sale-item2">
-						<div class="sale-item-name">
-							<a>투혼귀걸이 2계열</a>
+						<div class="sale-item-name-bs2">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="bs_tuhon_earring2"name="bs_tuhon_earring2" value="0"> <i
@@ -461,8 +432,7 @@
 
 					<!-- 소용돌이 사원 2네임드 -->
 					<div class="vt-sale-item2">
-						<div class="sale-item-name">
-							<a>투쟁 목걸이 1계열</a>
+						<div class="sale-item-name-vt2">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="vt_tujang1"name="vt_tujang1" value="0"> <i
@@ -471,8 +441,7 @@
 					</div>
 
 					<div class="vt-sale-item2">
-						<div class="sale-item-name">
-							<a>투쟁 목걸이 2계열</a>
+						<div class="sale-item-name-vt2">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox"  id="vt_tujang2"name="vt_tujang2" value="0"> <i
@@ -481,8 +450,7 @@
 					</div>
 					
 					<div class="vt-sale-item2">
-						<div class="sale-item-name">
-							<a>투지 목걸이 1계열</a>
+						<div class="sale-item-name-vt2">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox"  id="vt_tuji1"name="vt_tuji1" value="0"> <i
@@ -491,8 +459,7 @@
 					</div>
 					
 					<div class="vt-sale-item2">
-						<div class="sale-item-name">
-							<a>투지 목걸이 2계열</a>
+						<div class="sale-item-name-vt2">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="vt_tuji2" name="vt_tuji2" value="0"> <i
@@ -501,8 +468,7 @@
 					</div>
 					
 					<div class="vt-sale-item2">
-						<div class="sale-item-name">
-							<a>투혼 목걸이 1계열</a>
+						<div class="sale-item-name-vt2">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox"  id="vt_tuhon1"name="vt_tuhon1" value="0"> <i
@@ -511,8 +477,7 @@
 					</div>
 					
 					<div class="vt-sale-item2">
-						<div class="sale-item-name">
-							<a>투혼 목걸이 2계열</a>
+						<div class="sale-item-name-vt2">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox"  id="vt_tuhon2" name="vt_tuhon2" value="0"> <i
@@ -524,8 +489,7 @@
 					
 					<!-- 태천왕릉  2네임드-->
 					<div class="tw-sale-item2">
-						<div class="sale-item-name">
-							<a>투쟁귀걸이 1계열</a>
+						<div class="sale-item-name-tw2">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox"  id="tw_tujang_earring1"name="tw_tujang_earring1" value="0"> <i
@@ -534,8 +498,7 @@
 					</div>
 
 					<div class="tw-sale-item2">
-						<div class="sale-item-name">
-							<a>투쟁귀걸이 2계열</a>
+						<div class="sale-item-name-tw2">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="tw_tujang_earring2"name="tw_tujang_earring2" value="0"> <i
@@ -544,8 +507,7 @@
 					</div>
 					
 					<div class="tw-sale-item2">
-						<div class="sale-item-name">
-							<a>투지귀걸이 1계열</a>
+						<div class="sale-item-name-tw2">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="tw_tuji_earring1"name="tw_tuji_earring1" value="0"> <i
@@ -554,8 +516,7 @@
 					</div>
 
 					<div class="tw-sale-item2">
-						<div class="sale-item-name">
-							<a>투지귀걸이 2계열</a>
+						<div class="sale-item-name-tw2">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="tw_tuji_earring2"name="tw_tuji_earring1" value="0"> <i
@@ -564,8 +525,7 @@
 					</div>
 					
 					<div class="tw-sale-item2">
-						<div class="sale-item-name">
-							<a>투혼귀걸이 1계열</a>
+						<div class="sale-item-name-tw2">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="tw_tuhon_earring1"name="tw_tuhon_earring1" value="0"> <i
@@ -574,8 +534,7 @@
 					</div>
 
 					<div class="tw-sale-item2">
-						<div class="sale-item-name">
-							<a>투혼귀걸이 2계열</a>
+						<div class="sale-item-name-tw2">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="tw_tuhon_earring2"name="tw_tuhon_earring2" value="0"> <i
@@ -585,8 +544,7 @@
 					
 					<!-- 적몽의 비원 2네임드 -->
 					<div class="rd-sale-item2">
-						<div class="sale-item-name">
-							<a>투쟁목걸이 1계열</a>
+						<div class="sale-item-name-rd2">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="rd_tujang1_neck" name="rd_tujang1_neck" value="0"> <i
@@ -595,8 +553,7 @@
 					</div>
 
 					<div class="rd-sale-item2">
-						<div class="sale-item-name">
-							<a>투쟁목걸이 2계열</a>
+						<div class="sale-item-name-rd2">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="rd_tujang2_neck" name="rd_tujang2_neck" value="0"> <i
@@ -605,8 +562,7 @@
 					</div>
 					
 					<div class="rd-sale-item2">
-						<div class="sale-item-name">
-							<a>투지목걸이 1계열</a>
+						<div class="sale-item-name-rd2">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="rd_tuji1_neck" name="rd_tuji1_neck" value="0"> <i
@@ -615,8 +571,7 @@
 					</div>
 
 					<div class="rd-sale-item2">
-						<div class="sale-item-name">
-							<a>투지목걸이 2계열</a>
+						<div class="sale-item-name-rd2">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="rd_tuji2_neck" name="rd_tuji2_neck" value="0"> <i
@@ -625,8 +580,7 @@
 					</div>	
 					
 					<div class="rd-sale-item2">
-						<div class="sale-item-name">
-							<a>투혼목걸이 1계열</a>
+						<div class="sale-item-name-rd2">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="rd_tuhon1_neck" name="rd_tuhon1_neck" value="0"> <i
@@ -635,8 +589,7 @@
 					</div>
 
 					<div class="rd-sale-item2">
-						<div class="sale-item-name">
-							<a>투혼목걸이 2계열</a>
+						<div class="sale-item-name-rd2">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="rd_tuhon2_neck" name="rd_tuhon2_neck" value="0"> <i
@@ -673,8 +626,7 @@
 					
 					<!-- 검은마천루 3네임드  -->
 					<div class="bs-sale-item3">
-						<div class="sale-item-name">
-							<a>투쟁반지 1계열</a>
+						<div class="sale-item-name-bs3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="bs_tujang_ring3"name="bs_tujang_ring3" value="0"> <i
@@ -683,8 +635,7 @@
 					</div>
 
 					<div class="bs-sale-item3">
-						<div class="sale-item-name">
-							<a>투쟁반지 2계열</a>
+						<div class="sale-item-name-bs3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="bs_tujang_ring4" name="bs_tujang_ring4" value="0"> <i
@@ -693,8 +644,7 @@
 					</div>
 				
 					<div class="bs-sale-item3">
-						<div class="sale-item-name">
-							<a>투지반지 1계열</a>
+						<div class="sale-item-name-bs3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="bs_tuji_ring3" name="bs_tuji_ring3" value="0"> <i
@@ -703,8 +653,7 @@
 					</div>
 
 					<div class="bs-sale-item3">
-						<div class="sale-item-name">
-							<a>투지반지 2계열</a>
+						<div class="sale-item-name-bs3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox"  id="bs_tuji_ring4" name="bs_tuji_ring4" value="0"> <i
@@ -713,8 +662,7 @@
 					</div>
 					
 					<div class="bs-sale-item3">
-						<div class="sale-item-name">
-							<a>투혼반지 1계열</a>
+						<div class="sale-item-name-bs3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="bs_tuhon_ring3" name="bs_tuhon_ring3" value="0"> <i
@@ -723,8 +671,7 @@
 					</div>
 
 					<div class="bs-sale-item3">
-						<div class="sale-item-name">
-							<a>투혼반지 2계열</a>
+						<div class="sale-item-name-bs3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="bs_tuhon_ring4" name="bs_tuhon_ring4" value="0"> <i
@@ -733,8 +680,7 @@
 					</div>
 					
 					<div class="bs-sale-item3">
-						<div class="sale-item-name">
-							<a>투쟁귀걸이 1계열</a>
+						<div class="sale-item-name-bs3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="bs_tujang_earring3" name="bs_tujang_earring3" value="0"> <i
@@ -743,8 +689,7 @@
 					</div>
 
 					<div class="bs-sale-item3">
-						<div class="sale-item-name">
-							<a>투쟁귀걸이 2계열</a>
+						<div class="sale-item-name-bs3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox"id="bs_tujang_earring4"  name="bs_tujang_earring4" value="0"> <i
@@ -753,8 +698,7 @@
 					</div>
 					
 					<div class="bs-sale-item3">
-						<div class="sale-item-name">
-							<a>투지귀걸이 1계열</a>
+						<div class="sale-item-name-bs3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="bs_tuji_earring3" name="bs_tuji_earring3" value="0"> <i
@@ -763,8 +707,7 @@
 					</div>
 
 					<div class="bs-sale-item3">
-						<div class="sale-item-name">
-							<a>투지귀걸이 2계열</a>
+						<div class="sale-item-name-bs3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="bs_tuji_earring4" name="bs_tuji_earring4" value="0"> <i
@@ -773,8 +716,7 @@
 					</div>
 					
 					<div class="bs-sale-item3">
-						<div class="sale-item-name">
-							<a>투혼귀걸이 1계열</a>
+						<div class="sale-item-name-bs3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="bs_tuhon_earring3" name="bs_tuhon_earring3" value="0"> <i
@@ -783,8 +725,7 @@
 					</div>
 
 					<div class="bs-sale-item3">
-						<div class="sale-item-name">
-							<a>투혼귀걸이 2계열</a>
+						<div class="sale-item-name-bs3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="bs_tuhon_earring4" name="bs_tuhon_earring4" value="0"> <i
@@ -794,8 +735,7 @@
 
 					<!-- 소용돌이 사원  3네임드-->
 					<div class="vt-sale-item3">
-						<div class="sale-item-name">
-							<a>투쟁 목걸이 1계열</a>
+						<div class="sale-item-name-vt3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="vt_tujang3" name="vt_tujang3" value="0"> <i
@@ -804,8 +744,7 @@
 					</div>
 
 					<div class="vt-sale-item3">
-						<div class="sale-item-name">
-							<a>투쟁 목걸이 2계열</a>
+						<div class="sale-item-name-vt3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="vt_tujang4"  name="vt_tujang4" value="0"> <i
@@ -814,8 +753,7 @@
 					</div>
 					
 					<div class="vt-sale-item3">
-						<div class="sale-item-name">
-							<a>투지 목걸이 1계열</a>
+						<div class="sale-item-name-vt3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="vt_tuji3"  name="vt_tuji3" value="0"> <i
@@ -824,8 +762,7 @@
 					</div>
 					
 					<div class="vt-sale-item3">
-						<div class="sale-item-name">
-							<a>투지 목걸이 2계열</a>
+						<div class="sale-item-name-vt3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="vt_tuji4" name="vt_tuji4" value="0"> <i
@@ -834,8 +771,7 @@
 					</div>
 					
 					<div class="vt-sale-item3">
-						<div class="sale-item-name">
-							<a>투혼 목걸이 1계열</a>
+						<div class="sale-item-name-vt3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="vt_tuhon3"  name="vt_tuhon3" value="0"> <i
@@ -844,8 +780,7 @@
 					</div>
 					
 					<div class="vt-sale-item3">
-						<div class="sale-item-name">
-							<a>투혼 목걸이 2계열</a>
+						<div class="sale-item-name-vt3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="vt_tuhon4" name="vt_tuhon4" value="0"> <i
@@ -854,8 +789,7 @@
 					</div>
 
 					<div class="vt-sale-item3">
-						<div class="sale-item-name">
-							<a>곤륜비공패 투쟁</a>
+						<div class="sale-item-name-vt3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="vt_gon_tujang2"  name="vt_gon_tujang2" value="0"> <i
@@ -864,8 +798,7 @@
 					</div>
 
 					<div class="vt-sale-item3">
-						<div class="sale-item-name">
-							<a>선륜비공패 투쟁</a>
+						<div class="sale-item-name-vt3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id=vt_sun_tujang2  name="vt_sun_tujang2" value="0"> <i
@@ -874,8 +807,7 @@
 					</div>
 							
 					<div class="vt-sale-item3">
-						<div class="sale-item-name">
-							<a>곤륜비공패 투지</a>
+						<div class="sale-item-name-vt3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="vt_gon_tuji2"  name="vt_gon_tuji2" value="0"> <i
@@ -884,8 +816,7 @@
 					</div>
 					
 					<div class="vt-sale-item3">
-						<div class="sale-item-name">
-							<a>선륜비공패 투지</a>
+						<div class="sale-item-name-vt3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="vt_sun_tuji2"  name="vt_sun_tuji2" value="0"> <i
@@ -894,8 +825,7 @@
 					</div>
 					
 					<div class="vt-sale-item3">
-						<div class="sale-item-name">
-							<a>곤륜비공패 투혼</a>
+						<div class="sale-item-name-vt3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="vt_gon_tuhon2"  name="vt_gon_tuhon2" value="0"> <i
@@ -904,8 +834,7 @@
 					</div>
 					
 					<div class="vt-sale-item3">
-						<div class="sale-item-name">
-							<a>선륜비공패 투혼</a>
+						<div class="sale-item-name-vt3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox"  id="vt_sun_tuhon2" name="vt_sun_tuhon2" value="0"> <i
@@ -914,8 +843,7 @@
 					</div>
 					
 					<div class="vt-sale-item3" >
-						<div class="sale-item-name" >
-							<a> 신공석</a>
+						<div class="sale-item-name-vt3" >
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="singongsuk"  name="singongsuk" value="0"> <i
@@ -924,15 +852,15 @@
 					</div>
 					
 					<div class="vt-sale-item3" >
-						<div class="sale-item-name" style="height:26px;">
+						<div class="sale-item-name3" style="height:26px;">
 						</div>
+							<br>
 					</div>
-
+				
 					
 					<!-- 태천왕릉 3네임드 -->
 		     		<div class="tw-sale-item3">
-						<div class="sale-item-name">
-							<a>투쟁반지 1계열</a>
+						<div class="sale-item-name-tw3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="tw_tujang_ring3"  name="tw_tujang_ring3" value="0"> <i
@@ -941,8 +869,7 @@
 					</div>
 
 					<div class="tw-sale-item3">
-						<div class="sale-item-name">
-							<a>투쟁반지 2계열</a>
+						<div class="sale-item-name-tw3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="tw_tujang_ring4" name="tw_tujang_ring4" value="0"> <i
@@ -951,8 +878,7 @@
 					</div>
 					
 					<div class="tw-sale-item3">
-						<div class="sale-item-name">
-							<a>투지반지 1계열</a>
+						<div class="sale-item-name-tw3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="tw_tuji_ring3" name="tw_tuji_ring3" value="0"> <i
@@ -961,8 +887,7 @@
 					</div>
 
 					<div class="tw-sale-item3">
-						<div class="sale-item-name">
-							<a>투지반지 2계열</a>
+						<div class="sale-item-name-tw3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="tw_tuji_ring4" name="tw_tuji_ring4" value="0"> <i
@@ -971,8 +896,7 @@
 					</div>
 					
 					<div class="tw-sale-item3">
-						<div class="sale-item-name">
-							<a>투혼반지 1계열</a>
+						<div class="sale-item-name-tw3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="tw_tuhon_ring3" name="tw_tuhon_ring3" value="0"> <i
@@ -981,8 +905,7 @@
 					</div>
 
 					<div class="tw-sale-item3">
-						<div class="sale-item-name">
-							<a>투혼반지 2계열</a>
+						<div class="sale-item-name-tw3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="tw_tuhon_ring4" name="tw_tuhon_ring4" value="0"> <i
@@ -991,8 +914,7 @@
 					</div>
 					
 					<div class="tw-sale-item3">
-						<div class="sale-item-name">
-							<a>투쟁귀걸이 1계열</a>
+						<div class="sale-item-name-tw3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="tw_tujang_earring3" name="tw_tujang_earring3" value="0"> <i
@@ -1001,8 +923,7 @@
 					</div>
 
 					<div class="tw-sale-item3">
-						<div class="sale-item-name">
-							<a>투쟁귀걸이 2계열</a>
+						<div class="sale-item-name-tw3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="tw_tujang_earring4" name="tw_tujang_earring4" value="0"> <i
@@ -1011,8 +932,7 @@
 					</div>
 					
 					<div class="tw-sale-item3">
-						<div class="sale-item-name">
-							<a>투지귀걸이 1계열</a>
+						<div class="sale-item-name-tw3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="tw_tuji_earring3" name="tw_tuji_earring3" value="0"> <i
@@ -1021,8 +941,7 @@
 					</div>
 
 					<div class="tw-sale-item3">
-						<div class="sale-item-name">
-							<a>투지귀걸이 2계열</a>
+						<div class="sale-item-name-tw3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="tw_tuji_earring4" name="tw_tuji_earring4" value="0"> <i
@@ -1031,8 +950,7 @@
 					</div>
 					
 					<div class="tw-sale-item3">
-						<div class="sale-item-name">
-							<a>투혼귀걸이 1계열</a>
+						<div class="sale-item-name-tw3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="tw_tuhon_earring3" name="tw_tuhon_earring3" value="0"> <i
@@ -1041,8 +959,7 @@
 					</div>
 
 					<div class="tw-sale-item3">
-						<div class="sale-item-name">
-							<a>투혼귀걸이 2계열</a>
+						<div class="sale-item-name-tw3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox"id="tw_tuhon_earring4"  name="tw_tuhon_earring4" value="0"> <i
@@ -1053,8 +970,7 @@
 					
 					<!-- 적몽의 비원 3네임드 -->
 					<div class="rd-sale-item3">
-						<div class="sale-item-name">
-							<a>사화마녀의 포엽</a>
+						<div class="sale-item-name-rd3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="poyup" name="poyup" value="0"> <i
@@ -1063,8 +979,7 @@
 					</div>
 
 					<div class="rd-sale-item3">
-						<div class="sale-item-name">
-							<a>사화마녀의 자모</a>
+						<div class="sale-item-name-rd3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="jamo" name="jamo"  value="0"> <i
@@ -1073,8 +988,7 @@
 					</div>	
 					
 					<div class="rd-sale-item3">
-						<div class="sale-item-name">
-							<a>사화마녀의 잎맥</a>
+						<div class="sale-item-name-rd3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="ipmak" name="ipmak" value="0"> <i
@@ -1083,8 +997,7 @@
 					</div>
 
 					<div class="rd-sale-item3">
-						<div class="sale-item-name">
-							<a>사화강</a>
+						<div class="sale-item-name-rd3">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="rd_gang" name="rd_gang" value="0"> <i
@@ -1112,8 +1025,7 @@
 					
 					<!-- 검은마천루 4네임드 -->
 					<div class="bs-sale-item4">
-						<div class="sale-item-name">
-							<a>촉마왕의 흑린</a>
+						<div class="sale-item-name-bs4">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="hukrin" name="hukrin" value="0"> <i
@@ -1122,8 +1034,7 @@
 					</div>
 
 					<div class="bs-sale-item4">
-						<div class="sale-item-name">
-							<a>촉마왕의 격골</a>
+						<div class="sale-item-name-bs4">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="gyukgol" name="gyukgol" value="0"> <i
@@ -1132,8 +1043,7 @@
 					</div>
 
 					<div class="bs-sale-item4">
-						<div class="sale-item-name">
-							<a>촉마왕의 진기</a>
+						<div class="sale-item-name-bs4">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="ginki"name="ginki" value="0"> <i
@@ -1142,8 +1052,7 @@
 					</div>
 					
 					<div class="bs-sale-item4">
-						<div class="sale-item-name">
-							<a>촉마강</a>
+						<div class="sale-item-name-bs4">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="bs_gang"name="bs_gang" value="0"> <i
@@ -1153,8 +1062,7 @@
 				
 					<!-- 소용돌이 사원  -->
 					<div class="vt-sale-item4">
-						<div class="sale-item-name">
-							<a>흑풍마녀의 묵시</a>
+						<div class="sale-item-name-vt4">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="muksi"name="muksi" value="0"> <i
@@ -1162,8 +1070,7 @@
 						</label> <input type="text" id="muksi_price" name="muksi_price" class="writeprice" placeholder="금액">
 					</div>
 					<div class="vt-sale-item4">
-						<div class="sale-item-name">
-							<a>흑풍마녀의 흑참</a>
+						<div class="sale-item-name-vt4">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="hukcham"name="hukcham" value="0"> <i
@@ -1171,8 +1078,7 @@
 						</label> <input type="text" id="hukcham_price"  name="hukcham_price" class="writeprice" placeholder="금액">
 					</div>
 					<div class="vt-sale-item4">
-						<div class="sale-item-name">
-							<a>흑풍마녀의 암각</a>
+						<div class="sale-item-name-vt4">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="amgak"name="amgak" value="0"> <i
@@ -1180,8 +1086,7 @@
 						</label> <input type="text" id="amgak_price"  name="amgak_price" class="writeprice" placeholder="금액">
 					</div>
 					<div class="vt-sale-item4">
-						<div class="sale-item-name">
-							<a>흑풍강</a>
+						<div class="sale-item-name-vt4">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox"  id="vt_gang"name="vt_gang" value="0"> <i
@@ -1191,8 +1096,7 @@
 					
 					<!-- 태천왕릉 4네임드 -->
 					<div class="tw-sale-item4">
-						<div class="sale-item-name">
-							<a>태천명왕의 시익</a>
+						<div class="sale-item-name-tw4">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="siik"name="siik" value="0"> <i
@@ -1201,8 +1105,7 @@
 					</div>
 
 					<div class="tw-sale-item4">
-						<div class="sale-item-name">
-							<a>태천명왕의 늑골</a>
+						<div class="sale-item-name-tw4">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="nukgol"name="nukgol" value="0"> <i
@@ -1211,8 +1114,7 @@
 					</div>
 					
 					<div class="tw-sale-item4">
-						<div class="sale-item-name">
-							<a>태천명왕의 광배</a>
+						<div class="sale-item-name-tw4">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="gwangbae"name="gwangbae" value="0"> <i
@@ -1221,8 +1123,7 @@
 					</div>
 					
 					<div class="tw-sale-item4">
-						<div class="sale-item-name">
-							<a>태천강</a>
+						<div class="sale-item-name-tw4">
 						</div>
 						<label class="checkbox">
 								<input type="checkbox" id="tw_gang"name="tw_gang" value="0"> <i

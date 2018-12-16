@@ -139,12 +139,27 @@ body {
 
 
 
-.sale-item-name a {
+.sale-item-name a, .sale-item-name2 a,.sale-item-name3 a, .sale-item-name4 a {
 	color: #000;
 	font-weight: normal;
+	display: inline-block;
 }
 
-.sale-item-name {
+.sale-item-name-bs1,
+.sale-item-name-bs2,
+.sale-item-name-bs3,
+.sale-item-name-bs4,
+.sale-item-name-vt1,
+.sale-item-name-vt2,
+.sale-item-name-vt3,
+.sale-item-name-vt4,
+.sale-item-name-tw1,
+.sale-item-name-tw2,
+.sale-item-name-tw3,
+.sale-item-name-tw4,
+.sale-item-name-rd1,
+.sale-item-name-rd2,
+.sale-item-name-rd3 {
 	width: 180px;
 	margin: 0;
 	display: inline-block;

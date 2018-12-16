@@ -70,9 +70,12 @@ $("#btn_submit").click(e=>{
 });
 
 
-$("#bs_1st, #bs_2nd, #bs_3rd, #bs_4th").change(function(){
+$("#bs_1st, #bs_2nd, #bs_3rd, #bs_4th,"
++	"#vt_1st, #vt_2nd, #vt_3rd, #vt_4th," 
++	"#tw_1st, #tw_2nd, #tw_3rd, #tw_4th," 
++	"#rd_1st, #rd_2nd, #rd_3rd").change(function(){
 
-	var item_type = $("input[name=raid_type").val();
+	var item_type = $("input[name=raid_type]:checked").val();
 	var boss_level = $(this).val();
 
 		var request_itemlist= {"action":"showitemlist",	    			
@@ -81,28 +84,176 @@ $("#bs_1st, #bs_2nd, #bs_3rd, #bs_4th").change(function(){
 				}
 
 		$.getJSON("../../ItemServ", request_itemlist, function(data){
+			
+			var raid_type = data.raid_type;
+			var boss_level = data.boss_level;
+			
+		// 검은 마천루
+			if(raid_type=="검은 마천루" && boss_level==1) {
+		
+				for(var i=0;i<data.item_name.length;i++){
+					console.log(data.item_name[i]);
+					htmlTag = ''; 
+					itemList = "<a>"+ data.item_name[i] +"</a>";
+					  text=htmlTag+itemList;
+					  $('.sale-item-name-bs1:eq('+i+')').html(text);
+				}
+				
+			} else if (raid_type=="검은 마천루" && boss_level==2) {
 
-			$('.sale-item-name').empty();
+				
+				  for(var i=0;i<data.item_name.length;i++){
+					  console.log(data.item_name[i]);
+						htmlTag = ''; 
+						itemList = "<a>"+ data.item_name[i] +"</a>";
+						  text=htmlTag+itemList;
+						  $('.sale-item-name-bs2:eq('+i+')').html(text);
+				}
+			} else if (raid_type=="검은 마천루" && boss_level==3) {
+		
+					
+					  for(var i=0;i<data.item_name.length;i++){
+					console.log(data.item_name[i]);
+					htmlTag = ''; 
+					itemList = "<a>"+ data.item_name[i] +"</a>";
+					  text=htmlTag+itemList;
+					  $('.sale-item-name-bs3:eq('+i+')').html(text);
+			}
+				  
+		} else if (raid_type=="검은 마천루" && boss_level==4) {
 
+			
+				  for(var i=0;i<data.item_name.length;i++){
+				console.log(data.item_name[i]);
+				htmlTag = ''; 
+				itemList = "<a>"+ data.item_name[i] +"</a>";
+				  text=htmlTag+itemList;
+				  $('.sale-item-name-vt1:eq('+i+')').html(text);
+				 }
+
+		} else if(raid_type=="소용돌이 사원" && boss_level==1) {
+			
+			for(var i=0;i<data.item_name.length;i++){
+				console.log(data.item_name[i]);
+				htmlTag = ''; 
+				itemList = "<a>"+ data.item_name[i] +"</a>";
+				  text=htmlTag+itemList;
+				  $('.sale-item-name-vt1:eq('+i+')').html(text);
+			}
+			
+		} else if (raid_type=="소용돌이 사원" && boss_level==2) {
+
+			
+			  for(var i=0;i<data.item_name.length;i++){
+				  console.log(data.item_name[i]);
+					htmlTag = ''; 
+					itemList = "<a>"+ data.item_name[i] +"</a>";
+					  text=htmlTag+itemList;
+					  $('.sale-item-name-vt2:eq('+i+')').html(text);
+			}
+		} else if (raid_type=="소용돌이 사원" && boss_level==3) {
+	
+				
+				  for(var i=0;i<data.item_name.length;i++){
+				console.log(data.item_name[i]);
+				htmlTag = ''; 
+				itemList = "<a>"+ data.item_name[i] +"</a>";
+				  text=htmlTag+itemList;
+				  $('.sale-item-name-vt3:eq('+i+')').html(text);
+		}
+			  
+	} else if (raid_type=="소용돌이 사원" && boss_level==4) {
+
+		
 			  for(var i=0;i<data.item_name.length;i++){
 			console.log(data.item_name[i]);
 			htmlTag = ''; 
 			itemList = "<a>"+ data.item_name[i] +"</a>";
 			  text=htmlTag+itemList;
-			  $('.sale-item-name:eq('+i+')').html(text);
+			  $('.sale-item-name-vt4:eq('+i+')').html(text);
 			 }
 		
 			  
+	} // 태천왕릉
+	else if(raid_type=="태천왕릉" && boss_level==1) {
 		
+		for(var i=0;i<data.item_name.length;i++){
+			console.log(data.item_name[i]);
+			htmlTag = ''; 
+			itemList = "<a>"+ data.item_name[i] +"</a>";
+			  text=htmlTag+itemList;
+			  $('.sale-item-name-tw1:eq('+i+')').html(text);
+		}
+		
+	} else if (raid_type=="태천왕릉" && boss_level==2) {
+
+		
+		  for(var i=0;i<data.item_name.length;i++){
+			  console.log(data.item_name[i]);
+				htmlTag = ''; 
+				itemList = "<a>"+ data.item_name[i] +"</a>";
+				  text=htmlTag+itemList;
+				  $('.sale-item-name-tw2:eq('+i+')').html(text);
+		}
+	} else if (raid_type=="태천왕릉" && boss_level==3) {
+
+			
+			  for(var i=0;i<data.item_name.length;i++){
+			console.log(data.item_name[i]);
+			htmlTag = ''; 
+			itemList = "<a>"+ data.item_name[i] +"</a>";
+			  text=htmlTag+itemList;
+			  $('.sale-item-name-tw3:eq('+i+')').html(text);
+			  }
+		  
+	} else if (raid_type=="태천왕릉" && boss_level==4) {
 	
 		
-			  	 
+			  for(var i=0;i<data.item_name.length;i++){
+			console.log(data.item_name[i]);
+			htmlTag = ''; 
+			itemList = "<a>"+ data.item_name[i] +"</a>";
+			  text=htmlTag+itemList;
+			  $('.sale-item-name-tw4:eq('+i+')').html(text);
+			 }
+	
+	}  // 적몽의 비원
+	else if(raid_type=="적몽의 비원" && boss_level==1) {
+		
+		for(var i=0;i<data.item_name.length;i++){
+			console.log(data.item_name[i]);
+			htmlTag = ''; 
+			itemList = "<a>"+ data.item_name[i] +"</a>";
+			  text=htmlTag+itemList;
+			  $('.sale-item-name-rd1:eq('+i+')').html(text);
+		}
+		
+	} else if (raid_type=="적몽의 비원" && boss_level==2) {
+	
+		
+		  for(var i=0;i<data.item_name.length;i++){
+			  console.log(data.item_name[i]);
+				htmlTag = ''; 
+				itemList = "<a>"+ data.item_name[i] +"</a>";
+				  text=htmlTag+itemList;
+				  $('.sale-item-name-rd2:eq('+i+')').html(text);
+		}
+	} else if (raid_type=="적몽의 비원" && boss_level==3) {
+	
+			
+			  for(var i=0;i<data.item_name.length;i++){
+			console.log(data.item_name[i]);
+			htmlTag = ''; 
+			itemList = "<a>"+ data.item_name[i] +"</a>";
+			  text=htmlTag+itemList;
+			  $('.sale-item-name-rd3:eq('+i+')').html(text);
+		}	
+		  
+	} 
+			
+			
 		 });
-	
-		
 
-
-    
 
 });
 
@@ -297,7 +448,7 @@ $('#vt_4th').change(function() {
 	}
 });
 
-//태천왕릉 1~4네임드 체크박스
+// 태천왕릉 1~4네임드 체크박스
 $('#tw_1st').change(function() {
 	if ($("#tw_1st").is(":checked")) {
 	$('.tw-sale-item1').show();
@@ -338,7 +489,7 @@ $('#tw_4th').change(function() {
 	}
 });
 
-//적몽의 비원 1~3네임드 체크박스
+// 적몽의 비원 1~3네임드 체크박스
 $('#rd_1st').change(function() {
 	if ($("#rd_1st").is(":checked")) {
 	$('.rd-sale-item1').show();
