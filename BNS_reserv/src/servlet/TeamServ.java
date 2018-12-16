@@ -19,6 +19,7 @@ import dao.ItemDAO;
 import dao.KakaoDAO;
 import dao.TeamDAO;
 import vo.ItemDTO;
+import vo.SaleDTO;
 import vo.TeamDTO;
 
 @WebServlet("/servlet/TeamServ")
@@ -41,13 +42,16 @@ public class TeamServ extends HttpServlet {
 				// DO, DAO 객체 생성
 				TeamDTO tvo = new TeamDTO();
 				ItemDTO ivo = new ItemDTO();
+				SaleDTO svo = new SaleDTO();
+				
 				TeamDAO tdao = new TeamDAO();
 				KakaoDAO kdao = new KakaoDAO();
 				ItemDAO idao = new ItemDAO();
-				
 				try {
 					BeanUtils.copyProperties(tvo, request.getParameterMap());
 					BeanUtils.copyProperties(ivo, request.getParameterMap());
+					BeanUtils.copyProperties(svo, request.getParameterMap());
+					
 				} catch (IllegalAccessException e) {
 					e.printStackTrace();
 				} catch (InvocationTargetException e) {
@@ -58,11 +62,14 @@ public class TeamServ extends HttpServlet {
 					out.print("어떤 form의 action도 넘겨받지 못했습니다.");
 				
 				} else if (action.equals("team_reg")) {
+					String team_name = request.getParameter("team_name");
+					System.out.println(team_name);
 					
 					String id = request.getParameter("id");
 					String bns_id = kdao.selectOne(id);
 					tvo.setBns_id(bns_id);
 					tdao.addTeam(tvo);
+					idao.add_SaleItems(svo);
 					
 					tvo.setId(id);
 					tvo.setBns_id(bns_id);

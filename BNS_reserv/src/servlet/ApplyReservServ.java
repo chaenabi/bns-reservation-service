@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.beanutils.BeanUtils;
 
 import dao.ItemDAO;
-import vo.ItemDTO;
+import vo.SaleDTO;
 import vo.TeamDTO;
 
 
@@ -35,14 +35,13 @@ public class ApplyReservServ extends HttpServlet {
 	
 		// DO, DAO 객체 생성
 		TeamDTO tvo = new TeamDTO();
-		ItemDTO ivo = new ItemDTO();
-		//TeamDAO tdao = new TeamDAO();
-		//KakaoDAO kdao = new KakaoDAO();
+	
+
 		ItemDAO idao = new ItemDAO();
 		
 		try {
 			BeanUtils.copyProperties(tvo, request.getParameterMap());
-			BeanUtils.copyProperties(ivo, request.getParameterMap());
+			
 		} catch (IllegalAccessException e) {
 			e.printStackTrace();
 		} catch (InvocationTargetException e) {
@@ -56,15 +55,8 @@ public class ApplyReservServ extends HttpServlet {
 			out.print("어떤 form의 action도 넘겨받지 못했습니다.");
 
 		} else if (action.equals("item_reserv")) {
-			//String team_leader = request.getParameter("team_leader");
-			//System.out.println("team_leader : "+team_leader);
-			//String test = request.getParameter("bs_tujang_ring1");
-			//System.out.println(test);
-			String bs_tujang_ring1 = request.getParameter("bs_tujang_ring1");
-			System.out.println("session_bns_id : "+ bs_tujang_ring1);
-			String team_leader = request.getParameter("bns_id");
-			System.out.println("team_leader : " +team_leader);
-			//idao.bs_item_update(ivo, team_leader);
+	
+	
 			
 			request.getRequestDispatcher("/resource/jsp/menu.jsp").forward(request, response);
 			

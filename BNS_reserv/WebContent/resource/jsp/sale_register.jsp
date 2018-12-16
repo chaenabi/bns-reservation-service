@@ -24,7 +24,7 @@
 			src="${pageContext.request.contextPath}/resource/assets/video/vi3.mp4"
 			type="video/mp4">
 	</video>
-	<form action="../../TeamServ" method="post" id="sale_register">
+	<form action="../../servlet/TeamServ" method="post" id="sale_register">
 	 <input type="hidden" name="action" value="team_reg"/> 
 	<div class="container">
 		<div class="content">
@@ -73,9 +73,7 @@
 				</div>
 
 			</div>
-									
-									
-									
+		
 									
 					<div class="team_raid">
 					레이드 종류 : 검은 마천루
@@ -131,9 +129,9 @@
 						<div class="sale-item-name-bs1">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="bs_tujang_ring1" name="bs_tujang_ring1"value="0"> <i
-								class="icon-checkbox"></i>
-						</label> <input type="text" id="bs_tujang_ring1_price"  name="bs_tujang_ring1_price" class="writeprice" placeholder="금액">
+								<input type="checkbox" id="bs_tujang_ring1" name="sale_items"value="0"> <i
+						class="icon-checkbox"></i>
+						</label> <input type="text" id="bs_tujang_ring1_price"  name="sale_price" class="writeprice" placeholder="금액">
 						
 					</div>
 
@@ -141,9 +139,9 @@
 						<div class="sale-item-name-bs1">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="bs_tujang_ring2" name="bs_tujang_ring2" value="0"> <i
+								<input type="checkbox" id="bs_tujang_ring2" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="bs_tujang_ring2_price" name="bs_tujang_ring2_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs_tujang_ring2_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="bs-sale-item1">
@@ -151,36 +149,36 @@
 
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="bs_tuji_ring1"  name="bs_tuji_ring1" value="0"> <i
+								<input type="checkbox" id="bs_tuji_ring1"  name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="bs_tuji_ring1_price" name="bs_tuji_ring1_price"  class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs_tuji_ring1_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="bs-sale-item1">
 						<div class="sale-item-name-bs1">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="bs_tuji_ring2" name="bs_tuji_ring2" value="0"> <i
+								<input type="checkbox" id="bs_tuji_ring2" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="bs_tuji_ring2_price" name="bs_tuji_ring2_price"  class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="bs_tuji_ring2_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="bs-sale-item1">
 						<div class="sale-item-name-bs1">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="bs_tuhon_ring1"  name="bs_tuhon_ring1" value="0"> <i
+								<input type="checkbox" id="bs_tuhon_ring1"  name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="bs_tuhon_ring1_price"  name="bs_tuhon_ring1_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs_tuhon_ring1_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="bs-sale-item1">
 						<div class="sale-item-name-bs1">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="bs_tuhon_ring2"name="bs_tuhon_ring2" value="0"> <i
+								<input type="checkbox" id="bs_tuhon_ring2"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="bs_tuhon_ring2_price" name="bs_tuhon_ring2_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="bs_tuhon_ring2_price"  name="sale_price" class="writeprice" placeholder="금액">
 
 					</div>
 
@@ -189,54 +187,54 @@
 						<div class="sale-item-name-vt1">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="vt_gon_tujang"name="vt_gon_tujang" value="0"> <i
+								<input type="checkbox" id="vt_gon_tujang"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="vt_gon_tujang_price"  name="vt_gon_tujang_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt_gon_tujang_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="vt-sale-item1">
 						<div class="sale-item-name-vt1">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="vt_sun_tujang"name="vt_sun_tujang" value="0"> <i
+								<input type="checkbox" id="vt_sun_tujang"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="vt_sun_tujang_price"  name="vt_sun_tujang_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt_sun_tujang_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 							
 					<div class="vt-sale-item1">
 						<div class="sale-item-name-vt1">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="vt_gon_tuji"name="vt_gon_tuji" value="0"> <i
+								<input type="checkbox" id="vt_gon_tuji"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="vt_gon_tuji_price" name="vt_gon_tuji_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="vt_gon_tuji_price"   name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="vt-sale-item1">
 						<div class="sale-item-name-vt1">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="vt_sun_tuji"name="vt_sun_tuji" value="0"> <i
+								<input type="checkbox" id="vt_sun_tuji"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="vt_sun_tuji_price" name="vt_sun_tuji_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="vt_sun_tuji_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="vt-sale-item1">
 						<div class="sale-item-name-vt1">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="vt_gon_tuhon"name="vt_gon_tuhon" value="0"> <i
+								<input type="checkbox" id="vt_gon_tuhon"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="vt_gon_tuhon_price" name="vt_gon_tuhon_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="vt_gon_tuhon_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="vt-sale-item1">
 						<div class="sale-item-name-vt1">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="vt_sun_tuhon"name="vt_sun_tuhon" value="0"> <i
+								<input type="checkbox" id="vt_sun_tuhon"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="vt_sun_tuhon_price" name="vt_sun_tuhon_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="vt_sun_tuhon_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<!-- 태천왕릉 1네임드 -->
@@ -244,54 +242,54 @@
 						<div class="sale-item-name-tw1">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox"id="tw_tujang_ring1"name="tw_tujang_ring1" value="0"> <i
+								<input type="checkbox"id="tw_tujang_ring1"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="tw_tujang_ring1_price"  name="tw_tujang_ring1_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw_tujang_ring1_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="tw-sale-item1">
 						<div class="sale-item-name-tw1">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="tw_tujang_ring2"name="tw_tujang_ring2" value="0"> <i
+								<input type="checkbox" id="tw_tujang_ring2"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="tw_tujang_ring2_price" name="tw_tujang_ring2_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="tw_tujang_ring2_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="tw-sale-item1">
 						<div class="sale-item-name-tw1">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="tw_tuji_ring1"name="tw_tuji_ring1" value="0"> <i
+								<input type="checkbox" id="tw_tuji_ring1"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="tw_tuji_ring1_price"  name="tw_tuji_ring1_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw_tuji_ring1_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="tw-sale-item1">
 						<div class="sale-item-name-tw1">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox"  id="tw_tuji_ring2" name="tw_tuji_ring2" value="0"> <i
+								<input type="checkbox"  id="tw_tuji_ring2" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="tw_tuji_ring2_price" name="tw_tuji_ring2_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="tw_tuji_ring2_price"   name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="tw-sale-item1">
 						<div class="sale-item-name-tw1">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="tw_tuhon_ring1"name="tw_tuhon_ring1" value="0"> <i
+								<input type="checkbox" id="tw_tuhon_ring1"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="tw_tuhon_ring1_price"  name="tw_tuhon_ring1_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw_tuhon_ring1_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="tw-sale-item1">
 						<div class="sale-item-name-tw1">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="tw_tuhon_ring2"name="tw_tuhon_ring2" value="0"> <i
+								<input type="checkbox" id="tw_tuhon_ring2"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="tw_tuhon_ring2_price" name="tw_tuhon_ring2_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="tw_tuhon_ring2_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					
@@ -300,18 +298,18 @@
 						<div class="sale-item-name-rd1">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="rd_sa_tujang"  name="rd_sa_tujang" value="0"> <i
+								<input type="checkbox" id="rd_sa_tujang"  name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="rd_sa_tujang_price" name="rd_sa_tujang_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="rd_sa_tujang_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="rd-sale-item1">
 						<div class="sale-item-name-rd1">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="rd_mo_tujang" name="rd_mo_tujang" value="0"> <i
+								<input type="checkbox" id="rd_mo_tujang" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="rd_mo_tujang_price"  name="rd_mo_tujang_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="rd_mo_tujang_price"   name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					
@@ -319,36 +317,36 @@
 						<div class="sale-item-name-rd1">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="rd_sa_tuji" name="rd_sa_tuji" value="0"> <i
+								<input type="checkbox" id="rd_sa_tuji" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="rd_sa_tuji_price"  name="rd_sa_tuji_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="rd_sa_tuji_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="rd-sale-item1">
 						<div class="sale-item-name-rd1">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="rd_mo_tuji" name="rd_mo_tuji" value="0"> <i
+								<input type="checkbox" id="rd_mo_tuji" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="rd_mo_tuji_price" name="rd_mo_tuji_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="rd_mo_tuji_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>	
 
 					<div class="rd-sale-item1">
 						<div class="sale-item-name-rd1">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="rd_sa_tuhon" name="rd_sa_tuhon" value="0"> <i
+								<input type="checkbox" id="rd_sa_tuhon" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="rd_sa_tuhon_price"  name="rd_sa_tuhon_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="rd_sa_tuhon_price" name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="rd-sale-item1">
 						<div class="sale-item-name-rd1">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="rd_mo_tuhon" name="rd_mo_tuhon" value="0"> <i
+								<input type="checkbox" id="rd_mo_tuhon" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="rd_mo_tuhon_price" name="rd_mo_tuhon_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="rd_mo_tuhon_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="named_class">
@@ -380,54 +378,54 @@
 						<div class="sale-item-name-bs2">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="bs_tujang_earring1"name="bs_tujang_earring1" value="0"> <i
+								<input type="checkbox" id="bs_tujang_earring1"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="bs_tujang_earring1_price"  name="bs_tujang_earring1_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs_tujang_earring1_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="bs-sale-item2">
 						<div class="sale-item-name-bs2">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="bs_tujang_earring2"name="bs_tujang_earring2" value="0"> <i
+								<input type="checkbox" id="bs_tujang_earring2"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"id="bs_tujang_earring2_price"  name="bs_tujang_earring2_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"id="bs_tujang_earring2_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="bs-sale-item2">
 						<div class="sale-item-name-bs2">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="bs_tuji_earring1"name="bs_tuji_earring1" value="0"> <i
+								<input type="checkbox" id="bs_tuji_earring1"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="bs_tuji_earring1_price"  name="bs_tuji_earring1_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs_tuji_earring1_price" name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="bs-sale-item2">
 						<div class="sale-item-name-bs2">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="bs_tuji_earring2" name="bs_tuji_earring2" value="0"> <i
+								<input type="checkbox" id="bs_tuji_earring2" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"id="bs_tuji_earring2_price"  name="bs_tuji_earring2_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"id="bs_tuji_earring2_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="bs-sale-item2">
 						<div class="sale-item-name-bs2">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="bs_tuhon_earring1"name="bs_tuhon_earring1" value="0"> <i
+								<input type="checkbox" id="bs_tuhon_earring1"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="bs_tuhon_earring1_price"  name="bs_tuhon_earring1_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs_tuhon_earring1_price"   name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="bs-sale-item2">
 						<div class="sale-item-name-bs2">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="bs_tuhon_earring2"name="bs_tuhon_earring2" value="0"> <i
+								<input type="checkbox" id="bs_tuhon_earring2"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"id="bs_tuhon_earring2_price"  name="bs_tuhon_earring2_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"id="bs_tuhon_earring2_price"name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<!-- 소용돌이 사원 2네임드 -->
@@ -435,54 +433,54 @@
 						<div class="sale-item-name-vt2">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="vt_tujang1"name="vt_tujang1" value="0"> <i
+								<input type="checkbox" id="vt_tujang1"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="vt_tujang1_price" name="vt_tujang1_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt_tujang1_price" name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="vt-sale-item2">
 						<div class="sale-item-name-vt2">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox"  id="vt_tujang2"name="vt_tujang2" value="0"> <i
+								<input type="checkbox"  id="vt_tujang2"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="vt_tujang2_price" name="vt_tujang2_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt_tujang2_price" name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="vt-sale-item2">
 						<div class="sale-item-name-vt2">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox"  id="vt_tuji1"name="vt_tuji1" value="0"> <i
+								<input type="checkbox"  id="vt_tuji1"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="vt_tuji1_price" name="vt_tuji1_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt_tuji1_price" name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="vt-sale-item2">
 						<div class="sale-item-name-vt2">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="vt_tuji2" name="vt_tuji2" value="0"> <i
+								<input type="checkbox" id="vt_tuji2" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="vt_tuji2_price" name="vt_tuji2_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt_tuji2_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="vt-sale-item2">
 						<div class="sale-item-name-vt2">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox"  id="vt_tuhon1"name="vt_tuhon1" value="0"> <i
+								<input type="checkbox"  id="vt_tuhon1"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="vt_tuhon1_price" name="vt_tuhon1_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt_tuhon1_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="vt-sale-item2">
 						<div class="sale-item-name-vt2">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox"  id="vt_tuhon2" name="vt_tuhon2" value="0"> <i
+								<input type="checkbox"  id="vt_tuhon2" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="vt_tuhon2_price" name="vt_tuhon2_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt_tuhon2_price" name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 			
@@ -492,54 +490,54 @@
 						<div class="sale-item-name-tw2">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox"  id="tw_tujang_earring1"name="tw_tujang_earring1" value="0"> <i
+								<input type="checkbox"  id="tw_tujang_earring1"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="tw_tujang_earring1_price"  name="tw_tujang_earring1_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw_tujang_earring1_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="tw-sale-item2">
 						<div class="sale-item-name-tw2">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="tw_tujang_earring2"name="tw_tujang_earring2" value="0"> <i
+								<input type="checkbox" id="tw_tujang_earring2"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"id="tw_tujang_earring2_price"  name="tw_tujang_earring2_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"id="tw_tujang_earring2_price"   name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="tw-sale-item2">
 						<div class="sale-item-name-tw2">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="tw_tuji_earring1"name="tw_tuji_earring1" value="0"> <i
+								<input type="checkbox" id="tw_tuji_earring1"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="tw_tuji_earring1_price"  name="tw_tuji_earring1_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw_tuji_earring1_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="tw-sale-item2">
 						<div class="sale-item-name-tw2">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="tw_tuji_earring2"name="tw_tuji_earring1" value="0"> <i
+								<input type="checkbox" id="tw_tuji_earring2"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"id="tw_tuji_earring2_price"  name="tw_tuji_earring2_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"id="tw_tuji_earring2_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="tw-sale-item2">
 						<div class="sale-item-name-tw2">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="tw_tuhon_earring1"name="tw_tuhon_earring1" value="0"> <i
+								<input type="checkbox" id="tw_tuhon_earring1"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="tw_tuhon_earring1_price"  name="tw_tuhon_earring1_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw_tuhon_earring1_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="tw-sale-item2">
 						<div class="sale-item-name-tw2">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="tw_tuhon_earring2"name="tw_tuhon_earring2" value="0"> <i
+								<input type="checkbox" id="tw_tuhon_earring2"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"id="tw_tuhon_earring2_price"  name="tw_tuhon_earring2_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"id="tw_tuhon_earring2_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<!-- 적몽의 비원 2네임드 -->
@@ -547,54 +545,54 @@
 						<div class="sale-item-name-rd2">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="rd_tujang1_neck" name="rd_tujang1_neck" value="0"> <i
+								<input type="checkbox" id="rd_tujang1_neck" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="rd_tujang1_neck_price" name="rd_tujang1_neck_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="rd_tujang1_neck_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="rd-sale-item2">
 						<div class="sale-item-name-rd2">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="rd_tujang2_neck" name="rd_tujang2_neck" value="0"> <i
+								<input type="checkbox" id="rd_tujang2_neck" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="rd_tujang2_neck_price"  name="rd_tujang2_neck_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="rd_tujang2_neck_price"   name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="rd-sale-item2">
 						<div class="sale-item-name-rd2">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="rd_tuji1_neck" name="rd_tuji1_neck" value="0"> <i
+								<input type="checkbox" id="rd_tuji1_neck" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="rd_tuji1_neck_price"  name="rd_tuji1_neck_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="rd_tuji1_neck_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="rd-sale-item2">
 						<div class="sale-item-name-rd2">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="rd_tuji2_neck" name="rd_tuji2_neck" value="0"> <i
+								<input type="checkbox" id="rd_tuji2_neck" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="rd_tuji2_neck_price" name="rd_tuji2_neck_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="rd_tuji2_neck_price"   name="sale_price" class="writeprice" placeholder="금액">
 					</div>	
 					
 					<div class="rd-sale-item2">
 						<div class="sale-item-name-rd2">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="rd_tuhon1_neck" name="rd_tuhon1_neck" value="0"> <i
+								<input type="checkbox" id="rd_tuhon1_neck" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="rd_tuhon1_neck_price"  name="rd_tuhon1_neck_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="rd_tuhon1_neck_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="rd-sale-item2">
 						<div class="sale-item-name-rd2">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="rd_tuhon2_neck" name="rd_tuhon2_neck" value="0"> <i
+								<input type="checkbox" id="rd_tuhon2_neck" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="rd_tuhon2_neck_price" name="rd_tuhon2_neck_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="rd_tuhon2_neck_price"   name="sale_price" class="writeprice" placeholder="금액">
 					</div>	
 					
 
@@ -629,108 +627,108 @@
 						<div class="sale-item-name-bs3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="bs_tujang_ring3"name="bs_tujang_ring3" value="0"> <i
+								<input type="checkbox" id="bs_tujang_ring3"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="bs_tujang_ring3_price"  name="bs_tujang_ring3_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs_tujang_ring3_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="bs-sale-item3">
 						<div class="sale-item-name-bs3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="bs_tujang_ring4" name="bs_tujang_ring4" value="0"> <i
+								<input type="checkbox" id="bs_tujang_ring4" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="bs_tujang_ring4_price" name="bs_tujang_ring4_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="bs_tujang_ring4_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 				
 					<div class="bs-sale-item3">
 						<div class="sale-item-name-bs3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="bs_tuji_ring3" name="bs_tuji_ring3" value="0"> <i
+								<input type="checkbox" id="bs_tuji_ring3" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="bs_tuji_ring3_price"  name="bs_tuji_ring3_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs_tuji_ring3_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="bs-sale-item3">
 						<div class="sale-item-name-bs3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox"  id="bs_tuji_ring4" name="bs_tuji_ring4" value="0"> <i
+								<input type="checkbox"  id="bs_tuji_ring4" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="bs_tuji_ring4_price" name="bs_tuji_ring4_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="bs_tuji_ring4_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="bs-sale-item3">
 						<div class="sale-item-name-bs3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="bs_tuhon_ring3" name="bs_tuhon_ring3" value="0"> <i
+								<input type="checkbox" id="bs_tuhon_ring3" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="bs_tuhon_ring3_price"  name="bs_tuhon_ring3_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs_tuhon_ring3_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="bs-sale-item3">
 						<div class="sale-item-name-bs3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="bs_tuhon_ring4" name="bs_tuhon_ring4" value="0"> <i
+								<input type="checkbox" id="bs_tuhon_ring4" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="bs_tuhon_ring4_price" name="bs_tuhon_ring4_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="bs_tuhon_ring4_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="bs-sale-item3">
 						<div class="sale-item-name-bs3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="bs_tujang_earring3" name="bs_tujang_earring3" value="0"> <i
+								<input type="checkbox" id="bs_tujang_earring3" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="bs_tujang_earring3_price"  name="bs_tujang_earring3_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs_tujang_earring3_price"  name="bs_tujang_earring3_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="bs-sale-item3">
 						<div class="sale-item-name-bs3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox"id="bs_tujang_earring4"  name="bs_tujang_earring4" value="0"> <i
+								<input type="checkbox"id="bs_tujang_earring4"  name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"id="bs_tujang_earring4_price"  name="bs_tujang_earring4_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"id="bs_tujang_earring4_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="bs-sale-item3">
 						<div class="sale-item-name-bs3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="bs_tuji_earring3" name="bs_tuji_earring3" value="0"> <i
+								<input type="checkbox" id="bs_tuji_earring3" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="bs_tuji_earring3_price"  name="bs_tuji_earring3_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs_tuji_earring3_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="bs-sale-item3">
 						<div class="sale-item-name-bs3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="bs_tuji_earring4" name="bs_tuji_earring4" value="0"> <i
+								<input type="checkbox" id="bs_tuji_earring4" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"id="bs_tuji_earring4_price"  name="bs_tuji_earring4_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"id="bs_tuji_earring4_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="bs-sale-item3">
 						<div class="sale-item-name-bs3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="bs_tuhon_earring3" name="bs_tuhon_earring3" value="0"> <i
+								<input type="checkbox" id="bs_tuhon_earring3" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="bs_tuhon_earring3_price"  name="bs_tuhon_earring3_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs_tuhon_earring3_price"   name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="bs-sale-item3">
 						<div class="sale-item-name-bs3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="bs_tuhon_earring4" name="bs_tuhon_earring4" value="0"> <i
+								<input type="checkbox" id="bs_tuhon_earring4" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"id="bs_tuhon_earring4_price"  name="bs_tuhon_earring4_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"id="bs_tuhon_earring4_price"   name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<!-- 소용돌이 사원  3네임드-->
@@ -738,117 +736,117 @@
 						<div class="sale-item-name-vt3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="vt_tujang3" name="vt_tujang3" value="0"> <i
+								<input type="checkbox" id="vt_tujang3" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="vt_tujang3_price" name="vt_tujang3_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt_tujang3_price"   name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="vt-sale-item3">
 						<div class="sale-item-name-vt3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="vt_tujang4"  name="vt_tujang4" value="0"> <i
+								<input type="checkbox" id="vt_tujang4"  name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="vt_tujang4_price" name="vt_tujang4_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt_tujang4_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="vt-sale-item3">
 						<div class="sale-item-name-vt3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="vt_tuji3"  name="vt_tuji3" value="0"> <i
+								<input type="checkbox" id="vt_tuji3"  name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="vt_tuji3_price" name="vt_tuji3_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt_tuji3_price" name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="vt-sale-item3">
 						<div class="sale-item-name-vt3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="vt_tuji4" name="vt_tuji4" value="0"> <i
+								<input type="checkbox" id="vt_tuji4" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="vt_tuji4_price" name="vt_tuji4_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt_tuji4_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="vt-sale-item3">
 						<div class="sale-item-name-vt3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="vt_tuhon3"  name="vt_tuhon3" value="0"> <i
+								<input type="checkbox" id="vt_tuhon3"  name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="vt_tuhon3_price" name="vt_tuhon3_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt_tuhon3_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="vt-sale-item3">
 						<div class="sale-item-name-vt3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="vt_tuhon4" name="vt_tuhon4" value="0"> <i
+								<input type="checkbox" id="vt_tuhon4" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="vt_tuhon4_price" name="vt_tuhon4_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt_tuhon4_price" name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="vt-sale-item3">
 						<div class="sale-item-name-vt3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="vt_gon_tujang2"  name="vt_gon_tujang2" value="0"> <i
+								<input type="checkbox" id="vt_gon_tujang2"  name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="vt_gon_tujang2_price"  name="vt_gon_tujang2_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt_gon_tujang2_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="vt-sale-item3">
 						<div class="sale-item-name-vt3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id=vt_sun_tujang2  name="vt_sun_tujang2" value="0"> <i
+								<input type="checkbox" id=vt_sun_tujang2  name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="vt_sun_tujang2_price"  name="vt_sun_tujang2_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt_sun_tujang2_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 							
 					<div class="vt-sale-item3">
 						<div class="sale-item-name-vt3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="vt_gon_tuji2"  name="vt_gon_tuji2" value="0"> <i
+								<input type="checkbox" id="vt_gon_tuji2"  name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="vt_gon_tuji2_price" name="vt_gon_tuji2_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="vt_gon_tuji2_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="vt-sale-item3">
 						<div class="sale-item-name-vt3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="vt_sun_tuji2"  name="vt_sun_tuji2" value="0"> <i
+								<input type="checkbox" id="vt_sun_tuji2"  name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="vt_sun_tuji2_price" name="vt_sun_tuji2_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="vt_sun_tuji2_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="vt-sale-item3">
 						<div class="sale-item-name-vt3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="vt_gon_tuhon2"  name="vt_gon_tuhon2" value="0"> <i
+								<input type="checkbox" id="vt_gon_tuhon2"  name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="vt_gon_tuhon2_price" name="vt_gon_tuhon2_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="vt_gon_tuhon2_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="vt-sale-item3">
 						<div class="sale-item-name-vt3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox"  id="vt_sun_tuhon2" name="vt_sun_tuhon2" value="0"> <i
+								<input type="checkbox"  id="vt_sun_tuhon2" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="vt_sun_tuhon2_price" name="vt_sun_tuhon2_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="vt_sun_tuhon2_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="vt-sale-item3" >
 						<div class="sale-item-name-vt3" >
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="singongsuk"  name="singongsuk" value="0"> <i
+								<input type="checkbox" id="singongsuk"  name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="singongsuk_price" name="singongsuk_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="singongsuk_price" name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="vt-sale-item3" >
@@ -863,108 +861,108 @@
 						<div class="sale-item-name-tw3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="tw_tujang_ring3"  name="tw_tujang_ring3" value="0"> <i
+								<input type="checkbox" id="tw_tujang_ring3"  name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="tw_tujang_ring3_price"  name="tw_tujang_ring3_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw_tujang_ring3_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="tw-sale-item3">
 						<div class="sale-item-name-tw3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="tw_tujang_ring4" name="tw_tujang_ring4" value="0"> <i
+								<input type="checkbox" id="tw_tujang_ring4" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="tw_tujang_ring4_price" name="tw_tujang_ring4_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="tw_tujang_ring4_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="tw-sale-item3">
 						<div class="sale-item-name-tw3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="tw_tuji_ring3" name="tw_tuji_ring3" value="0"> <i
+								<input type="checkbox" id="tw_tuji_ring3" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="tw_tuji_ring3_price"  name="tw_tuji_ring3_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw_tuji_ring3_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="tw-sale-item3">
 						<div class="sale-item-name-tw3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="tw_tuji_ring4" name="tw_tuji_ring4" value="0"> <i
+								<input type="checkbox" id="tw_tuji_ring4" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="tw_tuji_ring4_price" name="tw_tuji_ring4_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="tw_tuji_ring4_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="tw-sale-item3">
 						<div class="sale-item-name-tw3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="tw_tuhon_ring3" name="tw_tuhon_ring3" value="0"> <i
+								<input type="checkbox" id="tw_tuhon_ring3" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="tw_tuhon_ring3_price"  name="tw_tuhon_ring3_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw_tuhon_ring3_price"   name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="tw-sale-item3">
 						<div class="sale-item-name-tw3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="tw_tuhon_ring4" name="tw_tuhon_ring4" value="0"> <i
+								<input type="checkbox" id="tw_tuhon_ring4" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="tw_tuhon_ring4_price" name="tw_tuhon_ring4_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="tw_tuhon_ring4_price" name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="tw-sale-item3">
 						<div class="sale-item-name-tw3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="tw_tujang_earring3" name="tw_tujang_earring3" value="0"> <i
+								<input type="checkbox" id="tw_tujang_earring3" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="tw_tujang_earring3_price"  name="tw_tujang_earring3_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw_tujang_earring3_price"   name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="tw-sale-item3">
 						<div class="sale-item-name-tw3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="tw_tujang_earring4" name="tw_tujang_earring4" value="0"> <i
+								<input type="checkbox" id="tw_tujang_earring4" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"id="tw_tujang_earring4_price"  name="tw_tujang_earring4_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"id="tw_tujang_earring4_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="tw-sale-item3">
 						<div class="sale-item-name-tw3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="tw_tuji_earring3" name="tw_tuji_earring3" value="0"> <i
+								<input type="checkbox" id="tw_tuji_earring3" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="tw_tuji_earring3_price"  name="tw_tuji_earring3_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw_tuji_earring3_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="tw-sale-item3">
 						<div class="sale-item-name-tw3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="tw_tuji_earring4" name="tw_tuji_earring4" value="0"> <i
+								<input type="checkbox" id="tw_tuji_earring4" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"id="tw_tuji_earring4_price"  name="tw_tuji_earring4_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"id="tw_tuji_earring4_price" name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="tw-sale-item3">
 						<div class="sale-item-name-tw3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="tw_tuhon_earring3" name="tw_tuhon_earring3" value="0"> <i
+								<input type="checkbox" id="tw_tuhon_earring3" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="tw_tuhon_earring3_price"  name="tw_tuhon_earring3_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw_tuhon_earring3_price" name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="tw-sale-item3">
 						<div class="sale-item-name-tw3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox"id="tw_tuhon_earring4"  name="tw_tuhon_earring4" value="0"> <i
+								<input type="checkbox"id="tw_tuhon_earring4"  name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"id="tw_tuhon_earring4_price"  name="tw_tuhon_earring4_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"id="tw_tuhon_earring4_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					
@@ -973,36 +971,36 @@
 						<div class="sale-item-name-rd3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="poyup" name="poyup" value="0"> <i
+								<input type="checkbox" id="poyup" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="poyup_price" name="poyup_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="poyup_price" name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="rd-sale-item3">
 						<div class="sale-item-name-rd3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="jamo" name="jamo"  value="0"> <i
+								<input type="checkbox" id="jamo" name="sale_items"  value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="jamo_price" name="jamo_price" class="writeprice" placeholder="금액">				
+						</label> <input type="text"  id="jamo_price" name="sale_price" class="writeprice" placeholder="금액">				
 					</div>	
 					
 					<div class="rd-sale-item3">
 						<div class="sale-item-name-rd3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="ipmak" name="ipmak" value="0"> <i
+								<input type="checkbox" id="ipmak" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="ipmak_price" name="ipmak_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="ipmak_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="rd-sale-item3">
 						<div class="sale-item-name-rd3">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="rd_gang" name="rd_gang" value="0"> <i
+								<input type="checkbox" id="rd_gang" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="rd_gang_price" name="rd_gang_price" class="writeprice" placeholder="금액">				
+						</label> <input type="text"  id="rd_gang_price"  name="sale_price" class="writeprice" placeholder="금액">				
 					</div>	
 					
 					<div class="named_class">
@@ -1017,7 +1015,7 @@
 					</div>
 					<div class="named_class">
 					<a class="named3"> 태천명왕<label class="checkbox">
-								<input type="checkbox" id="tw_4th" name="tw_4th"value="4"> <i class="icon-checkbox"></i>
+								<input type="checkbox" id="tw_4th" name="tw_4th" value="4"> <i class="icon-checkbox"></i>
 							</label> </a>	
 					</div>
 					
@@ -1028,36 +1026,36 @@
 						<div class="sale-item-name-bs4">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="hukrin" name="hukrin" value="0"> <i
+								<input type="checkbox" id="hukrin" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text"  id="hukrin_price" name="hukrin_price" class="writeprice" placeholder="금액">
+						</label> <input type="text"  id="hukrin_price" name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="bs-sale-item4">
 						<div class="sale-item-name-bs4">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="gyukgol" name="gyukgol" value="0"> <i
+								<input type="checkbox" id="gyukgol" name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="gyukgol_price" name="gyukgol_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="gyukgol_price" name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="bs-sale-item4">
 						<div class="sale-item-name-bs4">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="ginki"name="ginki" value="0"> <i
+								<input type="checkbox" id="ginki"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="ginki_price" name="ginki_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="ginki_price" name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="bs-sale-item4">
 						<div class="sale-item-name-bs4">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="bs_gang"name="bs_gang" value="0"> <i
+								<input type="checkbox" id="bs_gang"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="bs_gang_price" name="bs_gang_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="bs_gang_price" name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 				
 					<!-- 소용돌이 사원  -->
@@ -1065,33 +1063,33 @@
 						<div class="sale-item-name-vt4">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="muksi"name="muksi" value="0"> <i
+								<input type="checkbox" id="muksi"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="muksi_price" name="muksi_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="muksi_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					<div class="vt-sale-item4">
 						<div class="sale-item-name-vt4">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="hukcham"name="hukcham" value="0"> <i
+								<input type="checkbox" id="hukcham"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="hukcham_price"  name="hukcham_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="hukcham_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					<div class="vt-sale-item4">
 						<div class="sale-item-name-vt4">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="amgak"name="amgak" value="0"> <i
+								<input type="checkbox" id="amgak"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="amgak_price"  name="amgak_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="amgak_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					<div class="vt-sale-item4">
 						<div class="sale-item-name-vt4">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox"  id="vt_gang"name="vt_gang" value="0"> <i
+								<input type="checkbox"  id="vt_gang"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="vt_gang_price"  name="vt_gang_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="vt_gang_price"   name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<!-- 태천왕릉 4네임드 -->
@@ -1099,36 +1097,36 @@
 						<div class="sale-item-name-tw4">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="siik"name="siik" value="0"> <i
+								<input type="checkbox" id="siik"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="siik_price" name="siik_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="siik_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 					<div class="tw-sale-item4">
 						<div class="sale-item-name-tw4">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="nukgol"name="nukgol" value="0"> <i
+								<input type="checkbox" id="nukgol"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="nukgol_price" name="nukgol_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="nukgol_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="tw-sale-item4">
 						<div class="sale-item-name-tw4">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="gwangbae"name="gwangbae" value="0"> <i
+								<input type="checkbox" id="gwangbae"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="gwangbae_price" name="gwangbae_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="gwangbae_price" name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 					
 					<div class="tw-sale-item4">
 						<div class="sale-item-name-tw4">
 						</div>
 						<label class="checkbox">
-								<input type="checkbox" id="tw_gang"name="tw_gang" value="0"> <i
+								<input type="checkbox" id="tw_gang"name="sale_items" value="0"> <i
 								class="icon-checkbox"></i>
-						</label> <input type="text" id="tw_gang_price" name="tw_gang_price" class="writeprice" placeholder="금액">
+						</label> <input type="text" id="tw_gang_price"  name="sale_price" class="writeprice" placeholder="금액">
 					</div>
 
 	

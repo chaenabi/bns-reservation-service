@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import common.JDBC;
+import vo.SaleDTO;
 
 public class ItemDAO extends JDBC {
 
@@ -16,11 +17,9 @@ public class ItemDAO extends JDBC {
 	}
 	
 	
-	// 레이드 타입에 따라 Items 테이블의 아이템목록을 가지고 오는 메소드
+	// 레이드 타입과 보스의 종류에 따라 Items 테이블의 아이템목록을 가지고 오는 메소드
 	public List<HashMap<String,Object>> showItems(String item_type, String boss_level) {
 
-		
-	
 		List<HashMap<String,Object>> items = new ArrayList<>();
 		HashMap<String,Object> pl;
 		connect();
@@ -45,11 +44,32 @@ public class ItemDAO extends JDBC {
 		return items;
 
 	}
+
+
+
+//팀 등록(아이템 등록) sale_register.jsp
+	public void add_SaleItems(SaleDTO svo) {
+		try {
+			connect();
+			String sql = "INSERT INTO sales (team_name, sale_items, sale_price)" + "VALUES (?, ?, ?)";
+
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, svo.getTeam_name());
+			pstmt.setString(2, svo.getSale_items());
+			pstmt.setString(3, svo.getSale_price());
+
+
+			pstmt.executeUpdate();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			disconnect();
+
+		}
+
+	}
 }
-
-
-
-
 
 
 	/*//주문내역 보기. 아직 미구현 
