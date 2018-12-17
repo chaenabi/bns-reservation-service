@@ -24,7 +24,7 @@ public class ItemDAO extends JDBC {
 		HashMap<String,Object> pl;
 		connect();
 			
-		String sql = "select item_name from items where item_type = '"+item_type+"' and boss_level ='"+boss_level+"'";
+		String sql = "select item_code, item_name from items where item_type = '"+item_type+"' and boss_level ='"+boss_level+"'";
 		try {
 			pstmt = conn.prepareStatement(sql);
 			ResultSet rs = pstmt.executeQuery();
@@ -32,6 +32,7 @@ public class ItemDAO extends JDBC {
 			while(rs.next()) {
 	
 				pl = new HashMap<>();
+				pl.put("item_code", rs.getString("item_code"));
 				pl.put("item_name", rs.getString("item_name"));				
 				items.add(pl);
 			}
@@ -57,7 +58,6 @@ public class ItemDAO extends JDBC {
 			pstmt.setString(1, svo.getTeam_name());
 			pstmt.setString(2, svo.getSale_items());
 			pstmt.setString(3, svo.getSale_price());
-
 
 			pstmt.executeUpdate();
 

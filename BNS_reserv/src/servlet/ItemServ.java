@@ -37,18 +37,32 @@ public class ItemServ extends HttpServlet {
 		if (action.equals("showitemlist")) {
 		List<HashMap<String,Object>> lis = new ArrayList<>();
 		lis = ItemDAO.getInstance().showItems(item_type, boss_level);
-		String it ="{\"item_name\":[";
+		
+		String itc ="{\"item_code\":[";
 		int cnt=0;
 		for(HashMap<String,Object> n :lis) {
 			if(cnt==0) {
-				it+="\""+n.get("item_name")+"\"";
+				itc+="\""+n.get("item_code")+"\"";
 				cnt++;
 			}
 			else {
-				it+=",\""+n.get("item_name")+"\"";
+				itc+=",\""+n.get("item_code")+"\"";
 			}
 		}
-		it+="],";
+		itc+="],";
+		
+		String itn ="\"item_name\":[";
+		int cnt2=0;
+		for(HashMap<String,Object> n :lis) {
+			if(cnt2==0) {
+				itn+="\""+n.get("item_name")+"\"";
+				cnt2++;
+			}
+			else {
+				itn+=",\""+n.get("item_name")+"\"";
+			}
+		}
+		itn+="],";
 		
 		String bl ="\"boss_level\":[";
 		bl+=boss_level;		
@@ -59,11 +73,12 @@ public class ItemServ extends HttpServlet {
 			rt+='"'+item_type+'"';
 		rt+="]}";
 		
-		it+=bl;
-		it+=rt;
+		itc+=itn;
+		itc+=bl;
+		itc+=rt;
 		
-		System.out.println(it);
-		out.print(it);
+		System.out.println(itc);
+		out.print(itc);
 		
 		}
 		

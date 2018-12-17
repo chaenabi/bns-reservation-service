@@ -2,10 +2,19 @@ package vo;
 
 public class ItemDTO {
 
+	private String item_code;
 	private String item_name;
 	private String item_type;
 	private String boss_level;
 	
+	
+	
+	public String getItem_code() {
+		return item_code;
+	}
+	public void setItem_code(String item_code) {
+		this.item_code = item_code;
+	}
 	public String getItem_name() {
 		return item_name;
 	}
@@ -26,8 +35,11 @@ public class ItemDTO {
 	}
 	@Override
 	public String toString() {
-		return "ItemDTO [item_name=" + item_name + ", item_type=" + item_type + ", boss_level=" + boss_level + "]";
+		return "ItemDTO [item_code=" + item_code + ", item_name=" + item_name + ", item_type=" + item_type
+				+ ", boss_level=" + boss_level + "]";
 	}
+	
+	
 	
 	
 }

@@ -87,16 +87,16 @@ $("#bs_1st, #bs_2nd, #bs_3rd, #bs_4th,"
 			
 			var raid_type = data.raid_type;
 			var boss_level = data.boss_level;
-			
+		
 		// 검은 마천루
 			if(raid_type=="검은 마천루" && boss_level==1) {
-		
+
 				for(var i=0;i<data.item_name.length;i++){
-					console.log(data.item_name[i]);
-					htmlTag = ''; 
-					itemList = "<a>"+ data.item_name[i] +"</a>";
-					  text=htmlTag+itemList;
-					  $('.sale-item-name-bs1:eq('+i+')').html(text);
+
+						htmlTag = ''; 
+						itemList = "<a>"+ data.item_name[i] +"</a>";
+						  text=htmlTag+itemList;
+						  $('.sale-item-name-bs1:eq('+i+')').html(text);
 				}
 				
 			} else if (raid_type=="검은 마천루" && boss_level==2) {
@@ -256,6 +256,11 @@ $("#bs_1st, #bs_2nd, #bs_3rd, #bs_4th,"
 
 
 });
+
+
+
+
+
 
 
 // $(document).ready(function () {/// 페이지 오픈시 검은마천루 radio 자동선택
@@ -521,7 +526,7 @@ $('#rd_3rd').change(function() {
 });
 
 
-// 데이트타임피커
+// 날짜 선택 API
 function showdatetime() {
 $("#go_date").datetimepicker({
 	locale : 'ko',
@@ -553,10 +558,11 @@ $(".writeprice").on("propertychange change keyup paste input", function() {
 
 // $('#black').trigger('click'); }); // 페이지 오픈시 검은마천루 radio 자동선택
 // 체크박스 금액 표시기
-$(document).ready(function() {
+
 	
 	// 마천루
 	// 마천루 1네임드
+
 	$('#bs_tujang_ring1').change(function() {
 		if ($("#bs_tujang_ring1").is(":checked")) {
 			$("#bs_tujang_ring1_price").show('fast');
@@ -611,6 +617,7 @@ $(document).ready(function() {
 			$("#bs_tujang_earring1_price").show('fast');
 		} else {
 			$('#bs_tujang_earring1_price').hide('fast');
+			
 		}
 	});
 	
@@ -1385,4 +1392,3 @@ $(document).ready(function() {
 		}
 	});
 	
-});
