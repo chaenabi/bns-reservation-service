@@ -64,13 +64,19 @@ public class TeamServ extends HttpServlet {
 				} else if (action.equals("team_reg")) {
 					String team_name = request.getParameter("team_name");
 					System.out.println(team_name);
-					
+
 					String id = request.getParameter("id");
 					String bns_id = kdao.selectOne(id);
 					tvo.setBns_id(bns_id);
 					tdao.addTeam(tvo);
-					idao.add_SaleItems(svo);
+					String[] sale_items = request.getParameterValues("sale_items");
 					
+					System.out.println(sale_items);
+					
+					String[] sale_price = request.getParameterValues("sale_price");
+					for (int i = 0; i < sale_items.length; i++) {
+					idao.add_SaleItems(svo);
+					}
 					tvo.setId(id);
 					tvo.setBns_id(bns_id);
 

@@ -11,7 +11,7 @@ function getDate(server, divTagID){
 		for(var i=0;i<data.go_date.length;i++){
 			var divid= "date" + i;
 			dateList = "<div id='"+ divid + "' class='go_date' onclick='getTime(\""+server+"\", \""+ data.go_date[i] + "\");' style='cursor: pointer;'>" + data.go_date[i] + "</div>";
-			htmlTag= htmlTag + dateList;
+			htmlTag= htmlTag+dateList;
 		}
 		$('#' + divTagID).html(htmlTag);
 	});
@@ -32,7 +32,7 @@ function getTime(server, date){
 		for(var i=0;i<data.go_time.length;i++){
 			var divid= "time" + i;
 			timeList = "<div id='"+ divid + "' class='go_time' onclick='getTeams("+ '"' + data.go_time[i] + '"'+");' style='cursor: pointer;'><span>"+data.go_time[i]+"</span></div>";
-			htmlTag= htmlTag +timeList;
+			htmlTag= htmlTag+timeList;
 		}
 		$('#timestamp').html(htmlTag);
 	});
