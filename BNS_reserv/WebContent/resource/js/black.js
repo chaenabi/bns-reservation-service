@@ -5,7 +5,7 @@ function getDate(server, divTagID){
 			"server":server
 	 }; 
 	
-	$.getJSON("../../TeamServ", requestServerDate, function(data){
+	$.getJSON("../../servlet/TeamServ", requestServerDate, function(data){
 		var htmlTag ='';
 		
 		for(var i=0;i<data.go_date.length;i++){
@@ -23,7 +23,7 @@ function getTime(server, date){
 			"date":date
 	 };
 	
-	$.getJSON("../../TeamServ", requestServerTime, function(data){
+	$.getJSON("../../servlet/TeamServ", requestServerTime, function(data){
 		var htmlTag = '';
 		
 		$("#timestamp").empty();
@@ -44,7 +44,7 @@ function getTeams(gt){
 			"go_time":gt
 	 };
 	
-	$.getJSON("../../TeamServ", requestDate , function(data){
+	$.getJSON("../../servlet/TeamServ", requestDate , function(data){
 
 		$("#team_manage").empty();
 		$("#teams_hide").show();
@@ -66,7 +66,7 @@ function getItemList(team_name){
 	var requestItemList = {"action":"getItemList",	    			
 			"team_name":team_name
 	 };
-	$.getJSON("../../TeamServ", requestItemList, function(data){
+	$.getJSON("../../servlet/TeamServ", requestItemList, function(data){
 		
 	
 			

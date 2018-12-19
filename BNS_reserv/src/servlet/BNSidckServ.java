@@ -25,8 +25,8 @@ public class BNSidckServ extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("application/json; charset=UTF-8");
 		request.setCharacterEncoding("utf-8");
- 		//response.addHeader("Access-Control-Allow-Origin", "*");  
- 		//response.setHeader("Access-Control-Allow-Headers", "origin, x-requested-with, content-type, accept");
+ 		response.addHeader("Access-Control-Allow-Origin", "*");  
+ 		response.setHeader("Access-Control-Allow-Headers", "origin, x-requested-with, content-type, accept");
 		// 내장객체 application, session, out
 		//ServletContext application = this.getServletContext();
 		//HttpSession session = request.getSession();

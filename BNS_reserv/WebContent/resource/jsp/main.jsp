@@ -5,6 +5,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/resource/css/main.css">
@@ -15,7 +17,10 @@
 	src="${pageContext.request.contextPath}/resource/js/jquery/jquery.min.js"></script>
 
 <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-
+<%
+response.addHeader("Access-Control-Allow-Origin", "*");
+response.setHeader("Access-Control-Allow-Headers", "origin, x-requested-with, content-type, accept");
+%>
 
 </head>
 

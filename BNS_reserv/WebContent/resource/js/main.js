@@ -12,15 +12,16 @@ $("#ck_bns_id").click(e=>{
 		$.ajax({
 				
 		        crossDomain:true,
-		        type : "GET",
-		        url : "http://a.bns.plaync.com/bnsapi/character/equipments/"+bns_id,
-		        dataType: 'jsonp',
-		        /*headers: {
+		        headers: {
 		            'Access-Control-Allow-Credentials' : true,
 		            'Access-Control-Allow-Origin':'*',
 		            'Access-Control-Allow-Methods':'GET',
 		            'Access-Control-Allow-Headers':'application/www-form-urlencoded',
-		          },*/
+		          },
+		        type : "GET",
+		        url : "http://a.bns.plaync.com/bnsapi/character/equipments/"+bns_id,
+		        dataType: 'jsonp',
+		      
 		        success: function(result){
 		        	
 		        	
@@ -36,13 +37,19 @@ $("#ck_bns_id").click(e=>{
 		        	//id check
      			   $.ajax({
      		            async: true,
+     		           headers: {
+    			            'Access-Control-Allow-Credentials' : true,
+    			            'Access-Control-Allow-Origin':'*',
+    			            'Access-Control-Allow-Methods':'GET',
+    			            'Access-Control-Allow-Headers':'application/www-form-urlencoded',
+    			          },
      		            type : 'get',
      		            data :  $('#kakao-login').serialize(),
      		            url : "/BNS_reserv/BNSidckServ",
-     		            dataType : 'json',
+     		            dataType : 'jsonp',
      		            contentType: "application/www-form-urlencoded; charset=UTF-8",
      		            timeout: 3000,
-     		      
+     		           
      		            success : function(data) {
      		            		//alert(data.result);
  		
@@ -163,11 +170,18 @@ Kakao.Auth.createLoginButton({
 				// DB에 아이디가 있으면 바로 서브밋, 없으면 bnsid div 를 띄우도록 설정한다.
 				$.ajax({
 					async: true,
+					headers: {
+ 			            'Access-Control-Allow-Credentials' : true,
+ 			            'Access-Control-Allow-Origin':'*',
+ 			            'Access-Control-Allow-Methods':'GET',
+ 			            'Access-Control-Allow-Headers':'application/www-form-urlencoded',
+ 			          },
  		            type : 'get',
  		            data :  $('#kakao-login').serialize(),
  		            url : "/BNS_reserv/DBidckServ",
  		            dataType : 'json',
  		            contentType: "application/json; charset=UTF-8",
+ 		           
  		            timeout: 3000,
  		            success : function(data) {
  		            	
@@ -238,11 +252,18 @@ Kakao.Auth.loginForm({
 			// DB에 아이디가 있으면 바로 서브밋, 없으면 bnsid div 를 띄우도록 설정한다.
 			$.ajax({
 				async: true,
-		            type : 'get',
+				headers: {
+			            'Access-Control-Allow-Credentials' : true,
+			            'Access-Control-Allow-Origin':'*',
+			            'Access-Control-Allow-Methods':'GET',
+			            'Access-Control-Allow-Headers':'application/www-form-urlencoded',
+			          },  
+				type : 'get',
 		            data :  $('#kakao-login').serialize(),
 		            url : "/BNS_reserv/DBidckServ",
 		            dataType : 'json',
 		            contentType: "application/json; charset=UTF-8",
+		            
 		            timeout: 3000,
 		            success : function(data) {
 		            	if($.trim(data.result)  ==  "false") {

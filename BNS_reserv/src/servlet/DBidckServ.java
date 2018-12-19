@@ -20,11 +20,11 @@ public class DBidckServ extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+		response.addHeader("Access-Control-Allow-Origin", "*");  
+ 		response.setHeader("Access-Control-Allow-Headers", "origin, x-requested-with, content-type, accept");
 		response.setContentType("application/www-form-urlencoded; charset=UTF-8");
 		request.setCharacterEncoding("utf-8");
- 		response.addHeader("Access-Control-Allow-Origin", "*");  
- 		response.setHeader("Access-Control-Allow-Headers", "origin, x-requested-with, content-type, accept");
-		JSONObject okay = new JSONObject();
+ 		JSONObject okay = new JSONObject();
 		String id = request.getParameter("id");
 		
 		 KakaoDTO kvo = new KakaoDTO();
